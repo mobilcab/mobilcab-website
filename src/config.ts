@@ -2,7 +2,7 @@
 // true once this mailbox really exists; production deploys are blocked until
 // then (scripts/launch-check.mjs).
 export const CONTACT_EMAIL = 'contact@mobilcab.com';
-export const CONTACT_EMAIL_CONFIRMED = false;
+export const CONTACT_EMAIL_CONFIRMED = true;
 
 // Founding Partner spots (docs/DECISIONS.md). Reservations stop at this number.
 export const FOUNDING_PARTNER_SPOTS = 100;
