@@ -38,5 +38,12 @@ ${[...pageEntries, ...postEntries].join('\n')}
 </urlset>
 `;
 
-  return new Response(body, { headers: { 'content-type': 'application/xml; charset=utf-8' } });
+  // text/xml is the type Google's sitemap docs cite most often; charset helps
+  // picky parsers. (Vercel may still serve a static file without the charset.)
+  return new Response(body, {
+    headers: {
+      'Content-Type': 'text/xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=0, must-revalidate',
+    },
+  });
 };
