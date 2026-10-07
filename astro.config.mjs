@@ -25,13 +25,14 @@ export default defineConfig({
         "img-src 'self' data: https://i.ytimg.com",
         'frame-src https://www.youtube-nocookie.com',
         "font-src 'self'",
-        "connect-src 'self' https://plausible.io",
+        // Plausible (optional) + Vercel Web Analytics debug script when not on Vercel.
+        "connect-src 'self' https://plausible.io https://va.vercel-scripts.com",
         "base-uri 'self'",
         "form-action 'self'",
         "object-src 'none'",
       ],
       scriptDirective: {
-        resources: ["'self'", 'https://plausible.io'],
+        resources: ["'self'", 'https://plausible.io', 'https://va.vercel-scripts.com'],
       },
     },
   },

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import CtaTracking from '../components/CtaTracking.astro';
+import Analytics from '@vercel/analytics/astro';
 import fontLatin from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
 import fontLatinExt from '@fontsource-variable/manrope/files/manrope-latin-ext-wght-normal.woff2?url';
 import { PUBLIC_PLAUSIBLE_DOMAIN } from 'astro:env/client';
@@ -88,5 +89,7 @@ const t = useTranslations(lang);
   <body class="blueprint min-h-dvh antialiased">
     <slot />
     <CtaTracking />
+    {/* Page views on Vercel (Hobby free tier). Custom waitlist events stay on Plausible when configured. */}
+    <Analytics />
   </body>
 </html>
