@@ -1,0 +1,17 @@
+---
+// Sends the `cta_click` Plausible event (Build Brief 5) for every element with
+// data-cta (which button) and data-cta-location (where it is). Included once,
+// in src/layouts/Base.astro, so each page and the header menu are covered
+// without their own copies. No-op when Plausible isn't configured.
+---
+
+<script>
+  type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
+  const track: Plausible = (event, options) => (window as unknown as { plausible?: Plausible }).plausible?.(event, options);
+
+  for (const el of document.querySelectorAll<HTMLElement>('[data-cta]')) {
+    el.addEventListener('click', () =>
+      track('cta_click', { props: { cta: el.dataset.cta ?? '', location: el.dataset.ctaLocation ?? '' } }),
+    );
+  }
+</script>

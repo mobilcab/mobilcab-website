@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "Sign-up confirmed — Mobilcab",
+    "description": "Confirmation of your Mobilcab waitlist sign-up."
+  },
+  "ok": {
+    "title": "Done, you're on the list!",
+    "body": "Thanks for confirming your address. We'll let you know as soon as we launch."
+  },
+  "error": {
+    "linkTitle": "This link is no longer valid",
+    "linkBody": "The confirmation link has expired or is incomplete. Sign up again and we'll send you a new one.",
+    "serverTitle": "Something went wrong",
+    "serverBody": "We couldn't confirm your sign-up. Please try the link in the email again in a few minutes.",
+    "again": "Back to sign-up"
+  },
+  "referral": {
+    "title": "Invite other carpenters",
+    "body": "For every carpenter who signs up through your link and confirms their address, you move up the queue for the private beta. At {goal} confirmed invites, you get a guaranteed place in the beta.",
+    "linkLabel": "Your invite link",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "whatsapp": "Send on WhatsApp",
+    "shareText": "Here's a furniture design tool that runs straight from the browser. Sign up here:",
+    "progress": "{count} of {goal} confirmed invites — {left} more for a guaranteed beta place.",
+    "done": "{count} confirmed invites — your place in the private beta is guaranteed. We'll be in touch.",
+    "note": "You can come back here any time from the welcome email to check your progress. The names of the people you invite are never shown."
+  }
+}

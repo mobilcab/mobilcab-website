@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "Cum funcționează — Mobilcab",
+    "description": "Trei clipuri scurte: un dulap de colț proiectat în sub 10 minute, asistentul AI care prinde greșelile înainte de tăiere și exportul cutlist-ului pentru CNC."
+  },
+  "hero": {
+    "label": "Cum funcționează",
+    "title": "De la primul panou la fișierul de tăiere.",
+    "body": "Trei clipuri scurte, pe același proiect. Sub fiecare, pe scurt, ce se întâmplă în el — dacă n-ai timp să te uiți acum."
+  },
+  "player": {
+    "comingSoon": "Clip în curând",
+    "play": "Pornește clipul: {title}"
+  },
+  "videos": [
+    {
+      "title": "Proiectare",
+      "aha": "Un dulap de colț de bucătărie, de la zero, în sub 10 minute.",
+      "points": [
+        "Setezi dimensiunile dulapului, așezi panourile, ajustezi îmbinarea de colț și adaugi ușile și sertarele.",
+        "Schimbi o dimensiune, iar restul panourilor se ajustează automat.",
+        "Totul direct din browser, fără instalare."
+      ],
+      "note": ""
+    },
+    {
+      "title": "Asistentul AI",
+      "aha": "Prinde o coliziune între sertar și balama înainte să ajungă la pânza de tăiere.",
+      "points": [
+        "AI-ul observă că sertarul s-ar lovi de balamaua ușii — înainte să trimiți proiectul la CNC.",
+        "Îți sugerează o altă împărțire a panourilor, care reduce risipa de material.",
+        "Nu îți înlocuiește experiența, dar prinde greșelile înainte să te coste materialul."
+      ],
+      "note": "Sugestiile AI sunt orientative: verifică întotdeauna dimensiunile înainte de tăiere."
+    },
+    {
+      "title": "Cutlist și export CNC",
+      "aha": "De la proiect la fișierul de tăiere, fără să calculezi nimic manual.",
+      "points": [
+        "Dintr-un proiect terminat, un clic pe „Export cutlist”.",
+        "Lista apare imediat, cu dimensiunile panourilor, cantitățile și materialele.",
+        "Fișierul e pregătit pentru fluxul tău CNC."
+      ],
+      "note": ""
+    }
+  ],
+  "cta": {
+    "title": "Vrei să-l încerci pe proiectul tău?",
+    "primary": "Devino Founding Partner",
+    "secondary": "Sau alătură-te gratuit"
+  }
+}

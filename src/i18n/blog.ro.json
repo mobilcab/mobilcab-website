@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Blog — Mobilcab",
+    "description": "Articole practice despre proiectarea mobilei, cutlist și CNC, pentru tâmplari și ateliere de mobilă."
+  },
+  "hero": {
+    "label": "Blog",
+    "title": "Articole practice pentru tâmplari.",
+    "body": "Despre proiectarea mobilei, cutlist, CNC și uneltele pe care le ai la dispoziție. Fără vorbe goale."
+  },
+  "empty": "Primele articole apar în curând.",
+  "langNote": "",
+  "readMore": "Citește articolul",
+  "draft": "Ciornă — nepublicat",
+  "back": "Toate articolele",
+  "cta": {
+    "title": "Vrei să încerci Mobilcab pe proiectele tale?",
+    "body": "Mobilcab e un CAD pentru mobilă care rulează direct din browser, cu cutlist și export pentru CNC. E în dezvoltare, iar primii 100 de tâmplari primesc prețul Founding Partner.",
+    "primary": "Despre programul Founding Partner",
+    "secondary": "Intră gratuit în lista de așteptare"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "Programul Founding Partner — Mobilcab",
+    "description": "Primii 100 de tâmplari care construiesc Mobilcab alături de noi primesc prețul blocat 12 luni, un cuvânt de spus în ce urmează și acces înaintea tuturor."
+  },
+  "hero": {
+    "label": "Programul Founding Partner",
+    "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm 100 de tâmplari care să-l construiască alături de noi — și care primesc în schimb un preț blocat, un cuvânt de spus în ce urmează și acces înaintea tuturor.",
+    "cta": "Rezervă-ți locul de Founding Partner"
+  },
+  "counter": {
+    "remaining": "{remaining} din {total} locuri Founding Partner rămase",
+    "full": "Toate cele {total} de locuri Founding Partner au fost rezervate."
+  },
+  "included": {
+    "title": "Ce primești",
+    "items": [
+      { "title": "Preț blocat 12 luni", "body": "Plătești același preț un an întreg, oricum s-ar schimba prețurile după lansare." },
+      { "title": "Un cuvânt de spus în ce construim", "body": "Ne spui ce îți lipsește în atelier, iar propunerile tale intră direct în planul de dezvoltare." },
+      { "title": "Numele tău, ca Founding Partner", "body": "Apari în lista celor care au ajutat la construirea Mobilcab." },
+      { "title": "Grup privat de feedback", "body": "Vorbești direct cu fondatorul și cu ceilalți Founding Partners." },
+      { "title": "Acces înaintea tuturor", "body": "Primești funcțiile noi primul, înainte să ajungă la toată lumea." }
+    ]
+  },
+  "offer": {
+    "title": "Oferta",
+    "price": "49 RON/lună",
+    "yearly": "sau 549 RON/an",
+    "detail": "Planul Basic, cu prețul blocat 12 luni. Doar pentru primii 100 de tâmplari.",
+    "noPayment": "Acum nu plătești nimic: îți rezervi locul, iar plata o faci abia când primești acces."
+  },
+  "ai": {
+    "title": "Ce nu include Basic",
+    "body": "Spus direct, ca să nu ai surprize: Basic acoperă proiectarea, cutlist-ul și exportul pentru CNC. Asistentul AI îl încerci o singură dată, pe proiectul de pornire, ca să vezi ce face. După aceea, AI-ul e inclus doar în planurile Starter (de la 99 RON/lună), Pro și Studio."
+  },
+  "proof": {
+    "title": "Ce spun primii Founding Partners"
+  },
+  "next": {
+    "title": "Ce urmează după rezervare",
+    "steps": [
+      "Locul tău e păstrat pe numele tău.",
+      "Te contactăm personal când deschidem accesul pentru Founding Partners.",
+      "Plata se face abia când primești acces."
+    ]
+  },
+  "form": {
+    "title": "Rezervă-ți locul",
+    "nameLabel": "Nume și prenume",
+    "emailLabel": "Email",
+    "workshopLabel": "Numele atelierului",
+    "optional": "(opțional)",
+    "cityLabel": "Orașul",
+    "consent": "Sunt de acord să fiu contactat despre programul Founding Partner și să primesc actualizări prin email.",
+    "privacyLink": "Vezi politica de confidențialitate",
+    "submit": "Rezervă-ți locul de Founding Partner"
+  },
+  "messages": {
+    "sending": "Se trimite…",
+    "reserved": "Locul tău e rezervat! Te contactăm personal când deschidem accesul.",
+    "already": "Ai deja un loc rezervat. Te contactăm personal când deschidem accesul.",
+    "full": "Toate locurile Founding Partner au fost rezervate. Te poți înscrie în continuare gratuit pe lista de așteptare.",
+    "invalidName": "Scrie-ți numele (cel puțin 2 litere).",
+    "invalidEmail": "Introdu o adresă de email validă.",
+    "invalidWorkshop": "Numele atelierului e prea lung.",
+    "invalidCity": "Scrie orașul în care lucrezi.",
+    "consentRequired": "Bifează căsuța de acord ca să te putem contacta.",
+    "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
+    "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."
+  },
+  "joinFree": "Înscrie-te gratuit"
+}

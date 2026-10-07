@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Mobilcab — de la idee la panou, direct din browser",
+    "description": "CAD pentru mobilă care rulează în browser, pe laptop, tabletă sau telefon. Asistent AI la proiectare și cutlist pentru CNC într-un click."
+  },
+  "hero": {
+    "title": "De la idee la panou, direct din browser.",
+    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Proiectezi, iar cutlist-ul e pregătit pentru CNC într-un click.",
+    "ctaPrimary": "Devino Founding Partner",
+    "ctaSecondary": "Sau alătură-te gratuit",
+    "note": "Primii 100 de tâmplari primesc prețul Founding Partner, blocat 12 luni."
+  },
+  "problem": {
+    "title": "Sună familiar?",
+    "items": [
+      "Programe CAD greoaie, instalate doar pe un calculator din atelier",
+      "Licențe scumpe pentru funcții pe care le folosești rar",
+      "Ore pierdute făcând manual cutlist-ul pentru CNC",
+      "Nu poți arăta clientului un design live, direct de pe telefon, la fața locului"
+    ]
+  },
+  "features": {
+    "title": "Trei motive pentru care Mobilcab e diferit",
+    "items": [
+      {
+        "title": "100% în browser",
+        "body": "Fără instalare, fără server de licențe. Deschizi orice device — laptop, tabletă, telefon — și lucrezi."
+      },
+      {
+        "title": "Asistent AI la proiectare",
+        "body": "Sugerează layout-uri de panouri și îți semnalează erorile înainte să ajungă la pânza de tăiere."
+      },
+      {
+        "title": "Cutlist & export CNC într-un click",
+        "body": "De la design la fișierul de tăiere, fără pași manuali intermediari."
+      }
+    ]
+  },
+  "demo": {
+    "title": "Vezi cum funcționează",
+    "intro": "Trei clipuri scurte, pe același proiect: de la primele panouri la fișierul pentru CNC.",
+    "comingSoon": "Clip în curând",
+    "link": "Toate clipurile, pe larg",
+    "videos": [
+      { "title": "Proiectare", "caption": "Un dulap de colț de bucătărie, de la zero, în sub 10 minute." },
+      { "title": "Asistentul AI", "caption": "Prinde o coliziune între sertar și balama înainte să ajungă la pânza de tăiere." },
+      { "title": "Cutlist și export CNC", "caption": "De la proiect la fișierul de tăiere, fără să calculezi nimic manual." }
+    ]
+  },
+  "pricing": {
+    "title": "Prețuri",
+    "offerLabel": "Founding Partner",
+    "offerPrice": "49 RON/lună",
+    "offerDetail": "sau 549 RON/an, pentru planul Basic, blocat 12 luni. Doar pentru primii 100 de tâmplari.",
+    "aiNote": "Basic acoperă proiectarea și cutlist-ul; asistentul AI îl încerci o dată, la început. Planurile cu AI inclus pornesc de la 99 RON/lună.",
+    "free": "Planul gratuit e disponibil oricând.",
+    "cancel": "Fără contract — anulezi oricând.",
+    "link": "Vezi toate planurile"
+  },
+  "faq": {
+    "title": "Întrebări frecvente",
+    "items": [
+      { "q": "Trebuie să instalez ceva?", "a": "Nu, Mobilcab rulează direct din browser." },
+      { "q": "Funcționează pe tabletă?", "a": "Da, e optimizat pentru laptop, tabletă și telefon." },
+      { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Da — exportul de cutlist e pregătit pentru fluxul standard CNC." },
+      { "q": "Cât costă?", "a": "Planul gratuit e disponibil oricând; primii 100 de utilizatori primesc prețul special Founding Partner." }
+    ],
+    "link": "Toate întrebările"
+  },
+  "final": {
+    "title": "Fii printre primii tâmplari din România care proiectează direct din browser.",
+    "or": "Sau intră gratuit în lista de așteptare:"
+  },
+  "footer": {
+    "privacy": "Confidențialitate"
+  },
+  "anchors": {
+    "join": "inscriere"
+  }
+}

@@ -1,0 +1,42 @@
+---
+// Plain links rather than a JS toggle: each locale is its own static page,
+// so switching costs nothing extra and both versions are indexable.
+import { languageNames, languages, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  alternates: Record<Lang, string>;
+  label: string;
+}
+
+const { lang, alternates, label } = Astro.props;
+---
+
+<nav aria-label={label} class="flex items-center text-sm font-semibold">
+  {
+    languages.map((l, i) => (
+      <>
+        {i > 0 && (
+          <span class="text-line" aria-hidden="true">
+            /
+          </span>
+        )}
+        {l === lang ? (
+          <span class="inline-flex min-h-11 items-center px-2 text-ink" aria-current="page" aria-label={languageNames[l]}>
+            {l.toUpperCase()}
+          </span>
+        ) : (
+          <a
+            href={alternates[l]}
+            hreflang={l}
+            lang={l}
+            aria-label={languageNames[l]}
+            class="inline-flex min-h-11 items-center px-2 text-graphite underline-offset-4 hover:text-ink hover:underline"
+          >
+            {l.toUpperCase()}
+          </a>
+        )}
+      </>
+    ))
+  }
+</nav>

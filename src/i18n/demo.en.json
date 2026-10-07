@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "How it works — Mobilcab",
+    "description": "Three short clips: a corner cabinet designed in under 10 minutes, the AI assistant catching mistakes before cutting, and cutlist export for your CNC."
+  },
+  "hero": {
+    "label": "How it works",
+    "title": "From the first panel to the cutting file.",
+    "body": "Three short clips on the same project. Under each one, a quick summary of what happens — in case you don't have time to watch right now."
+  },
+  "player": {
+    "comingSoon": "Clip coming soon",
+    "play": "Play the clip: {title}"
+  },
+  "videos": [
+    {
+      "title": "Design flow",
+      "aha": "A corner kitchen cabinet from scratch, in under 10 minutes.",
+      "points": [
+        "Set the cabinet dimensions, place the panels, adjust the corner joint and add the doors and drawers.",
+        "Change one dimension, and the other panels adjust automatically.",
+        "All straight from the browser, nothing to install."
+      ],
+      "note": ""
+    },
+    {
+      "title": "AI assistant",
+      "aha": "Catches a clearance mistake before it hits the saw.",
+      "points": [
+        "The AI notices the drawer would collide with the door hinge — before you send the project to the CNC.",
+        "It suggests a different panel split that reduces material waste.",
+        "It doesn't replace your experience, but it catches mistakes before they cost you material."
+      ],
+      "note": "AI suggestions are advisory: always verify dimensions before cutting."
+    },
+    {
+      "title": "Cutlist & CNC export",
+      "aha": "From design to cutting file, no manual math.",
+      "points": [
+        "From a finished design, one click on \"Export cutlist\".",
+        "The list appears instantly, with panel dimensions, quantities and materials.",
+        "The file is ready for your CNC workflow."
+      ],
+      "note": ""
+    }
+  ],
+  "cta": {
+    "title": "Want to try it on your own project?",
+    "primary": "Become a Founding Partner",
+    "secondary": "Or join free"
+  }
+}

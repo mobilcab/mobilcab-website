@@ -1,0 +1,145 @@
+---
+// Pricing (Build Brief 4.3, Funnel Plan 3.3). Numbers come from
+// src/data/pricing.ts, shared with the FAQ. Each plan has its own anchor
+// (e.g. #basic). Basic links to the Founding Partner page (its only paid
+// sign-up today); the other plans link to the waitlist until accounts exist.
+import Base from '../layouts/Base.astro';
+import PreviewBanner from './PreviewBanner.astro';
+import SiteFooter from './SiteFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+import { tiers } from '../data/pricing';
+import { useFaqTranslations, usePricingTranslations, type Lang } from '../i18n';
+import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const preview = !published.pricing;
+const t = usePricingTranslations(lang);
+const paths = pathsFor('pricing');
+const fpHref = linkFor('foundingPartner', lang, preview);
+const joinFreeHref = joinFree(lang, preview);
+const plansFaqId = useFaqTranslations(lang).items.find((i) => i.tiers)?.id ?? '';
+const faqPage = linkFor('faq', lang, preview);
+const faqHref = faqPage && `${faqPage}#${plansFaqId}`;
+const wrap = 'mx-auto w-full max-w-6xl px-5 sm:px-8';
+---
+
+<Base lang={lang} title={t.meta.title} description={t.meta.description} alternates={preview ? undefined : paths}>
+  {preview && <PreviewBanner lang={lang} />}
+
+  <div class="mx-auto w-full max-w-5xl px-5 sm:px-8">
+    <SiteHeader lang={lang} alternates={paths} preview={preview} current="pricing" />
+  </div>
+
+  <main>
+    <section class="mx-auto w-full max-w-5xl px-5 pt-10 pb-10 sm:px-8 sm:pt-16 sm:pb-12">
+      <div class="max-w-2xl">
+        <div class="dimension-line mb-6" aria-hidden="true"></div>
+        <p class="text-sm font-semibold tracking-wide text-wood">{t.hero.label}</p>
+        <h1 class="mt-3 text-[2rem] leading-[1.12] font-bold tracking-tight text-balance sm:text-[3rem]">{t.hero.title}</h1>
+        <p class="mt-5 text-lg leading-relaxed text-graphite">{t.hero.body}</p>
+      </div>
+
+      {/* Founding Partner callout, above the plans (Funnel Plan 3.3) */}
+      <div class="mt-10 flex flex-col gap-3 rounded-md border border-line border-l-4 border-l-wood bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8">
+        <div>
+          <p class="font-bold">{t.callout.title}</p>
+          <p class="mt-1 text-base leading-relaxed text-graphite">{t.callout.body}</p>
+        </div>
+        {
+          fpHref && (
+            <a href={fpHref} class="link-quiet shrink-0" data-cta="founding_partner" data-cta-location="pricing_callout">
+              {t.callout.link}
+            </a>
+          )
+        }
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-white/60">
+      <div class:list={[wrap, 'py-10 sm:py-14']}>
+        <ol class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+          {
+            tiers.map((tier) => {
+              const plan = t.plans[tier.key];
+              const highlighted = tier.foundingPartnerYearly !== undefined;
+              // Basic's sign-up is the Founding Partner page; until that's
+              // published, it falls back to the waitlist like the other plans.
+              const toFp = tier.key === 'basic' && fpHref !== null;
+              const href = toFp ? fpHref : joinFreeHref;
+              const ctaLabel = tier.key === 'basic' && !toFp ? t.plans.starter.cta : plan.cta;
+              return (
+                <li
+                  id={tier.key}
+                  class:list={[
+                    'flex scroll-mt-4 flex-col rounded-md border bg-white p-5',
+                    highlighted ? 'border-wood ring-1 ring-wood' : 'border-line',
+                  ]}
+                >
+                  <h2 class="text-lg font-bold tracking-tight">{plan.name}</h2>
+                  <p class="mt-2">
+                    {tier.monthly === 0 ? (
+                      <span class="text-[1.75rem] leading-none font-bold tracking-tight">{t.free}</span>
+                    ) : (
+                      <>
+                        <span class="text-[1.75rem] leading-none font-bold tracking-tight">{tier.monthly}</span>{' '}
+                        <span class="text-sm font-semibold text-graphite">{t.perMonth}</span>
+                      </>
+                    )}
+                  </p>
+                  {tier.foundingPartnerYearly && (
+                    <p class="mt-2 text-sm font-semibold text-wood">
+                      {t.fpYearly.replace('{price}', String(tier.foundingPartnerYearly))}
+                    </p>
+                  )}
+                  <p class="mt-3 text-sm leading-relaxed text-graphite">{plan.for}</p>
+                  <ul class="mt-4 space-y-1.5 text-sm text-ink">
+                    {plan.features.map((feature) => (
+                      <li class="flex gap-2">
+                        <span class="mt-[0.6em] h-px w-3 shrink-0 bg-wood" aria-hidden="true" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                    <li class="flex gap-2 font-semibold">
+                      <span class="mt-[0.6em] h-px w-3 shrink-0 bg-wood" aria-hidden="true" />
+                      <span>
+                        {tier.aiPerMonth === 0 ? t.aiTrial : t.aiPerMonth.replace('{count}', String(tier.aiPerMonth))}
+                      </span>
+                    </li>
+                  </ul>
+                  <div class="mt-auto pt-5">
+                    {tier.monthly > 0 && <p class="mb-3 text-xs font-medium text-graphite">{t.cancel}</p>}
+                    <a
+                      href={href}
+                      class:list={[highlighted ? 'btn-primary w-full px-3 py-2 text-[0.9375rem] leading-snug' : 'link-quiet']}
+                      data-cta={toFp ? 'founding_partner' : 'join_free'}
+                      data-cta-location={`pricing_${tier.key}`}
+                    >
+                      {ctaLabel}
+                    </a>
+                  </div>
+                </li>
+              );
+            })
+          }
+        </ol>
+        <p class="mt-6 text-sm text-graphite">{t.note}</p>
+      </div>
+    </section>
+
+    <section class="border-t border-line">
+      <div class="mx-auto w-full max-w-5xl px-5 py-14 sm:px-8 sm:py-20">
+        <div class="max-w-2xl">
+          <h2 class="text-[1.5rem] leading-tight font-bold tracking-tight sm:text-[1.75rem]">{t.why.title}</h2>
+          <p class="mt-3 text-base leading-relaxed text-graphite">{t.why.body}</p>
+          {faqHref && <a href={faqHref} class="link-quiet mt-4">{t.faqLink}</a>}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter lang={lang} preview={preview} />
+</Base>

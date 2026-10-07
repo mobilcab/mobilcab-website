@@ -1,0 +1,45 @@
+---
+// One page for both languages: it's static, so it can't know which locale the
+// broken link came from. Romanian first, English below.
+import Base from '../layouts/Base.astro';
+import Wordmark from '../components/Wordmark.astro';
+import { languages, useTranslations } from '../i18n';
+import { livePaths } from '../site';
+
+const homePaths = livePaths.home;
+
+const ro = useTranslations('ro');
+const en = useTranslations('en');
+---
+
+<Base lang="ro" title={`${ro.notFound.title} / ${en.notFound.title} — Mobilcab`} description={ro.notFound.body}>
+  <div class="mx-auto flex min-h-dvh max-w-xl flex-col px-5 sm:px-8">
+    <header class="flex items-center py-4">
+      <Wordmark href={homePaths.ro} />
+    </header>
+
+    <main class="flex flex-1 flex-col justify-center pt-8 pb-16 sm:pb-24">
+      <div class="dimension-line mb-6" aria-hidden="true"></div>
+      <p class="text-sm font-semibold tracking-widest text-wood">404</p>
+
+      {
+        languages.map((lang, i) => {
+          const t = useTranslations(lang);
+          const Heading = i === 0 ? 'h1' : 'h2';
+          return (
+            <section lang={lang} class={i > 0 ? 'mt-10 border-t border-line pt-10' : 'mt-3'}>
+              <Heading class="text-[1.75rem] leading-tight font-bold tracking-tight sm:text-[2rem]">{t.notFound.title}</Heading>
+              <p class="mt-3 text-base leading-relaxed text-graphite">{t.notFound.body}</p>
+              <a
+                href={homePaths[lang]}
+                class="mt-5 inline-flex min-h-11 items-center font-semibold text-ink underline underline-offset-4 hover:text-wood-dark"
+              >
+                {t.notFound.back}
+              </a>
+            </section>
+          );
+        })
+      }
+    </main>
+  </div>
+</Base>

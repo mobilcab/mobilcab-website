@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "Mobilcab — proiectare mobilă direct din browser",
+    "description": "Proiectare de mobilă direct din browser. Fără instalare — lucrezi pe laptop, tabletă sau telefon."
+  },
+  "nav": {
+    "languageLabel": "Limba",
+    "mainLabel": "Navigare principală",
+    "menu": "Meniu",
+    "demo": "Cum funcționează",
+    "pricing": "Prețuri",
+    "faq": "Întrebări",
+    "blog": "Blog",
+    "foundingPartner": "Founding Partner",
+    "terms": "Termeni",
+    "privacy": "Confidențialitate"
+  },
+  "hero": {
+    "headline": "Mobilcab — proiectare mobilă direct din browser.",
+    "valueProp": "Fără instalare. Lucrezi pe laptop, tabletă sau telefon.",
+    "description": "Construim un instrument de proiectare pentru tâmplari și ateliere de mobilă — simplu, rapid, și accesibil. Lasă-ți emailul ca să fii primul care află când lansăm."
+  },
+  "form": {
+    "emailLabel": "Adresa ta de email",
+    "emailPlaceholder": "nume@exemplu.ro",
+    "submit": "Anunță-mă la lansare",
+    "consent": "Sunt de acord să primesc actualizări prin email.",
+    "privacyLink": "Vezi politica de confidențialitate"
+  },
+  "notFound": {
+    "title": "Pagina nu există",
+    "body": "Linkul poate fi greșit sau pagina a fost mutată.",
+    "back": "Înapoi la pagina principală"
+  },
+  "messages": {
+    "sending": "Se trimite…",
+    "pending": "Aproape gata! Ți-am trimis un email: apasă pe linkul din el ca să-ți confirmi înscrierea. Dacă nu-l găsești, uită-te și în Spam.",
+    "already": "Ești deja pe listă. Te anunțăm imediat ce lansăm.",
+    "invalidEmail": "Introdu o adresă de email validă.",
+    "consentRequired": "Bifează căsuța de acord ca să te putem anunța.",
+    "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
+    "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."
+  }
+}

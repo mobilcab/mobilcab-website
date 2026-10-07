@@ -1,0 +1,186 @@
+---
+import type { FoundingPartnerDict, Lang } from '../i18n';
+import { RESERVATION_LIMITS } from '../lib/reservation';
+
+interface Props {
+  lang: Lang;
+  t: FoundingPartnerDict;
+  privacyHref: string;
+}
+
+const { lang, t, privacyHref } = Astro.props;
+const label = 'block text-sm font-semibold text-ink';
+const input =
+  'mt-1.5 min-h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink focus:border-wood focus:ring-2 focus:ring-wood/25 focus:outline-none aria-[invalid=true]:border-red-700';
+---
+
+<div data-fp-form data-lang={lang} data-messages={JSON.stringify(t.messages)}>
+  <form class="space-y-4" novalidate>
+    <div>
+      <label for="fp-name" class={label}>{t.form.nameLabel}</label>
+      <input id="fp-name" name="name" type="text" autocomplete="name" required maxlength={RESERVATION_LIMITS.name.max} class={input} />
+    </div>
+    <div>
+      <label for="fp-email" class={label}>{t.form.emailLabel}</label>
+      <input
+        id="fp-email"
+        name="email"
+        type="email"
+        inputmode="email"
+        autocomplete="email"
+        autocapitalize="off"
+        spellcheck="false"
+        required
+        maxlength="254"
+        class={input}
+      />
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div>
+        <label for="fp-workshop" class={label}>
+          {t.form.workshopLabel} <span class="font-normal text-graphite">{t.form.optional}</span>
+        </label>
+        <input id="fp-workshop" name="workshop" type="text" autocomplete="organization" maxlength={RESERVATION_LIMITS.workshop.max} class={input} />
+      </div>
+      <div>
+        <label for="fp-city" class={label}>{t.form.cityLabel}</label>
+        <input id="fp-city" name="city" type="text" autocomplete="address-level2" required maxlength={RESERVATION_LIMITS.city.max} class={input} />
+      </div>
+    </div>
+
+    <label class="flex items-start gap-3 text-sm leading-snug text-graphite">
+      <input type="checkbox" name="consent" required class="mt-0.5 size-5 shrink-0 accent-wood" />
+      <span>
+        {t.form.consent}{' '}
+        <a href={privacyHref} class="text-ink underline underline-offset-2 hover:text-wood-dark">{t.form.privacyLink}</a>
+      </span>
+    </label>
+
+    <div class="honeypot" aria-hidden="true">
+      <label>
+        Company
+        <input type="text" name="company" tabindex="-1" autocomplete="off" />
+      </label>
+    </div>
+
+    <button type="submit" class="btn-primary w-full disabled:cursor-wait disabled:opacity-70 sm:w-auto">{t.form.submit}</button>
+    <p data-status role="status" aria-live="polite" class="min-h-5 text-sm font-medium text-red-800"></p>
+  </form>
+
+  <div data-done hidden tabindex="-1" class="rounded-md border border-line border-l-4 border-l-wood bg-white px-5 py-4 outline-none">
+    <p data-done-text class="text-base font-medium text-ink"></p>
+  </div>
+</div>
+
+<script>
+  import { isValidEmail, normalizeEmail } from '../lib/email';
+  import { cleanText, isValidField } from '../lib/reservation';
+
+  type MessageKey =
+    | 'sending'
+    | 'reserved'
+    | 'already'
+    | 'full'
+    | 'invalidName'
+    | 'invalidEmail'
+    | 'invalidWorkshop'
+    | 'invalidCity'
+    | 'consentRequired'
+    | 'network'
+    | 'server';
+  type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
+  const track: Plausible = (event, options) => (window as unknown as { plausible?: Plausible }).plausible?.(event, options);
+
+  for (const root of document.querySelectorAll<HTMLElement>('[data-fp-form]')) {
+    const form = root.querySelector('form')!;
+    const field = (name: string) => form.elements.namedItem(name) as HTMLInputElement;
+    const [nameInput, emailInput, workshopInput, cityInput, consentInput, honeypot] = [
+      'name',
+      'email',
+      'workshop',
+      'city',
+      'consent',
+      'company',
+    ].map(field);
+    const inputs = [nameInput, emailInput, workshopInput, cityInput, consentInput];
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    const status = root.querySelector<HTMLElement>('[data-status]')!;
+    const done = root.querySelector<HTMLElement>('[data-done]')!;
+    const doneText = root.querySelector<HTMLElement>('[data-done-text]')!;
+    const lang = root.dataset.lang ?? 'ro';
+    const messages: Record<MessageKey, string> = JSON.parse(root.dataset.messages ?? '{}');
+    const buttonLabel = button.textContent;
+
+    // Funnel: the first interaction with the form counts as "started".
+    form.addEventListener('input', () => track('fp_signup_started', { props: { lang } }), { once: true });
+
+    const setError = (message: string, input?: HTMLInputElement) => {
+      status.textContent = message;
+      for (const i of inputs) i.removeAttribute('aria-invalid');
+      if (input) {
+        input.setAttribute('aria-invalid', 'true');
+        input.focus();
+      }
+    };
+
+    const showDone = (message: string) => {
+      doneText.textContent = message;
+      form.hidden = true;
+      done.hidden = false;
+      done.focus();
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const name = cleanText(nameInput.value);
+      const email = normalizeEmail(emailInput.value);
+      const workshop = cleanText(workshopInput.value);
+      const city = cleanText(cityInput.value);
+
+      if (!isValidField('name', name)) return setError(messages.invalidName, nameInput);
+      if (!isValidEmail(email)) return setError(messages.invalidEmail, emailInput);
+      if (!isValidField('workshop', workshop)) return setError(messages.invalidWorkshop, workshopInput);
+      if (!isValidField('city', city)) return setError(messages.invalidCity, cityInput);
+      if (!consentInput.checked) return setError(messages.consentRequired, consentInput);
+
+      setError('');
+      button.disabled = true;
+      button.textContent = messages.sending;
+
+      try {
+        const res = await fetch('/api/founding-partner', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ name, email, workshop, city, consent: true, lang, company: honeypot.value }),
+          signal: AbortSignal.timeout(15000),
+        });
+        const data: { status?: string; error?: string } = await res.json().catch(() => ({}));
+
+        if (res.ok && data.status === 'reserved') {
+          track('fp_signup_completed', { props: { lang } });
+          document.dispatchEvent(new CustomEvent('fp:reserved'));
+          return showDone(messages.reserved);
+        }
+        if (res.ok && data.status === 'already') return showDone(messages.already);
+        if (res.ok && data.status === 'full') return showDone(messages.full);
+
+        const errors: Record<string, [MessageKey, HTMLInputElement]> = {
+          invalid_name: ['invalidName', nameInput],
+          invalid_email: ['invalidEmail', emailInput],
+          invalid_workshop: ['invalidWorkshop', workshopInput],
+          invalid_city: ['invalidCity', cityInput],
+          consent_required: ['consentRequired', consentInput],
+        };
+        const known = data.error ? errors[data.error] : undefined;
+        if (known) return setError(messages[known[0]], known[1]);
+        setError(messages.server);
+      } catch {
+        setError(messages.network);
+      } finally {
+        button.disabled = false;
+        button.textContent = buttonLabel;
+      }
+    });
+  }
+</script>

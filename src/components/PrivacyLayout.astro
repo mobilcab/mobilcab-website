@@ -1,0 +1,27 @@
+---
+// The temporary privacy notice, shown at the real privacy address while the
+// full Privacy Policy isn't published (src/site.ts).
+import Base from '../layouts/Base.astro';
+import SiteHeader from './SiteHeader.astro';
+import type { Lang } from '../i18n';
+import { livePaths } from '../site';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+}
+
+const { lang, title, description } = Astro.props;
+const privacyPaths = livePaths.privacy;
+---
+
+<Base lang={lang} title={`${title} — Mobilcab`} description={description} alternates={privacyPaths}>
+  <div class="mx-auto flex min-h-dvh max-w-xl flex-col px-5 sm:px-8">
+    <SiteHeader lang={lang} alternates={privacyPaths} />
+    <main class="pt-8 pb-16 text-base leading-relaxed text-graphite [&_h2]:mt-8 [&_h2]:font-semibold [&_h2]:text-ink [&_a]:text-ink [&_a]:underline [&_a]:underline-offset-2 [&_ul]:mt-2 [&_ul]:list-disc [&_ul]:space-y-1 [&_ul]:pl-5">
+      <h1 class="text-[1.75rem] leading-tight font-bold tracking-tight text-ink">{title}</h1>
+      <slot />
+    </main>
+  </div>
+</Base>

@@ -1,0 +1,73 @@
+{
+  "meta": {
+    "title": "The Founding Partner program — Mobilcab",
+    "description": "The first 100 workshops who build Mobilcab with us get pricing locked for 12 months, a real say in what comes next, and access before everyone else."
+  },
+  "hero": {
+    "label": "The Founding Partner program",
+    "title": "Help shape the tool Romanian workshops actually need.",
+    "body": "We're not looking for testers for unfinished software. We're looking for 100 workshops to build it with us — and in return they get locked-in pricing, a real say in what comes next, and access before everyone else.",
+    "cta": "Claim your Founding Partner spot"
+  },
+  "counter": {
+    "remaining": "{remaining} of {total} Founding Partner spots remaining",
+    "full": "All {total} Founding Partner spots have been claimed."
+  },
+  "included": {
+    "title": "What's included",
+    "items": [
+      { "title": "Pricing locked for 12 months", "body": "You pay the same price for a whole year, however prices change after launch." },
+      { "title": "A say in what we build", "body": "Tell us what's missing in your workshop, and your ideas go straight into the roadmap." },
+      { "title": "Your name, as a Founding Partner", "body": "You're listed among the people who helped build Mobilcab." },
+      { "title": "Private feedback group", "body": "Talk directly with the founder and the other Founding Partners." },
+      { "title": "Access before everyone else", "body": "You get new features first, before they reach everyone." }
+    ]
+  },
+  "offer": {
+    "title": "The offer",
+    "price": "49 RON/month",
+    "yearly": "or 549 RON/year",
+    "detail": "The Basic plan, with pricing locked for 12 months. Only for the first 100 workshops.",
+    "noPayment": "Nothing to pay now: you reserve your spot, and only pay once you get access."
+  },
+  "ai": {
+    "title": "What Basic doesn't include",
+    "body": "Said plainly, so there are no surprises: Basic covers design, cutlists and CNC export. You try the AI assistant once, on the starter project, to see what it does. After that, AI is only included in the Starter (from 99 RON/month), Pro and Studio plans."
+  },
+  "proof": {
+    "title": "What the first Founding Partners say"
+  },
+  "next": {
+    "title": "What happens after you reserve",
+    "steps": [
+      "Your spot is held in your name.",
+      "We contact you personally when Founding Partner access opens.",
+      "You only pay once you get access."
+    ]
+  },
+  "form": {
+    "title": "Reserve your spot",
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "workshopLabel": "Workshop name",
+    "optional": "(optional)",
+    "cityLabel": "City",
+    "consent": "I agree to be contacted about the Founding Partner program and to receive updates by email.",
+    "privacyLink": "See the privacy policy",
+    "submit": "Claim your Founding Partner spot"
+  },
+  "messages": {
+    "sending": "Sending…",
+    "reserved": "Your spot is reserved! We'll contact you personally when access opens.",
+    "already": "You already have a spot reserved. We'll contact you personally when access opens.",
+    "full": "All Founding Partner spots have been claimed. You can still join the waitlist for free.",
+    "invalidName": "Enter your name (at least 2 letters).",
+    "invalidEmail": "Enter a valid email address.",
+    "invalidWorkshop": "The workshop name is too long.",
+    "invalidCity": "Enter the city you work in.",
+    "consentRequired": "Tick the consent box so we can contact you.",
+    "network": "Couldn't send. Check your connection and try again.",
+    "server": "Something went wrong on our side. Please try again in a few minutes."
+  },
+  "joinFree": "Join free"
+}

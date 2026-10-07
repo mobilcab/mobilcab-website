@@ -1,0 +1,80 @@
+---
+// Every content page of the site, generated from the launch switch in
+// src/site.ts. A published page is built at its real address; an unpublished
+// one at /preview/<address>, plus a stand-in at the real address for Home
+// (coming-soon page) and Privacy (temporary notice).
+// API routes and 404.astro are separate files.
+import type { GetStaticPaths } from 'astro';
+import BlogIndexPage from '../components/BlogIndexPage.astro';
+import BlogPostPage from '../components/BlogPostPage.astro';
+import ComingSoonPage from '../components/ComingSoonPage.astro';
+import DemoPage from '../components/DemoPage.astro';
+import FaqPage from '../components/FaqPage.astro';
+import FoundingPartnerPage from '../components/FoundingPartnerPage.astro';
+import HomePage from '../components/HomePage.astro';
+import LegalPage from '../components/LegalPage.astro';
+import PricingPage from '../components/PricingPage.astro';
+import PrivacyNotice from '../components/PrivacyNotice.astro';
+import { Content as PrivacyEn } from '../content/legal/privacy.en.md';
+import { Content as PrivacyRo } from '../content/legal/privacy.ro.md';
+import { Content as TermsEn } from '../content/legal/terms.en.md';
+import { Content as TermsRo } from '../content/legal/terms.ro.md';
+import { languages, type Lang } from '../i18n';
+import { postPath, posts, type Post } from '../lib/blog';
+import { hasStandIn, livePaths, pathFor, published, type PageKey } from '../site';
+
+type Props =
+  | {
+      key: PageKey;
+      lang: Lang;
+      /** Render the stand-in instead of the page itself. */
+      standIn: boolean;
+      post?: undefined;
+    }
+  | { post: Post; key?: undefined; lang?: undefined; standIn?: undefined };
+
+// getStaticPaths runs on its own, so everything it uses must be imported or defined inside it.
+export const getStaticPaths = (() => {
+  // "/ro/preturi/" -> "ro/preturi" (the rest parameter has no slashes at the ends).
+  const param = (path: string) => path.replace(/^\/|\/$/g, '');
+  const pages = languages.flatMap((lang) =>
+    (Object.keys(livePaths) as PageKey[]).flatMap((key) => {
+      const routes = [{ params: { path: param(pathFor(key, lang)) }, props: { key, lang, standIn: false } }];
+      if (!published[key] && hasStandIn(key)) {
+        routes.push({ params: { path: param(livePaths[key][lang]) }, props: { key, lang, standIn: true } });
+      }
+      return routes;
+    }),
+  );
+  const blogPosts = posts.map((post) => ({ params: { path: param(postPath(post)) }, props: { post } }));
+  return [...pages, ...blogPosts];
+}) satisfies GetStaticPaths;
+
+const props = Astro.props;
+const { key, lang, standIn } = props.post ? { key: undefined, lang: undefined, standIn: false } : props;
+
+const legal = {
+  terms: { ro: { title: 'Termeni și condiții', description: 'Termenii de folosire a aplicației Mobilcab.', Body: TermsRo }, en: { title: 'Terms of Service', description: 'The terms for using the Mobilcab app.', Body: TermsEn } },
+  privacy: {
+    ro: { title: 'Politica de confidențialitate', description: 'Cum prelucrăm datele tale personale pe site-ul și în aplicația Mobilcab.', Body: PrivacyRo },
+    en: { title: 'Privacy Policy', description: 'How we process your personal data on the Mobilcab website and app.', Body: PrivacyEn },
+  },
+};
+const legalPage = lang && (key === 'terms' || key === 'privacy') && !standIn ? legal[key][lang] : null;
+---
+
+{props.post && <BlogPostPage post={props.post} />}
+{lang && key === 'blog' && <BlogIndexPage lang={lang} />}
+{lang && key === 'home' && (standIn ? <ComingSoonPage lang={lang} /> : <HomePage lang={lang} />)}
+{lang && key === 'foundingPartner' && <FoundingPartnerPage lang={lang} />}
+{lang && key === 'demo' && <DemoPage lang={lang} />}
+{lang && key === 'pricing' && <PricingPage lang={lang} />}
+{lang && key === 'faq' && <FaqPage lang={lang} />}
+{lang && key === 'privacy' && standIn && <PrivacyNotice lang={lang} />}
+{
+  lang && legalPage && (key === 'terms' || key === 'privacy') && (
+    <LegalPage lang={lang} page={key} title={legalPage.title} description={legalPage.description}>
+      <legalPage.Body />
+    </LegalPage>
+  )
+}

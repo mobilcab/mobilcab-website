@@ -1,0 +1,71 @@
+---
+// Click-to-load YouTube player. Shows only YouTube's thumbnail (a small image)
+// until someone presses play; the heavy player iframe loads after that.
+// Uses youtube-nocookie.com. Both hosts are allowed in the CSP (astro.config.mjs).
+// With no video ID yet, shows a "coming soon" placeholder.
+
+interface Props {
+  youtubeId: string | null;
+  title: string;
+  comingSoon: string;
+  /** Button label for screen readers, with `{title}` replaced. */
+  playLabel: string;
+  /** Load the thumbnail eagerly (above the fold). */
+  eager?: boolean;
+}
+
+const { youtubeId, title, comingSoon, playLabel, eager = false } = Astro.props;
+const box = 'relative aspect-video w-full overflow-hidden rounded-md border border-line';
+---
+
+{
+  youtubeId ? (
+    <div class:list={[box, 'bg-ink']} data-yt={youtubeId} data-yt-title={title}>
+      <button type="button" class="group absolute inset-0 h-full w-full cursor-pointer" aria-label={playLabel.replace('{title}', title)}>
+        <img
+          src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
+          alt=""
+          width="480"
+          height="360"
+          loading={eager ? 'eager' : 'lazy'}
+          decoding="async"
+          class="absolute inset-0 h-full w-full object-cover"
+        />
+        <span class="absolute inset-0 flex items-center justify-center">
+          <span class="flex size-16 items-center justify-center rounded-full bg-wood text-white shadow-lg transition-transform group-hover:scale-105">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M8 5.5v13l11-6.5z" />
+            </svg>
+          </span>
+        </span>
+      </button>
+    </div>
+  ) : (
+    <div class:list={[box, 'blueprint flex flex-col items-center justify-center gap-2 bg-paper text-graphite']}>
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M10 8.5v7l5.5-3.5z" />
+      </svg>
+      <span class="text-xs font-semibold tracking-wide">{comingSoon}</span>
+    </div>
+  )
+}
+
+<script>
+  for (const box of document.querySelectorAll<HTMLElement>('[data-yt]')) {
+    box.querySelector('button')?.addEventListener(
+      'click',
+      () => {
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(box.dataset.yt ?? '')}?autoplay=1&rel=0`;
+        iframe.title = box.dataset.ytTitle ?? '';
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+        iframe.allowFullscreen = true;
+        iframe.className = 'absolute inset-0 h-full w-full border-0';
+        box.replaceChildren(iframe);
+        iframe.focus();
+      },
+      { once: true },
+    );
+  }
+</script>

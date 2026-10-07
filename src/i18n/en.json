@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "title": "Mobilcab — furniture design, right in your browser",
+    "description": "Furniture design, right in your browser. Nothing to install — work on your laptop, tablet or phone."
+  },
+  "nav": {
+    "languageLabel": "Language",
+    "mainLabel": "Main navigation",
+    "menu": "Menu",
+    "demo": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "foundingPartner": "Founding Partner",
+    "terms": "Terms",
+    "privacy": "Privacy"
+  },
+  "hero": {
+    "headline": "Mobilcab — furniture design, right in your browser.",
+    "valueProp": "Nothing to install. Work on your laptop, tablet or phone.",
+    "description": "We're building a design tool for carpenters and furniture workshops — simple, fast, and affordable. Leave your email to be the first to know when we launch."
+  },
+  "form": {
+    "emailLabel": "Your email address",
+    "emailPlaceholder": "name@example.com",
+    "submit": "Notify me at launch",
+    "consent": "I agree to receive updates by email.",
+    "privacyLink": "See the privacy policy"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The link may be wrong, or the page may have moved.",
+    "back": "Back to the home page"
+  },
+  "messages": {
+    "sending": "Sending…",
+    "pending": "Almost done! We've sent you an email: click the link in it to confirm your sign-up. If you can't find it, check your Spam folder.",
+    "already": "You're already on the list. We'll let you know as soon as we launch.",
+    "invalidEmail": "Enter a valid email address.",
+    "consentRequired": "Tick the consent box so we can notify you.",
+    "network": "Couldn't send. Check your connection and try again.",
+    "server": "Something went wrong on our side. Please try again in a few minutes."
+  }
+}

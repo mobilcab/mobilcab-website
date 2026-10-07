@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Frequently asked questions — Mobilcab",
+    "description": "Straight answers about Mobilcab: installing, tablets, CNC export, pricing, the Basic plan, and how far you can rely on the AI assistant."
+  },
+  "hero": {
+    "label": "Frequently asked questions",
+    "title": "Straight answers, before you sign up.",
+    "body": "If you can't find what you're looking for, write to us. We answer personally."
+  },
+  "items": [
+    {
+      "id": "install",
+      "q": "Do I need to install anything?",
+      "a": ["No. Mobilcab runs straight from your browser, on laptop, tablet or phone. Nothing to install, no license server."]
+    },
+    {
+      "id": "tablet",
+      "q": "Does it work on a tablet?",
+      "a": ["Yes, it's built for laptop, tablet and phone. You can start a project in the workshop and show it to your client on a tablet, on-site."]
+    },
+    {
+      "id": "cnc-export",
+      "q": "Can I export directly for my CNC?",
+      "a": ["Yes — the cutlist export is ready for a standard CNC workflow. From a finished design, one click gives you the list with panel dimensions, quantities and materials."]
+    },
+    {
+      "id": "price",
+      "q": "How much does it cost?",
+      "a": [
+        "The free plan is available any time.",
+        "The first 100 workshops get Founding Partner pricing: 49 RON/month or 549 RON/year for the Basic plan, locked for 12 months. Plans with the AI assistant included start at 99 RON/month. No contract — cancel anytime."
+      ],
+      "link": "foundingPartner"
+    },
+    {
+      "id": "ai-accuracy",
+      "q": "Is the AI assistant's output guaranteed to be accurate?",
+      "a": [
+        "No. The AI assistant is a helper, not a guarantee. It flags possible problems — for example, a drawer that would hit a hinge — and suggests panel splits, but it can be wrong.",
+        "Always verify dimensions, clearances and the cutlist before cutting. The final call is yours."
+      ]
+    },
+    {
+      "id": "plans",
+      "q": "How is Basic different from the other plans?",
+      "a": [
+        "Basic covers everything design-related: the design, the cutlist and CNC export. You try the AI assistant once, on the starter project. The Starter, Pro and Studio plans add the AI assistant, with more requests per month at each step:"
+      ],
+      "tiers": true,
+      "after": ["Final prices are confirmed before launch."]
+    }
+  ],
+  "tiers": {
+    "names": { "free": "Free", "basic": "Basic", "starter": "Starter", "pro": "Pro", "studio": "Studio" },
+    "perMonth": "{price} RON/month",
+    "free": "0 RON",
+    "aiTrial": "AI: one trial, during onboarding",
+    "aiPerMonth": "{count} AI requests per month"
+  },
+  "contact": {
+    "title": "Didn't find your answer?",
+    "body": "Write to us at {email} and we'll answer personally."
+  },
+  "links": {
+    "foundingPartner": "About the Founding Partner program"
+  },
+  "cta": {
+    "primary": "Become a Founding Partner",
+    "secondary": "Or join free"
+  }
+}

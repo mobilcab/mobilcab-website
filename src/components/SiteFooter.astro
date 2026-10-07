@@ -1,0 +1,32 @@
+---
+// Footer links follow the launch switch the same way as the header menu.
+import { useTranslations, type Lang } from '../i18n';
+import { linkFor } from '../site';
+
+interface Props {
+  lang: Lang;
+  /** Whether the page showing this footer is a preview. */
+  preview?: boolean;
+}
+
+const { lang, preview = false } = Astro.props;
+const t = useTranslations(lang);
+const links = (['faq', 'terms', 'privacy'] as const)
+  .map((key) => ({ label: t.nav[key], href: linkFor(key, lang, preview) }))
+  .filter((link) => link.href !== null);
+---
+
+<footer class="border-t border-line">
+  <div class="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-5 py-6 text-sm text-graphite sm:px-8">
+    <p>© {new Date().getFullYear()} Mobilcab</p>
+    <nav aria-label={lang === 'ro' ? 'Subsol' : 'Footer'} class="flex flex-wrap gap-x-5">
+      {
+        links.map((link) => (
+          <a href={link.href} class="inline-flex min-h-11 items-center underline-offset-4 hover:text-ink hover:underline">
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</footer>

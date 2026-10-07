@@ -1,0 +1,94 @@
+---
+// Demo / How it works (Build Brief 4.4, Funnel Plan 3.4). A standalone page so
+// Facebook posts and YouTube descriptions can link straight to proof. Each clip
+// has its own anchor: #design, #ai, #export.
+import Base from '../layouts/Base.astro';
+import PreviewBanner from './PreviewBanner.astro';
+import SiteFooter from './SiteFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+import VideoPlayer from './VideoPlayer.astro';
+import { demoVideos } from '../data/demoVideos';
+import { useDemoTranslations, type Lang } from '../i18n';
+import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const preview = !published.demo;
+const t = useDemoTranslations(lang);
+const paths = pathsFor('demo');
+const fpHref = linkFor('foundingPartner', lang, preview);
+const joinFreeHref = joinFree(lang, preview);
+const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
+---
+
+<Base lang={lang} title={t.meta.title} description={t.meta.description} alternates={preview ? undefined : paths}>
+  {preview && <PreviewBanner lang={lang} />}
+
+  <div class={wrap}>
+    <SiteHeader lang={lang} alternates={paths} preview={preview} current="demo" />
+  </div>
+
+  <main>
+    <section class:list={[wrap, 'pt-10 pb-12 sm:pt-16 sm:pb-16']}>
+      <div class="max-w-2xl">
+        <div class="dimension-line mb-6" aria-hidden="true"></div>
+        <p class="text-sm font-semibold tracking-wide text-wood">{t.hero.label}</p>
+        <h1 class="mt-3 text-[2rem] leading-[1.12] font-bold tracking-tight text-balance sm:text-[3rem]">{t.hero.title}</h1>
+        <p class="mt-5 text-lg leading-relaxed text-graphite">{t.hero.body}</p>
+      </div>
+    </section>
+
+    {
+      demoVideos.map((video, i) => {
+        const copy = t.videos[i];
+        if (!copy) return null;
+        return (
+          <section id={video.key} class:list={['scroll-mt-4 border-t border-line', i % 2 === 0 && 'bg-white/60']}>
+            <div class:list={[wrap, 'grid gap-6 py-12 sm:py-16 md:grid-cols-[3fr_2fr] md:items-start md:gap-10']}>
+              <VideoPlayer
+                youtubeId={video.youtubeId[lang] ?? video.youtubeId.ro}
+                title={copy.title}
+                comingSoon={t.player.comingSoon}
+                playLabel={t.player.play}
+                eager={i === 0}
+              />
+              <div>
+                <p class="text-sm font-semibold text-wood">{String(i + 1).padStart(2, '0')}</p>
+                <h2 class="mt-1 text-[1.5rem] leading-tight font-bold tracking-tight">{copy.title}</h2>
+                <p class="mt-3 text-lg leading-snug font-semibold text-ink">{copy.aha}</p>
+                <ul class="mt-4 space-y-2">
+                  {copy.points.map((point) => (
+                    <li class="flex gap-3 text-base leading-relaxed text-graphite">
+                      <span class="mt-[0.7em] h-px w-4 shrink-0 bg-wood" aria-hidden="true" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                {copy.note && (
+                  <p class="mt-4 rounded-md border border-line bg-paper px-4 py-3 text-sm leading-relaxed text-ink">{copy.note}</p>
+                )}
+              </div>
+            </div>
+          </section>
+        );
+      })
+    }
+
+    <section class="border-t border-line">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class="text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]">{t.cta.title}</h2>
+        <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+          {fpHref && <a href={fpHref} class="btn-primary" data-cta="founding_partner" data-cta-location="demo">{t.cta.primary}</a>}
+          <a href={joinFreeHref} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="join_free" data-cta-location="demo">
+            {t.cta.secondary}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter lang={lang} preview={preview} />
+</Base>

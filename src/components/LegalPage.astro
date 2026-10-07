@@ -1,0 +1,40 @@
+---
+// Shell for long legal text (Terms now; the full Privacy Policy later). The text
+// itself is Markdown in src/content/legal/, passed in through the slot, so the
+// lawyer-reviewed file and the page can't drift apart.
+import Base from '../layouts/Base.astro';
+import PreviewBanner from './PreviewBanner.astro';
+import SiteFooter from './SiteFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+import type { Lang } from '../i18n';
+import { pathsFor, published } from '../site';
+
+interface Props {
+  lang: Lang;
+  page: 'terms' | 'privacy';
+  title: string;
+  description: string;
+}
+
+const { lang, page, title, description } = Astro.props;
+const preview = !published[page];
+const paths = pathsFor(page);
+---
+
+<Base lang={lang} title={`${title} — Mobilcab`} description={description} alternates={preview ? undefined : paths}>
+  {preview && <PreviewBanner lang={lang} />}
+
+  <div class="mx-auto w-full max-w-5xl px-5 sm:px-8">
+    <SiteHeader lang={lang} alternates={paths} preview={preview} current={page} />
+  </div>
+
+  <main class="mx-auto w-full max-w-5xl px-5 pt-10 pb-16 sm:px-8 sm:pt-16">
+    <article class="prose-text max-w-2xl">
+      <div class="dimension-line mb-6" aria-hidden="true"></div>
+      <h1 class="text-[2rem] leading-tight font-bold tracking-tight text-ink sm:text-[2.5rem]">{title}</h1>
+      <slot />
+    </article>
+  </main>
+
+  <SiteFooter lang={lang} preview={preview} />
+</Base>

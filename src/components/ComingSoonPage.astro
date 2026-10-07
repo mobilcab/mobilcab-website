@@ -1,0 +1,45 @@
+---
+import Base from '../layouts/Base.astro';
+import SiteHeader from './SiteHeader.astro';
+import WaitlistForm from './WaitlistForm.astro';
+import { useHomeTranslations, useTranslations, type Lang } from '../i18n';
+import { homeData } from '../lib/structuredData';
+import { linkFor, livePaths } from '../site';
+
+// Shown at /ro/ and /en/ while the full Home page isn't published (src/site.ts).
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const homePaths = livePaths.home;
+// Same anchor as the Home page's form, so "join free" links work either way.
+const joinId = useHomeTranslations(lang).anchors.join;
+---
+
+<Base
+  lang={lang}
+  title={t.meta.title}
+  description={t.meta.description}
+  alternates={homePaths}
+  structuredData={Astro.site ? homeData(Astro.site, lang) : []}
+>
+  <div class="mx-auto flex min-h-dvh max-w-xl flex-col px-5 sm:px-8">
+    <SiteHeader lang={lang} alternates={homePaths} current="home" />
+
+    <main class="flex flex-1 flex-col justify-center pt-8 pb-16 sm:pb-24">
+      <div class="dimension-line mb-6" aria-hidden="true"></div>
+      <h1 class="text-[1.875rem] leading-[1.15] font-bold tracking-tight text-balance sm:text-[2.5rem]">
+        {t.hero.headline}
+      </h1>
+      <p class="mt-5 text-lg font-medium text-ink">{t.hero.valueProp}</p>
+      <p class="mt-3 text-base leading-relaxed text-graphite">{t.hero.description}</p>
+
+      <div id={joinId} class="mt-8 scroll-mt-4">
+        <WaitlistForm lang={lang} t={t} privacyHref={linkFor('privacy', lang, false) ?? ''} />
+      </div>
+    </main>
+  </div>
+</Base>

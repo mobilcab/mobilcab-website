@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Mobilcab — from idea to panel, straight from your browser",
+    "description": "Cloud-based furniture CAD that runs in your browser, on laptop, tablet or phone. AI design assistant and one-click CNC cutlist export."
+  },
+  "hero": {
+    "title": "From idea to panel, straight from your browser.",
+    "body": "Mobilcab is a cloud-based CAD for furniture — works on laptop, tablet, or phone. No installs, no license servers. Design it, and your cutlist is CNC-ready in one click.",
+    "ctaPrimary": "Become a Founding Partner",
+    "ctaSecondary": "Or join free",
+    "note": "The first 100 workshops get Founding Partner pricing, locked for 12 months."
+  },
+  "problem": {
+    "title": "Sound familiar?",
+    "items": [
+      "Heavy CAD software installed on one single workshop computer",
+      "Expensive licenses for features you barely use",
+      "Hours lost manually building the cutlist for your CNC",
+      "No easy way to show a live design to a client on-site, from your phone"
+    ]
+  },
+  "features": {
+    "title": "Three reasons Mobilcab is different",
+    "items": [
+      {
+        "title": "100% browser-based",
+        "body": "No install, no license server. Open it on any device — laptop, tablet, phone."
+      },
+      {
+        "title": "AI design assistant",
+        "body": "Suggests panel layouts and flags errors before they reach the saw."
+      },
+      {
+        "title": "One-click cutlist & CNC export",
+        "body": "From design to cutting file, no manual steps in between."
+      }
+    ]
+  },
+  "demo": {
+    "title": "See how it works",
+    "intro": "Three short clips on the same project: from the first panels to the file for your CNC.",
+    "comingSoon": "Clip coming soon",
+    "link": "All clips, in detail",
+    "videos": [
+      { "title": "Design flow", "caption": "A corner kitchen cabinet from scratch, in under 10 minutes." },
+      { "title": "AI assistant", "caption": "Catches a clearance mistake before it hits the saw." },
+      { "title": "Cutlist & CNC export", "caption": "From design to cutting file, no manual math." }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "offerLabel": "Founding Partner",
+    "offerPrice": "49 RON/month",
+    "offerDetail": "or 549 RON/year, for the Basic plan, locked for 12 months. Only for the first 100 workshops.",
+    "aiNote": "Basic covers design and cutlists; you try the AI assistant once, during onboarding. Plans with AI included start at 99 RON/month.",
+    "free": "The free plan is available any time.",
+    "cancel": "No contract — cancel anytime.",
+    "link": "See all plans"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      { "q": "Do I need to install anything?", "a": "No, Mobilcab runs straight from your browser." },
+      { "q": "Does it work on a tablet?", "a": "Yes, it's built for laptop, tablet and phone." },
+      { "q": "Can I export directly for my CNC?", "a": "Yes — the cutlist export is ready for a standard CNC workflow." },
+      { "q": "How much does it cost?", "a": "The free plan is available any time; the first 100 users get special Founding Partner pricing." }
+    ],
+    "link": "All questions"
+  },
+  "final": {
+    "title": "Be among the first workshops in Romania designing straight from the browser.",
+    "or": "Or join the waitlist for free:"
+  },
+  "footer": {
+    "privacy": "Privacy"
+  },
+  "anchors": {
+    "join": "join"
+  }
+}

@@ -1,0 +1,96 @@
+---
+// Header: wordmark, main menu, language switch. Menu items come from
+// src/site.ts and only appear when they'd point somewhere this page is allowed
+// to link to, so public pages never link to unpublished ones (and the
+// coming-soon page, with nothing published, shows no menu at all).
+// The phone menu is a native <details>, so it needs no JavaScript.
+import LangSwitch from './LangSwitch.astro';
+import Wordmark from './Wordmark.astro';
+import { useTranslations, type Lang } from '../i18n';
+import { linkFor, type PageKey } from '../site';
+
+interface Props {
+  lang: Lang;
+  alternates: Record<Lang, string>;
+  /** Whether the page showing this header is a preview. */
+  preview?: boolean;
+  /** The page being shown, marked as current in the menu. */
+  current?: PageKey;
+}
+
+const { lang, alternates, preview = false, current } = Astro.props;
+const t = useTranslations(lang);
+const home = linkFor('home', lang, preview) ?? '/';
+
+const items = (['demo', 'pricing', 'faq', 'blog'] as const)
+  .map((key) => ({ key, label: t.nav[key], href: linkFor(key, lang, preview) }))
+  .filter((item): item is { key: (typeof item)['key']; label: string; href: string } => item.href !== null);
+const fpHref = linkFor('foundingPartner', lang, preview);
+const hasMenu = items.length > 0 || fpHref !== null;
+
+const linkClass = 'inline-flex min-h-11 items-center font-semibold text-graphite hover:text-ink aria-[current=page]:text-ink';
+---
+
+<header class="relative flex items-center justify-between gap-4 py-4">
+  <Wordmark href={home} />
+
+  <div class="flex items-center gap-2 md:gap-6">
+    {
+      hasMenu && (
+        <nav aria-label={t.nav.mainLabel} class="hidden items-center gap-6 text-sm md:flex">
+          {items.map((item) => (
+            <a href={item.href} class={linkClass} aria-current={item.key === current ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))}
+          {fpHref && (
+            <a
+              href={fpHref}
+              class="inline-flex min-h-10 items-center rounded-md border border-wood px-3 font-semibold text-wood hover:bg-wood hover:text-white"
+              aria-current={current === 'foundingPartner' ? 'page' : undefined}
+              data-cta="founding_partner"
+              data-cta-location="header"
+            >
+              {t.nav.foundingPartner}
+            </a>
+          )}
+        </nav>
+      )
+    }
+
+    <LangSwitch lang={lang} alternates={alternates} label={t.nav.languageLabel} />
+
+    {
+      hasMenu && (
+        <details class="group md:hidden">
+          <summary class="flex min-h-11 cursor-pointer list-none items-center gap-2 rounded-md px-2 text-sm font-semibold text-ink [&::-webkit-details-marker]:hidden">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+              <path class="group-open:hidden" d="M4 7h16M4 12h16M4 17h16" />
+              <path class="hidden group-open:block" d="M6 6l12 12M18 6L6 18" />
+            </svg>
+            {t.nav.menu}
+          </summary>
+          <nav
+            aria-label={t.nav.mainLabel}
+            class="absolute inset-x-0 top-full z-20 rounded-md border border-line bg-white p-2 shadow-lg"
+          >
+            {items.map((item) => (
+              <a
+                href={item.href}
+                class="flex min-h-12 items-center rounded px-3 font-semibold text-ink hover:bg-paper aria-[current=page]:text-wood"
+                aria-current={item.key === current ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+            {fpHref && (
+              <a href={fpHref} class="btn-primary mt-2 w-full" data-cta="founding_partner" data-cta-location="header">
+                {t.nav.foundingPartner}
+              </a>
+            )}
+          </nav>
+        </details>
+      )
+    }
+  </div>
+</header>

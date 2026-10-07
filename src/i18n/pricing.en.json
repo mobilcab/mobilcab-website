@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Pricing — Mobilcab",
+    "description": "Pricing in RON, no contract: a free plan, Basic from 49 RON/month, and plans with the AI assistant from 99 RON/month. Cancel anytime."
+  },
+  "hero": {
+    "label": "Pricing",
+    "title": "Pricing in RON. No contract, no thousands of euros upfront.",
+    "body": "Start free and move to a paid plan only when you need it. What changes between plans is the AI assistant: how often you can use it."
+  },
+  "callout": {
+    "title": "New here?",
+    "body": "Founding Partner pricing locks the Basic plan at 549 RON/year, for 12 months. Only for the first 100 workshops.",
+    "link": "About the Founding Partner program"
+  },
+  "perMonth": "RON/month",
+  "free": "0 RON",
+  "fpYearly": "Founding Partner: {price} RON/year, locked for 12 months",
+  "cancel": "No contract — cancel anytime",
+  "aiTrial": "AI assistant: one trial, during onboarding",
+  "aiPerMonth": "AI assistant: {count} requests per month",
+  "plans": {
+    "free": {
+      "name": "Free",
+      "for": "To try Mobilcab on your own projects, with no risk at all.",
+      "features": ["Full design", "On laptop, tablet and phone", "Limited export"],
+      "cta": "Join free"
+    },
+    "basic": {
+      "name": "Basic",
+      "for": "For carpenters who want design, cutlists and CNC export, without AI.",
+      "features": ["Full design", "On laptop, tablet and phone", "Cutlist & CNC export"],
+      "cta": "Become a Founding Partner"
+    },
+    "starter": {
+      "name": "Starter",
+      "for": "For workshops that want the AI assistant on everyday projects.",
+      "features": ["Everything in Basic", "The AI assistant checks and suggests"],
+      "cta": "Notify me at launch"
+    },
+    "pro": {
+      "name": "Pro",
+      "for": "For workshops with many projects a month.",
+      "features": ["Everything in Starter", "Three times as many AI requests"],
+      "cta": "Notify me at launch"
+    },
+    "studio": {
+      "name": "Studio",
+      "for": "For workshops that use the AI assistant on every project.",
+      "features": ["Everything in Pro", "The most AI requests"],
+      "cta": "Notify me at launch"
+    }
+  },
+  "why": {
+    "title": "Why is AI only in the bigger plans?",
+    "body": "Every request to the AI assistant costs us, so plans with AI cost more. Basic doesn't use AI, which is why it can stay this affordable. So you know what you're getting or missing, everyone tries the assistant once, during onboarding."
+  },
+  "note": "Final prices are confirmed before launch.",
+  "faqLink": "Questions about the plans"
+}

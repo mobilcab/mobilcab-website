@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "title": "Prețuri — Mobilcab",
+    "description": "Prețuri în lei, fără contract: plan gratuit, Basic de la 49 RON/lună și planuri cu asistent AI de la 99 RON/lună. Anulezi oricând."
+  },
+  "hero": {
+    "label": "Prețuri",
+    "title": "Prețuri în lei. Fără contract, fără plată de mii de euro la început.",
+    "body": "Începi gratuit și treci la un plan plătit doar când ai nevoie. Diferența dintre planuri e asistentul AI: cât de des îl poți folosi."
+  },
+  "callout": {
+    "title": "Ești nou aici?",
+    "body": "Prețul Founding Partner îți blochează planul Basic la 549 RON/an, timp de 12 luni. Doar pentru primii 100 de tâmplari.",
+    "link": "Despre programul Founding Partner"
+  },
+  "perMonth": "RON/lună",
+  "free": "0 RON",
+  "fpYearly": "Founding Partner: {price} RON/an, blocat 12 luni",
+  "cancel": "Fără contract — anulezi oricând",
+  "aiTrial": "Asistentul AI: o încercare, la început",
+  "aiPerMonth": "Asistentul AI: {count} cereri pe lună",
+  "plans": {
+    "free": {
+      "name": "Gratuit",
+      "for": "Ca să încerci Mobilcab pe proiectele tale, fără niciun risc.",
+      "features": ["Proiectare completă", "Pe laptop, tabletă și telefon", "Export limitat"],
+      "cta": "Alătură-te gratuit"
+    },
+    "basic": {
+      "name": "Basic",
+      "for": "Pentru tâmplarii care vor proiectare, cutlist și export CNC, fără AI.",
+      "features": ["Proiectare completă", "Pe laptop, tabletă și telefon", "Cutlist și export CNC"],
+      "cta": "Devino Founding Partner"
+    },
+    "starter": {
+      "name": "Starter",
+      "for": "Pentru atelierele care vor asistentul AI la proiectele obișnuite.",
+      "features": ["Tot ce are Basic", "Asistentul AI verifică și sugerează"],
+      "cta": "Anunță-mă la lansare"
+    },
+    "pro": {
+      "name": "Pro",
+      "for": "Pentru atelierele cu multe proiecte pe lună.",
+      "features": ["Tot ce are Starter", "De trei ori mai multe cereri AI"],
+      "cta": "Anunță-mă la lansare"
+    },
+    "studio": {
+      "name": "Studio",
+      "for": "Pentru atelierele care folosesc asistentul AI la fiecare proiect.",
+      "features": ["Tot ce are Pro", "Cele mai multe cereri AI"],
+      "cta": "Anunță-mă la lansare"
+    }
+  },
+  "why": {
+    "title": "De ce e AI-ul doar în planurile mai mari?",
+    "body": "Fiecare cerere către asistentul AI ne costă, așa că planurile cu AI costă mai mult. Basic nu folosește AI, de aceea poate rămâne atât de accesibil. Ca să știi ce pierzi sau ce câștigi, oricine încearcă asistentul o dată, la început."
+  },
+  "note": "Prețurile finale se confirmă înainte de lansare.",
+  "faqLink": "Întrebări despre planuri"
+}

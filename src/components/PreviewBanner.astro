@@ -1,0 +1,13 @@
+---
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+<p class="bg-ink px-5 py-2 text-center text-xs font-semibold tracking-wide text-paper">
+  {lang === 'ro' ? 'Previzualizare — pagina nu e publică încă.' : 'Preview — this page is not public yet.'}
+</p>

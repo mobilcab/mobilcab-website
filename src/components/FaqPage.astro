@@ -1,0 +1,143 @@
+---
+// FAQ / Support (Build Brief 4.6, Funnel Plan 3.6). Each question has its own
+// anchor (e.g. #ai-corect), and opens automatically when linked to directly.
+// Questions waiting on a decision are listed in docs/DECISIONS.md, not here.
+import Base from '../layouts/Base.astro';
+import PreviewBanner from './PreviewBanner.astro';
+import SiteFooter from './SiteFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+import { CONTACT_EMAIL } from '../config';
+import { tiers } from '../data/pricing';
+import { useFaqTranslations, type Lang } from '../i18n';
+import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const preview = !published.faq;
+const t = useFaqTranslations(lang);
+const paths = pathsFor('faq');
+const fpHref = linkFor('foundingPartner', lang, preview);
+const joinFreeHref = joinFree(lang, preview);
+// In-answer links, left out when their page isn't reachable from here.
+const linkTargets: Record<string, { href: string; label: string } | undefined> = {
+  foundingPartner: fpHref ? { href: fpHref, label: t.links.foundingPartner } : undefined,
+};
+const [contactBefore, contactAfter] = t.contact.body.split('{email}');
+const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
+---
+
+<Base lang={lang} title={t.meta.title} description={t.meta.description} alternates={preview ? undefined : paths}>
+  {preview && <PreviewBanner lang={lang} />}
+
+  <div class={wrap}>
+    <SiteHeader lang={lang} alternates={paths} preview={preview} current="faq" />
+  </div>
+
+  <main>
+    <section class:list={[wrap, 'pt-10 pb-10 sm:pt-16 sm:pb-14']}>
+      <div class="max-w-2xl">
+        <div class="dimension-line mb-6" aria-hidden="true"></div>
+        <p class="text-sm font-semibold tracking-wide text-wood">{t.hero.label}</p>
+        <h1 class="mt-3 text-[2rem] leading-[1.12] font-bold tracking-tight text-balance sm:text-[3rem]">{t.hero.title}</h1>
+        <p class="mt-5 text-lg leading-relaxed text-graphite">{t.hero.body}</p>
+      </div>
+    </section>
+
+    <section class="border-t border-line bg-white/60">
+      <div class:list={[wrap, 'py-10 sm:py-14']}>
+        <div class="max-w-2xl divide-y divide-line border-y border-line">
+          {
+            t.items.map((item) => {
+              const link = item.link ? linkTargets[item.link] : undefined;
+              return (
+                <details id={item.id} class="group scroll-mt-4 py-1" data-faq={item.id}>
+                  <summary class="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold [&::-webkit-details-marker]:hidden">
+                    {item.q}
+                    <span class="text-2xl font-normal text-wood transition-transform group-open:rotate-45" aria-hidden="true">
+                      +
+                    </span>
+                  </summary>
+                  <div class="space-y-3 pb-5 text-base leading-relaxed text-graphite">
+                    {item.a.map((p) => (
+                      <p>{p}</p>
+                    ))}
+                    {item.tiers && (
+                      <dl class="divide-y divide-line rounded-md border border-line bg-white text-sm">
+                        {tiers.map((tier) => (
+                          <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-4 py-2.5">
+                            <dt class="font-semibold text-ink">
+                              {t.tiers.names[tier.key]}
+                              <span class="ml-2 font-normal text-graphite">
+                                {tier.monthly === 0 ? t.tiers.free : t.tiers.perMonth.replace('{price}', String(tier.monthly))}
+                              </span>
+                            </dt>
+                            <dd>
+                              {tier.aiPerMonth === 0
+                                ? t.tiers.aiTrial
+                                : t.tiers.aiPerMonth.replace('{count}', String(tier.aiPerMonth))}
+                            </dd>
+                          </div>
+                        ))}
+                      </dl>
+                    )}
+                    {item.after?.map((p) => (
+                      <p class="text-sm">{p}</p>
+                    ))}
+                    {link && (
+                      <a href={link.href} class="link-quiet">
+                        {link.label}
+                      </a>
+                    )}
+                  </div>
+                </details>
+              );
+            })
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-line">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class="text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]">{t.contact.title}</h2>
+        <p class="mt-3 text-base leading-relaxed text-graphite">
+          {contactBefore}<a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-ink underline underline-offset-2">{CONTACT_EMAIL}</a>{contactAfter}
+        </p>
+        <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+          {fpHref && <a href={fpHref} class="btn-primary" data-cta="founding_partner" data-cta-location="faq">{t.cta.primary}</a>}
+          <a href={joinFreeHref} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="join_free" data-cta-location="faq">
+            {t.cta.secondary}
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter lang={lang} preview={preview} />
+</Base>
+
+<script>
+  type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
+  const track: Plausible = (event, options) => (window as unknown as { plausible?: Plausible }).plausible?.(event, options);
+
+  // Open the question a link points to, e.g. /ro/intrebari/#ai-corect.
+  const openFromHash = () => {
+    const target = location.hash ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    if (target instanceof HTMLDetailsElement) {
+      target.open = true;
+      target.scrollIntoView();
+    }
+  };
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+
+  // Which objections people actually read (Funnel Plan 5). Nothing is stored on the device.
+  for (const details of document.querySelectorAll<HTMLDetailsElement>('[data-faq]')) {
+    details.addEventListener('toggle', () => {
+      if (details.open) track('faq_open', { props: { question: details.dataset.faq ?? '' } });
+    });
+  }
+</script>

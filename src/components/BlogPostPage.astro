@@ -1,0 +1,98 @@
+---
+// One blog post. Ends with a soft call to action (Build Brief 4.5), whose
+// clicks send `blog_to_signup` (Build Brief 5). Nothing is stored on the
+// device, so "read a post, signed up later" isn't tracked.
+import Base from '../layouts/Base.astro';
+import PreviewBanner from './PreviewBanner.astro';
+import SiteFooter from './SiteFooter.astro';
+import SiteHeader from './SiteHeader.astro';
+import { isPostPublic, postPath, type Post } from '../lib/blog';
+import { languages, useBlogTranslations, type Lang } from '../i18n';
+import { postData } from '../lib/structuredData';
+import { joinFreeHref, linkFor } from '../site';
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const lang = post.lang;
+const preview = !isPostPublic(post);
+const t = useBlogTranslations(lang);
+const { Content } = post;
+
+// The language switch goes to the other language's blog index; there are no
+// translated posts yet, so hreflang only announces this post's own language.
+const alternates = Object.fromEntries(
+  languages.map((l) => [l, l === lang ? postPath(post) : (linkFor('blog', l, preview) ?? linkFor('home', l, preview) ?? '/')]),
+) as Record<Lang, string>;
+const blogHref = linkFor('blog', lang, preview);
+const fpHref = linkFor('foundingPartner', lang, preview);
+const dateLabel = new Intl.DateTimeFormat(lang === 'ro' ? 'ro-RO' : 'en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(post.date);
+---
+
+<Base
+  lang={lang}
+  title={`${post.title} — Mobilcab`}
+  description={post.description}
+  alternates={preview ? undefined : alternates}
+  translatedInto={[lang]}
+  structuredData={Astro.site ? [postData(Astro.site, post, new URL(postPath(post), Astro.site).href)] : []}
+>
+  {preview && <PreviewBanner lang={lang} />}
+
+  <div class="mx-auto w-full max-w-5xl px-5 sm:px-8">
+    <SiteHeader lang={lang} alternates={alternates} preview={preview} current="blog" />
+  </div>
+
+  <main class="mx-auto w-full max-w-5xl px-5 pt-10 pb-16 sm:px-8 sm:pt-16">
+    <article class="max-w-2xl">
+      {blogHref && <a href={blogHref} class="text-sm font-semibold text-wood hover:text-wood-dark">← {t.back}</a>}
+      {!isPostPublic(post) && <p class="mt-4 inline-block rounded-full bg-white px-3 py-1 text-xs font-semibold text-wood">{t.draft}</p>}
+      <h1 class="mt-4 text-[2rem] leading-[1.15] font-bold tracking-tight text-balance text-ink sm:text-[2.5rem]">{post.title}</h1>
+      <p class="mt-3 text-sm text-graphite">
+        <time datetime={post.date.toISOString().slice(0, 10)}>{dateLabel}</time>
+      </p>
+      <div class="prose-text mt-6">
+        <Content />
+      </div>
+
+      <aside class="mt-12 rounded-md border border-line border-l-4 border-l-wood bg-white p-6">
+        <h2 class="text-lg font-bold tracking-tight text-ink">{t.cta.title}</h2>
+        <p class="mt-2 text-base leading-relaxed text-graphite">{t.cta.body}</p>
+        <div class="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+          {
+            fpHref && (
+              <a href={fpHref} class="btn-primary" data-blog-cta="founding_partner" data-post={post.slug}>
+                {t.cta.primary}
+              </a>
+            )
+          }
+          <a
+            href={joinFreeHref(lang, preview)}
+            class={fpHref ? 'link-quiet' : 'btn-primary'}
+            data-blog-cta="join_free"
+            data-post={post.slug}
+          >
+            {t.cta.secondary}
+          </a>
+        </div>
+      </aside>
+    </article>
+  </main>
+
+  <SiteFooter lang={lang} preview={preview} />
+</Base>
+
+<script>
+  type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
+  const track: Plausible = (event, options) => (window as unknown as { plausible?: Plausible }).plausible?.(event, options);
+
+  for (const el of document.querySelectorAll<HTMLElement>('[data-blog-cta]')) {
+    el.addEventListener('click', () => {
+      const props = { cta: el.dataset.blogCta ?? '', post: el.dataset.post ?? '' };
+      track('blog_to_signup', { props });
+      track('cta_click', { props: { cta: props.cta, location: `blog:${props.post}` } });
+    });
+  }
+</script>

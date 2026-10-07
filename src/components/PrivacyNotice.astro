@@ -1,0 +1,91 @@
+---
+// The short temporary privacy notice (Phase 1). Shown at the real privacy
+// address until the full Privacy Policy is published (src/site.ts).
+import PrivacyLayout from './PrivacyLayout.astro';
+import { CONTACT_EMAIL } from '../config';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+---
+
+{
+  lang === 'ro' ? (
+    <PrivacyLayout lang="ro" title="Confidențialitate" description="Cum folosim adresa de email lăsată pe lista de așteptare Mobilcab.">
+      <p class="mt-4 rounded-md border border-line bg-white px-4 py-3 text-sm">
+        Notă temporară. Politica de confidențialitate completă va fi publicată înainte de lansare.
+      </p>
+
+      <h2>Ce colectăm</h2>
+      <p class="mt-2">
+        Doar adresa de email pe care o introduci în formular și limba în care te-ai înscris. Te adăugăm pe listă abia după ce
+        confirmi, din emailul pe care ți-l trimitem imediat după înscriere.
+      </p>
+
+      <h2>De ce</h2>
+      <p class="mt-2">
+        Ca să te anunțăm când lansăm Mobilcab și să-ți trimitem, ocazional, noutăți despre produs. Temeiul este
+        consimțământul tău (art. 6 alin. (1) lit. a) GDPR), pe care îl poți retrage oricând.
+      </p>
+
+      <h2>Unde sunt păstrate datele</h2>
+      <p class="mt-2">
+        La Brevo, furnizorul nostru de email (companie din Franța), pe servere din Uniunea Europeană. Nu vindem și nu dăm
+        adresa ta altcuiva.
+      </p>
+
+      <h2>Statistici</h2>
+      <p class="mt-2">
+        Folosim Plausible Analytics pentru numărul de vizite. Nu folosește cookie-uri și nu colectează date personale.
+      </p>
+
+      <h2>Drepturile tale</h2>
+      <ul>
+        <li>Te poți dezabona din orice email, cu un singur clic.</li>
+        <li>
+          Poți cere accesul la date sau ștergerea lor scriindu-ne la <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </li>
+        <li>Poți depune o plângere la ANSPDCP (Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal).</li>
+      </ul>
+    </PrivacyLayout>
+  ) : (
+    <PrivacyLayout lang="en" title="Privacy" description="How we use the email address you leave on the Mobilcab waitlist.">
+      <p class="mt-4 rounded-md border border-line bg-white px-4 py-3 text-sm">
+        Temporary notice. The full privacy policy will be published before launch.
+      </p>
+
+      <h2>What we collect</h2>
+      <p class="mt-2">
+        Only the email address you enter in the form and the language you signed up in. We only add you to the list once you
+        confirm, from the email we send you right after you sign up.
+      </p>
+
+      <h2>Why</h2>
+      <p class="mt-2">
+        To tell you when Mobilcab launches and, occasionally, to send product news. The legal basis is your consent
+        (Article 6(1)(a) GDPR), which you can withdraw at any time.
+      </p>
+
+      <h2>Where it's stored</h2>
+      <p class="mt-2">
+        With Brevo, our email provider (a French company), on servers in the European Union. We don't sell your address or
+        share it with anyone else.
+      </p>
+
+      <h2>Analytics</h2>
+      <p class="mt-2">We use Plausible Analytics to count visits. It uses no cookies and collects no personal data.</p>
+
+      <h2>Your rights</h2>
+      <ul>
+        <li>You can unsubscribe from any email with one click.</li>
+        <li>
+          You can ask to see or delete your data by writing to <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        </li>
+        <li>You can complain to ANSPDCP, the Romanian data protection authority.</li>
+      </ul>
+    </PrivacyLayout>
+  )
+}

@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "title": "Înscriere confirmată — Mobilcab",
+    "description": "Confirmarea înscrierii pe lista de așteptare Mobilcab."
+  },
+  "ok": {
+    "title": "Gata, ești pe listă!",
+    "body": "Mulțumim că ți-ai confirmat adresa. Te anunțăm imediat ce lansăm."
+  },
+  "error": {
+    "linkTitle": "Linkul nu mai e valabil",
+    "linkBody": "Linkul de confirmare a expirat sau nu e complet. Înscrie-te din nou și îți trimitem unul nou.",
+    "serverTitle": "Ceva n-a mers",
+    "serverBody": "Nu am putut confirma înscrierea. Încearcă din nou linkul din email peste câteva minute.",
+    "again": "Înapoi la înscriere"
+  },
+  "referral": {
+    "title": "Invită alți tâmplari",
+    "body": "Pentru fiecare tâmplar care se înscrie prin linkul tău și își confirmă adresa, urci în coada pentru beta-ul privat. La {goal} invitații confirmate, ai un loc garantat în beta.",
+    "linkLabel": "Linkul tău de invitație",
+    "copy": "Copiază",
+    "copied": "Copiat!",
+    "whatsapp": "Trimite pe WhatsApp",
+    "shareText": "Uite un program de proiectare mobilă care merge direct din browser. Înscrie-te aici:",
+    "progress": "{count} din {goal} invitații confirmate — încă {left} pentru locul garantat în beta.",
+    "done": "{count} invitații confirmate — locul tău în beta-ul privat e garantat. Te contactăm noi.",
+    "note": "Poți reveni oricând aici din emailul de bun venit, ca să-ți vezi progresul. Numele celor pe care îi inviți nu apar nicăieri."
+  }
+}

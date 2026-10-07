@@ -1,0 +1,225 @@
+---
+// Phase 2 Home page (Build Brief 4.1, copy from Launch Content Kit Section 1).
+// Hero → Problem → Features → Demo → Pricing teaser → FAQ teaser → Final CTA.
+// The social-proof section is deliberately absent until real testimonials exist (Funnel Plan 3.1).
+import Base from '../layouts/Base.astro';
+import SiteHeader from './SiteHeader.astro';
+import SiteFooter from './SiteFooter.astro';
+import WaitlistForm from './WaitlistForm.astro';
+import PreviewBanner from './PreviewBanner.astro';
+import VideoPlayer from './VideoPlayer.astro';
+import { demoVideos } from '../data/demoVideos';
+import { useDemoTranslations, useHomeTranslations, useTranslations, type Lang } from '../i18n';
+import { homeData, softwareData } from '../lib/structuredData';
+import { linkFor, pathsFor, productPublic, published } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const preview = !published.home;
+const t = useHomeTranslations(lang);
+const formT = useTranslations(lang);
+// Links to pages that aren't published are null on the public site and left out.
+const fpHref = linkFor('foundingPartner', lang, preview);
+const demoHref = linkFor('demo', lang, preview);
+const pricingHref = linkFor('pricing', lang, preview);
+const faqHref = linkFor('faq', lang, preview);
+const privacyHref = linkFor('privacy', lang, preview) ?? '';
+const demoT = useDemoTranslations(lang);
+const site = Astro.site;
+const structuredData = site
+  ? [...homeData(site, lang), ...(productPublic ? [softwareData(site, lang, t.meta.description)] : [])]
+  : [];
+const joinId = t.anchors.join;
+const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
+const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]';
+---
+
+<Base
+  lang={lang}
+  title={t.meta.title}
+  description={t.meta.description}
+  alternates={preview ? undefined : pathsFor('home')}
+  structuredData={structuredData}
+>
+  {preview && <PreviewBanner lang={lang} />}
+
+  <div class={wrap}>
+    <SiteHeader lang={lang} alternates={pathsFor('home')} preview={preview} current="home" />
+  </div>
+
+  <main>
+    {/* Hero */}
+    <section class:list={[wrap, 'pt-10 pb-16 sm:pt-16 sm:pb-24']}>
+      <div class="max-w-2xl">
+        <div class="dimension-line mb-6" aria-hidden="true"></div>
+        <h1 class="text-[2.125rem] leading-[1.1] font-bold tracking-tight text-balance sm:text-[3.25rem]">{t.hero.title}</h1>
+        <p class="mt-5 text-lg leading-relaxed text-graphite">{t.hero.body}</p>
+        <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+          {
+            fpHref && (
+              <a href={fpHref} class="btn-primary" data-cta="founding_partner" data-cta-location="hero">
+                {t.hero.ctaPrimary}
+              </a>
+            )
+          }
+          <a href={`#${joinId}`} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="join_free" data-cta-location="hero">
+            {t.hero.ctaSecondary}
+          </a>
+        </div>
+        <p class="mt-5 text-sm text-graphite">{t.hero.note}</p>
+      </div>
+    </section>
+
+    {/* Problem */}
+    <section class="border-t border-line bg-white/60">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class={sectionTitle}>{t.problem.title}</h2>
+        <ul class="mt-8 grid gap-x-10 gap-y-4 sm:grid-cols-2">
+          {
+            t.problem.items.map((item) => (
+              <li class="flex gap-3 text-base leading-relaxed text-graphite">
+                <span class="mt-[0.7em] h-px w-4 shrink-0 bg-wood" aria-hidden="true" />
+                <span>{item}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {/* Features */}
+    <section class="border-t border-line">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class={sectionTitle}>{t.features.title}</h2>
+        <ol class="mt-8 grid gap-4 sm:grid-cols-3">
+          {
+            t.features.items.map((item, i) => (
+              <li class="rounded-md border border-line bg-white p-5">
+                <p class="text-sm font-semibold text-wood">{String(i + 1).padStart(2, '0')}</p>
+                <h3 class="mt-2 text-lg font-bold tracking-tight">{item.title}</h3>
+                <p class="mt-2 text-base leading-relaxed text-graphite">{item.body}</p>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    {/* Demo: video slots until the recordings exist (Launch Content Kit Section 2) */}
+    <section class="border-t border-line bg-white/60" data-track-section="demo">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class={sectionTitle}>{t.demo.title}</h2>
+        <p class="mt-3 max-w-2xl text-base leading-relaxed text-graphite">{t.demo.intro}</p>
+        <div class="mt-8 grid gap-6 sm:grid-cols-3">
+          {
+            t.demo.videos.map((video, i) => {
+              const ids = demoVideos[i]?.youtubeId;
+              return (
+                <figure>
+                  <VideoPlayer
+                    youtubeId={ids ? (ids[lang] ?? ids.ro) : null}
+                    title={video.title}
+                    comingSoon={t.demo.comingSoon}
+                    playLabel={demoT.player.play}
+                  />
+                  <figcaption class="mt-3">
+                    <span class="block font-bold">{video.title}</span>
+                    <span class="mt-1 block text-sm leading-relaxed text-graphite">{video.caption}</span>
+                  </figcaption>
+                </figure>
+              );
+            })
+          }
+        </div>
+        {demoHref && <a href={demoHref} class="link-quiet mt-4">{t.demo.link}</a>}
+      </div>
+    </section>
+
+    {/* Pricing teaser */}
+    <section class="border-t border-line" data-track-section="pricing">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class={sectionTitle}>{t.pricing.title}</h2>
+        <div class="mt-8 max-w-2xl rounded-md border border-line border-l-4 border-l-wood bg-white p-6">
+          <p class="text-sm font-semibold tracking-wide text-wood">{t.pricing.offerLabel}</p>
+          <p class="mt-1 text-[2rem] leading-tight font-bold tracking-tight">{t.pricing.offerPrice}</p>
+          <p class="mt-1 text-base text-graphite">{t.pricing.offerDetail}</p>
+          <p class="mt-4 text-sm leading-relaxed text-graphite">{t.pricing.aiNote}</p>
+          <ul class="mt-4 space-y-1 text-sm font-medium text-ink">
+            <li>{t.pricing.free}</li>
+            <li>{t.pricing.cancel}</li>
+          </ul>
+        </div>
+        {pricingHref && <a href={pricingHref} class="link-quiet mt-4">{t.pricing.link}</a>}
+      </div>
+    </section>
+
+    {/* FAQ teaser: native <details>, no JS */}
+    <section class="border-t border-line bg-white/60">
+      <div class:list={[wrap, 'py-14 sm:py-20']}>
+        <h2 class={sectionTitle}>{t.faq.title}</h2>
+        <div class="mt-8 max-w-2xl divide-y divide-line border-y border-line">
+          {
+            t.faq.items.map((item) => (
+              <details class="group py-1">
+                <summary class="flex min-h-12 cursor-pointer list-none items-center justify-between gap-4 font-semibold [&::-webkit-details-marker]:hidden">
+                  {item.q}
+                  <span class="text-xl font-normal text-wood transition-transform group-open:rotate-45" aria-hidden="true">
+                    +
+                  </span>
+                </summary>
+                <p class="pb-4 text-base leading-relaxed text-graphite">{item.a}</p>
+              </details>
+            ))
+          }
+        </div>
+        {faqHref && <a href={faqHref} class="link-quiet mt-4">{t.faq.link}</a>}
+      </div>
+    </section>
+
+    {/* Final CTA, also the "join free" target */}
+    <section id={joinId} class="scroll-mt-4 border-t border-line">
+      <div class:list={[wrap, 'py-14 sm:py-24']}>
+        <div class="max-w-xl">
+          <h2 class={sectionTitle}>{t.final.title}</h2>
+          {
+            fpHref && (
+              <>
+                <a href={fpHref} class="btn-primary mt-8" data-cta="founding_partner" data-cta-location="final">
+                  {t.hero.ctaPrimary}
+                </a>
+                <p class="mt-8 mb-4 text-base font-medium text-graphite">{t.final.or}</p>
+              </>
+            )
+          }
+          <div class:list={[!fpHref && 'mt-8']}>
+            <WaitlistForm lang={lang} t={formT} privacyHref={privacyHref} />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter lang={lang} preview={preview} />
+</Base>
+
+<script>
+  // Funnel event (Build Brief Section 5): how far down the page visitors get.
+  // Button clicks are tracked site-wide by src/components/CtaTracking.astro.
+  type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
+  const track: Plausible = (event, options) => (window as unknown as { plausible?: Plausible }).plausible?.(event, options);
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        track('landing_scroll_depth', { props: { section: (entry.target as HTMLElement).dataset.trackSection ?? '' } });
+        observer.unobserve(entry.target);
+      }
+    },
+    { threshold: 0.4 },
+  );
+  document.querySelectorAll('[data-track-section]').forEach((section) => observer.observe(section));
+</script>

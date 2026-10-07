@@ -1,0 +1,72 @@
+{
+  "meta": {
+    "title": "Întrebări frecvente — Mobilcab",
+    "description": "Răspunsuri directe despre Mobilcab: instalare, tabletă, export CNC, prețuri, planul Basic și cât te poți baza pe asistentul AI."
+  },
+  "hero": {
+    "label": "Întrebări frecvente",
+    "title": "Răspunsuri directe, înainte să te înscrii.",
+    "body": "Dacă nu găsești aici ce cauți, scrie-ne. Răspundem personal."
+  },
+  "items": [
+    {
+      "id": "instalare",
+      "q": "Trebuie să instalez ceva?",
+      "a": ["Nu. Mobilcab rulează direct din browser, pe laptop, tabletă sau telefon. Nu instalezi nimic și nu ai nevoie de server de licențe."]
+    },
+    {
+      "id": "tableta",
+      "q": "Funcționează pe tabletă?",
+      "a": ["Da, e optimizat pentru laptop, tabletă și telefon. Poți începe un proiect în atelier și să-l arăți clientului de pe tabletă, la fața locului."]
+    },
+    {
+      "id": "export-cnc",
+      "q": "Pot exporta direct pentru CNC-ul meu?",
+      "a": ["Da — exportul de cutlist e pregătit pentru fluxul standard CNC. Dintr-un proiect terminat, un clic îți dă lista cu dimensiunile panourilor, cantitățile și materialele."]
+    },
+    {
+      "id": "pret",
+      "q": "Cât costă?",
+      "a": [
+        "Planul gratuit e disponibil oricând.",
+        "Primii 100 de tâmplari primesc prețul Founding Partner: 49 RON/lună sau 549 RON/an pentru planul Basic, blocat 12 luni. Planurile cu asistent AI inclus pornesc de la 99 RON/lună. Fără contract — anulezi oricând."
+      ],
+      "link": "foundingPartner"
+    },
+    {
+      "id": "ai-corect",
+      "q": "E garantat corect ce sugerează asistentul AI?",
+      "a": [
+        "Nu. Asistentul AI e un ajutor, nu o garanție. Îți semnalează probleme posibile — de exemplu, un sertar care s-ar lovi de o balama — și îți sugerează împărțiri de panouri, dar poate greși.",
+        "Verifică întotdeauna dimensiunile, gabaritele și cutlist-ul înainte de tăiere. Decizia finală e a ta."
+      ]
+    },
+    {
+      "id": "planuri",
+      "q": "Prin ce diferă Basic de celelalte planuri?",
+      "a": [
+        "Basic acoperă tot ce ține de proiectare: designul, cutlist-ul și exportul pentru CNC. Asistentul AI îl încerci o singură dată, pe proiectul de pornire. Planurile Starter, Pro și Studio adaugă asistentul AI, cu tot mai multe cereri pe lună:"
+      ],
+      "tiers": true,
+      "after": ["Prețurile finale se confirmă înainte de lansare."]
+    }
+  ],
+  "tiers": {
+    "names": { "free": "Gratuit", "basic": "Basic", "starter": "Starter", "pro": "Pro", "studio": "Studio" },
+    "perMonth": "{price} RON/lună",
+    "free": "0 RON",
+    "aiTrial": "AI: o încercare, la început",
+    "aiPerMonth": "{count} cereri AI pe lună"
+  },
+  "contact": {
+    "title": "N-ai găsit răspunsul?",
+    "body": "Scrie-ne la {email} și îți răspundem personal."
+  },
+  "links": {
+    "foundingPartner": "Despre programul Founding Partner"
+  },
+  "cta": {
+    "primary": "Devino Founding Partner",
+    "secondary": "Sau alătură-te gratuit"
+  }
+}

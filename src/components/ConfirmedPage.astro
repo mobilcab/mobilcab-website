@@ -1,0 +1,159 @@
+---
+// Where the waitlist confirmation link lands, and the invite-progress page the
+// welcome email links to (?cod=<invite code>). Static: the script reads the
+// address and fetches the invite count. Not indexed.
+import Base from '../layouts/Base.astro';
+import SiteHeader from './SiteHeader.astro';
+import { REFERRAL_GOAL, REFERRAL_PROGRAM } from '../config';
+import { useConfirmTranslations, type Lang } from '../i18n';
+import { confirmedPaths, joinFreeHref, livePaths } from '../site';
+
+interface Props {
+  lang: Lang;
+}
+
+const { lang } = Astro.props;
+const t = useConfirmTranslations(lang);
+const card = 'rounded-md border border-line bg-white p-6';
+---
+
+<Base lang={lang} title={t.meta.title} description={t.meta.description}>
+  <div class="mx-auto flex min-h-dvh max-w-xl flex-col px-5 sm:px-8">
+    <SiteHeader lang={lang} alternates={confirmedPaths} />
+
+    <main
+      class="flex flex-1 flex-col justify-center pt-8 pb-16"
+      data-confirmed
+      data-referral={REFERRAL_PROGRAM ? 'on' : 'off'}
+      data-goal={REFERRAL_GOAL}
+      data-home={livePaths.home[lang]}
+      data-text={JSON.stringify(t.referral)}
+    >
+      <div class="dimension-line mb-6" aria-hidden="true"></div>
+
+      <section data-state="ok">
+        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight">{t.ok.title}</h1>
+        <p class="mt-3 text-base leading-relaxed text-graphite">{t.ok.body}</p>
+      </section>
+
+      <section data-state="error-link" hidden>
+        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight">{t.error.linkTitle}</h1>
+        <p class="mt-3 text-base leading-relaxed text-graphite">{t.error.linkBody}</p>
+        <a href={joinFreeHref(lang, false)} class="btn-primary mt-6">{t.error.again}</a>
+      </section>
+
+      <section data-state="error-server" hidden>
+        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight">{t.error.serverTitle}</h1>
+        <p class="mt-3 text-base leading-relaxed text-graphite">{t.error.serverBody}</p>
+      </section>
+
+      {
+        REFERRAL_PROGRAM && (
+          <section data-referral-box hidden class:list={[card, 'mt-8']}>
+            <h2 class="text-lg font-bold tracking-tight">{t.referral.title}</h2>
+            <p class="mt-2 text-base leading-relaxed text-graphite">{t.referral.body.replace('{goal}', String(REFERRAL_GOAL))}</p>
+
+            <label for="invite-link" class="mt-5 block text-sm font-semibold text-ink">{t.referral.linkLabel}</label>
+            <div class="mt-1.5 flex flex-col gap-2 sm:flex-row">
+              <input
+                id="invite-link"
+                readonly
+                class="min-h-12 w-full flex-1 rounded-md border border-line bg-paper px-3 text-sm text-ink"
+                data-invite-link
+              />
+              <button type="button" class="btn-primary px-4" data-copy>{t.referral.copy}</button>
+            </div>
+            <a
+              href="#"
+              class="link-quiet mt-3"
+              target="_blank"
+              rel="noopener"
+              data-whatsapp
+              data-cta="referral_whatsapp"
+              data-cta-location="confirmed"
+            >
+              {t.referral.whatsapp}
+            </a>
+
+            <div class="mt-5" data-progress hidden>
+              <div class="h-2 overflow-hidden rounded-full bg-paper" aria-hidden="true">
+                {/* Width set from the script: CSS changes from scripts are allowed by the CSP, style="" attributes aren't. */}
+                <div class="h-full w-0 rounded-full bg-wood transition-[width]" data-bar></div>
+              </div>
+              <p class="mt-2 text-sm font-semibold text-ink" role="status" data-progress-text></p>
+            </div>
+            <p class="mt-4 text-xs leading-relaxed text-graphite">{t.referral.note}</p>
+          </section>
+        )
+      }
+    </main>
+  </div>
+</Base>
+
+<script>
+  import { isReferralCode } from '../lib/referral';
+
+  type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
+  const track: Plausible = (event, options) => (window as unknown as { plausible?: Plausible }).plausible?.(event, options);
+
+  const main = document.querySelector<HTMLElement>('[data-confirmed]')!;
+  const params = new URLSearchParams(location.search);
+  const error = params.get('eroare');
+  const code = params.get('cod');
+
+  const show = (state: string) =>
+    main.querySelectorAll<HTMLElement>('[data-state]').forEach((s) => (s.hidden = s.dataset.state !== state));
+
+  if (error) {
+    show(error === 'server' ? 'error-server' : 'error-link');
+  } else {
+    show('ok');
+    // A fresh confirmation counts once; revisits from the welcome email don't.
+    if (params.get('nou') === '1') {
+      track('Waitlist Confirmed');
+      params.delete('nou');
+      history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);
+    }
+  }
+
+  const box = main.querySelector<HTMLElement>('[data-referral-box]');
+  if (!error && box && main.dataset.referral === 'on' && isReferralCode(code)) {
+    const text: Record<string, string> = JSON.parse(main.dataset.text ?? '{}');
+    const goal = Number(main.dataset.goal ?? 3);
+    const link = `${location.origin}${main.dataset.home ?? '/'}?ref=${code}`;
+
+    const input = box.querySelector<HTMLInputElement>('[data-invite-link]')!;
+    input.value = link;
+    input.addEventListener('focus', () => input.select());
+
+    const copy = box.querySelector<HTMLButtonElement>('[data-copy]')!;
+    copy.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(link);
+      } catch {
+        input.select();
+      }
+      copy.textContent = text.copied ?? '';
+      setTimeout(() => (copy.textContent = text.copy ?? ''), 2000);
+    });
+
+    box.querySelector<HTMLAnchorElement>('[data-whatsapp]')!.href =
+      `https://wa.me/?text=${encodeURIComponent(`${text.shareText ?? ''} ${link}`)}`;
+    box.hidden = false;
+
+    fetch(`/api/referral?cod=${encodeURIComponent(code)}`)
+      .then((res) => (res.ok ? res.json() : Promise.reject()))
+      .then((data: { count: number }) => {
+        const count = data.count;
+        const progress = box.querySelector<HTMLElement>('[data-progress]')!;
+        box.querySelector<HTMLElement>('[data-bar]')!.style.width = `${Math.min(100, (count / goal) * 100)}%`;
+        const template = (count >= goal ? text.done : text.progress) ?? '';
+        box.querySelector<HTMLElement>('[data-progress-text]')!.textContent = template
+          .replace('{count}', String(count))
+          .replace('{goal}', String(goal))
+          .replace('{left}', String(Math.max(0, goal - count)));
+        progress.hidden = false;
+      })
+      .catch(() => {});
+  }
+</script>

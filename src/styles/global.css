@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/*
+ * Manrope, Latin + Latin Extended only (covers Romanian ă â î ș ț). Declared here
+ * instead of importing @fontsource-variable/manrope, which adds Cyrillic, Greek
+ * and Vietnamese faces the site never uses. The same files are preloaded in
+ * src/layouts/Base.astro; keep the paths in sync.
+ */
+@font-face {
+  font-family: "Manrope Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("../../node_modules/@fontsource-variable/manrope/files/manrope-latin-ext-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Manrope Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("../../node_modules/@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@theme {
+  --font-sans: "Manrope Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Neutral base with one warm, wood-tone accent used only for CTAs and highlights. */
+  --color-paper: #f7f6f3;
+  --color-ink: #1d2126;
+  --color-graphite: #4a5059;
+  --color-line: #d9d6cf;
+  --color-wood: #9a5f1a;
+  --color-wood-dark: #7d4c13;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  /* Faint drafting grid, pure CSS so it costs no download. */
+  .blueprint {
+    background-image:
+      linear-gradient(to right, rgb(29 33 38 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(29 33 38 / 0.045) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Small dimension-line mark, like the ones on a technical drawing. */
+  .dimension-line {
+    position: relative;
+    width: 3.5rem;
+    height: 9px;
+    border-inline: 1.5px solid var(--color-wood);
+  }
+
+  .dimension-line::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 50%;
+    height: 1.5px;
+    margin-top: -0.75px;
+    background: var(--color-wood);
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-md bg-wood px-6 text-center text-base font-semibold text-white transition-colors hover:bg-wood-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wood;
+  }
+
+  .link-quiet {
+    @apply inline-flex min-h-11 items-center font-semibold text-ink underline underline-offset-4 hover:text-wood-dark;
+  }
+
+  /* Long text rendered from Markdown: legal pages and blog posts. */
+  .prose-text {
+    @apply text-base leading-relaxed text-graphite;
+  }
+  .prose-text h2 {
+    @apply mt-10 text-lg font-bold tracking-tight text-ink;
+  }
+  .prose-text h3 {
+    @apply mt-6 font-bold text-ink;
+  }
+  .prose-text p,
+  .prose-text ul,
+  .prose-text ol {
+    @apply mt-3;
+  }
+  .prose-text ul {
+    @apply list-disc space-y-2 pl-5;
+  }
+  .prose-text ol {
+    @apply list-decimal space-y-2 pl-5;
+  }
+  .prose-text li {
+    @apply pl-1;
+  }
+  .prose-text strong {
+    @apply font-semibold text-ink;
+  }
+  .prose-text a {
+    @apply text-ink underline underline-offset-2;
+  }
+  .prose-text blockquote {
+    @apply mt-6 rounded-md border border-line bg-white px-4 py-3 text-sm;
+  }
+  .prose-text blockquote p {
+    @apply mt-0;
+  }
+  .prose-text table {
+    @apply mt-4 block w-full overflow-x-auto border-collapse text-sm;
+  }
+  .prose-text th,
+  .prose-text td {
+    @apply border border-line px-3 py-2 text-left align-top;
+  }
+  .prose-text th {
+    @apply bg-white font-semibold text-ink;
+  }
+  .prose-text code {
+    @apply text-[0.9em];
+  }
+
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+}

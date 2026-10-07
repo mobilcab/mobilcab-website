@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "title": "Blog — Mobilcab",
+    "description": "Practical articles on furniture design, cutlists and CNC, for carpenters and furniture workshops."
+  },
+  "hero": {
+    "label": "Blog",
+    "title": "Practical articles for carpenters.",
+    "body": "About furniture design, cutlists, CNC and the tools available to you. No fluff."
+  },
+  "empty": "The first articles are coming soon.",
+  "langNote": "Our articles are in Romanian for now, written for workshops in Romania.",
+  "readMore": "Read the article",
+  "draft": "Draft — not published",
+  "back": "All articles",
+  "cta": {
+    "title": "Want to try Mobilcab on your own projects?",
+    "body": "Mobilcab is a furniture CAD that runs straight from your browser, with cutlists and CNC export. It's in development, and the first 100 workshops get Founding Partner pricing.",
+    "primary": "About the Founding Partner program",
+    "secondary": "Join the waitlist for free"
+  }
+}
