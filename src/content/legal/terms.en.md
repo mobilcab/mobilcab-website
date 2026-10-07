@@ -6,7 +6,7 @@
 
 Mobilcab is operated by **[FILL IN company name]**, registered at **[FILL IN address]**, tax ID (CUI) **[FILL IN]**, Trade Register no. **[FILL IN]** ("Mobilcab", "we").
 
-These terms apply to your use of the Mobilcab app and the mobilcab.ro website. When you create an account, you confirm that you've read them and agree to them.
+These terms apply to your use of the Mobilcab app and the mobilcab.com website. When you create an account, you confirm that you've read them and agree to them.
 
 ## 2. The service
 

@@ -64,7 +64,7 @@ const { lang, t, privacyHref } = Astro.props;
 
   type MessageKey = 'sending' | 'pending' | 'already' | 'invalidEmail' | 'consentRequired' | 'network' | 'server';
 
-  // An invite code from the address (mobilcab.ro/ro/?ref=…). The server only
+  // An invite code from the address (mobilcab.com/ro/?ref=…). The server only
   // counts it while the referral program is on. Nothing is stored on the device.
   const refParam = new URLSearchParams(location.search).get('ref');
   const ref = isReferralCode(refParam) ? refParam : undefined;

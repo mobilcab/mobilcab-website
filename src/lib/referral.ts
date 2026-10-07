@@ -1,4 +1,4 @@
-// Personal invite codes, e.g. mobilcab.ro/ro/?ref=k7Q2xMa9. Random and
+// Personal invite codes, e.g. mobilcab.com/ro/?ref=k7Q2xMa9. Random and
 // unguessable, and they contain nothing about the person. Shared by the form
 // script (client) and the endpoints (server).
 

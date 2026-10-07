@@ -44,7 +44,7 @@ me before building anything from Phase 2.
 - **Email capture / waitlist (Phase 1):** use an actual email marketing tool, not a custom database, so confirmation emails (Launch Content Kit Section 4) and later newsletters (Retention Playbook, Marketing Plan Section 6a) work out of the box. **Brevo** (EU-based, strong free tier, GDPR-friendly by default) is the recommended pick over Mailchimp given the GDPR/EU-data requirements already established — confirm this choice before building the integration.
 - **Analytics:** **Plausible** or **Fathom** — EU-based, cookie-consent-free, lightweight. Avoid Google Analytics here; it needs a cookie consent banner under GDPR (Marketing Plan Section 4b) and adds unnecessary JS weight for exactly the performance-sensitive audience this site serves.
 - **Payments (Phase 2 only, not now):** Stripe, charging in RON, using Stripe Billing for subscriptions (Marketing Plan Section 4b).
-- **Domain:** register the actual domain now if not already done (e.g., `mobilcab.ro`), even though only the coming-soon page goes live.
+- **Domain:** register the actual domain now if not already done (e.g., `mobilcab.com`), even though only the coming-soon page goes live.
 
 ---
 

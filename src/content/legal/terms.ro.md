@@ -6,7 +6,7 @@
 
 Mobilcab este operat de **[COMPLETEAZĂ denumirea firmei]**, cu sediul în **[COMPLETEAZĂ adresa]**, CUI **[COMPLETEAZĂ]**, nr. Registrul Comerțului **[COMPLETEAZĂ]** („Mobilcab”, „noi”).
 
-Acești termeni se aplică folosirii aplicației Mobilcab și a site-ului mobilcab.ro. Când îți creezi un cont, confirmi că i-ai citit și că ești de acord cu ei.
+Acești termeni se aplică folosirii aplicației Mobilcab și a site-ului mobilcab.com. Când îți creezi un cont, confirmi că i-ai citit și că ești de acord cu ei.
 
 ## 2. Serviciul
 

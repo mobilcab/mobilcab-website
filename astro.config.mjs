@@ -7,7 +7,7 @@ import launchCheck from './src/integrations/launch-check.mjs';
 import vercelCrons from './src/integrations/vercel-crons.mjs';
 
 export default defineConfig({
-  site: process.env.SITE_URL || 'https://mobilcab.ro',
+  site: process.env.SITE_URL || 'https://mobilcab.com',
   // Every page is prerendered to static HTML; only /api/subscribe runs on demand.
   output: 'static',
   adapter: vercel(),

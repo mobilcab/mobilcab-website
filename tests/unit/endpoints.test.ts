@@ -36,7 +36,7 @@ const context = (url: string, init?: RequestInit) =>
 
 const post = async (body: unknown) => {
   const res = await subscribe.POST(
-    context('https://mobilcab.ro/api/subscribe', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }),
+    context('https://mobilcab.com/api/subscribe', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) }),
   );
   return { status: res.status, body: await res.json() };
 };
@@ -52,7 +52,7 @@ describe('POST /api/subscribe', () => {
   });
 
   it('rejects a body that is not JSON', async () => {
-    const res = await subscribe.POST(context('https://mobilcab.ro/api/subscribe', { method: 'POST', body: '{nope' }));
+    const res = await subscribe.POST(context('https://mobilcab.com/api/subscribe', { method: 'POST', body: '{nope' }));
     expect(res.status).toBe(400);
   });
 
@@ -70,7 +70,7 @@ describe('POST /api/subscribe', () => {
   it('emails a signed link that confirms the sign-up', async () => {
     expect((await post({ email: ' Ion@Atelier.RO ', consent: true, lang: 'ro' })).body).toMatchObject({ status: 'pending' });
     const link = brevo.sent[0]!.params.CONFIRM_URL!;
-    expect(link).toMatch(/^https:\/\/mobilcab\.ro\/api\/confirm\?t=/);
+    expect(link).toMatch(/^https:\/\/mobilcab\.com\/api\/confirm\?t=/);
 
     expect(await open(link)).toBe('/ro/confirmat/?nou=1');
     expect([...brevo.get('ion@atelier.ro')!.listIds]).toEqual([11]);
@@ -82,8 +82,8 @@ describe('POST /api/subscribe', () => {
 
 describe('GET /api/confirm', () => {
   it('rejects a missing or forged token', async () => {
-    expect(await open('https://mobilcab.ro/api/confirm')).toBe('/ro/confirmat/?eroare=link');
-    expect(await open('https://mobilcab.ro/api/confirm?t=abc.def')).toBe('/ro/confirmat/?eroare=link');
+    expect(await open('https://mobilcab.com/api/confirm')).toBe('/ro/confirmat/?eroare=link');
+    expect(await open('https://mobilcab.com/api/confirm?t=abc.def')).toBe('/ro/confirmat/?eroare=link');
   });
 
   it("rejects a valid link whose contact is gone (e.g. cleaned up)", async () => {
@@ -96,7 +96,7 @@ describe('GET /api/confirm', () => {
 
 describe('GET /api/cleanup', () => {
   it('refuses callers without the cron secret', async () => {
-    const run = (headers: Record<string, string> = {}) => cleanup.GET(context('https://mobilcab.ro/api/cleanup', { headers }));
+    const run = (headers: Record<string, string> = {}) => cleanup.GET(context('https://mobilcab.com/api/cleanup', { headers }));
     expect((await run()).status).toBe(401);
     expect((await run({ authorization: 'Bearer wrong' })).status).toBe(401);
     expect((await run({ authorization: 'Bearer cron-secret' })).status).toBe(200);

@@ -4,7 +4,7 @@
 
 ## 1. Cine suntem
 
-Site-ul mobilcab.ro și aplicația Mobilcab sunt administrate de **[COMPLETEAZĂ denumirea firmei]**, cu sediul în **[COMPLETEAZĂ adresa]**, CUI **[COMPLETEAZĂ]**, nr. Registrul Comerțului **[COMPLETEAZĂ]** („Mobilcab”, „noi”). Suntem operatorul datelor tale personale în sensul Regulamentului (UE) 2016/679 („GDPR”).
+Site-ul mobilcab.com și aplicația Mobilcab sunt administrate de **[COMPLETEAZĂ denumirea firmei]**, cu sediul în **[COMPLETEAZĂ adresa]**, CUI **[COMPLETEAZĂ]**, nr. Registrul Comerțului **[COMPLETEAZĂ]** („Mobilcab”, „noi”). Suntem operatorul datelor tale personale în sensul Regulamentului (UE) 2016/679 („GDPR”).
 
 Pentru orice întrebare legată de datele tale, scrie-ne la **[COMPLETEAZĂ adresa de email]**.
 

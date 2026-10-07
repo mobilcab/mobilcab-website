@@ -17,8 +17,8 @@ const ready = {
   BREVO_CONFIRM_TEMPLATE_ID_EN: '3',
   CONFIRM_SECRET: 'x'.repeat(40),
   CRON_SECRET: 'y'.repeat(40),
-  SITE_URL: 'https://mobilcab.ro',
-  PUBLIC_PLAUSIBLE_DOMAIN: 'mobilcab.ro',
+  SITE_URL: 'https://mobilcab.com',
+  PUBLIC_PLAUSIBLE_DOMAIN: 'mobilcab.com',
 };
 
 const edit = (rel: string, change: (text: string) => string) => {
@@ -95,7 +95,7 @@ describe('launch check', () => {
 
   it('only warns about a Demo page without videos and placeholder emails', () => {
     publish('demo');
-    edit('emails/waitlist-ro.html', (s) => s.replace('Ion Pop', '[COMPLETEAZĂ]'));
+    edit('emails/waitlist-ro.html', (s) => s.replace('Stefan si Fineas', '[COMPLETEAZĂ]'));
     const { errors, warnings } = check();
     expect(errors).toEqual([]);
     expect(warnings).toEqual([expect.stringContaining('no videos'), expect.stringContaining('waitlist-ro.html')]);

@@ -55,7 +55,7 @@ Plus two multipliers: **word of mouth through the referral program**, and the
 | **Facebook groups** (5–10 tâmplari / mobilă la comandă / CNC lemn groups) | The main engine. Trust first, then product | Answers from week 5; own posts rarely | Read each group's rules; ask admins before any project mention; no links unless allowed (put them in comments) |
 | **Facebook Page** (Mobilcab) | Home base people check after seeing you in a group | Created week 1; 1 post / 1–2 weeks from week 5; weekly from week 9; 2/week after launch | Empty pages look abandoned: the early posts are for later visitors, not reach |
 | **YouTube** | Searchable proof: demos and tutorials | Created week 1; first video week 6; demos weeks 18–21; ~1 every 2 weeks after | Romanian titles with the words people search ("cum fac cutlist CNC") |
-| **Blog** (mobilcab.ro/ro/blog) | Google traffic from people looking for tools | 3 posts weeks 18–20 (drafts exist); 1/month after launch | Indexing takes weeks, which is why they go out at month -2 |
+| **Blog** (mobilcab.com/ro/blog) | Google traffic from people looking for tools | 3 posts weeks 18–20 (drafts exist); 1/month after launch | Indexing takes weeks, which is why they go out at month -2 |
 | **Email** (Brevo) | Keeps the waitlist warm; launch announcement | Monthly "jurnal de construcție" from week 10; weekly in the last 3 weeks before launch | Only to confirmed sign-ups (double opt-in) |
 | **WhatsApp** | Word of mouth between carpenters | From week 13 (invite links have a WhatsApp button) | Never message people who haven't asked |
 | **Associations, trade shows, workshop visits** | The offline slice of the market | First contact week 6; visits monthly | APMR and regional wood clusters (Section 5.1) |
@@ -101,7 +101,7 @@ No product mentions anywhere public (Section 3c).
 
 **Week 1 · 12 Oct · L−26**
 - **Website:** deploy the coming-soon page (see Section 2).
-- **Facebook Page + YouTube:** create both. Profile only: name, logo (the wordmark), cover, a one-line description, link to mobilcab.ro. No posts yet.
+- **Facebook Page + YouTube:** create both. Profile only: name, logo (the wordmark), cover, a one-line description, link to mobilcab.com. No posts yet.
 - **Admin:** start SRL registration, Stripe account and e-Factura-ready invoicing (Section 4b).
 - **Research:** search Facebook for "tâmplari", "mobilă la comandă", "CNC lemn", "proiectare mobilă"; list 10–15 groups with member counts and how active they are.
 

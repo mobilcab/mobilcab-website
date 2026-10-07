@@ -41,7 +41,7 @@ const signup = (email: string, opts: { lang?: 'ro' | 'en'; referredBy?: string }
     email,
     lang: opts.lang ?? 'ro',
     referredBy: opts.referredBy,
-    confirmUrl: (token) => `https://mobilcab.ro/api/confirm?t=${token}`,
+    confirmUrl: (token) => `https://mobilcab.com/api/confirm?t=${token}`,
     makeToken: async () => `token-for-${email}`,
     newCode: newReferralCode,
   });
@@ -63,7 +63,7 @@ describe('double opt-in', () => {
     expect(contact.ext_id).toBe(contact.attributes.REFCODE);
     expect(contact.attributes).toMatchObject({ REFERRALS: 0, REFERRED_BY: '', LANGUAGE: 'ro' });
     expect(brevo.sent).toEqual([
-      { to: 'ion@atelier.ro', templateId: 101, params: { CONFIRM_URL: 'https://mobilcab.ro/api/confirm?t=token-for-ion@atelier.ro' } },
+      { to: 'ion@atelier.ro', templateId: 101, params: { CONFIRM_URL: 'https://mobilcab.com/api/confirm?t=token-for-ion@atelier.ro' } },
     ]);
   });
 

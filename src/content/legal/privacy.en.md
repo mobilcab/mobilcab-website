@@ -4,7 +4,7 @@
 
 ## 1. Who we are
 
-The mobilcab.ro website and the Mobilcab app are operated by **[FILL IN company name]**, registered at **[FILL IN address]**, tax ID (CUI) **[FILL IN]**, Trade Register no. **[FILL IN]** ("Mobilcab", "we"). We are the controller of your personal data under Regulation (EU) 2016/679 ("GDPR").
+The mobilcab.com website and the Mobilcab app are operated by **[FILL IN company name]**, registered at **[FILL IN address]**, tax ID (CUI) **[FILL IN]**, Trade Register no. **[FILL IN]** ("Mobilcab", "we"). We are the controller of your personal data under Regulation (EU) 2016/679 ("GDPR").
 
 For any question about your data, write to us at **[FILL IN email address]**.
 

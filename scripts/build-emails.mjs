@@ -26,7 +26,7 @@ const setting = (key) => block.match(new RegExp(`${key}:\\s*'([^']*)'`))?.[1] ??
 const settings = {
   founderName: setting('founderName'),
   companyLine: setting('companyLine'),
-  siteUrl: setting('siteUrl') || 'https://mobilcab.ro',
+  siteUrl: setting('siteUrl') || 'https://mobilcab.com',
   demoUrl: setting('demoUrl'),
 };
 
@@ -116,8 +116,8 @@ const site = settings.siteUrl.replace(/\/$/, '');
 const signature = (lang) =>
   p(
     lang === 'ro'
-      ? `Pe curând,<br><strong style="color:${colors.ink};">${escape(fill(settings.founderName, lang))}</strong>, fondator Mobilcab`
-      : `Talk soon,<br><strong style="color:${colors.ink};">${escape(fill(settings.founderName, lang))}</strong>, Mobilcab founder`,
+      ? `Pe curând,<br><strong style="color:${colors.ink};">${escape(fill(settings.founderName, lang))}</strong>, fondatori Mobilcab`
+      : `Talk soon,<br><strong style="color:${colors.ink};">${escape(fill(settings.founderName, lang))}</strong>, Mobilcab founders`,
   );
 const demoLine = (lang) =>
   settings.demoUrl
@@ -154,7 +154,7 @@ const templates = {
     lang: 'ro',
     subject: 'Confirmă-ți înscrierea la Mobilcab',
     preheader: 'Un singur clic și ești pe lista de așteptare.',
-    reason: 'Primești acest email pentru că cineva a introdus adresa ta în formularul de pe mobilcab.ro. Dacă nu ai fost tu, ignoră-l: fără confirmare, nu te adăugăm pe nicio listă.',
+    reason: 'Primești acest email pentru că cineva a introdus adresa ta în formularul de pe mobilcab.com. Dacă nu ai fost tu, ignoră-l: fără confirmare, nu te adăugăm pe nicio listă.',
     transactional: true,
     body: [
       p('Salut,'),
@@ -167,7 +167,7 @@ const templates = {
     lang: 'en',
     subject: 'Confirm your Mobilcab sign-up',
     preheader: "One click and you're on the waitlist.",
-    reason: "You're receiving this email because someone entered your address on mobilcab.ro. If it wasn't you, ignore it: without confirmation, we don't add you to any list.",
+    reason: "You're receiving this email because someone entered your address on mobilcab.com. If it wasn't you, ignore it: without confirmation, we don't add you to any list.",
     transactional: true,
     body: [
       p('Hi,'),
@@ -180,7 +180,7 @@ const templates = {
     lang: 'ro',
     subject: 'Ești pe listă! Iată ce urmează 🛠️',
     preheader: 'Mulțumesc că te-ai înscris. Iată ce urmează până la lansare.',
-    reason: 'Primești acest email pentru că te-ai înscris pe lista de așteptare de pe mobilcab.ro.',
+    reason: 'Primești acest email pentru că te-ai înscris pe lista de așteptare de pe mobilcab.com.',
     body: [
       p('Salut,'),
       p('Mulțumesc că te-ai înscris pe lista de așteptare Mobilcab!'),
@@ -202,7 +202,7 @@ const templates = {
     lang: 'en',
     subject: "You're on the list! Here's what happens next 🛠️",
     preheader: "Thanks for signing up. Here's what happens before launch.",
-    reason: 'You are receiving this email because you joined the waitlist on mobilcab.ro.',
+    reason: 'You are receiving this email because you joined the waitlist on mobilcab.com.',
     body: [
       p('Hi,'),
       p('Thanks for joining the Mobilcab waitlist!'),
@@ -224,7 +224,7 @@ const templates = {
     lang: 'ro',
     subject: 'Locul tău de Founding Partner e rezervat 🛠️',
     preheader: 'Ți-am păstrat locul. Iată ce înseamnă și ce urmează.',
-    reason: 'Primești acest email pentru că ți-ai rezervat un loc în programul Founding Partner pe mobilcab.ro.',
+    reason: 'Primești acest email pentru că ți-ai rezervat un loc în programul Founding Partner pe mobilcab.com.',
     body: [
       p('Salut, {{ contact.FIRSTNAME }},'),
       p('Mulțumesc că ți-ai rezervat locul în programul Founding Partner! Ești printre primii 100 de tâmplari care construiesc Mobilcab alături de noi.'),
@@ -248,7 +248,7 @@ const templates = {
     lang: 'en',
     subject: 'Your Founding Partner spot is reserved 🛠️',
     preheader: "We've held your spot. Here's what it means and what happens next.",
-    reason: 'You are receiving this email because you reserved a spot in the Founding Partner program on mobilcab.ro.',
+    reason: 'You are receiving this email because you reserved a spot in the Founding Partner program on mobilcab.com.',
     body: [
       p('Hi {{ contact.FIRSTNAME }},'),
       p("Thanks for reserving your spot in the Founding Partner program! You're among the first 100 workshops building Mobilcab with us."),

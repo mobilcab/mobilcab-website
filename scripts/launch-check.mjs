@@ -46,7 +46,7 @@ export function runLaunchChecks({ root, env }) {
   if (env.CONFIRM_SECRET && env.CONFIRM_SECRET.length < 32) {
     errors.push('CONFIRM_SECRET is shorter than 32 characters; use a long random string.');
   }
-  if (!env.SITE_URL) warnings.push('SITE_URL is not set; links and the sitemap use https://mobilcab.ro.');
+  if (!env.SITE_URL) warnings.push('SITE_URL is not set; links and the sitemap use https://mobilcab.com.');
   if (!env.PUBLIC_PLAUSIBLE_DOMAIN) warnings.push('PUBLIC_PLAUSIBLE_DOMAIN is not set: no visit or sign-up statistics.');
   if (!env.BREVO_CONFIRM_TEMPLATE_ID_EN) warnings.push('BREVO_CONFIRM_TEMPLATE_ID_EN is not set: English sign-ups get the Romanian confirmation email.');
 
