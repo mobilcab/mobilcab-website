@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Planul Mobilcab — ce livrăm și în ce ordine",
+    "description": "Mobilcab se livrează pe etape: proiectare 3D și listă de debitare mai întâi, apoi nesting, CNC, echipă, abonamente și AI. Fără date false — doar ordine și status."
+  },
+  "hero": {
+    "label": "Planul produsului",
+    "title": "Livrăm pe etape — fiecare utilă singură.",
+    "body": "Nu promitem „tot CAD-ul și CNC-ul mâine”. Construim în ordine: mai întâi baza de atelier (proiectare + debitare), apoi ce urmează doar când etapa curentă e stabilă pe proiecte reale."
+  },
+  "statuses": {
+    "launch": "Lansare",
+    "available": "Disponibil",
+    "inProgress": "În lucru",
+    "planned": "Planificat"
+  },
+  "stages": [
+    {
+      "id": "design-cutlist",
+      "status": "launch",
+      "title": "Proiectare 3D + listă de debitare",
+      "body": "Desenezi mobilierul în 3D, salvezi în cloud și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit."
+    },
+    {
+      "id": "nesting-offer",
+      "status": "inProgress",
+      "title": "Optimizare pe placă + etichete + ofertă",
+      "body": "Așezi piesele pe plăci, tipărești etichete și calculezi costuri ca să dai o ofertă clară clientului."
+    },
+    {
+      "id": "cnc-export",
+      "status": "planned",
+      "title": "Export CNC",
+      "body": "Fișiere pentru mașină, după ce nesting-ul e stabil. Un flux repetabil pe care te poți baza — nu „toate CNC-urile din lume” dintr-o dată."
+    },
+    {
+      "id": "team-share",
+      "status": "planned",
+      "title": "Echipă și partajare",
+      "body": "Lucru în atelier cu roluri, invitați și un link de vizualizare pentru client — fără să-i dai acces la tot atelierul."
+    },
+    {
+      "id": "subscriptions",
+      "status": "planned",
+      "title": "Abonamente",
+      "body": "Planuri plătite când valoarea (export, atelier) e clară. Până atunci, acces generos la etapa de proiectare și debitare."
+    },
+    {
+      "id": "ai-renders",
+      "status": "planned",
+      "title": "AI + randări",
+      "body": "Asistent de layout și vizualizări pentru prezentări. Extra, premium — nu blochează etapele de bază din atelier."
+    }
+  ],
+  "faq": {
+    "title": "Întrebări despre plan",
+    "items": [
+      {
+        "id": "de-ce-etape",
+        "q": "De ce pe etape?",
+        "a": [
+          "Ca să ai ceva util în atelier mai repede, nu un program jumătate gata pe toate fronturile. Fiecare etapă trebuie să stea pe picioarele ei înainte să deschidem următoarea."
+        ]
+      },
+      {
+        "id": "cand-cnc",
+        "q": "Când vine CNC?",
+        "a": [
+          "După proiectare, debitare și nesting stabile pe proiecte reale. Exportul CNC fără nesting de încredere creează doar frustrare la mașină — de aceea e etapa a treia, nu prima."
+        ]
+      },
+      {
+        "id": "doar-proiectare",
+        "q": "Pot folosi doar proiectarea acum?",
+        "a": [
+          "Da. Etapa 1 (proiectare 3D + listă de debitare) e baza pe care o lansăm întâi. Poți lucra cu ea fără să aștepți nesting, CNC sau AI."
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Încearcă baza acum",
+    "body": "Proiectare și debitare — următorul pas când ești gata.",
+    "primary": "Încearcă aplicația",
+    "secondary": "Sau înscrie-te pe listă"
+  }
+}

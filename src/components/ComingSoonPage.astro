@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
 import WaitlistForm from './WaitlistForm.astro';
 import { useHomeTranslations, useTranslations, type Lang } from '../i18n';
@@ -42,4 +43,5 @@ const joinId = useHomeTranslations(lang).anchors.join;
       </div>
     </main>
   </div>
+  <SiteFooter lang={lang} />
 </Base>

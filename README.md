@@ -11,6 +11,7 @@ The only client JS is the small form handler; the language switch is plain links
 |---|---|
 | `/` | Redirects to `/ro/` |
 | `/ro/`, `/en/` | Coming-soon page |
+| `/ro/roadmap/`, `/en/roadmap/` | Product roadmap (stages for workshops) |
 | `/ro/confidentialitate/`, `/en/privacy/` | Temporary privacy note |
 | `POST /api/subscribe` | Waitlist sign-up (Brevo) |
 

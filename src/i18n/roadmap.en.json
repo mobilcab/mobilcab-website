@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Mobilcab roadmap — what we ship, and in what order",
+    "description": "Mobilcab ships in stages: 3D design and cut lists first, then nesting, CNC, team, subscriptions and AI. No fake dates — just order and status."
+  },
+  "hero": {
+    "label": "Product roadmap",
+    "title": "We ship in stages — each one useful on its own.",
+    "body": "We don't promise “full CAD and CNC tomorrow.” We build in order: workshop basics first (design + cut lists), then the next stage only when the current one is stable on real projects."
+  },
+  "statuses": {
+    "launch": "Launch",
+    "available": "Available",
+    "inProgress": "In progress",
+    "planned": "Planned"
+  },
+  "stages": [
+    {
+      "id": "design-cutlist",
+      "status": "launch",
+      "title": "3D design + cut list",
+      "body": "Design furniture in 3D, save to the cloud, and get the parts list — what you cut in the workshop. That's the foundation: without a cut list, the project isn't worth investing in."
+    },
+    {
+      "id": "nesting-offer",
+      "status": "inProgress",
+      "title": "Sheet nesting + labels + quotes",
+      "body": "Lay parts on sheets, print labels, and work out costs so you can give the client a clear quote."
+    },
+    {
+      "id": "cnc-export",
+      "status": "planned",
+      "title": "CNC export",
+      "body": "Machine files once nesting is solid. A repeatable flow you can rely on — not “every CNC in the world” on day one."
+    },
+    {
+      "id": "team-share",
+      "status": "planned",
+      "title": "Team and sharing",
+      "body": "Workshop work with roles, invites, and a view-only link for the client — without opening the whole shop to them."
+    },
+    {
+      "id": "subscriptions",
+      "status": "planned",
+      "title": "Subscriptions",
+      "body": "Paid plans when the value (export, workshop tools) is clear. Until then, generous access to design and cut lists."
+    },
+    {
+      "id": "ai-renders",
+      "status": "planned",
+      "title": "AI + renders",
+      "body": "A layout assistant and visuals for presentations. Premium extras — they don't block the core workshop stages."
+    }
+  ],
+  "faq": {
+    "title": "Roadmap questions",
+    "items": [
+      {
+        "id": "why-stages",
+        "q": "Why ship in stages?",
+        "a": [
+          "So you get something useful in the workshop sooner — not a half-finished tool on every front. Each stage has to stand on its own before we open the next one."
+        ]
+      },
+      {
+        "id": "when-cnc",
+        "q": "When does CNC arrive?",
+        "a": [
+          "After design, cut lists and nesting are stable on real projects. CNC export without reliable nesting only frustrates you at the machine — that's why it's stage three, not stage one."
+        ]
+      },
+      {
+        "id": "design-only",
+        "q": "Can I use design only for now?",
+        "a": [
+          "Yes. Stage 1 (3D design + cut list) is the foundation we launch first. You can work with it without waiting for nesting, CNC or AI."
+        ]
+      }
+    ]
+  },
+  "cta": {
+    "title": "Try the foundation now",
+    "body": "Design and cut lists — the next step when you're ready.",
+    "primary": "Try the app",
+    "secondary": "Or join the waitlist"
+  }
+}

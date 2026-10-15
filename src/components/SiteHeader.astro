@@ -22,7 +22,7 @@ const { lang, alternates, preview = false, current } = Astro.props;
 const t = useTranslations(lang);
 const home = linkFor('home', lang, preview) ?? '/';
 
-const items = (['demo', 'pricing', 'faq', 'blog'] as const)
+const items = (['demo', 'roadmap', 'pricing', 'faq', 'blog'] as const)
   .map((key) => ({ key, label: t.nav[key], href: linkFor(key, lang, preview) }))
   .filter((item): item is { key: (typeof item)['key']; label: string; href: string } => item.href !== null);
 const fpHref = linkFor('foundingPartner', lang, preview);

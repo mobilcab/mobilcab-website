@@ -17,6 +17,9 @@ export const REFERRAL_GOAL = 3;
 /** Invites counted per person at most. */
 export const REFERRAL_CAP = 5;
 
+/** Public app URL (Roadmap CTA). Waitlist remains the fallback until accounts open. */
+export const APP_URL = 'https://app.mobilcab.com';
+
 // Used by the Brevo email templates (scripts/build-emails.mjs, `npm run emails`).
 // Leave a value empty and the emails show a visible [COMPLETEAZĂ] marker instead.
 export const EMAIL_SETTINGS = {

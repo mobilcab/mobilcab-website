@@ -8,6 +8,8 @@ import demoRo from './demo.ro.json';
 import demoEn from './demo.en.json';
 import faqRo from './faq.ro.json';
 import faqEn from './faq.en.json';
+import roadmapRo from './roadmap.ro.json';
+import roadmapEn from './roadmap.en.json';
 import pricingRo from './pricing.ro.json';
 import pricingEn from './pricing.en.json';
 import blogRo from './blog.ro.json';
@@ -41,6 +43,10 @@ export const useDemoTranslations = (lang: Lang): DemoDict => demoDicts[lang];
 export type FaqDict = typeof faqRo;
 const faqDicts: Record<Lang, FaqDict> = { ro: faqRo, en: faqEn };
 export const useFaqTranslations = (lang: Lang): FaqDict => faqDicts[lang];
+
+export type RoadmapDict = typeof roadmapRo;
+const roadmapDicts: Record<Lang, RoadmapDict> = { ro: roadmapRo, en: roadmapEn };
+export const useRoadmapTranslations = (lang: Lang): RoadmapDict => roadmapDicts[lang];
 
 export type PricingDict = typeof pricingRo;
 const pricingDicts: Record<Lang, PricingDict> = { ro: pricingRo, en: pricingEn };

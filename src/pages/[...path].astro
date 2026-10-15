@@ -15,6 +15,7 @@ import HomePage from '../components/HomePage.astro';
 import LegalPage from '../components/LegalPage.astro';
 import PricingPage from '../components/PricingPage.astro';
 import PrivacyNotice from '../components/PrivacyNotice.astro';
+import RoadmapPage from '../components/RoadmapPage.astro';
 import { Content as PrivacyEn } from '../content/legal/privacy.en.md';
 import { Content as PrivacyRo } from '../content/legal/privacy.ro.md';
 import { Content as TermsEn } from '../content/legal/terms.en.md';
@@ -69,6 +70,7 @@ const legalPage = lang && (key === 'terms' || key === 'privacy') && !standIn ? l
 {lang && key === 'foundingPartner' && <FoundingPartnerPage lang={lang} />}
 {lang && key === 'demo' && <DemoPage lang={lang} />}
 {lang && key === 'pricing' && <PricingPage lang={lang} />}
+{lang && key === 'roadmap' && <RoadmapPage lang={lang} />}
 {lang && key === 'faq' && <FaqPage lang={lang} />}
 {lang && key === 'privacy' && standIn && <PrivacyNotice lang={lang} />}
 {

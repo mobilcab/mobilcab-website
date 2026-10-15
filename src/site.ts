@@ -13,12 +13,23 @@
 import { REFERRAL_PROGRAM } from './config';
 import { useHomeTranslations, type Lang } from './i18n';
 
-export type PageKey = 'home' | 'foundingPartner' | 'demo' | 'pricing' | 'faq' | 'blog' | 'terms' | 'privacy';
+export type PageKey =
+  | 'home'
+  | 'foundingPartner'
+  | 'demo'
+  | 'roadmap'
+  | 'pricing'
+  | 'faq'
+  | 'blog'
+  | 'terms'
+  | 'privacy';
 
 export const published: Record<PageKey, boolean> = {
   home: false,
   foundingPartner: false,
   demo: false,
+  // Public during waitlist: shows what ships when, without promising dates.
+  roadmap: true,
   pricing: false,
   faq: false,
   // The blog's index page. Each post also has its own `published` flag (src/content/blog/).
@@ -40,6 +51,7 @@ export const livePaths: Record<PageKey, Record<Lang, string>> = {
   home: { ro: '/ro/', en: '/en/' },
   foundingPartner: { ro: '/ro/founding-partner/', en: '/en/founding-partner/' },
   demo: { ro: '/ro/cum-functioneaza/', en: '/en/how-it-works/' },
+  roadmap: { ro: '/ro/roadmap/', en: '/en/roadmap/' },
   pricing: { ro: '/ro/preturi/', en: '/en/pricing/' },
   faq: { ro: '/ro/intrebari/', en: '/en/faq/' },
   blog: { ro: '/ro/blog/', en: '/en/blog/' },
