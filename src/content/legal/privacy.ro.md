@@ -46,8 +46,9 @@ Când îți creezi un cont și folosești aplicația, prelucrăm:
 
 - **datele contului:** adresa de email, numele și datele de autentificare (parola este stocată doar sub formă criptată) [VERIFICĂ];
 - **proiectele tale:** designurile, cutlist-urile și exporturile pe care le creezi, ca să le salvăm și să le ai pe toate device-urile;
-- **datele de plată:** plățile se fac prin Stripe; noi nu vedem și nu stocăm datele cardului tău, ci doar informații despre abonament și facturi;
-- **cererile către asistentul AI:** când folosești asistentul, datele proiectului relevante pentru cererea ta sunt trimise furnizorului nostru de AI pentru a genera răspunsul [VERIFICĂ: furnizorul, locația datelor, cât timp le păstrează]. Nu folosim proiectele tale pentru a antrena modele AI **[DE DECIS]**.
+- **datele de plată:** plățile se fac prin Paddle, care acționează ca vânzător oficial (merchant of record); noi nu vedem și nu stocăm datele cardului tău, ci doar informații despre abonament și facturi;
+- **cererile către asistentul AI:** când folosești asistentul, datele proiectului relevante pentru cererea ta sunt trimise furnizorului nostru de AI pentru a genera răspunsul [VERIFICĂ: furnizorul, locația datelor, cât timp le păstrează];
+- **antrenarea de modele AI:** ne rezervăm dreptul de a folosi date de proiect, **anonimizate și agregate**, pentru a dezvolta funcționalități viitoare de generare asistată prin AI. Ai opțiunea de **opt-out**, disponibilă din contul tău [VERIFICĂ: locul exact] — temeiul legal pentru cei care nu optează pentru opt-out este interesul legitim (art. 6 alin. (1) lit. f) GDPR), cu drept de opoziție. Drept rezervat pentru viitor, nu o prelucrare activă azi.
 
 **Temeiul legal** este executarea contractului cu tine (art. 6 alin. (1) lit. b) GDPR) și, pentru facturi, obligațiile legale fiscale (art. 6 alin. (1) lit. c) GDPR).
 
@@ -79,7 +80,7 @@ Nu vindem și nu închiriem datele tale și nu le folosim pentru publicitate. Lu
 | Brevo (Sendinblue SAS, Franța) | Lista de așteptare, rezervările Founding Partner și trimiterea emailurilor | Uniunea Europeană [VERIFICĂ] |
 | Plausible Insights OÜ (Estonia) | Statistici de vizitare, fără date personale | Uniunea Europeană [VERIFICĂ] |
 | Vercel Inc. (SUA) | Găzduirea site-ului | [VERIFICĂ: regiunea]; transferurile în afara UE se bazează pe [VERIFICĂ: Cadrul UE-SUA privind protecția datelor / clauze contractuale standard] |
-| Stripe | Procesarea plăților | [VERIFICĂ] |
+| Paddle | Procesarea plăților (merchant of record) | [VERIFICĂ] |
 | [COMPLETEAZĂ furnizorul de AI] | Generarea răspunsurilor asistentului AI | [VERIFICĂ] |
 | [COMPLETEAZĂ furnizorul de găzduire a aplicației] | Stocarea conturilor și a proiectelor | [VERIFICĂ] |
 

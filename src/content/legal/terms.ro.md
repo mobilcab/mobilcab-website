@@ -12,7 +12,7 @@ Acești termeni se aplică folosirii aplicației Mobilcab și a site-ului mobilc
 
 Mobilcab este un program de proiectare a mobilierului care rulează în browser, pe laptop, tabletă sau telefon. Îți permite să proiectezi mobilier, să generezi cutlist-ul și fișiere de export pentru CNC și, în anumite planuri, să folosești un asistent AI.
 
-Serviciul este în dezvoltare activă: adăugăm, schimbăm și, uneori, eliminăm funcții. Te anunțăm din timp despre schimbările importante.
+Serviciul este în dezvoltare activă: adăugăm, schimbăm și, uneori, eliminăm funcții. Ne rezervăm dreptul de a face asta fără notificare prealabilă pentru schimbări minore; pentru schimbări importante te anunțăm din timp.
 
 ## 3. Contul tău
 
@@ -30,7 +30,7 @@ Oferim un plan gratuit și planurile plătite Basic, Starter, Pro și Studio. Ce
 
 ## 5. Plata, reînnoirea și anularea
 
-- Plățile se fac prin Stripe. Nu stocăm datele cardului tău.
+- Plățile se fac prin Paddle, care acționează ca vânzător oficial al serviciului (merchant of record). Nu stocăm datele cardului tău.
 - Abonamentele lunare se reînnoiesc automat în fiecare lună, până le anulezi.
 - **Poți anula oricând**, din cont. Anularea are efect la sfârșitul perioadei deja plătite; până atunci, păstrezi accesul.
 - Abonamentele anuale: **[DE DECIS — vezi întrebarea deschisă 3]** dacă anularea înainte de termen dă dreptul la o rambursare parțială sau doar oprește reînnoirea.
@@ -39,10 +39,10 @@ Oferim un plan gratuit și planurile plătite Basic, Starter, Pro și Studio. Ce
 
 ## 6. Programul Founding Partner
 
-- Programul este limitat la primii 100 de utilizatori.
-- **Rezervarea unui loc este gratuită și nu te obligă la nimic.** Plata începe doar când primești acces și alegi să continui.
-- Prețul Founding Partner pentru planul Basic (549 RON/an sau 49 RON/lună) rămâne blocat timp de 12 luni de la **[DE DECIS: prima plată?]**.
-- După cele 12 luni: **[DE DECIS — vezi întrebarea deschisă 5]**.
+- Programul este limitat la primii 15 utilizatori, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
+- **Rezervarea unui loc este gratuită și nu te obligă la nimic.** Accesul prin cod de acces e oferit fără plată, în schimbul explicit al feedback-ului dat aplicației — nu un cadou necondiționat.
+- La activarea planului plătit, Founding Partners primesc o reducere de 20% din preț, valabilă 12 luni de la activare.
+- După cele 12 luni, prețul revine automat la cel standard — reducerea nu se anulează și nu rămâne activă pe termen nelimitat.
 - Beneficiile Founding Partner sunt personale și nu pot fi transferate.
 
 ## 7. Asistentul AI
@@ -67,7 +67,7 @@ Această secțiune e importantă: citește-o cu atenție.
 - Proiectele pe care le creezi îți aparțin.
 - Ne dai doar dreptul de a le stoca și prelucra cât e necesar ca să-ți oferim serviciul (de exemplu, ca să le salvăm, să le afișăm pe toate device-urile tale și să generăm exporturile).
 - Când folosești asistentul AI, datele proiectului relevante pentru cererea ta sunt trimise furnizorului nostru de AI pentru a genera răspunsul [VERIFICĂ: furnizorul, locația datelor, păstrarea lor].
-- Nu folosim proiectele tale pentru a antrena modele AI **[DE DECIS: confirmați această politică]**.
+- Ne rezervăm dreptul de a folosi date de proiect, **anonimizate și agregate**, pentru a dezvolta și antrena funcționalități viitoare de generare asistată de mobilier prin inteligență artificială. Ai opțiunea de **opt-out**, disponibilă din contul tău [VERIFICĂ: locul exact — setări cont]. Acesta e un drept rezervat pentru viitor, nu o descriere a unei prelucrări active azi.
 
 ## 10. Ce nu ai voie să faci
 
