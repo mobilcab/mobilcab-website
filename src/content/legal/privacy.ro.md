@@ -40,21 +40,25 @@ Folosim aceste date ca să-ți păstrăm locul, să te contactăm personal când
 
 ## 4. Contul și aplicația
 
-[VERIFICĂ — această secțiune depinde de felul în care funcționează aplicația și trebuie confirmată înainte de lansare.]
+[VERIFICĂ — secțiunea descrie aplicația așa cum e în cod la 2026-10-27 (mobilcab-cad, `develop`). Se reverifică înainte de publicare și se confirmă cu avocatul.]
 
 Când îți creezi un cont și folosești aplicația, prelucrăm:
 
-- **datele contului:** adresa de email, numele și datele de autentificare (parola este stocată doar sub formă criptată) [VERIFICĂ];
-- **proiectele tale:** designurile, cutlist-urile și exporturile pe care le creezi, ca să le salvăm și să le ai pe toate device-urile;
+- **datele contului:** adresa de email, parola (stocată de furnizorul de autentificare doar sub formă criptată, nu o vedem) și, dacă o completezi la înregistrare, numele tău;
+- **proiectele tale:** designurile pe care le creezi, ca să le salvăm și să le ai pe toate device-urile. Pot conține date ale clienților tăi (nume, dimensiuni, prețuri) — tu decizi ce introduci. Până la salvare, o ciornă a proiectului rămâne în browserul tău;
+- **setările tale:** preferințele de lucru (de exemplu unitatea de măsură sau lățimea panourilor) și presetările salvate, legate de contul tău;
+- **rapoartele de problemă:** când apeși „Raportează o problemă”, trimitem echipei, **automat**, contextul tehnic de care avem nevoie ca să reproducem problema: versiunea aplicației, mediul și limba interfeței; emailul, identificatorul, planul și rolul contului tău; browserul, dimensiunea ferestrei, densitatea ecranului, placa video (randarea WebGL) și, dacă browserul o spune, memoria dispozitivului; identificatorul și numele proiectului, numărul de elemente pe tip, elementul selectat (identificator, tip și dimensiunile lui), fila și unealta active, unitatea de măsură; ultimele comenzi date (tip și identificator, fără conținut) și erorile recente ale aplicației. **Doar dacă bifezi tu**, atașăm și o captură a vederii 3D sau fișierul întreg al proiectului. Raportul ajunge, printr-o funcție a noastră, ca sarcină în ClickUp;
 - **datele de plată:** plățile se fac prin Paddle, care acționează ca vânzător oficial (merchant of record); noi nu vedem și nu stocăm datele cardului tău, ci doar informații despre abonament și facturi;
-- **cererile către asistentul AI:** când folosești asistentul, datele proiectului relevante pentru cererea ta sunt trimise furnizorului nostru de AI pentru a genera răspunsul [VERIFICĂ: furnizorul, locația datelor, cât timp le păstrează];
-- **antrenarea de modele AI:** ne rezervăm dreptul de a folosi date de proiect, **anonimizate și agregate**, pentru a dezvolta funcționalități viitoare de generare asistată prin AI. Ai opțiunea de **opt-out**, disponibilă din contul tău [VERIFICĂ: locul exact] — temeiul legal pentru cei care nu optează pentru opt-out este interesul legitim (art. 6 alin. (1) lit. f) GDPR), cu drept de opoziție. Drept rezervat pentru viitor, nu o prelucrare activă azi.
+- **emailurile tranzacționale** (de exemplu confirmări și notificări legate de contul sau de cererea ta), trimise prin Brevo;
+- **asistentul AI și antrenarea de modele AI:** [VERIFICĂ — în aplicație nu există azi un asistent AI și nicio trimitere de date către un furnizor de AI; paragraful rămâne doar dacă se decide.] Ne rezervăm dreptul de a folosi date de proiect, **anonimizate și agregate**, pentru a dezvolta funcționalități viitoare de generare asistată prin AI. Ai opțiunea de **opt-out**, disponibilă din contul tău [VERIFICĂ: opțiunea nu există încă în aplicație] — temeiul legal pentru cei care nu optează pentru opt-out este interesul legitim (art. 6 alin. (1) lit. f) GDPR), cu drept de opoziție. Drept rezervat pentru viitor, nu o prelucrare activă azi.
 
-**Temeiul legal** este executarea contractului cu tine (art. 6 alin. (1) lit. b) GDPR) și, pentru facturi, obligațiile legale fiscale (art. 6 alin. (1) lit. c) GDPR).
+**Temeiul legal:** contul și proiectele — executarea contractului cu tine (art. 6 alin. (1) lit. b) GDPR); rapoartele de problemă — interesul nostru legitim de a diagnostica și repara erori (art. 6 alin. (1) lit. f) GDPR); captura 3D și fișierul proiectului atașate unui raport — consimțământul tău, exprimat prin bifa din dialog (art. 6 alin. (1) lit. a) GDPR); facturile — obligațiile legale fiscale (art. 6 alin. (1) lit. c) GDPR).
+
+**Exportul și ștergerea contului.** Din meniul contului poți descărca într-un fișier datele tale (contul, proiectele, presetările și setările) și îți poți șterge contul. Ștergerea elimină contul și datele asociate lui din baza de date activă. Pentru orice altceva, scrie-ne la adresa din secțiunea 1.
 
 ## 5. Statistici de vizitare
 
-Folosim Plausible Analytics ca să știm câte persoane vizitează site-ul, ce pagini citesc și câte se înscriu. Plausible nu folosește cookie-uri și nu stochează date personale: adresa IP este folosită doar pentru a genera un identificator anonim care se schimbă zilnic și nu este salvată [VERIFICĂ]. Vedem doar statistici agregate. Temeiul este interesul nostru legitim de a înțelege dacă site-ul își atinge scopul (art. 6 alin. (1) lit. f) GDPR).
+Folosim Plausible Analytics ca să știm câte persoane vizitează site-ul, ce pagini citesc și câte se înscriu. Plausible nu folosește cookie-uri și nu stochează date personale: adresa IP este folosită doar pentru a genera un identificator anonim care se schimbă zilnic și nu este salvată [VERIFICĂ]. Site-ul mai folosește Vercel Web Analytics pentru numărul de vizualizări de pagină, tot fără cookie-uri și fără profiluri individuale [VERIFICĂ la Vercel; în cod, `@vercel/analytics` e activ în `Base.astro`, deci sunt două instrumente, nu unul]. Vedem doar statistici agregate. În aplicație nu există analytics de terți (verificat în cod la 2026-10-27). Temeiul este interesul nostru legitim de a înțelege dacă site-ul își atinge scopul (art. 6 alin. (1) lit. f) GDPR).
 
 ## 6. Clipurile video
 
@@ -69,7 +73,7 @@ Ca orice site, serverele care îl găzduiesc primesc automat date tehnice despre
 Site-ul nu folosește cookie-uri și nu stochează informații pe dispozitivul tău. Excepții:
 
 - playerul YouTube, după ce apeși pe „play” (vezi secțiunea 6);
-- în aplicație, cookie-urile strict necesare pentru a rămâne autentificat [VERIFICĂ].
+- în aplicație, sesiunea de autentificare, ținută în spațiul de stocare al browserului (localStorage sau sessionStorage, după cum alegi la autentificare), ciorna proiectului și setările locale. Sunt strict necesare pentru ca aplicația să funcționeze, deci nu cer consimțământ. Nu folosim cookie-uri de urmărire sau de publicitate nici pe site, nici în aplicație, așa că nu afișăm banner de cookie-uri; dacă se adaugă analytics de terți, decizia se reia [VERIFICĂ cu avocatul].
 
 ## 9. Cine mai are acces la date
 
@@ -77,12 +81,13 @@ Nu vindem și nu închiriem datele tale și nu le folosim pentru publicitate. Lu
 
 | Furnizor | Rol | Unde sunt datele |
 |---|---|---|
-| Brevo (Sendinblue SAS, Franța) | Lista de așteptare, rezervările Founding Partner și trimiterea emailurilor | Uniunea Europeană [VERIFICĂ] |
+| Brevo (Sendinblue SAS, Franța) | Lista de așteptare, rezervările Founding Partner și trimiterea emailurilor, inclusiv cele tranzacționale din aplicație | Uniunea Europeană [VERIFICĂ] |
 | Plausible Insights OÜ (Estonia) | Statistici de vizitare, fără date personale | Uniunea Europeană [VERIFICĂ] |
-| Vercel Inc. (SUA) | Găzduirea site-ului | [VERIFICĂ: regiunea]; transferurile în afara UE se bazează pe [VERIFICĂ: Cadrul UE-SUA privind protecția datelor / clauze contractuale standard] |
+| Vercel Inc. (SUA) | Găzduirea site-ului și a aplicației; statistici de vizualizări (Web Analytics) | [VERIFICĂ: regiunea]; transferurile în afara UE se bazează pe [VERIFICĂ: Cadrul UE-SUA privind protecția datelor / clauze contractuale standard] |
+| Supabase | Autentificare, baza de date cu conturi, proiecte și setări, funcția care primește rapoartele de problemă | Irlanda, UE (regiunea `eu-west-1`, verificată în consola Supabase la 2026-10-27, pentru mediul de dezvoltare și cel de producție); furnizorul e companie din SUA, deci [VERIFICĂ: DPA și baza transferurilor, dacă există acces din afara UE] |
+| ClickUp (Mango Technologies, Inc., SUA) | Primește rapoartele de problemă ca sarcini, cu emailul tău și contextul tehnic de mai sus | [VERIFICĂ: regiunea spațiului de lucru]; dacă nu e în UE, [VERIFICĂ: clauze contractuale standard / DPA] |
 | Paddle | Procesarea plăților (merchant of record) | [VERIFICĂ] |
-| [COMPLETEAZĂ furnizorul de AI] | Generarea răspunsurilor asistentului AI | [VERIFICĂ] |
-| [COMPLETEAZĂ furnizorul de găzduire a aplicației] | Stocarea conturilor și a proiectelor | [VERIFICĂ] |
+| [COMPLETEAZĂ furnizorul de AI] | Doar dacă se introduce un asistent AI; azi nu există | — |
 
 YouTube (Google) prelucrează date ca operator independent, doar dacă pornești un clip.
 
@@ -93,7 +98,8 @@ YouTube (Google) prelucrează date ca operator independent, doar dacă pornești
 - **Înscrieri neconfirmate:** cel mult 30 de zile [VERIFICĂ].
 - **Lista de așteptare și datele programului de invitații:** până te dezabonezi sau ceri ștergerea. Dacă nu îți mai trimitem niciun email timp de 24 de luni, sau dacă Mobilcab nu se lansează, ștergem lista [VERIFICĂ perioada].
 - **Rezervările Founding Partner:** până deschidem accesul și alegi dacă continui. Dacă nu continui, ștergem datele rezervării în cel mult 6 luni [VERIFICĂ perioada].
-- **Contul și proiectele:** cât timp ai cont. După închiderea contului le ștergem în [COMPLETEAZĂ] zile [VERIFICĂ].
+- **Contul și proiectele:** cât timp ai cont. La ștergerea contului din aplicație, datele dispar imediat din baza de date activă; copiile de rezervă ale furnizorului expiră treptat, în cel mult [COMPLETEAZĂ — propus 30 de zile] [VERIFICĂ perioada de backup la Supabase].
+- **Rapoartele de problemă:** sarcina din ClickUp (inclusiv emailul și contextul tehnic) se păstrează cât e util pentru diagnostic [COMPLETEAZĂ perioada]; o ștergi, la cerere, scriindu-ne. Ștergerea contului nu elimină automat sarcinile din ClickUp [VERIFICĂ — de decis dacă se adaugă ștergere automată].
 - **Facturile:** cât cere legea fiscală [VERIFICĂ: 10 ani].
 - **După dezabonare** păstrăm doar adresa de email într-o listă de excludere, ca să nu-ți mai scriem din greșeală.
 - **Date tehnice:** perioada scurtă descrisă mai sus.
@@ -110,7 +116,7 @@ Conform GDPR, ai dreptul:
 - să te opui prelucrării bazate pe interesul nostru legitim;
 - să îți retragi consimțământul oricând.
 
-Pentru oricare dintre acestea, scrie-ne la **[COMPLETEAZĂ adresa de email]**. Îți răspundem în cel mult o lună.
+Accesul la datele din cont, copia lor și ștergerea contului le poți face direct din aplicație (vezi secțiunea 4). Pentru oricare dintre drepturi, inclusiv pentru rapoartele de problemă, scrie-ne la **[COMPLETEAZĂ adresa de email]**. Îți răspundem în cel mult o lună.
 
 Dacă ești nemulțumit de felul în care îți prelucrăm datele, poți depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), B-dul G-ral. Gheorghe Magheru nr. 28-30, sector 1, București, www.dataprotection.ro [VERIFICĂ].
 

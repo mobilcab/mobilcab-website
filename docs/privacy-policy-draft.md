@@ -29,11 +29,34 @@
 - Both forms require the consent checkbox, checked in the browser and again on
   the server.
 
-## What the app does (not in this codebase)
+## What the app does (checked in `mobilcab-cad` on 2026-10-27, ClickUp CU-1amhxucmurv)
 
-Section 4 of the policy (account, projects, Stripe payments, AI assistant) is
-written from the plans in the Marketing Plan and the Terms of Service, not from
-code. Every point there needs confirming against the real app before launch.
+Section 4 of the policy is now written from the app's code (`mobilcab-cad`,
+`develop`), not from plans. Re-check it before publishing. What the code shows:
+
+| What | Where it goes | Code reference (mobilcab-cad) |
+|---|---|---|
+| Account: email, password (hashed by Supabase Auth), optional full name; session in `localStorage` or `sessionStorage` | Supabase, project `mobilcab-cad-prod` (`eu-west-1`, Ireland) | `src/app/services/auth.service.ts` |
+| Projects (cloud) and project draft (`mobilcab_project` in `localStorage`) | Supabase; the browser | `src/app/services/project.service.ts` |
+| Presets and settings | Supabase | `user_presets`, `user_settings` |
+| Problem report: automatic technical context (app, user, device, project, recent commands and errors) + opt-in 3D capture / whole `.mcab` | Edge Function `report-problem` -> ClickUp task | `src/app/services/problem-report.service.ts`, `supabase/functions/report-problem/` |
+| Transactional emails (Founding Partner waitlist, invite codes) | Brevo, from the Edge Function `send-app-notification` | `supabase/functions/send-app-notification/` |
+| Self-service export and account deletion | Export built in the browser; deletion by Edge Function `delete-account` (removes the `auth.users` row, the rest cascades) | `src/app/services/account-data.service.ts`, `supabase/functions/delete-account/` |
+
+Facts that differ from the earlier draft:
+
+- **No AI assistant exists in the app.** The policy keeps the "reserved right to
+  train on anonymised data" paragraph only as a decision to confirm; the opt-out it
+  mentions does not exist yet. Remove it if the decision is not to reserve it.
+- **Payments: Paddle**, not Stripe. Not live yet.
+- **No third-party analytics in the app** (no gtag, PostHog, Sentry, Plausible). The
+  **website** uses Plausible (optional, `PUBLIC_PLAUSIBLE_DOMAIN`) **and**
+  `@vercel/analytics` (`Base.astro`); the earlier draft mentioned only Plausible.
+- **Account deletion is immediate** in the live database; whether backups keep the
+  data for up to 30 days is to be confirmed with Supabase.
+- **ClickUp tasks from reports are not deleted** with the account.
+- **Not in code yet** (so not described as live): phone number and CUI on the
+  Founding Partner request, `consent_at`, and an AI opt-out.
 
 ## Questions for the lawyer
 
@@ -63,7 +86,17 @@ code. Every point there needs confirming against the real app before launch.
 7. **Law 506/2004** (electronic communications) alongside GDPR for marketing
    emails: confirm the wording.
 8. **AI provider**: which one, where it processes data, how long it keeps it,
-   and the "no training on your projects" commitment (also in the Terms).
+   and the "no training on your projects" commitment (also in the Terms). No AI
+   feature exists in the app today; is the reserved-right clause worth keeping?
+9. **Problem reports.** Legitimate interest for the automatic context (email,
+   device, project name, recent commands), consent for the opt-in capture and project
+   file. ClickUp stores them (region and DPA to confirm). Retention period, and
+   whether deleting an account should also delete its ClickUp tasks.
+10. **Supabase and ClickUp** as subprocessors: DPA and transfer basis (Supabase
+   region is Ireland; both vendors are US companies).
+11. **Cookie banner:** the app and site use no tracking cookies and no third-party
+   analytics in the app, so no banner. The website's two analytics tools are
+   cookieless; confirm this holds without consent.
 
 ## Before publishing
 
