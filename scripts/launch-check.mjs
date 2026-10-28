@@ -56,7 +56,7 @@ export function runLaunchChecks({ root, env }) {
   }
 
   // Published legal pages must be the approved text, not the draft.
-  for (const page of ['terms', 'privacy']) {
+  for (const page of ['terms', 'privacy', 'refund']) {
     if (!published[page]) continue;
     for (const lang of ['ro', 'en']) {
       const file = `src/content/legal/${page}.${lang}.md`;

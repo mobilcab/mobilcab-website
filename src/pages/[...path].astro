@@ -18,6 +18,8 @@ import PrivacyNotice from '../components/PrivacyNotice.astro';
 import RoadmapPage from '../components/RoadmapPage.astro';
 import { Content as PrivacyEn } from '../content/legal/privacy.en.md';
 import { Content as PrivacyRo } from '../content/legal/privacy.ro.md';
+import { Content as RefundEn } from '../content/legal/refund.en.md';
+import { Content as RefundRo } from '../content/legal/refund.ro.md';
 import { Content as TermsEn } from '../content/legal/terms.en.md';
 import { Content as TermsRo } from '../content/legal/terms.ro.md';
 import { languages, type Lang } from '../i18n';
@@ -60,8 +62,13 @@ const legal = {
     ro: { title: 'Politica de confidențialitate', description: 'Cum prelucrăm datele tale personale pe site-ul și în aplicația Mobilcab.', Body: PrivacyRo },
     en: { title: 'Privacy Policy', description: 'How we process your personal data on the Mobilcab website and app.', Body: PrivacyEn },
   },
+  refund: {
+    ro: { title: 'Politica de rambursare', description: 'Cum ceri rambursarea unui abonament Mobilcab plătit prin Paddle.', Body: RefundRo },
+    en: { title: 'Refund Policy', description: 'How to request a refund for a Mobilcab subscription paid through Paddle.', Body: RefundEn },
+  },
 };
-const legalPage = lang && (key === 'terms' || key === 'privacy') && !standIn ? legal[key][lang] : null;
+const legalKey = key === 'terms' || key === 'privacy' || key === 'refund' ? key : null;
+const legalPage = lang && legalKey && !standIn ? legal[legalKey][lang] : null;
 ---
 
 {props.post && <BlogPostPage post={props.post} />}
@@ -74,8 +81,8 @@ const legalPage = lang && (key === 'terms' || key === 'privacy') && !standIn ? l
 {lang && key === 'faq' && <FaqPage lang={lang} />}
 {lang && key === 'privacy' && standIn && <PrivacyNotice lang={lang} />}
 {
-  lang && legalPage && (key === 'terms' || key === 'privacy') && (
-    <LegalPage lang={lang} page={key} title={legalPage.title} description={legalPage.description}>
+  lang && legalPage && legalKey && (
+    <LegalPage lang={lang} page={legalKey} title={legalPage.title} description={legalPage.description}>
       <legalPage.Body />
     </LegalPage>
   )

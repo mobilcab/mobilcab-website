@@ -11,7 +11,7 @@ interface Props {
 
 const { lang, preview = false } = Astro.props;
 const t = useTranslations(lang);
-const links = (['roadmap', 'faq', 'terms', 'privacy'] as const)
+const links = (['roadmap', 'faq', 'terms', 'privacy', 'refund'] as const)
   .map((key) => ({ label: t.nav[key], href: linkFor(key, lang, preview) }))
   .filter((link) => link.href !== null);
 ---

@@ -1,5 +1,5 @@
 ---
-// Shell for long legal text (Terms now; the full Privacy Policy later). The text
+// Shell for long legal text (Terms, Privacy, Refund). The text
 // itself is Markdown in src/content/legal/, passed in through the slot, so the
 // lawyer-reviewed file and the page can't drift apart.
 import Base from '../layouts/Base.astro';
@@ -11,7 +11,7 @@ import { pathsFor, published } from '../site';
 
 interface Props {
   lang: Lang;
-  page: 'terms' | 'privacy';
+  page: 'terms' | 'privacy' | 'refund';
   title: string;
   description: string;
 }

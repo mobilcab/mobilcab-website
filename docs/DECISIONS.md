@@ -17,6 +17,8 @@ documents is adjusted to match.
 | Referral rewards (Marketing Plan 3c "invite others, move up the list") | **Access, not money**: 1 confirmed invite = ahead in the private-beta queue; 3 = a guaranteed private-beta invite. No cash, no extra discounts, no buying Founding Partner spots, no public leaderboard. After launch: one free month for both sides (Marketing Plan 5.3), built in the app | Marketing Plan 3c, 5.3, 5.4 |
 | How referral progress is shown | **Confirmed-invite count, not a queue position** ("2 confirmed — 1 more for a guaranteed beta invite") | "move up the list" wording |
 | What counts as a referral | Only an invited person who **confirms their email (double opt-in)**; each address once; no self-referral; at most 5 counted per person. Double opt-in applies to every waitlist sign-up, which also answers the lawyer's proof-of-consent question | — |
+| Legal operator until an SRL exists | **Natural persons (Ștefan and Fineas)** trading as Mobilcab; no CUI, registered office or Trade Register number on the site. Update Terms/Privacy as soon as the SRL is formed | Placeholder company fields in the legal drafts |
+| Cancelling a yearly plan | **Stops renewal, no pro-rata refund** of the unused year, except the 14-day consumer withdrawal (GEO 34/2014) and the Refund Policy once billing is live | "cancel anytime" on yearly Founding Partner (Funnel Plan / Build Brief) |
 
 ## Open questions
 
@@ -32,16 +34,12 @@ decided, move it into the table above.
    Founding Partners can also choose Starter or Pro "at Founding Partner
    pricing", but no price is given. Is there a Founding Partner price for those
    tiers, and what is it? Or is Founding Partner Basic-only?
-3. **Cancelling a yearly plan.** Every paid tier says "cancel anytime", but the
-   Founding Partner yearly option (549 RON/year) is paid upfront. If a yearly
-   Founding Partner cancels, do they get a (partial) refund, or does the plan
-   simply not renew at the end of the year?
-4. **Unreliable workshop internet (FAQ).** What does the app actually do when
+3. **Unreliable workshop internet (FAQ).** What does the app actually do when
    the connection drops: keep working and sync later, keep unsaved changes
    until it reconnects, or need a constant connection? The Build Brief (4.6)
    says to confirm the real behaviour before writing this answer, so it's left
    out of the FAQ until then.
-5. **When the Founding Partner year ends (FAQ).** Does the price stay at
+4. **When the Founding Partner year ends (FAQ).** Does the price stay at
    49 RON/month (549 RON/year), or move to the then-current list price (with
    renewal reminders 30 and 7 days before, Marketing Plan 6a)? Left out of the
-   FAQ until decided. Related to question 3.
+   FAQ until decided.

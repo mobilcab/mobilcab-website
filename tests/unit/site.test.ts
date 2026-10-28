@@ -48,6 +48,15 @@ describe('addresses', () => {
   });
 });
 
+describe('currently published', () => {
+  it('puts terms and privacy at their real addresses, not preview', () => {
+    expect(pathFor('terms', 'ro')).toBe('/ro/termeni/');
+    expect(pathFor('privacy', 'en')).toBe('/en/privacy/');
+    expect(linkFor('terms', 'ro', false)).toBe('/ro/termeni/');
+    expect(linkFor('privacy', 'ro', false)).toBe('/ro/confidentialitate/');
+  });
+});
+
 describe('with nothing published (today)', () => {
   beforeEach(unpublishAll);
 
@@ -91,6 +100,12 @@ describe('publishing a page', () => {
   it('leaves the other pages unpublished', () => {
     published.demo = true;
     expect(linkFor('pricing', 'ro', false)).toBeNull();
+  });
+
+  it('does not expose the refund policy on public pages until billing', () => {
+    expect(pathFor('refund', 'ro')).toBe('/preview/ro/rambursare/');
+    expect(linkFor('refund', 'ro', false)).toBeNull();
+    expect(linkFor('refund', 'ro', true)).toBe('/preview/ro/rambursare/');
   });
 });
 

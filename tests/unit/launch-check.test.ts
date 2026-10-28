@@ -62,18 +62,15 @@ describe('launch check', () => {
     expect(check().errors).toEqual([expect.stringContaining('CONTACT_EMAIL')]);
   });
 
-  it('blocks publishing the draft Privacy Policy, and allows the approved text', () => {
-    publish('privacy');
-    expect(check().errors.filter((e) => e.includes('privacy.'))).toHaveLength(4);
-
-    for (const lang of ['ro', 'en']) {
-      edit(`src/content/legal/privacy.${lang}.md`, (s) =>
-        s
-          .replace(/^>.*\n/m, '')
-          .replace(/\[(COMPLETEAZĂ|VERIFICĂ|DE DECIS|FILL IN|VERIFY|TO DECIDE)[^\]]*\]/g, 'ok'),
-      );
-    }
+  it('blocks published legal pages that still have draft markers', () => {
     expect(check().errors).toEqual([]);
+
+    edit('src/content/legal/privacy.ro.md', (s) => `${s}\n[COMPLETEAZĂ]\n`);
+    expect(check().errors).toEqual([expect.stringContaining('privacy.ro.md')]);
+
+    publish('refund');
+    expect(check().errors.some((e) => e.includes('privacy.ro.md'))).toBe(true);
+    expect(check().errors.some((e) => e.includes('refund.'))).toBe(false);
   });
 
   it('requires the Founding Partner list once that page is published', () => {

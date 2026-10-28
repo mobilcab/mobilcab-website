@@ -12,7 +12,9 @@ The only client JS is the small form handler; the language switch is plain links
 | `/` | Redirects to `/ro/` |
 | `/ro/`, `/en/` | Coming-soon page |
 | `/ro/roadmap/`, `/en/roadmap/` | Product roadmap (stages for workshops) |
-| `/ro/confidentialitate/`, `/en/privacy/` | Temporary privacy note |
+| `/ro/confidentialitate/`, `/en/privacy/` | Privacy Policy |
+| `/ro/termeni/`, `/en/terms/` | Terms of Service |
+| `/preview/ro/rambursare/`, `/preview/en/refund/` | Refund Policy draft (published at billing live) |
 | `POST /api/subscribe` | Waitlist sign-up (Brevo) |
 
 Copy lives in `src/i18n/ro.json` and `src/i18n/en.json`.
@@ -241,8 +243,9 @@ Every page is listed in `src/site.ts` with `published: true` or `false`.
   not indexed, with a "preview" banner, and never linked from public pages.
 - **Published** pages are built at their real address (e.g. `/ro/preturi/`),
   indexable, and appear in the header menu and footer of every page.
-- While Home and Privacy are unpublished, their real addresses show the
-  coming-soon page and the temporary privacy notice.
+- While Home is unpublished, `/ro/` and `/en/` show the coming-soon page.
+  Privacy and Terms are published. The Refund Policy stays in preview until
+  billing goes live.
 
 To launch a page, set it to `true` and deploy. Links, menus, the language
 switch, canonical/hreflang tags and "don't index" all follow automatically. The
@@ -259,7 +262,9 @@ and `terms` at month -1.
 
 ## Before going live
 
-- Replace `CONTACT_EMAIL` in `src/config.ts` with a real mailbox.
-- The privacy page is a placeholder until the full policy is written (Phase 2, Section 4.7).
+- When the SRL is formed, put the company name, registered office, CUI and
+  Trade Register number into `src/content/legal/{privacy,terms}.{ro,en}.md`.
+- Before billing through Paddle, set `refund: true` in `src/site.ts` and fill
+  in plan prices on the refund page if they belong there.
 - Before the Founding Partner page goes public, the privacy text must also cover
   what that form collects: name, workshop name and city, not just the email.

@@ -31,7 +31,9 @@ const publicPages = pages.filter((p) => !isPreview(p.url) && p.url !== '/404.htm
 describe('built pages', () => {
   it('found the pages', () => {
     expect(pages.length).toBeGreaterThan(10);
-    expect(pages.map((p) => p.url)).toEqual(expect.arrayContaining(['/ro/', '/en/', '/ro/confidentialitate/', '/404.html']));
+    expect(pages.map((p) => p.url)).toEqual(
+      expect.arrayContaining(['/ro/', '/en/', '/ro/confidentialitate/', '/ro/termeni/', '/404.html']),
+    );
   });
 
   it('never links a public page to a preview', () => {

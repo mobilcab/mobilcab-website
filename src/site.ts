@@ -22,7 +22,8 @@ export type PageKey =
   | 'faq'
   | 'blog'
   | 'terms'
-  | 'privacy';
+  | 'privacy'
+  | 'refund';
 
 export const published: Record<PageKey, boolean> = {
   home: false,
@@ -34,8 +35,10 @@ export const published: Record<PageKey, boolean> = {
   faq: false,
   // The blog's index page. Each post also has its own `published` flag (src/content/blog/).
   blog: false,
-  terms: false,
-  privacy: false,
+  terms: true,
+  privacy: true,
+  // Paddle requires this at billing live (CU-1amhxucn004). Draft is in preview until then.
+  refund: false,
 };
 
 /**
@@ -57,6 +60,7 @@ export const livePaths: Record<PageKey, Record<Lang, string>> = {
   blog: { ro: '/ro/blog/', en: '/en/blog/' },
   terms: { ro: '/ro/termeni/', en: '/en/terms/' },
   privacy: { ro: '/ro/confidentialitate/', en: '/en/privacy/' },
+  refund: { ro: '/ro/rambursare/', en: '/en/refund/' },
 };
 
 /**
