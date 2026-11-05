@@ -33,9 +33,12 @@ const RECORDS = [
   // Wildcard — this is what serves `app.mobilcab.com` (the CAD app on Vercel).
   { type: 'CNAME', name: '*', content: 'cname.vercel-dns-017.com' },
 
-  { type: 'CAA', name: '@', content: '0 issue "pki.goog"' },
-  { type: 'CAA', name: '@', content: '0 issue "letsencrypt.org"' },
-  { type: 'CAA', name: '@', content: '0 issue "sectigo.com"' },
+  // CAA is the one type Cloudflare will not take as a single `content` string:
+  // it wants the parsed form, so each entry carries `data` and is still listed
+  // with the presentation form for the diff.
+  { type: 'CAA', name: '@', content: '0 issue "pki.goog"', data: { flags: 0, tag: 'issue', value: 'pki.goog' } },
+  { type: 'CAA', name: '@', content: '0 issue "letsencrypt.org"', data: { flags: 0, tag: 'issue', value: 'letsencrypt.org' } },
+  { type: 'CAA', name: '@', content: '0 issue "sectigo.com"', data: { flags: 0, tag: 'issue', value: 'sectigo.com' } },
 
   // Brevo DKIM, one CNAME per selector.
   { type: 'CNAME', name: 'brevo1._domainkey', content: 'b1.mobilcab-com.dkim.brevo.com' },
@@ -168,6 +171,7 @@ async function main() {
           ttl: r.ttl,
           proxied: r.proxied,
           ...(r.priority === undefined ? {} : { priority: r.priority }),
+          ...(r.data ? { data: r.data } : {}),
         }),
       });
       created++;
