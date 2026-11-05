@@ -12,3 +12,4 @@ deploy.log
 npm-debug.log*
 *.zip
 .DS_Store
+.vercel

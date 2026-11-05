@@ -9,6 +9,8 @@
     "preview": "astro preview",
     "deploy": "astro build && wrangler deploy",
     "deploy:cron": "wrangler deploy -c cron/wrangler.jsonc",
+    "cf:dns": "node scripts/cloudflare-dns.mjs",
+    "cf:dns:apply": "node scripts/cloudflare-dns.mjs --apply",
     "og": "node scripts/generate-og-images.mjs",
     "emails": "node scripts/build-emails.mjs",
     "check-launch": "node scripts/launch-check.mjs",

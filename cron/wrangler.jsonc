@@ -3,6 +3,11 @@
   "name": "mobilcab-website-cleanup",
   "main": "./worker.mjs",
   "compatibility_date": "2026-11-05",
+  // It only has a `scheduled` handler, so there is nothing to serve over HTTP.
+  // Turning both off keeps an unused public URL (and its preview variants) out
+  // of the picture.
+  "workers_dev": false,
+  "preview_urls": false,
   // 03:00 UTC every day (05:00-06:00 in Romania), the same time the Vercel Cron
   // Job ran. Cloudflare may start it a few minutes late, which does not matter here.
   "triggers": { "crons": ["0 3 * * *"] },
