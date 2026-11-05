@@ -2,5 +2,12 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "mobilcab-website",
   "compatibility_date": "2026-11-05",
+  // The marketing site owns the apex and `www`. Nothing else may appear here:
+  // `app.mobilcab.com` is the CAD production app on Vercel, reached through the
+  // wildcard CNAME, and a wildcard route in this list would hijack it.
+  "routes": [
+    { "pattern": "mobilcab.com", "custom_domain": true },
+    { "pattern": "www.mobilcab.com", "custom_domain": true }
+  ],
   "observability": { "enabled": true }
 }

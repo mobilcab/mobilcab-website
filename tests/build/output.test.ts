@@ -137,6 +137,16 @@ describe('Cloudflare Worker config', () => {
     expect(config.triggers?.crons ?? []).toEqual([]);
   });
 
+  it('claims the marketing hostnames and nothing else', () => {
+    // `app.mobilcab.com` is the CAD production app and still lives on Vercel,
+    // reached through the wildcard CNAME. A wildcard route here would route the
+    // whole app through this Worker, so only the two marketing hostnames may
+    // ever appear.
+    const patterns = (config.routes ?? []).map((route) => route.pattern).sort();
+    expect(patterns).toEqual(['mobilcab.com', 'www.mobilcab.com']);
+    for (const route of config.routes) expect(route.custom_domain).toBe(true);
+  });
+
   it('schedules the daily clean-up in the dedicated cleanup Worker', () => {
     const cron = readJsonc(join(root, 'cron/wrangler.jsonc'));
     expect(cron.triggers.crons).toEqual(['0 3 * * *']);
