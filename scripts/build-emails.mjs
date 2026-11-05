@@ -179,17 +179,17 @@ const templates = {
   'waitlist-ro': {
     lang: 'ro',
     subject: 'Ești pe listă! Iată ce urmează 🛠️',
-    preheader: 'Mulțumesc că te-ai înscris. Iată ce urmează până la lansare.',
+    preheader: 'Mulțumesc că te-ai înscris. Noutăți și drumul până la Basic plătit.',
     reason: 'Primești acest email pentru că te-ai înscris pe lista de așteptare de pe mobilcab.com.',
     body: [
       p('Salut,'),
       p('Mulțumesc că te-ai înscris pe lista de așteptare Mobilcab!'),
       p(
-        'Ești printre primii care vor afla când deschidem accesul. Primii 100 de tâmplari vor primi prețul Founding Partner, blocat 12 luni — iar tu afli primul când se deschid locurile.',
+        'Ești pe lista de noutăți. Aplicația e gratuită până deschidem planurile plătite. Pentru discount pe Basic când dam drumul la M2, înscrie-te separat pe lista Founding Partner — fără obligație.',
       ),
       p('Ce urmează:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Te anunț personal când deschidem accesul pentru primii utilizatori.',
+        'Te anunț personal când deschidem Basic plătit odată cu M2 și când apar noutăți importante.',
         'Îți arăt un ghid rapid de 10 minute ca să faci primul tău proiect.',
         'Îți cer sincer părerea — ce merge, ce nu, ce ai vrea să vezi.',
       ]),
@@ -201,17 +201,17 @@ const templates = {
   'waitlist-en': {
     lang: 'en',
     subject: "You're on the list! Here's what happens next 🛠️",
-    preheader: "Thanks for signing up. Here's what happens before launch.",
+    preheader: "Thanks for signing up. News and the path to paid Basic.",
     reason: 'You are receiving this email because you joined the waitlist on mobilcab.com.',
     body: [
       p('Hi,'),
       p('Thanks for joining the Mobilcab waitlist!'),
       p(
-        "You're among the first to hear when access opens. The first 100 workshops will get Founding Partner pricing, locked for 12 months — and you'll be the first to know when spots open.",
+        "You're on the news list. The app is free until we open paid plans. For a discount on Basic when we ship M2, join the Founding Partner waitlist separately — no obligation.",
       ),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        "I'll let you know personally when access opens for the first users.",
+        "I'll let you know personally when we open paid Basic with M2 and when there's important news.",
         'A quick 10-minute guide to help you build your first project.',
         "I'll genuinely ask for your feedback — what works, what doesn't, what you'd want to see.",
       ]),
@@ -222,21 +222,21 @@ const templates = {
   },
   'founding-partner-ro': {
     lang: 'ro',
-    subject: 'Locul tău de Founding Partner e rezervat 🛠️',
-    preheader: 'Ți-am păstrat locul. Iată ce înseamnă și ce urmează.',
-    reason: 'Primești acest email pentru că ți-ai rezervat un loc în programul Founding Partner pe mobilcab.com.',
+    subject: 'Ești pe lista Founding Partner 🛠️',
+    preheader: 'Ești pe listă. Discount pe Basic când dam drumul la M2.',
+    reason: 'Primești acest email pentru că te-ai înscris pe lista Founding Partner pe mobilcab.com.',
     body: [
       p('Salut, {{ contact.FIRSTNAME }},'),
-      p('Mulțumesc că ți-ai rezervat locul în programul Founding Partner! Ești printre primii 100 de tâmplari care construiesc Mobilcab alături de noi.'),
-      p('Ce înseamnă rezervarea:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
+      p('Mulțumesc că te-ai înscris pe lista Founding Partner! Construiești Mobilcab alături de noi — fără plată acum.'),
+      p('Ce înseamnă lista:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Prețul Founding Partner pentru planul Basic: 49 RON/lună sau 549 RON/an, blocat 12 luni.',
-        'Nu plătești nimic acum. Plata se face abia când primești acces, iar rezervarea nu te obligă la nimic.',
+        'Când dam drumul la M2 și deschidem Basic plătit (proiectare, debitare, nesting, etichete, ofertă), cei de pe listă primesc discount față de prețul listă. Cine se abonează după plătește prețul întreg. Sumele le anunțăm atunci.',
+        'Nu plătești nimic acum. Plata e opțională când deschidem vânzarea; înscrierea nu te obligă.',
         'Ai un cuvânt de spus în ce construim mai departe.',
       ]),
       p('Ce urmează:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Te contactez personal când deschidem accesul pentru Founding Partners.',
+        'Te contactez personal când deschidem Basic plătit odată cu M2, cu prețul listă și discount-ul tău.',
         'Dacă vrei, facem împreună primul tău proiect, la telefon sau pe video.',
         'Îți cer sincer părerea — ce merge, ce nu, ce ai vrea să vezi.',
       ]),
@@ -246,21 +246,21 @@ const templates = {
   },
   'founding-partner-en': {
     lang: 'en',
-    subject: 'Your Founding Partner spot is reserved 🛠️',
-    preheader: "We've held your spot. Here's what it means and what happens next.",
-    reason: 'You are receiving this email because you reserved a spot in the Founding Partner program on mobilcab.com.',
+    subject: "You're on the Founding Partner waitlist 🛠️",
+    preheader: "You're on the list. Discount on Basic when we ship M2.",
+    reason: 'You are receiving this email because you joined the Founding Partner waitlist on mobilcab.com.',
     body: [
       p('Hi {{ contact.FIRSTNAME }},'),
-      p("Thanks for reserving your spot in the Founding Partner program! You're among the first 100 workshops building Mobilcab with us."),
-      p('What your reservation means:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
+      p("Thanks for joining the Founding Partner waitlist! You're building Mobilcab with us — nothing to pay now."),
+      p('What the waitlist means:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Founding Partner pricing for the Basic plan: 49 RON/month or 549 RON/year, locked for 12 months.',
-        "Nothing to pay now. You only pay once you get access, and the reservation doesn't commit you to anything.",
+        'When we ship M2 and open paid Basic (design, cut lists, nesting, labels, quotes), people on this list get a discount versus list price. Anyone who subscribes later pays full list. We announce amounts then.',
+        "Nothing to pay now. Payment is optional when we open sales; joining the waitlist doesn't commit you.",
         'You get a real say in what we build next.',
       ]),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        "I'll contact you personally when Founding Partner access opens.",
+        "I'll contact you personally when we open paid Basic with M2, with list price and your discount.",
         "If you'd like, we'll build your first project together, by phone or video call.",
         "I'll genuinely ask for your feedback — what works, what doesn't, what you'd want to see.",
       ]),

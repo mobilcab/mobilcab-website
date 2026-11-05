@@ -6,7 +6,7 @@ import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
 import { APP_URL } from '../config';
 import { useRoadmapTranslations, type Lang } from '../i18n';
-import { joinFreeHref as joinFree, pathsFor, published } from '../site';
+import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
 
 interface Props {
   lang: Lang;
@@ -17,6 +17,9 @@ const preview = !published.roadmap;
 const t = useRoadmapTranslations(lang);
 const paths = pathsFor('roadmap');
 const joinFreeHref = joinFree(lang, preview);
+const fpHref = linkFor('foundingPartner', lang, preview);
+const secondaryHref = fpHref ?? joinFreeHref;
+const secondaryLabel = fpHref ? t.cta.secondaryFp : t.cta.secondaryNews;
 const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
 
 type StatusKey = keyof typeof t.statuses;
@@ -125,8 +128,13 @@ const statusClass = (status: StatusKey) => {
             >
               {t.cta.primary}
             </a>
-            <a href={joinFreeHref} class="link-quiet" data-cta="join_free" data-cta-location="roadmap">
-              {t.cta.secondary}
+            <a
+              href={secondaryHref}
+              class="link-quiet"
+              data-cta={fpHref ? 'founding_partner' : 'join_free'}
+              data-cta-location="roadmap"
+            >
+              {secondaryLabel}
             </a>
           </div>
         </div>

@@ -13,3 +13,7 @@ npm-debug.log*
 *.zip
 .DS_Store
 .vercel
+
+# Local migration secrets
+.vercel-token.tmp
+.env.vercel-migration

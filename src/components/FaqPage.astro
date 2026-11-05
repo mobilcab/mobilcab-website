@@ -6,10 +6,10 @@ import Base from '../layouts/Base.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
-import { CONTACT_EMAIL } from '../config';
+import { APP_URL, CONTACT_EMAIL } from '../config';
 import { tiers } from '../data/pricing';
 import { useFaqTranslations, type Lang } from '../i18n';
-import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+import { linkFor, pathsFor, published } from '../site';
 
 interface Props {
   lang: Lang;
@@ -20,7 +20,6 @@ const preview = !published.faq;
 const t = useFaqTranslations(lang);
 const paths = pathsFor('faq');
 const fpHref = linkFor('foundingPartner', lang, preview);
-const joinFreeHref = joinFree(lang, preview);
 // In-answer links, left out when their page isn't reachable from here.
 const linkTargets: Record<string, { href: string; label: string } | undefined> = {
   foundingPartner: fpHref ? { href: fpHref, label: t.links.foundingPartner } : undefined,
@@ -108,7 +107,7 @@ const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
         </p>
         <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
           {fpHref && <a href={fpHref} class="btn-primary" data-cta="founding_partner" data-cta-location="faq">{t.cta.primary}</a>}
-          <a href={joinFreeHref} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="join_free" data-cta-location="faq">
+          <a href={APP_URL} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="open_app" data-cta-location="faq" rel="noopener">
             {t.cta.secondary}
           </a>
         </div>

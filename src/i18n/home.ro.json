@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "Mobilcab — de la idee la panou, direct din browser",
-    "description": "CAD pentru mobilă care rulează în browser, pe laptop, tabletă sau telefon. Asistent AI la proiectare și cutlist pentru CNC într-un click."
+    "description": "CAD pentru mobilă care rulează în browser, pe laptop, tabletă sau telefon. Proiectare 3D și listă de debitare — nesting și CNC pe etape."
   },
   "hero": {
     "title": "De la idee la panou, direct din browser.",
-    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Proiectezi, iar cutlist-ul e pregătit pentru CNC într-un click.",
+    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Proiectezi și treci la lista de debitare; nesting și CNC vin pe etape.",
     "ctaPrimary": "Devino Founding Partner",
-    "ctaSecondary": "Sau alătură-te gratuit",
-    "note": "Primii 100 de tâmplari primesc prețul Founding Partner, blocat 12 luni."
+    "ctaSecondary": "Sau folosește aplicația gratuit",
+    "note": "Founding Partner: te înscrii pe listă acum; discount pe Basic când dam drumul la M2. Cine se abonează după plătește prețul listă."
   },
   "problem": {
     "title": "Sună familiar?",
@@ -31,30 +31,30 @@
         "body": "Sugerează layout-uri de panouri și îți semnalează erorile înainte să ajungă la pânza de tăiere."
       },
       {
-        "title": "Cutlist & export CNC într-un click",
-        "body": "De la design la fișierul de tăiere, fără pași manuali intermediari."
+        "title": "De la proiect la debitare",
+        "body": "Listă de piese pentru atelier; nesting, etichete și ofertă pe măsură ce le livrăm pe etape."
       }
     ]
   },
   "demo": {
     "title": "Vezi cum funcționează",
-    "intro": "Trei clipuri scurte, pe același proiect: de la primele panouri la fișierul pentru CNC.",
+    "intro": "Trei clipuri scurte, pe același proiect: de la primele panouri la documentele de atelier.",
     "comingSoon": "Clip în curând",
     "link": "Toate clipurile, pe larg",
     "videos": [
       { "title": "Proiectare", "caption": "Un dulap de colț de bucătărie, de la zero, în sub 10 minute." },
       { "title": "Asistentul AI", "caption": "Prinde o coliziune între sertar și balama înainte să ajungă la pânza de tăiere." },
-      { "title": "Cutlist și export CNC", "caption": "De la proiect la fișierul de tăiere, fără să calculezi nimic manual." }
+      { "title": "Debitare și atelier", "caption": "De la proiect la lista de piese — nesting și CNC pe etapele următoare." }
     ]
   },
   "pricing": {
     "title": "Prețuri",
     "offerLabel": "Founding Partner",
-    "offerPrice": "49 RON/lună",
-    "offerDetail": "sau 549 RON/an, pentru planul Basic, blocat 12 luni. Doar pentru primii 100 de tâmplari.",
-    "aiNote": "Basic acoperă proiectarea și cutlist-ul; asistentul AI îl încerci o dată, la început. Planurile cu AI inclus pornesc de la 99 RON/lună.",
-    "free": "Planul gratuit e disponibil oricând.",
-    "cancel": "Fără contract — anulezi oricând.",
+    "offerPrice": "Listă gratuită acum",
+    "offerDetail": "Te înscrii pe lista FP fără plată. Când deschidem Basic plătit odată cu M2, cei de pe listă primesc discount. Cine vine după plătește prețul întreg.",
+    "aiNote": "Basic la M2 = atelier (fără CNC în plan). AI și CNC vin separat, pe etape.",
+    "free": "Aplicația e gratuită până deschidem planurile plătite.",
+    "cancel": "Înscrierea FP nu te obligă să plătești.",
     "link": "Vezi toate planurile"
   },
   "faq": {
@@ -62,14 +62,15 @@
     "items": [
       { "q": "Trebuie să instalez ceva?", "a": "Nu, Mobilcab rulează direct din browser." },
       { "q": "Funcționează pe tabletă?", "a": "Da, e optimizat pentru laptop, tabletă și telefon." },
-      { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Da — exportul de cutlist e pregătit pentru fluxul standard CNC." },
-      { "q": "Cât costă?", "a": "Planul gratuit e disponibil oricând; primii 100 de utilizatori primesc prețul special Founding Partner." }
+      { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Lista de debitare e baza; exportul CNC vine într-o etapă ulterioară pe roadmap." },
+      { "q": "Cât costă?", "a": "Acum: aplicația e gratuită. Te poți înscrie pe lista Founding Partner pentru discount pe Basic când dam drumul la M2. Cine se abonează după plătește prețul listă." }
     ],
     "link": "Toate întrebările"
   },
   "final": {
     "title": "Fii printre primii tâmplari din România care proiectează direct din browser.",
-    "or": "Sau intră gratuit în lista de așteptare:"
+    "or": "Sau folosește aplicația gratuit:",
+    "news": "Vrei doar noutăți pe email? (fără discount Founding Partner)"
   },
   "footer": {
     "privacy": "Confidențialitate"

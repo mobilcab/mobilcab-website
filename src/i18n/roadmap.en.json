@@ -43,7 +43,7 @@
       "id": "subscriptions",
       "status": "planned",
       "title": "Subscriptions",
-      "body": "Paid plans when the value (export, workshop tools) is clear. Until then, generous access to design and cut lists."
+      "body": "Paid plans when M2 (nesting, labels, quotes) is ready. Founding Partners on the waitlist get a discount; later subscribers pay list price. Until then, the app is free."
     },
     {
       "id": "ai-renders",
@@ -82,6 +82,7 @@
     "title": "Try the foundation now",
     "body": "Design and cut lists — the next step when you're ready.",
     "primary": "Try the app",
-    "secondary": "Or join the waitlist"
+    "secondaryFp": "Or the Founding Partner waitlist",
+    "secondaryNews": "Or email updates"
   }
 }

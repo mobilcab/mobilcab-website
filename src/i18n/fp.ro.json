@@ -1,52 +1,71 @@
 {
   "meta": {
     "title": "Programul Founding Partner — Mobilcab",
-    "description": "Primii 100 de tâmplari care construiesc Mobilcab alături de noi primesc prețul blocat 12 luni, un cuvânt de spus în ce urmează și acces înaintea tuturor."
+    "description": "Înscrie-te pe lista Founding Partner: când deschidem planul Basic plătit odată cu M2 (proiectare, debitare, nesting, etichete, ofertă), beneficiezi de discount. Cine vine după plătește prețul listă."
   },
   "hero": {
     "label": "Programul Founding Partner",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm 100 de tâmplari care să-l construiască alături de noi — și care primesc în schimb un preț blocat, un cuvânt de spus în ce urmează și acces înaintea tuturor.",
-    "cta": "Rezervă-ți locul de Founding Partner"
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm tâmplari care să-l construiască alături de noi. Te înscrii gratuit pe lista Founding Partner; când dam drumul la M2 și la planul Basic plătit, cei de pe listă primesc discount. Cine se abonează mai târziu plătește prețul întreg.",
+    "cta": "Înscrie-te pe lista Founding Partner"
   },
   "counter": {
     "remaining": "{remaining} din {total} locuri Founding Partner rămase",
-    "full": "Toate cele {total} de locuri Founding Partner au fost rezervate."
+    "full": "Toate cele {total} de locuri Founding Partner au fost ocupate."
   },
   "included": {
     "title": "Ce primești",
     "items": [
-      { "title": "Preț blocat 12 luni", "body": "Plătești același preț un an întreg, oricum s-ar schimba prețurile după lansare." },
-      { "title": "Un cuvânt de spus în ce construim", "body": "Ne spui ce îți lipsește în atelier, iar propunerile tale intră direct în planul de dezvoltare." },
-      { "title": "Numele tău, ca Founding Partner", "body": "Apari în lista celor care au ajutat la construirea Mobilcab." },
-      { "title": "Grup privat de feedback", "body": "Vorbești direct cu fondatorii și cu ceilalți Founding Partners." },
-      { "title": "Acces înaintea tuturor", "body": "Primești funcțiile noi primul, înainte să ajungă la toată lumea." }
+      {
+        "title": "Loc pe lista Founding Partner, gratuit",
+        "body": "Nu plătești nimic ca să te înscrii. Discount-ul se aplică abia când deschidem Basic plătit odată cu M2 — și doar dacă vrei să te abonezi."
+      },
+      {
+        "title": "Discount pe Basic la M2",
+        "body": "Basic (M1+M2) acoperă proiectarea, lista de debitare, nesting-ul pe placă, etichetele și oferta către client. Founding Partners plătesc mai puțin decât prețul listă. Cine vine după, fără loc pe listă, plătește prețul întreg. Sumele le anunțăm când e gata."
+      },
+      {
+        "title": "Un cuvânt de spus în ce construim",
+        "body": "Ne spui ce îți lipsește în atelier, iar propunerile tale intră direct în planul de dezvoltare."
+      },
+      {
+        "title": "Numele tău, ca Founding Partner",
+        "body": "Apari în lista celor care au ajutat la construirea Mobilcab."
+      },
+      {
+        "title": "Grup privat de feedback",
+        "body": "Vorbești direct cu fondatorii și cu ceilalți Founding Partners."
+      },
+      {
+        "title": "Anunț personal la deschiderea plății",
+        "body": "Te contactăm când Basic plătit (M2) e gata, cu prețul listă și discount-ul tău — înainte ca oferta FP să se închidă."
+      }
     ]
   },
   "offer": {
-    "title": "Oferta",
-    "price": "49 RON/lună",
-    "yearly": "sau 549 RON/an",
-    "detail": "Planul Basic, cu prețul blocat 12 luni. Doar pentru primii 100 de tâmplari.",
-    "noPayment": "Acum nu plătești nimic: îți rezervi locul, iar plata o faci abia când primești acces."
+    "title": "Oferta acum",
+    "price": "Gratuit",
+    "yearly": "Listă de așteptare — fără plată",
+    "detail": "Când dam drumul la M2 și la Basic plătit, cei de pe lista Founding Partner pot cumpăra cu discount. Restul care vor planul plătit ulterior îl iau la prețul listă. Locurile pe listă sunt limitate; anunțăm când închidem înscrierile.",
+    "noPayment": "Înscrierea nu te obligă la nimic. Dacă nu vrei să plătești când deschidem Basic, refuzi — și atât."
   },
   "ai": {
-    "title": "Ce nu include Basic",
-    "body": "Spus direct, ca să nu ai surprize: Basic acoperă proiectarea, cutlist-ul și exportul pentru CNC. Asistentul AI îl încerci o singură dată, pe proiectul de pornire, ca să vezi ce face. După aceea, AI-ul e inclus doar în planurile Starter (de la 99 RON/lună), Pro și Studio."
+    "title": "Ce nu e în Basic",
+    "body": "Spus direct: Basic (la lansarea plătită cu M2) e pentru atelier — proiectare, debitare, nesting, etichete, ofertă. Nu include export CNC (vine într-o etapă ulterioară) și nu include asistentul AI recurent. AI-ul și CNC-ul vor avea oferte separate, anunțate la vremea lor."
   },
   "proof": {
     "title": "Ce spun primii Founding Partners"
   },
   "next": {
-    "title": "Ce urmează după rezervare",
+    "title": "Ce urmează după înscriere",
     "steps": [
-      "Locul tău e păstrat pe numele tău.",
-      "Te contactăm personal când deschidem accesul pentru Founding Partners.",
-      "Plata se face abia când primești acces."
+      "Ești pe lista Founding Partner — gratuit, pe numele tău.",
+      "Poți folosi aplicația în perioada gratuită; construim M2 (nesting, etichete, ofertă) în paralel.",
+      "Când deschidem Basic plătit odată cu M2, te contactăm cu prețul listă și discount-ul FP. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
     ]
   },
   "form": {
-    "title": "Rezervă-ți locul",
+    "title": "Înscrie-te pe listă",
     "nameLabel": "Nume și prenume",
     "emailLabel": "Email",
     "workshopLabel": "Numele atelierului",
@@ -54,13 +73,13 @@
     "cityLabel": "Orașul",
     "consent": "Sunt de acord să fiu contactat despre programul Founding Partner și să primesc actualizări prin email.",
     "privacyLink": "Vezi politica de confidențialitate",
-    "submit": "Rezervă-ți locul de Founding Partner"
+    "submit": "Înscrie-te pe lista Founding Partner"
   },
   "messages": {
     "sending": "Se trimite…",
-    "reserved": "Locul tău e rezervat! Te contactăm personal când deschidem accesul.",
-    "already": "Ai deja un loc rezervat. Te contactăm personal când deschidem accesul.",
-    "full": "Toate locurile Founding Partner au fost rezervate. Te poți înscrie în continuare gratuit pe lista de așteptare.",
+    "reserved": "Ești pe lista Founding Partner. Te contactăm personal când deschidem Basic plătit odată cu M2.",
+    "already": "Ești deja pe lista Founding Partner. Te contactăm personal când deschidem Basic plătit odată cu M2.",
+    "full": "Înscrierile Founding Partner sunt închise momentan. Poți folosi aplicația gratuit; la abonament vei plăti prețul listă.",
     "invalidName": "Scrie-ți numele (cel puțin 2 litere).",
     "invalidEmail": "Introdu o adresă de email validă.",
     "invalidWorkshop": "Numele atelierului e prea lung.",
@@ -69,5 +88,5 @@
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
     "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."
   },
-  "joinFree": "Înscrie-te gratuit"
+  "joinFree": "Sau doar noutăți pe email (fără discount FP)"
 }

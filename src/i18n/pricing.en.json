@@ -1,60 +1,60 @@
 {
   "meta": {
     "title": "Pricing — Mobilcab",
-    "description": "Pricing in RON, no contract: a free plan, Basic from 49 RON/month, and plans with the AI assistant from 99 RON/month. Cancel anytime."
+    "description": "Now: free app + Founding Partner waitlist. At M2: paid Basic with an FP discount; later, full list price. AI plans announced separately."
   },
   "hero": {
     "label": "Pricing",
-    "title": "Pricing in RON. No contract, no thousands of euros upfront.",
-    "body": "Start free and move to a paid plan only when you need it. What changes between plans is the AI assistant: how often you can use it."
+    "title": "Free now. FP discount at M2. Then list price.",
+    "body": "Use the app for free. If you want a discount on Basic when we ship M2, join the Founding Partner waitlist. Anyone who subscribes later, without a waitlist place, pays full list. The figures below are indicative until paid launch."
   },
   "callout": {
     "title": "New here?",
-    "body": "Founding Partner pricing locks the Basic plan at 549 RON/year, for 12 months. Only for the first 100 workshops.",
+    "body": "Founding Partner means a free waitlist sign-up now and a discount on Basic when we open payment with M2 — with no obligation. Anyone who comes later pays list price.",
     "link": "About the Founding Partner program"
   },
-  "perMonth": "RON/month",
+  "perMonth": "RON/month (indicative)",
   "free": "0 RON",
-  "fpYearly": "Founding Partner: {price} RON/year, locked for 12 months",
-  "cancel": "No contract — cancel anytime",
+  "fpYearly": "Founding Partner: discount on Basic at M2 (amounts at paid launch)",
+  "cancel": "No contract — cancel anytime (once subscriptions exist)",
   "aiTrial": "AI assistant: one trial, during onboarding",
-  "aiPerMonth": "AI assistant: {count} requests per month",
+  "aiPerMonth": "AI assistant: {count} requests per month (future plans)",
   "plans": {
     "free": {
       "name": "Free",
-      "for": "To try Mobilcab on your own projects, with no risk at all.",
-      "features": ["Full design", "On laptop, tablet and phone", "Limited export"],
-      "cta": "Join free"
+      "for": "To use Mobilcab on your own projects until we open paid plans.",
+      "features": ["Design", "On laptop, tablet and phone", "Access during the free period"],
+      "cta": "Use the app"
     },
     "basic": {
       "name": "Basic",
-      "for": "For carpenters who want design, cutlists and CNC export, without AI.",
-      "features": ["Full design", "On laptop, tablet and phone", "Cutlist & CNC export"],
+      "for": "At paid launch with M2: design, cut lists, sheet nesting, labels and quotes — no CNC and no recurring AI. FP waitlist: discount; later: list price.",
+      "features": ["3D design and cut lists", "Nesting, labels, quotes", "No CNC export in this plan"],
       "cta": "Become a Founding Partner"
     },
     "starter": {
       "name": "Starter",
-      "for": "For workshops that want the AI assistant on everyday projects.",
-      "features": ["Everything in Basic", "The AI assistant checks and suggests"],
-      "cta": "Notify me at launch"
+      "for": "Later: for workshops that want the AI assistant on everyday projects.",
+      "features": ["Everything in Basic", "AI assistant (monthly requests)"],
+      "cta": "Email me updates"
     },
     "pro": {
       "name": "Pro",
-      "for": "For workshops with many projects a month.",
-      "features": ["Everything in Starter", "Three times as many AI requests"],
-      "cta": "Notify me at launch"
+      "for": "Later: for workshops with many projects a month.",
+      "features": ["Everything in Starter", "More AI requests"],
+      "cta": "Email me updates"
     },
     "studio": {
       "name": "Studio",
-      "for": "For workshops that use the AI assistant on every project.",
+      "for": "Later: for workshops that use the AI assistant on every project.",
       "features": ["Everything in Pro", "The most AI requests"],
-      "cta": "Notify me at launch"
+      "cta": "Email me updates"
     }
   },
   "why": {
-    "title": "Why is AI only in the bigger plans?",
-    "body": "Every request to the AI assistant costs us, so plans with AI cost more. Basic doesn't use AI, which is why it can stay this affordable. So you know what you're getting or missing, everyone tries the assistant once, during onboarding."
+    "title": "Why is AI separate?",
+    "body": "Basic is built for the workshop (design through to a quote). The AI assistant costs per request, so it comes in separate plans when the time is right — not as a blocker for Basic."
   },
-  "note": "Final prices are confirmed before launch.",
+  "note": "We don't charge subscriptions until paid Basic opens with M2. Table prices are indicative. The FP discount is only for people on the Founding Partner waitlist.",
   "faqLink": "Questions about the plans"
 }

@@ -8,15 +8,15 @@ We are the controllers of your personal data under Regulation (EU) 2016/679 ("GD
 
 For any question about your data, write to us at **contact@mobilcab.com**.
 
-## 2. The waitlist
+## 2. The news list (general waitlist)
 
-When you sign up to hear about the launch, we collect:
+When you sign up for email updates, we collect:
 
 - your email address;
 - the language you signed up in (Romanian or English);
 - the date you signed up and the fact that you gave consent.
 
-We use this only to tell you when Mobilcab launches and, occasionally, to send you product news.
+We use this only to send you product news. **Signing up to this list does not grant the Founding Partner discount.**
 
 **Confirmation.** Right after you sign up, we send you an email with a confirmation link. We only add you to the list once you click it. If you don't confirm, we keep your address only as long as the link needs to work, and delete it within 30 days at most, through a daily job.
 
@@ -24,9 +24,9 @@ We use this only to tell you when Mobilcab launches and, occasionally, to send y
 
 **The invite program.** When it is on, everyone who signs up gets a personal invite code. If you sign up through someone's link, we record that person's code, and once you confirm your address we increase their count of confirmed invites. We use this only to give the program's rewards (a better place in the queue, or a guaranteed place in the private beta). The person who invited you only sees how many confirmed invites they have, not who signed up through their link. The legal basis is the consent you give when signing up. The program is off until we turn it on.
 
-## 3. Founding Partner reservations
+## 3. The Founding Partner waitlist
 
-When you reserve a spot in the Founding Partner program, we collect:
+When you join the Founding Partner waitlist, we collect:
 
 - your full name;
 - your email address;
@@ -34,7 +34,7 @@ When you reserve a spot in the Founding Partner program, we collect:
 - your city;
 - the language you signed up in and the fact that you gave consent.
 
-We use this to hold your spot, contact you personally when access opens, and send you news about the program. Reserving is free and doesn't commit you to anything.
+We use this to keep you on the list eligible for a discount on paid Basic when we open payment with M2, to contact you personally then, and to send you news about the program. Joining is free and doesn't commit you to anything. Anyone who subscribes later, without a place on this list, pays list price.
 
 **The legal basis** is your consent (Article 6(1)(a) GDPR).
 
@@ -82,7 +82,7 @@ We don't sell or rent your data, and we don't use it for advertising. We work wi
 
 | Provider | Role | Where the data is |
 |---|---|---|
-| Brevo (Sendinblue SAS, France) | The waitlist, Founding Partner reservations and sending emails, including the app's transactional ones | European Union |
+| Brevo (Sendinblue SAS, France) | The news waitlist, Founding Partner waitlist and sending emails, including the app's transactional ones | European Union |
 | Plausible Insights OÜ (Estonia) | Visit statistics, no personal data | European Union |
 | Vercel Inc. (USA) | Hosting of the app; server functions run in Frankfurt | USA / EU; transfers outside the EU rely on the EU–US Data Privacy Framework and Standard Contractual Clauses |
 | Cloudflare, Inc. (USA) | Hosting of the website (Cloudflare Workers) and page-view statistics, without cookies (Cloudflare Web Analytics) | USA / global network; transfers outside the EU rely on the Data Processing Addendum and Standard Contractual Clauses |
@@ -97,8 +97,8 @@ In emails sent through Brevo, we can see whether an email was opened and whether
 ## 10. How long we keep data
 
 - **Unconfirmed sign-ups:** 30 days at most.
-- **Waitlist and invite-program data:** until you unsubscribe or ask us to delete it. If we send you no email for 24 months, or if Mobilcab doesn't launch, we delete the list.
-- **Founding Partner reservations:** until access opens and you decide whether to continue. If you don't continue, we delete the reservation data within 6 months at most.
+- **News waitlist and invite-program data:** until you unsubscribe or ask us to delete it. If we send you no email for 24 months, we delete the list.
+- **Founding Partner waitlist:** until paid Basic opens with M2 and you decide whether to subscribe. If you don't continue, we delete the waitlist data within 6 months at most.
 - **Account and projects:** for as long as you have an account. When you delete the account from the app, the data disappears at once from the live database; backups expire within 30 days at most.
 - **Problem reports:** the ClickUp task (including your email and the technical context) is kept as long as it's useful for diagnosis, 24 months at most; you can have it deleted by writing to us. Deleting your account doesn't automatically remove the ClickUp tasks.
 - **Invoices** (when they exist): for as long as tax law requires, typically 10 years. Paddle, as merchant of record, issues invoices to the buyer.

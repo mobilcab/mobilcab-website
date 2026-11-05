@@ -4,8 +4,11 @@
 export const CONTACT_EMAIL = 'contact@mobilcab.com';
 export const CONTACT_EMAIL_CONFIRMED = true;
 
-// Founding Partner spots (docs/DECISIONS.md). Reservations stop at this number.
-export const FOUNDING_PARTNER_SPOTS = 100;
+// Soft technical cap only (docs/DECISIONS.md: public N is TBD). Not shown on the site.
+// FP form = waitlist for discount when paid Basic opens with M2; later buyers pay list.
+export const FOUNDING_PARTNER_SPOTS = 500;
+/** When false, the FP page does not show a remaining-spots counter. */
+export const FOUNDING_PARTNER_SHOW_COUNTER = false;
 
 // The referral program (docs/DECISIONS.md): invite links, invite counts and the
 // "share your link" block. Planned for month -4 (Marketing Plan 3c). While
@@ -17,7 +20,7 @@ export const REFERRAL_GOAL = 3;
 /** Invites counted per person at most. */
 export const REFERRAL_CAP = 5;
 
-/** Public app URL (Roadmap CTA). Waitlist remains the fallback until accounts open. */
+/** Public app URL (free access). Primary “use the app” CTA on Home / Pricing / Roadmap. */
 export const APP_URL = 'https://app.mobilcab.com';
 
 // Used by the Brevo email templates (scripts/build-emails.mjs, `npm run emails`).

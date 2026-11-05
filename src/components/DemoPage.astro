@@ -9,7 +9,8 @@ import SiteHeader from './SiteHeader.astro';
 import VideoPlayer from './VideoPlayer.astro';
 import { demoVideos } from '../data/demoVideos';
 import { useDemoTranslations, type Lang } from '../i18n';
-import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+import { APP_URL } from '../config';
+import { linkFor, pathsFor, published } from '../site';
 
 interface Props {
   lang: Lang;
@@ -20,7 +21,6 @@ const preview = !published.demo;
 const t = useDemoTranslations(lang);
 const paths = pathsFor('demo');
 const fpHref = linkFor('foundingPartner', lang, preview);
-const joinFreeHref = joinFree(lang, preview);
 const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
 ---
 
@@ -82,7 +82,7 @@ const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
         <h2 class="text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]">{t.cta.title}</h2>
         <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
           {fpHref && <a href={fpHref} class="btn-primary" data-cta="founding_partner" data-cta-location="demo">{t.cta.primary}</a>}
-          <a href={joinFreeHref} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="join_free" data-cta-location="demo">
+          <a href={APP_URL} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="open_app" data-cta-location="demo" rel="noopener">
             {t.cta.secondary}
           </a>
         </div>

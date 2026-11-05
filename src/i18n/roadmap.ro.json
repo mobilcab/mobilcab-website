@@ -43,7 +43,7 @@
       "id": "subscriptions",
       "status": "planned",
       "title": "Abonamente",
-      "body": "Planuri plătite când valoarea (export, atelier) e clară. Până atunci, acces generos la etapa de proiectare și debitare."
+      "body": "Planuri plătite când M2 (nesting, etichete, ofertă) e gata. Founding Partners de pe listă primesc discount; cine se abonează după plătește prețul listă. Până atunci, aplicația e gratuită."
     },
     {
       "id": "ai-renders",
@@ -82,6 +82,7 @@
     "title": "Încearcă baza acum",
     "body": "Proiectare și debitare — următorul pas când ești gata.",
     "primary": "Încearcă aplicația",
-    "secondary": "Sau înscrie-te pe listă"
+    "secondaryFp": "Sau lista Founding Partner",
+    "secondaryNews": "Sau noutăți pe email"
   }
 }

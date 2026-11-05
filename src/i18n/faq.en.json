@@ -22,14 +22,17 @@
     {
       "id": "cnc-export",
       "q": "Can I export directly for my CNC?",
-      "a": ["Yes — the cutlist export is ready for a standard CNC workflow. From a finished design, one click gives you the list with panel dimensions, quantities and materials."]
+      "a": [
+        "The cut list (dimensions, quantities, materials) is the workshop foundation.",
+        "Dedicated CNC machine export comes in a later roadmap stage — after nesting is solid. It is not included in Basic at paid launch."
+      ]
     },
     {
       "id": "price",
       "q": "How much does it cost?",
       "a": [
-        "The free plan is available any time.",
-        "The first 100 workshops get Founding Partner pricing: 49 RON/month or 549 RON/year for the Basic plan, locked for 12 months. Plans with the AI assistant included start at 99 RON/month. No contract — cancel anytime."
+        "The app is free for now and we are not charging subscriptions. If you want a discount on Basic, join the Founding Partner waitlist.",
+        "When we ship M2 and open paid Basic (design, cut lists, nesting, labels, quotes), people on the FP waitlist get a discount versus list price. Anyone who subscribes later, without a waitlist place, pays full list. You are not obliged to pay if you do not want to. AI and CNC plans will be announced separately."
       ],
       "link": "foundingPartner"
     },
@@ -45,10 +48,11 @@
       "id": "plans",
       "q": "How is Basic different from the other plans?",
       "a": [
-        "Basic covers everything design-related: the design, the cutlist and CNC export. You try the AI assistant once, on the starter project. The Starter, Pro and Studio plans add the AI assistant, with more requests per month at each step:"
+        "At paid launch with M2, Basic is the workshop plan: 3D design, cut list, sheet nesting, labels and client quotes — no CNC and no recurring AI. Founding Partners on the waitlist: discount; later: list price.",
+        "Starter, Pro and Studio (later) add the AI assistant, with more requests per month at each step. The figures below are indicative until we open payment:"
       ],
       "tiers": true,
-      "after": ["Final prices are confirmed before launch."]
+      "after": ["We do not charge until paid Basic with M2. Final prices are confirmed then."]
     }
   ],
   "tiers": {
@@ -67,6 +71,6 @@
   },
   "cta": {
     "primary": "Become a Founding Partner",
-    "secondary": "Or join free"
+    "secondary": "Or use the app free"
   }
 }

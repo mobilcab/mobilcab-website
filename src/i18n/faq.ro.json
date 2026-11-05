@@ -22,14 +22,17 @@
     {
       "id": "export-cnc",
       "q": "Pot exporta direct pentru CNC-ul meu?",
-      "a": ["Da — exportul de cutlist e pregătit pentru fluxul standard CNC. Dintr-un proiect terminat, un clic îți dă lista cu dimensiunile panourilor, cantitățile și materialele."]
+      "a": [
+        "Lista de debitare (dimensiuni, cantități, materiale) e baza pentru atelier.",
+        "Exportul dedicat pentru mașina CNC vine într-o etapă ulterioară pe roadmap — după nesting stabil. Nu e inclus în planul Basic de la lansarea plătită."
+      ]
     },
     {
       "id": "pret",
       "q": "Cât costă?",
       "a": [
-        "Planul gratuit e disponibil oricând.",
-        "Primii 100 de tâmplari primesc prețul Founding Partner: 49 RON/lună sau 549 RON/an pentru planul Basic, blocat 12 luni. Planurile cu asistent AI inclus pornesc de la 99 RON/lună. Fără contract — anulezi oricând."
+        "Acum aplicația e gratuită și nu încasăm abonamente. Dacă vrei discount pe Basic, te înscrii pe lista Founding Partner.",
+        "Când dam drumul la M2 și deschidem Basic plătit (proiectare, debitare, nesting, etichete, ofertă), cei de pe lista FP primesc discount față de prețul listă. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Nu ești obligat să plătești dacă nu vrei. Planurile cu AI și CNC le anunțăm separat."
       ],
       "link": "foundingPartner"
     },
@@ -45,10 +48,11 @@
       "id": "planuri",
       "q": "Prin ce diferă Basic de celelalte planuri?",
       "a": [
-        "Basic acoperă tot ce ține de proiectare: designul, cutlist-ul și exportul pentru CNC. Asistentul AI îl încerci o singură dată, pe proiectul de pornire. Planurile Starter, Pro și Studio adaugă asistentul AI, cu tot mai multe cereri pe lună:"
+        "La lansarea plătită cu M2, Basic e planul de atelier: proiectare 3D, listă de debitare, nesting pe placă, etichete și ofertă către client — fără CNC și fără AI recurent. Founding Partners de pe listă: discount; ulterior: preț listă.",
+        "Starter, Pro și Studio (mai târziu) adaugă asistentul AI, cu tot mai multe cereri pe lună. Cifrele de mai jos sunt orientative până deschidem plata:"
       ],
       "tiers": true,
-      "after": ["Prețurile finale se confirmă înainte de lansare."]
+      "after": ["Nu încasăm până la Basic plătit odată cu M2. Prețurile finale se confirmă atunci."]
     }
   ],
   "tiers": {
@@ -67,6 +71,6 @@
   },
   "cta": {
     "primary": "Devino Founding Partner",
-    "secondary": "Sau alătură-te gratuit"
+    "secondary": "Sau folosește aplicația gratuit"
   }
 }

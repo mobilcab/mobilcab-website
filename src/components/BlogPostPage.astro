@@ -9,7 +9,8 @@ import SiteHeader from './SiteHeader.astro';
 import { isPostPublic, postPath, type Post } from '../lib/blog';
 import { languages, useBlogTranslations, type Lang } from '../i18n';
 import { postData } from '../lib/structuredData';
-import { joinFreeHref, linkFor } from '../site';
+import { APP_URL } from '../config';
+import { linkFor } from '../site';
 
 interface Props {
   post: Post;
@@ -69,10 +70,11 @@ const dateLabel = new Intl.DateTimeFormat(lang === 'ro' ? 'ro-RO' : 'en-GB', { d
             )
           }
           <a
-            href={joinFreeHref(lang, preview)}
+            href={APP_URL}
             class={fpHref ? 'link-quiet' : 'btn-primary'}
-            data-blog-cta="join_free"
+            data-blog-cta="open_app"
             data-post={post.slug}
+            rel="noopener"
           >
             {t.cta.secondary}
           </a>

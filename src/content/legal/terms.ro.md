@@ -42,9 +42,9 @@ Când există un plan plătit, **procesul de comandă este derulat de revânzăt
 
 ## 6. Programul Founding Partner
 
-- Programul este limitat la primii 15 utilizatori, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
-- **Rezervarea unui loc este gratuită și nu te obligă la nimic.** Accesul prin cod de acces e oferit fără plată, în schimbul explicit al feedback-ului dat aplicației — nu un cadou necondiționat.
-- La activarea planului plătit, Founding Partners primesc o reducere de 20% din preț, valabilă 12 luni de la activare.
+- Programul este limitat la primii 15 utilizatori pe lista Founding Partner, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
+- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Plata începe doar când deschidem Basic plătit odată cu M2 și alegi să te abonezi. Accesul prin cod, când e oferit, e în schimbul feedback-ului pe aplicație — nu un cadou necondiționat.
+- La activarea planului plătit, Founding Partners de pe listă primesc o reducere de 20% din prețul listă al planului Basic (M1+M2), valabilă 12 luni de la activare. Cine se abonează după, fără loc pe listă, plătește prețul listă.
 - După cele 12 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
 - Beneficiile Founding Partner sunt personale și nu pot fi transferate.
 

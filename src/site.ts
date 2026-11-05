@@ -91,8 +91,8 @@ export function linkFor(key: PageKey, lang: Lang, fromPreview: boolean): string 
 }
 
 /**
- * The "join free" link: the waitlist form on the Home page, or on the
- * coming-soon page while Home isn't published (both carry the same anchor).
+ * News waitlist (no FP discount): Home `#join` form, or the coming-soon
+ * stand-in while Home isn't published (same anchor).
  */
 export const joinFreeHref = (lang: Lang, fromPreview: boolean) =>
   `${linkFor('home', lang, fromPreview)}#${useHomeTranslations(lang).anchors.join}`;

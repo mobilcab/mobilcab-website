@@ -16,19 +16,21 @@ const { lang } = Astro.props;
   lang === 'ro' ? (
     <PrivacyLayout lang="ro" title="Confidențialitate" description="Cum folosim adresa de email lăsată pe lista de așteptare Mobilcab.">
       <p class="mt-4 rounded-md border border-line bg-white px-4 py-3 text-sm">
-        Notă temporară. Politica de confidențialitate completă va fi publicată înainte de lansare.
+        Notă temporară. Politica de confidențialitate completă (inclusiv lista Founding Partner) va fi publicată înainte ca
+        formularul FP să fie pe site.
       </p>
 
       <h2>Ce colectăm</h2>
       <p class="mt-2">
-        Doar adresa de email pe care o introduci în formular și limba în care te-ai înscris. Te adăugăm pe listă abia după ce
-        confirmi, din emailul pe care ți-l trimitem imediat după înscriere.
+        Doar adresa de email pe care o introduci în formularul de noutăți și limba în care te-ai înscris. Te adăugăm pe listă
+        abia după ce confirmi, din emailul pe care ți-l trimitem imediat după înscriere. Această listă nu include discountul
+        Founding Partner.
       </p>
 
       <h2>De ce</h2>
       <p class="mt-2">
-        Ca să te anunțăm când lansăm Mobilcab și să-ți trimitem, ocazional, noutăți despre produs. Temeiul este
-        consimțământul tău (art. 6 alin. (1) lit. a) GDPR), pe care îl poți retrage oricând.
+        Ca să-ți trimitem noutăți despre produs. Temeiul este consimțământul tău (art. 6 alin. (1) lit. a) GDPR), pe care îl
+        poți retrage oricând.
       </p>
 
       <h2>Unde sunt păstrate datele</h2>
@@ -54,19 +56,20 @@ const { lang } = Astro.props;
   ) : (
     <PrivacyLayout lang="en" title="Privacy" description="How we use the email address you leave on the Mobilcab waitlist.">
       <p class="mt-4 rounded-md border border-line bg-white px-4 py-3 text-sm">
-        Temporary notice. The full privacy policy will be published before launch.
+        Temporary notice. The full privacy policy (including the Founding Partner waitlist) will be published before the FP
+        form goes live on the site.
       </p>
 
       <h2>What we collect</h2>
       <p class="mt-2">
-        Only the email address you enter in the form and the language you signed up in. We only add you to the list once you
-        confirm, from the email we send you right after you sign up.
+        Only the email address you enter in the news form and the language you signed up in. We only add you to the list once
+        you confirm, from the email we send you right after you sign up. This list does not include the Founding Partner
+        discount.
       </p>
 
       <h2>Why</h2>
       <p class="mt-2">
-        To tell you when Mobilcab launches and, occasionally, to send product news. The legal basis is your consent
-        (Article 6(1)(a) GDPR), which you can withdraw at any time.
+        To send you product news. The legal basis is your consent (Article 6(1)(a) GDPR), which you can withdraw at any time.
       </p>
 
       <h2>Where it's stored</h2>

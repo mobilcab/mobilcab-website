@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "The Founding Partner program — Mobilcab",
-    "description": "The first 100 workshops who build Mobilcab with us get pricing locked for 12 months, a real say in what comes next, and access before everyone else."
+    "description": "Join the Founding Partner waitlist: when we open paid Basic with M2 (design, cut lists, nesting, labels, quotes), you get a discount. Anyone who subscribes later pays full list price."
   },
   "hero": {
     "label": "The Founding Partner program",
     "title": "Help shape the tool Romanian workshops actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for 100 workshops to build it with us — and in return they get locked-in pricing, a real say in what comes next, and access before everyone else.",
-    "cta": "Claim your Founding Partner spot"
+    "body": "We're not looking for testers for unfinished software. We're looking for workshops to build it with us. Join the Founding Partner waitlist for free; when we ship M2 and open paid Basic, people on that list get a discount. Anyone who subscribes later pays full list price.",
+    "cta": "Join the Founding Partner waitlist"
   },
   "counter": {
     "remaining": "{remaining} of {total} Founding Partner spots remaining",
@@ -16,37 +16,56 @@
   "included": {
     "title": "What's included",
     "items": [
-      { "title": "Pricing locked for 12 months", "body": "You pay the same price for a whole year, however prices change after launch." },
-      { "title": "A say in what we build", "body": "Tell us what's missing in your workshop, and your ideas go straight into the roadmap." },
-      { "title": "Your name, as a Founding Partner", "body": "You're listed among the people who helped build Mobilcab." },
-      { "title": "Private feedback group", "body": "Talk directly with the founders and the other Founding Partners." },
-      { "title": "Access before everyone else", "body": "You get new features first, before they reach everyone." }
+      {
+        "title": "A place on the Founding Partner waitlist, free",
+        "body": "You pay nothing to join. The discount applies only when we open paid Basic with M2 — and only if you choose to subscribe."
+      },
+      {
+        "title": "Discount on Basic at M2",
+        "body": "Basic (M1+M2) covers design, cut lists, sheet nesting, labels and client quotes. Founding Partners pay less than list price. Anyone who comes later, without a waitlist place, pays full list. We announce the amounts when we're ready."
+      },
+      {
+        "title": "A say in what we build",
+        "body": "Tell us what's missing in your workshop, and your ideas go straight into the roadmap."
+      },
+      {
+        "title": "Your name, as a Founding Partner",
+        "body": "You're listed among the people who helped build Mobilcab."
+      },
+      {
+        "title": "Private feedback group",
+        "body": "Talk directly with the founders and the other Founding Partners."
+      },
+      {
+        "title": "Personal notice when payment opens",
+        "body": "We contact you when paid Basic (M2) is ready, with list price and your discount — before the FP offer closes."
+      }
     ]
   },
   "offer": {
-    "title": "The offer",
-    "price": "49 RON/month",
-    "yearly": "or 549 RON/year",
-    "detail": "The Basic plan, with pricing locked for 12 months. Only for the first 100 workshops.",
-    "noPayment": "Nothing to pay now: you reserve your spot, and only pay once you get access."
+    "title": "The offer now",
+    "price": "Free",
+    "yearly": "Waitlist — no payment",
+    "detail": "When we ship M2 and open paid Basic, people on the Founding Partner waitlist can buy at a discount. Anyone who wants the paid plan later pays full list price. Waitlist places are limited; we'll say when we close sign-ups.",
+    "noPayment": "Joining doesn't commit you to anything. If you don't want to pay when Basic opens, you decline — and that's it."
   },
   "ai": {
     "title": "What Basic doesn't include",
-    "body": "Said plainly, so there are no surprises: Basic covers design, cutlists and CNC export. You try the AI assistant once, on the starter project, to see what it does. After that, AI is only included in the Starter (from 99 RON/month), Pro and Studio plans."
+    "body": "Said plainly: paid Basic (at M2) is for the workshop — design, cut lists, nesting, labels, quotes. It does not include CNC export (a later stage) or recurring AI. AI and CNC will have their own offers, announced in time."
   },
   "proof": {
     "title": "What the first Founding Partners say"
   },
   "next": {
-    "title": "What happens after you reserve",
+    "title": "What happens after you join",
     "steps": [
-      "Your spot is held in your name.",
-      "We contact you personally when Founding Partner access opens.",
-      "You only pay once you get access."
+      "You're on the Founding Partner waitlist — free, in your name.",
+      "You can use the app during the free period while we finish M2 (nesting, labels, quotes).",
+      "When we open paid Basic with M2, we contact you with list price and the FP discount. Anyone who subscribes later, without a waitlist place, pays full list."
     ]
   },
   "form": {
-    "title": "Reserve your spot",
+    "title": "Join the waitlist",
     "nameLabel": "Full name",
     "emailLabel": "Email",
     "workshopLabel": "Workshop name",
@@ -54,13 +73,13 @@
     "cityLabel": "City",
     "consent": "I agree to be contacted about the Founding Partner program and to receive updates by email.",
     "privacyLink": "See the privacy policy",
-    "submit": "Claim your Founding Partner spot"
+    "submit": "Join the Founding Partner waitlist"
   },
   "messages": {
     "sending": "Sending…",
-    "reserved": "Your spot is reserved! We'll contact you personally when access opens.",
-    "already": "You already have a spot reserved. We'll contact you personally when access opens.",
-    "full": "All Founding Partner spots have been claimed. You can still join the waitlist for free.",
+    "reserved": "You're on the Founding Partner waitlist. We'll contact you personally when we open paid Basic with M2.",
+    "already": "You're already on the Founding Partner waitlist. We'll contact you personally when we open paid Basic with M2.",
+    "full": "Founding Partner sign-ups are closed for now. You can still use the app for free; a later subscription is at list price.",
     "invalidName": "Enter your name (at least 2 letters).",
     "invalidEmail": "Enter a valid email address.",
     "invalidWorkshop": "The workshop name is too long.",
@@ -69,5 +88,5 @@
     "network": "Couldn't send. Check your connection and try again.",
     "server": "Something went wrong on our side. Please try again in a few minutes."
   },
-  "joinFree": "Join free"
+  "joinFree": "Or email updates only (no FP discount)"
 }

@@ -5,9 +5,10 @@
 import Base from '../layouts/Base.astro';
 import SiteHeader from './SiteHeader.astro';
 import SiteFooter from './SiteFooter.astro';
-import WaitlistForm from './WaitlistForm.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import VideoPlayer from './VideoPlayer.astro';
+import WaitlistForm from './WaitlistForm.astro';
+import { APP_URL } from '../config';
 import { demoVideos } from '../data/demoVideos';
 import { useDemoTranslations, useHomeTranslations, useTranslations, type Lang } from '../i18n';
 import { homeData, softwareData } from '../lib/structuredData';
@@ -65,7 +66,7 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
               </a>
             )
           }
-          <a href={`#${joinId}`} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="join_free" data-cta-location="hero">
+          <a href={APP_URL} class={fpHref ? 'link-quiet' : 'btn-primary'} data-cta="open_app" data-cta-location="hero" rel="noopener">
             {t.hero.ctaSecondary}
           </a>
         </div>
@@ -179,24 +180,30 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
       </div>
     </section>
 
-    {/* Final CTA, also the "join free" target */}
+    {/* Final CTA: FP → app → news waitlist (joinFreeHref lands here) */}
     <section id={joinId} class="scroll-mt-4 border-t border-line">
       <div class:list={[wrap, 'py-14 sm:py-24']}>
         <div class="max-w-xl">
           <h2 class={sectionTitle}>{t.final.title}</h2>
           {
-            fpHref && (
+            fpHref ? (
               <>
                 <a href={fpHref} class="btn-primary mt-8" data-cta="founding_partner" data-cta-location="final">
                   {t.hero.ctaPrimary}
                 </a>
                 <p class="mt-8 mb-4 text-base font-medium text-graphite">{t.final.or}</p>
+                <a href={APP_URL} class="btn-primary" data-cta="open_app" data-cta-location="final" rel="noopener">
+                  {t.hero.ctaSecondary}
+                </a>
               </>
+            ) : (
+              <a href={APP_URL} class="btn-primary mt-8" data-cta="open_app" data-cta-location="final" rel="noopener">
+                {t.hero.ctaSecondary}
+              </a>
             )
           }
-          <div class:list={[!fpHref && 'mt-8']}>
-            <WaitlistForm lang={lang} t={formT} privacyHref={privacyHref} />
-          </div>
+          <p class="mt-10 mb-4 text-base font-medium text-graphite">{t.final.news}</p>
+          <WaitlistForm lang={lang} t={formT} privacyHref={privacyHref} />
         </div>
       </div>
     </section>

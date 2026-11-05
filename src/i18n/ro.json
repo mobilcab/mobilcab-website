@@ -20,12 +20,12 @@
   "hero": {
     "headline": "Mobilcab — proiectare mobilă direct din browser.",
     "valueProp": "Fără instalare. Lucrezi pe laptop, tabletă sau telefon.",
-    "description": "Construim un instrument de proiectare pentru tâmplari și ateliere de mobilă — simplu, rapid, și accesibil. Lasă-ți emailul ca să fii primul care află când lansăm."
+    "description": "Construim un instrument de proiectare pentru tâmplari și ateliere de mobilă. Lasă-ți emailul pentru noutăți — sau înscrie-te pe lista Founding Partner pentru discount pe Basic când dam drumul la M2."
   },
   "form": {
     "emailLabel": "Adresa ta de email",
     "emailPlaceholder": "nume@exemplu.ro",
-    "submit": "Anunță-mă la lansare",
+    "submit": "Trimite-mi noutăți",
     "consent": "Sunt de acord să primesc actualizări prin email.",
     "privacyLink": "Vezi politica de confidențialitate"
   },
@@ -37,7 +37,7 @@
   "messages": {
     "sending": "Se trimite…",
     "pending": "Aproape gata! Ți-am trimis un email: apasă pe linkul din el ca să-ți confirmi înscrierea. Dacă nu-l găsești, uită-te și în Spam.",
-    "already": "Ești deja pe listă. Te anunțăm imediat ce lansăm.",
+    "already": "Ești deja pe listă. Te anunțăm cu noutăți despre produs.",
     "invalidEmail": "Introdu o adresă de email validă.",
     "consentRequired": "Bifează căsuța de acord ca să te putem anunța.",
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",

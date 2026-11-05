@@ -4,7 +4,7 @@
 |---|---|---|
 | `confirm-ro.html` / `confirm-en.html` | Right after a waitlist sign-up, by the site (double opt-in) | Confirmă-ți înscrierea la Mobilcab / Confirm your Mobilcab sign-up |
 | `waitlist-ro.html` / `waitlist-en.html` | Someone confirms their sign-up (added to the waitlist list) | Ești pe listă! Iată ce urmează 🛠️ / You're on the list! Here's what happens next 🛠️ |
-| `founding-partner-ro.html` / `founding-partner-en.html` | Someone reserves a Founding Partner spot | Locul tău de Founding Partner e rezervat 🛠️ / Your Founding Partner spot is reserved 🛠️ |
+| `founding-partner-ro.html` / `founding-partner-en.html` | Someone joins the Founding Partner waitlist | Ești pe lista Founding Partner 🛠️ / You're on the Founding Partner waitlist 🛠️ |
 
 The HTML files are **generated**: edit the copy in `scripts/build-emails.mjs`,
 fill in `EMAIL_SETTINGS` in `src/config.ts`, then run:
@@ -38,8 +38,8 @@ contain visible **[COMPLETEAZĂ] / [FILL IN]** markers:
 2. **Waitlist automation:** Automations → "Contact added to a list" → choose the
    waitlist list → send `waitlist-ro`. If you use a separate English list
    (`BREVO_LIST_ID_EN`), make a second automation for it with `waitlist-en`.
-3. **Founding Partner automation:** "Contact added to a list" → the reservation
-   list (`BREVO_FP_LIST_ID`) → a condition on the `LANGUAGE` attribute: `en`
+3. **Founding Partner automation:** "Contact added to a list" → the FP waitlist
+   (`BREVO_FP_LIST_ID`) → a condition on the `LANGUAGE` attribute: `en`
    gets `founding-partner-en`, everything else `founding-partner-ro`.
 4. Send yourself a test of each before switching the automations on.
 
@@ -59,18 +59,18 @@ templates when you switch the program on.
 The waitlist email follows the Kit's text, with these changes:
 
 - **"Founding Workshop" → "Founding Partner"**, per `docs/DECISIONS.md`.
-- **The waitlist isn't a Founding Partner spot.** The Kit says signing up among
-  the first 100 gets the special price; now that needs a separate reservation.
-  The email says the first 100 workshops will get Founding Partner pricing and
-  that the subscriber hears first when spots open.
-- **"Îți trimit acces beta în următoarele [X] zile"** became "Te anunț personal
-  când deschidem accesul…", since no date is set and a placeholder must never
-  be sent.
+- **The general waitlist isn't Founding Partner.** News only — no FP discount.
+  The email points people to the separate FP waitlist for a discount on Basic
+  when paid Basic opens with M2 (no fixed N / 12-month lock in copy). Later /
+  non-FP subscribers pay list price.
+- **App free until paid Basic (M2).** Copy no longer frames the waitlist as
+  “first access”; it frames news + the path to paid plans.
 - **The demo video link** only appears once `demoUrl` is set.
 - **Added a footer**: why they're receiving the email, the sender's company
   line, and an unsubscribe link.
 
-The Founding Partner email is new (the Kit predates the reservation form). It
-restates the offer as decided (Basic, 49 RON/month or 549 RON/year, locked 12
-months, nothing to pay until access), and offers founder-led onboarding of the
-first project, per Marketing Plan 5.4. Remove that line if you won't offer it.
+The Founding Partner email covers the FP waitlist (the Kit predates the form).
+It restates: free waitlist now; discount on paid Basic when M2 opens (amounts
+TBD); later subscribers pay list; nothing owed until then; founder-led
+onboarding of the first project per Marketing Plan 5.4. Remove that line if you
+won't offer it.

@@ -1,12 +1,12 @@
 ---
-// Founding Partner program page (Build Brief 4.2, Funnel Plan 3.2).
-// Until Stripe exists, "claim your spot" is a reservation without payment:
-// it adds the person to a Brevo list, which also drives the spot counter.
+// Founding Partner waitlist (docs/DECISIONS.md): opt-in for Basic discount at M2.
+// No payment now — Brevo FP list only; counter optional via FOUNDING_PARTNER_SHOW_COUNTER.
 import Base from '../layouts/Base.astro';
 import FoundingPartnerForm from './FoundingPartnerForm.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
+import { FOUNDING_PARTNER_SHOW_COUNTER } from '../config';
 import { testimonials } from '../data/testimonials';
 import { useFoundingPartnerTranslations, type Lang } from '../i18n';
 import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
@@ -43,14 +43,17 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
         <p class="text-sm font-semibold tracking-wide text-wood">{t.hero.label}</p>
         <h1 class="mt-3 text-[2rem] leading-[1.12] font-bold tracking-tight text-balance sm:text-[3rem]">{t.hero.title}</h1>
         <p class="mt-5 text-lg leading-relaxed text-graphite">{t.hero.body}</p>
-        <p
-          data-fp-counter
-          data-template-remaining={t.counter.remaining}
-          data-template-full={t.counter.full}
-          hidden
-          class="mt-6 inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-sm font-semibold text-ink"
-        >
-        </p>
+        {
+          FOUNDING_PARTNER_SHOW_COUNTER && (
+            <p
+              data-fp-counter
+              data-template-remaining={t.counter.remaining}
+              data-template-full={t.counter.full}
+              hidden
+              class="mt-6 inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-1.5 text-sm font-semibold text-ink"
+            />
+          )
+        }
         <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
           <a href={`#${reserveId}`} class="btn-primary" data-cta="founding_partner" data-cta-location="fp_hero">{t.hero.cta}</a>
           <a href={joinFreeHref} class="link-quiet" data-cta="join_free" data-cta-location="fp_hero">{t.joinFree}</a>
@@ -118,14 +121,17 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
       <div class:list={[wrap, 'grid gap-10 py-14 sm:py-24 md:grid-cols-[3fr_2fr]']}>
         <div>
           <h2 class={sectionTitle}>{t.form.title}</h2>
-          <p
-            data-fp-counter
-            data-template-remaining={t.counter.remaining}
-            data-template-full={t.counter.full}
-            hidden
-            class="mt-3 text-sm font-semibold text-wood"
-          >
-          </p>
+          {
+            FOUNDING_PARTNER_SHOW_COUNTER && (
+              <p
+                data-fp-counter
+                data-template-remaining={t.counter.remaining}
+                data-template-full={t.counter.full}
+                hidden
+                class="mt-3 text-sm font-semibold text-wood"
+              />
+            )
+          }
           <div class="mt-6">
             <FoundingPartnerForm lang={lang} t={t} privacyHref={privacyHref} />
           </div>

@@ -20,12 +20,12 @@
   "hero": {
     "headline": "Mobilcab — furniture design, right in your browser.",
     "valueProp": "Nothing to install. Work on your laptop, tablet or phone.",
-    "description": "We're building a design tool for carpenters and furniture workshops — simple, fast, and affordable. Leave your email to be the first to know when we launch."
+    "description": "We're building a design tool for carpenters and furniture workshops. Leave your email for news — or join the Founding Partner waitlist for a discount on Basic when we ship M2."
   },
   "form": {
     "emailLabel": "Your email address",
     "emailPlaceholder": "name@example.com",
-    "submit": "Notify me at launch",
+    "submit": "Send me updates",
     "consent": "I agree to receive updates by email.",
     "privacyLink": "See the privacy policy"
   },
@@ -37,7 +37,7 @@
   "messages": {
     "sending": "Sending…",
     "pending": "Almost done! We've sent you an email: click the link in it to confirm your sign-up. If you can't find it, check your Spam folder.",
-    "already": "You're already on the list. We'll let you know as soon as we launch.",
+    "already": "You're already on the list. We'll send you product news.",
     "invalidEmail": "Enter a valid email address.",
     "consentRequired": "Tick the consent box so we can notify you.",
     "network": "Couldn't send. Check your connection and try again.",
