@@ -11,11 +11,11 @@ documents is adjusted to match.
 | Who is a Founding Partner | Anyone who **opts in on the FP waitlist** (name, email, workshop, city → Brevo FP list). Not automatic for every free user | Funnel Plan “claim spot = pay”; “beta tester” framing |
 | When the FP discount applies | When we **open paid Basic with M2** (design + cut list + nesting + labels + quote). People on the FP waitlist may buy Basic at **discount vs list**. Anyone who wants paid Basic **after** that window / without an FP waitlist place pays **full list price** | Vague “when we open payment”; access-before-everyone framing |
 | Founding Partner before SRL | **Free waitlist only**: no payment at sign-up; no public spot counter with a fixed N. Payment only after SRL + checkout exist and M2 paid Basic is open | Funnel Plan payment-at-claim; Build Brief locked price on the page |
-| Number of Founding Partner spots | **First 15**, with public announcement if extended. Soft technical cap in code (`FOUNDING_PARTNER_SPOTS`) may be higher; do not invent a fixed N in marketing beyond what Terms say | "50" / "50–100" / "100" (Build Brief 4.2, Funnel Plan 3.2, 3.3) |
-| How long the Founding Partner price is locked | **20% off list for 12 months from paid activation**, then list price. Exact list RON amounts TBD until paid Basic opens | "for life"; fixed 49/549 RON without % |
+| Number of Founding Partner spots | **First 15**; if demand is high we **raise the cap** and announce publicly. Soft technical cap in code (`FOUNDING_PARTNER_SPOTS`) may be higher. Marketing copy stays soft (see scarcity row) — do not hard-sell “15” on every page | "50" / "50–100" / "100"; CAD note that briefly said “no seat cap” (2026-11-04) |
+| How long the Founding Partner price is locked | **20% off list for 12 months from paid activation**, then list price. **Public marketing shows the % only** until we set list RON | "for life"; fixed 49/549 RON without %; CAD Admin default 30% |
 | What Basic includes at paid launch | **M1 + M2**: 3D design, cut list / workshop docs, sheet nesting, labels, client quote. **Not CNC** (M3+) and not recurring AI | Build Brief 4.3 Basic row that bundled CNC export |
-| Founding Partner paid offer | Same **Basic (M1+M2)** at **20% off list**, after SRL + checkout, for FP-waitlist people only. Later / non-FP buyers = list price | Fixed 49 RON/month / 549 RON/year on marketing pages |
-| When to form an SRL | **After clear purchase interest** (see Interest gate below). No SRL, no Stripe/MoR, no paid checkout until then | Assumed day-one company in Marketing Plan / Funnel Plan |
+| Founding Partner paid offer | Same **Basic (M1+M2) only** at **20% off list**, after SRL + checkout, for FP-waitlist people only. **No FP discount on Starter/Pro** for now. Later / non-FP buyers = list price. Referral discount (separate %) stacks after billing is live — see Referral | Fixed 49 RON/month / 549 RON/year; FP on Starter/Pro |
+| When to form an SRL / open billing | **When we launch billing**, judged by **how many clients** we have then — not the old fixed 30 FP / 10 workshops gate. No Stripe/MoR / paid checkout until that call | Assumed day-one company; hard Interest-gate thresholds (30 / 10) |
 | Legal operator until an SRL exists | **Natural persons (Ștefan and Fineas)** trading as Mobilcab; no CUI, registered office or Trade Register number on the site. Update Terms/Privacy as soon as the SRL is formed | Placeholder company fields in the legal drafts |
 | Cancelling a yearly plan | **Stops renewal, no pro-rata refund** of the unused year, except the 14-day consumer withdrawal (GEO 34/2014) and the Refund Policy once billing is live | "cancel anytime" on yearly Founding Partner (Funnel Plan / Build Brief) |
 | "Kitchen and bedroom" in headlines and hero copy | **Removed**: say "mobilă" / "furniture" | Launch Content Kit 1.1 hero text |
@@ -23,29 +23,27 @@ documents is adjusted to match.
 | Phase 2 rollout | **Each page launches separately** with the switch in `src/site.ts`; unpublished pages live at `/preview/…` (not indexed). The coming-soon page stays at `/ro/` until Home is published | Build Brief 4.1 "replaces the coming-soon page" |
 | "Claim your Founding Partner spot" before checkout exists | **Join the FP waitlist without payment** (Brevo FP list). Discount is offered when paid Basic (M2) opens; payment only then, and only if they choose to subscribe | Funnel Plan 4, step 5a "→ payment via Stripe"; “reserve for access” wording |
 | FAQ visits before vs. after sign-up (Build Brief 5, `faq_view_pre_signup` / `faq_view_post_signup`) | **Not split for now**: the FAQ sends `faq_open` with the question opened, and nothing is stored on the visitor's device, so the privacy text stays accurate. Splitting would need a "signed up" flag in the browser and a privacy-text update | Build Brief 5 event table |
-| Referral rewards (Marketing Plan 3c "invite others, move up the list") | **Access, not money**: 1 confirmed invite = ahead in the private-beta queue; 3 = a guaranteed private-beta invite. No cash, no extra discounts, no buying Founding Partner spots, no public leaderboard. After launch: one free month for both sides (Marketing Plan 5.3), built in the app | Marketing Plan 3c, 5.3, 5.4 |
-| How referral progress is shown | **Confirmed-invite count, not a queue position** ("2 confirmed — 1 more for a guaranteed beta invite") | "move up the list" wording |
-| What counts as a referral | Only an invited person who **confirms their email (double opt-in)**; each address once; no self-referral; at most 5 counted per person. Double opt-in applies to every waitlist sign-up, which also answers the lawyer's proof-of-consent question | — |
-| Interest gate (SRL + paid Basic) | Open SRL and paid checkout when **either** (≥ **30** completed Founding Partner waitlist sign-ups on the FP Brevo list) **or** (≥ **10** workshops reply in writing that they would pay the announced Basic list price). Whichever comes first. Plain product/newsletter waitlist emails without an FP opt-in do **not** count. Revisit the thresholds after the first serious review | — |
-| General waitlist vs FP waitlist | **FP waitlist** (Brevo FP list) = discount-eligible at M2 paid open. **General waitlist** = product news only, **no** FP discount. Free app users who never join the FP list pay **list price** if they subscribe later | Treating every free user as FP |
+| Referral rewards | **After billing is live**: referrer gets an **extra discount %** on paid plan (separate from the FP 20%), for invites that complete a **real in-app action** (not signup alone). **Max 3 rewarded invites** per referrer. Exact referral % TBD when billing opens. No cash, no buying FP spots, no public leaderboard | Marketing Plan 3c beta-queue / free-month rewards; “access not money” beta framing |
+| How referral progress is shown | **Confirmed + activated invite count** toward the max of 3 rewarded (in app) | "move up the list" / queue-position wording |
+| What counts as a referral | Invited person creates an account and completes a **first real action** in the app (e.g. save project or export); one referral per invitee; no self-referral; **at most 3 rewarded** per referrer. Double opt-in still applies to waitlist/email consent | “email confirm alone counts”; at most 5 counted |
+| Interest gate (SRL + paid Basic) | **Superseded** by “when we launch billing, based on client count” (row above). Old 30 FP / 10 written-intent thresholds are historical only | Hard numeric gate as a standing rule |
+| General waitlist vs FP waitlist | **FP waitlist** (Brevo FP list) = discount-eligible at paid Basic open. **General waitlist** = product news only, **no** FP discount. Free app users who never join the FP list pay **list price** if they subscribe later | Treating every free user as FP |
+| Free-for-everyone duration | Until **billing launches**. Whether the FP waitlist **closes at that moment** is decided **then**, not now | Fixed public end-date before billing exists |
+| Public FP scarcity copy | Soft: **“limited — we announce when we close”**. Terms may still say first 15 / we can raise the cap; marketing does not hammer the number | Public “first 15 only” on every CTA |
+| AI on the free plan | **Zero** until AI ships. No trial quota and no monthly AI allowance on Gratuit before the feature exists | Build Brief 1-trial / Marketing Plan 5–10/month |
+| Public milestone names | Use **product labels** on the site (e.g. Debitare / Atelier / CNC / Echipă / Abonamente / AI), not “M1/M2…” as the primary name. Internal docs may keep M-codes as aliases | Marketing that leads with M1/M2 jargon |
+| Plan/Home app CTA button | **„Încearcă gratuit”** / **“Try it free”** — lead-in text must **not** repeat the button wording | Duplicate `final.or` + `hero.ctaSecondary` copy |
 
 ## Open questions
 
 Not decided yet. Move into the table above when fixed.
 
-1. **AI assistant on the free plan.** One trial during onboarding only (Build
-   Brief 4.3 tier table), or 5–10 AI uses per month (Marketing Plan 3b)? The
-   Marketing Plan suggests asking 5–10 carpenters before fixing the free-plan
-   limits.
-2. **Founding Partner pricing on Starter and Pro.** Still open: FP is Basic-only
-   for Phase 2 unless we decide otherwise.
-3. **Unreliable workshop internet (FAQ).** Confirm real app behaviour before
-   writing the FAQ answer (Build Brief 4.6).
-4. **Basic list price in RON** (the 20% FP discount applies to that number).
-5. **How long the free-for-everyone period lasts** before paid Basic opens
-   (public wording), and whether the FP waitlist closes at the same moment.
-6. **Public soft copy for limited FP waitlist** — Terms say first 15; marketing
-   may stay soft (“limited — we announce when we close”) without repeating N.
+1. **Unreliable workshop internet (FAQ).** Confirm real app behaviour before
+   writing the FAQ answer (Build Brief 4.6) — revisit later.
+2. **Basic list price in RON** — set when we publish paid Basic; until then
+   marketing shows **discount % only**.
+3. **Exact referral discount %** (on top of FP 20%) — set when billing opens.
+4. **Whether FP waitlist closes** at billing launch — decide at that moment.
 
 ## Go-live flip (do not flip until ready)
 
@@ -63,7 +61,8 @@ deploy in one go.
 4. [ ] Env on Vercel/Cloudflare: `BREVO_*`, `CONFIRM_SECRET`, optionally
       analytics domain and `BREVO_CONFIRM_TEMPLATE_ID_EN`.
 5. [ ] Smoke on `/preview/…`: Home, FP form, Pricing, FAQ, confirm email flow.
-6. [ ] Decide open questions 4–6 (list price can stay “TBD” on the page).
+6. [x] Open product questions from 2026-11-05 locked (list price + referral %
+      still TBD until billing — OK to show % only on the site).
 
 ### Flip order (then deploy)
 
