@@ -32,6 +32,18 @@ jobs:
       # Public values read by astro:env at build time, not at request time.
       PUBLIC_PLAUSIBLE_DOMAIN: ${{ secrets.PUBLIC_PLAUSIBLE_DOMAIN }}
       PUBLIC_CF_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CF_ANALYTICS_TOKEN }}
+      # Server secrets, read by the Worker at request time — but the launch check
+      # in `astro:build:start` refuses a production build when they're missing, so
+      # the build environment needs to see them too. astro:env keeps `context:
+      # server` variables out of the client bundle; they're never inlined.
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+      BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+      BREVO_LIST_ID_EN: ${{ secrets.BREVO_LIST_ID_EN }}
+      BREVO_FP_LIST_ID: ${{ secrets.BREVO_FP_LIST_ID }}
+      BREVO_CONFIRM_TEMPLATE_ID_RO: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_RO }}
+      BREVO_CONFIRM_TEMPLATE_ID_EN: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_EN }}
+      CONFIRM_SECRET: ${{ secrets.CONFIRM_SECRET }}
+      CRON_SECRET: ${{ secrets.CRON_SECRET }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -51,15 +63,7 @@ jobs:
       - name: Sync Worker secrets
         # These are read at request time, so they are not part of the build.
         # Missing ones are skipped rather than written as empty strings.
-        env:
-          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
-          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
-          BREVO_LIST_ID_EN: ${{ secrets.BREVO_LIST_ID_EN }}
-          BREVO_FP_LIST_ID: ${{ secrets.BREVO_FP_LIST_ID }}
-          BREVO_CONFIRM_TEMPLATE_ID_RO: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_RO }}
-          BREVO_CONFIRM_TEMPLATE_ID_EN: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_EN }}
-          CONFIRM_SECRET: ${{ secrets.CONFIRM_SECRET }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        # The values come from the job-level env above.
         run: node scripts/worker-secrets.mjs
 
       - name: Deploy the site Worker
