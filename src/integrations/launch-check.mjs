@@ -1,6 +1,10 @@
 // Runs scripts/launch-check.mjs at the start of every build.
-// Production deploys on Vercel (VERCEL_ENV=production) stop on any error;
-// local builds and Vercel preview deploys only print a summary.
+// A production deploy (DEPLOY_ENV=production, set by the deploy workflow) stops
+// on any error; local builds and preview deploys only print a summary.
+//
+// This used to key off Vercel's own VERCEL_ENV variable. On Cloudflare Workers
+// nothing sets an equivalent, so the workflow sets DEPLOY_ENV explicitly: a
+// missing value must never be read as "production".
 
 import { fileURLToPath } from 'node:url';
 import { runLaunchChecks } from '../../scripts/launch-check.mjs';
@@ -12,7 +16,7 @@ export default function launchCheck() {
       'astro:build:start': ({ logger }) => {
         const root = fileURLToPath(new URL('../..', import.meta.url));
         const { errors, warnings } = runLaunchChecks({ root, env: process.env });
-        const production = process.env.VERCEL_ENV === 'production';
+        const production = process.env.DEPLOY_ENV === 'production';
 
         if (production) {
           for (const w of warnings) logger.warn(w);

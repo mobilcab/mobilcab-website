@@ -1,14 +1,20 @@
-// Checks the built site in .vercel/output (run with `npm run test:build`, which
-// builds first). These are the checks that matter most before a deploy: no
-// public page exposes a preview, previews aren't indexed, the CSP covers every
-// script, and test-mode code never ships.
+// Checks the built site in dist/ (run with `npm run test:build`, which builds
+// first). These are the checks that matter most before a deploy: no public page
+// exposes a preview, previews aren't indexed, the CSP covers every script, and
+// test-mode code never ships.
+//
+// On Vercel this read .vercel/output; the Cloudflare adapter writes a different
+// shape: pages in dist/client, the Worker in dist/server, and the effective
+// Wrangler config at dist/server/wrangler.json.
 import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { describe, expect, it } from 'vitest';
 
-const output = join(import.meta.dirname, '../../.vercel/output');
-const staticDir = join(output, 'static');
+const root = join(import.meta.dirname, '../..');
+const output = join(root, 'dist');
+const staticDir = join(output, 'client');
+const serverDir = join(output, 'server');
 
 if (!existsSync(staticDir)) throw new Error('No build output: run `npm run test:build` (it builds first).');
 
@@ -17,6 +23,15 @@ const walk = (dir: string): string[] =>
     const path = join(dir, name);
     return statSync(path).isDirectory() ? walk(path) : [path];
   });
+
+/** The Wrangler config files allow // comments, so JSON.parse alone is not enough. */
+const readJsonc = (file: string) =>
+  JSON.parse(
+    readFileSync(file, 'utf8')
+      .split(/\r?\n/)
+      .filter((line) => !/^\s*\/\//.test(line))
+      .join('\n'),
+  );
 
 const pages = walk(staticDir)
   .filter((f) => f.endsWith('.html'))
@@ -31,9 +46,7 @@ const publicPages = pages.filter((p) => !isPreview(p.url) && p.url !== '/404.htm
 describe('built pages', () => {
   it('found the pages', () => {
     expect(pages.length).toBeGreaterThan(10);
-    expect(pages.map((p) => p.url)).toEqual(
-      expect.arrayContaining(['/ro/', '/en/', '/ro/confidentialitate/', '/ro/termeni/', '/404.html']),
-    );
+    expect(pages.map((p) => p.url)).toEqual(expect.arrayContaining(['/ro/', '/en/', '/ro/confidentialitate/', '/404.html']));
   });
 
   it('never links a public page to a preview', () => {
@@ -99,33 +112,77 @@ describe('sitemap and robots.txt', () => {
   });
 });
 
-describe('Vercel config and server code', () => {
-  const config = JSON.parse(readFileSync(join(output, 'config.json'), 'utf8'));
+describe('Cloudflare Worker config', () => {
+  const config = readJsonc(join(serverDir, 'wrangler.json'));
+  const serverCode = walk(serverDir)
+    .filter((f) => /\.(m?js)$/.test(f))
+    .map((f) => readFileSync(f, 'utf8'))
+    .join('\n');
 
-  it('applies the security headers before every other route', () => {
-    expect(config.routes[0]).toMatchObject({ src: '^/(.*)$', continue: true });
-    expect(config.routes[0].headers).toMatchObject({
-      'X-Frame-Options': 'DENY',
-      'X-Content-Type-Options': 'nosniff',
-      'Content-Security-Policy': "frame-ancestors 'none'",
-    });
+  it('ships the generated Worker entry and the static assets next to it', () => {
+    expect(config.main).toBe('entry.mjs');
+    expect(existsSync(join(serverDir, config.main))).toBe(true);
+    expect(config.assets.directory).toBe('../client');
   });
 
   it('routes every API endpoint', () => {
-    const routes = config.routes.map((r: { src?: string }) => r.src ?? '').join('\n');
-    for (const name of ['subscribe', 'confirm', 'referral', 'founding-partner', 'cleanup']) expect(routes).toContain(`/api/${name}`);
+    for (const name of ['subscribe', 'confirm', 'referral', 'founding-partner', 'cleanup']) {
+      expect(serverCode).toContain(`"/api/${name}"`);
+    }
   });
 
-  it('schedules the daily clean-up', () => {
-    expect(config.crons).toEqual([{ path: '/api/cleanup', schedule: '0 3 * * *' }]);
+  it('keeps the site Worker free of a cron schedule', () => {
+    // The daily clean-up is its own Worker (cron/wrangler.jsonc), so a deploy of
+    // the site can never drop the schedule.
+    expect(config.triggers?.crons ?? []).toEqual([]);
+  });
+
+  it('schedules the daily clean-up in the dedicated cleanup Worker', () => {
+    const cron = readJsonc(join(root, 'cron/wrangler.jsonc'));
+    expect(cron.triggers.crons).toEqual(['0 3 * * *']);
+    expect(cron.main).toBe('./worker.mjs');
+  });
+
+  it('declares no session KV namespace, since the site has no sessions', () => {
+    expect(config.kv_namespaces).toEqual([]);
   });
 
   it('ships no local-test-mode code', () => {
-    const code = walk(join(output, 'functions'))
-      .filter((f) => /\.(m?js)$/.test(f))
-      .map((f) => readFileSync(f, 'utf8'))
-      .join('\n');
-    expect(code).toContain('api.brevo.com');
-    for (const marker of ['[brevo mock]', 'dev-only-secret', 'devConfirmUrl', 'lastConfirmUrl']) expect(code).not.toContain(marker);
+    expect(serverCode).toContain('api.brevo.com');
+    for (const marker of ['[brevo mock]', 'dev-only-secret', 'devConfirmUrl', 'lastConfirmUrl']) {
+      expect(serverCode).not.toContain(marker);
+    }
+  });
+});
+
+describe('Cloudflare static files', () => {
+  const headers = readFileSync(join(staticDir, '_headers'), 'utf8');
+  const redirects = readFileSync(join(staticDir, '_redirects'), 'utf8');
+
+  it('applies the security headers to every asset', () => {
+    expect(headers).toMatch(/^\/\*$/m);
+    for (const header of [
+      "Content-Security-Policy: frame-ancestors 'none'",
+      'X-Frame-Options: DENY',
+      'X-Content-Type-Options: nosniff',
+      'Referrer-Policy: strict-origin-when-cross-origin',
+      'Cross-Origin-Opener-Policy: same-origin',
+      'Strict-Transport-Security:',
+    ]) {
+      expect(headers).toContain(header);
+    }
+  });
+
+  it('keeps the hashed assets cacheable forever', () => {
+    expect(headers).toMatch(/^\/_astro\/\*$/m);
+    expect(headers).toContain('Cache-Control: public, max-age=31536000, immutable');
+  });
+
+  it('redirects the root to /ro/ with a real 301', () => {
+    expect(redirects).toMatch(/^\/\s+\/ro\/\s+301$/m);
+  });
+
+  it('does not ship a meta-refresh page at the root', () => {
+    expect(existsSync(join(staticDir, 'index.html'))).toBe(false);
   });
 });

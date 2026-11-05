@@ -15,8 +15,8 @@ const json = (body: unknown, status = 200) =>
 
 /**
  * Daily clean-up of sign-ups that were never confirmed. Called once a day by
- * Vercel Cron (registered by src/integrations/vercel-crons.mjs), which sends
- * `Authorization: Bearer <CRON_SECRET>`; any other caller is refused.
+ * the cron Worker (cron/), which sends `Authorization: Bearer <CRON_SECRET>`;
+ * any other caller is refused.
  *
  *   ?dryRun=1   report what would be deleted, delete nothing
  *   ?days=0     dev only: treat every unconfirmed sign-up as old, to test locally
