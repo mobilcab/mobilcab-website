@@ -1,24 +1,19 @@
 name: Deploy to Cloudflare Workers
 
-# Deploys with the wrangler CLI and a token, the same way the old Vercel workflow
-# worked: no native GitHub<->Cloudflare integration, so a deploy never depends on
-# who authored the commit.
-#
-# MANUAL ONLY UNTIL THE CUTOVER. Pushing to main still deploys to Vercel, which is
-# what serves mobilcab.com today. Starting the push trigger before the DNS move
-# would deploy to a Worker nobody is served by yet, on every commit.
-# At cutover: move this `push` trigger up, delete .github/workflows/vercel-deploy.yml,
-# and set the default of `environment` to production.
+# Deploys with the wrangler CLI and a token: no native GitHub<->Cloudflare
+# integration, so a deploy never depends on who authored the commit.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
     inputs:
       environment:
         description: "DEPLOY_ENV passed to the build (production stops on launch-check errors)"
         type: choice
         options:
-          - preview
           - production
-        default: preview
+          - preview
+        default: production
 
 # One deploy at a time; a newer run waits instead of racing it.
 concurrency:
@@ -30,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
-      DEPLOY_ENV: ${{ inputs.environment || 'preview' }}
+      DEPLOY_ENV: ${{ inputs.environment || 'production' }}
       SITE_URL: https://mobilcab.com
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -71,8 +66,7 @@ jobs:
         run: |
           set -euo pipefail
           npx wrangler deploy 2>&1 | tee deploy.log
-          URL=$(grep -oE 'https://[A-Za-z0-9.-]*workers\.dev' deploy.log | head -n1 || true)
-          echo "### Deployed: ${URL:-see the Workers dashboard}" >> "$GITHUB_STEP_SUMMARY"
+          echo "### Deployed: https://mobilcab.com" >> "$GITHUB_STEP_SUMMARY"
 
       - name: Deploy the cleanup Worker
         run: npx wrangler deploy -c cron/wrangler.jsonc

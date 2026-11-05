@@ -150,17 +150,21 @@ to try the real `workerd` runtime. Secrets for the local Worker go in `.dev.vars
 (gitignored); `astro dev` still reads `.env`.
 
 On CI, `.github/workflows/cloudflare-worker-deploy.yml` runs the tests, pushes the
-runtime secrets (`scripts/worker-secrets.mjs`), then deploys both Workers. It is
-**manual only** until the DNS cutover — `main` still deploys to Vercel, and that
-is what serves `mobilcab.com`.
+runtime secrets (`scripts/worker-secrets.mjs`), then deploys both Workers. It runs
+on every push to `main` and builds with `DEPLOY_ENV=production`; `workflow_dispatch`
+is there for a manual re-deploy of the same commit.
 
 Two things live outside the code and are set in the Cloudflare dashboard:
 
 1. **Secrets** on the `mobilcab-website` Worker: the names in `.env.example`
    marked as runtime (everything except `PUBLIC_*`, `SITE_URL`, `DEPLOY_ENV`).
    `CRON_SECRET` must be identical on `mobilcab-website-cleanup`.
-2. **Custom domains** (`mobilcab.com`, `www.mobilcab.com`) on the Worker, in
-   Workers → mobilcab-website → Settings → Domains & Routes.
+2. **DNS zone** `mobilcab.com` in the Cloudflare account — the apex and `www`
+   are Custom Domains on the Worker (declared in `wrangler.jsonc`, so `wrangler
+   deploy` owns them; do not add them by hand in the dashboard). Everything else
+   in the zone is DNS-only: `*` still points at Vercel for `app.mobilcab.com`
+   (the CAD app), `develop`/`staging` at Cloudflare Pages, and MX/SPF/DKIM/DMARC
+   at ImprovMX and Brevo. `scripts/cloudflare-dns.mjs` holds that inventory.
 
 ## SEO (Build Brief 7)
 
