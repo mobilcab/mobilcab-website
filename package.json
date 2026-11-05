@@ -7,6 +7,10 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "astro build && wrangler deploy",
+    "deploy:cron": "wrangler deploy -c cron/wrangler.jsonc",
+    "cf:dns": "node scripts/cloudflare-dns.mjs",
+    "cf:dns:apply": "node scripts/cloudflare-dns.mjs --apply",
     "og": "node scripts/generate-og-images.mjs",
     "emails": "node scripts/build-emails.mjs",
     "check-launch": "node scripts/launch-check.mjs",
@@ -15,14 +19,14 @@
     "test:all": "npm test && npm run test:build"
   },
   "dependencies": {
-    "@astrojs/vercel": "^11.0.12",
+    "@astrojs/cloudflare": "^14.4.4",
     "@fontsource-variable/manrope": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
-    "@vercel/analytics": "^2.0.1",
-    "astro": "^7.3.5",
+    "astro": "^7.4.5",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
-    "vitest": "^5.0.3"
+    "vitest": "^5.0.3",
+    "wrangler": "^4.157.0"
   }
 }

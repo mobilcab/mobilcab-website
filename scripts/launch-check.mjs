@@ -4,7 +4,7 @@
 //   npm run check-launch        run it now, with the values from .env
 //
 // It also runs on every build (src/integrations/launch-check.mjs): production
-// deploys on Vercel stop on any error; other builds only print a summary.
+// deploys stop on any error; other builds only print a summary.
 //
 // Reads src/config.ts and src/site.ts as text, so it needs no TypeScript tooling.
 

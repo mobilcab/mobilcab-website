@@ -3,8 +3,10 @@
 Phase 1: a bilingual coming-soon page with an email waitlist. The spec is in
 [docs/Mobilcab_Website_Build_Brief.md](docs/Mobilcab_Website_Build_Brief.md).
 
-Stack: Astro 7 + Tailwind CSS 4, deployed to Vercel. Every page is static HTML.
-The only server code is `/api/subscribe`, which adds the email to a Brevo list.
+Stack: Astro 7 + Tailwind CSS 4, deployed to Cloudflare Workers. Every page is
+static HTML served from the asset store.
+The only server code is the `/api/*` routes (waitlist, confirmation, referrals,
+Founding Partner reservations, clean-up), all of which talk to Brevo.
 The only client JS is the small form handler; the language switch is plain links.
 
 | Path | What |
@@ -132,12 +134,37 @@ header menu) are tracked once, site-wide, by `src/components/CtaTracking.astro`.
    sign-ups and carries a `lang` property. Plausible then shows the
    visits → sign-ups conversion rate.
 
-## Deploying to Vercel
+## Deploying to Cloudflare Workers
 
-1. Import the project in Vercel (framework preset: Astro).
-2. Add the environment variables above, plus `SITE_URL` once the domain is final.
-3. In Project Settings → Functions, set the region to Frankfurt (`fra1`) so the
-   sign-up function runs in the EU.
+The site runs as one Worker, `mobilcab-website`, with every page served straight
+from the static asset store; only the `/api/*` routes execute code. There is no
+database and no session store.
+
+```bash
+npm run deploy        # astro build && wrangler deploy
+npm run deploy:cron   # deploy the daily clean-up Worker (cron/)
+```
+
+Local: `npm run dev` (usual Astro dev server) or `astro build && astro preview`
+to try the real `workerd` runtime. Secrets for the local Worker go in `.dev.vars`
+(gitignored); `astro dev` still reads `.env`.
+
+On CI, `.github/workflows/cloudflare-worker-deploy.yml` runs the tests, pushes the
+runtime secrets (`scripts/worker-secrets.mjs`), then deploys both Workers. It runs
+on every push to `main` and builds with `DEPLOY_ENV=production`; `workflow_dispatch`
+is there for a manual re-deploy of the same commit.
+
+Two things live outside the code and are set in the Cloudflare dashboard:
+
+1. **Secrets** on the `mobilcab-website` Worker: the names in `.env.example`
+   marked as runtime (everything except `PUBLIC_*`, `SITE_URL`, `DEPLOY_ENV`).
+   `CRON_SECRET` must be identical on `mobilcab-website-cleanup`.
+2. **DNS zone** `mobilcab.com` in the Cloudflare account — the apex and `www`
+   are Custom Domains on the Worker (declared in `wrangler.jsonc`, so `wrangler
+   deploy` owns them; do not add them by hand in the dashboard). Everything else
+   in the zone is DNS-only: `*` still points at Vercel for `app.mobilcab.com`
+   (the CAD app), `develop`/`staging` at Cloudflare Pages, and MX/SPF/DKIM/DMARC
+   at ImprovMX and Brevo. `scripts/cloudflare-dns.mjs` holds that inventory.
 
 ## SEO (Build Brief 7)
 
@@ -161,7 +188,11 @@ header menu) are tracked once, site-wide, by `src/components/CtaTracking.astro`.
 - The CSP only applies to built pages, not `npm run dev`, so check new
   integrations with a production build.
 - The other headers (no framing, nosniff, referrer and permissions policy, HSTS)
-  are in `src/integrations/security-headers.mjs`.
+  are in `public/_headers`, which Cloudflare reads from the asset store. It also
+  marks `/_astro/*` as immutable, since those file names carry a content hash.
+  Note: `_headers` does not apply to the responses the Worker generates, so the
+  `/api/*` routes only get their own `content-type`/`cache-control` headers.
+- `/` → `/ro/` is a real 301 in `public/_redirects`, handled at the edge.
 
 ## Tests
 
@@ -187,15 +218,17 @@ Run `npm run test:all` before every deploy, and after changing anything in
   clean-up (deletes only old unconfirmed sign-ups), Founding Partner
   reservations.
 - `endpoints`: the sign-up, confirmation and clean-up endpoints as a browser and
-  Vercel call them: server-side validation, honeypot, signed links, the cron
+  Cloudflare call them: server-side validation, honeypot, signed links, the cron
   secret.
 - `launch-check`: the launch-readiness check, on a temporary copy of the project.
 
 **Built-site tests** (`tests/build/`): no public page links to a preview;
 previews are `noindex` with no canonical link; every inline script is in the
 page's CSP; no inline `style` attributes; the sitemap lists only public,
-indexable, existing pages; security headers come first; every API route and the
-daily clean-up are registered; no local-test-mode code ships.
+indexable, existing pages; `_headers` carries the security headers; `_redirects`
+301s the root; the generated Wrangler config points at the real Worker entry and
+every API route; the daily clean-up is scheduled in the separate cron Worker; no
+local-test-mode code ships.
 
 ## Launch-readiness check
 
@@ -206,8 +239,8 @@ npm run check-launch
 Lists everything that isn't ready for the public site, using the values in
 `.env`. The same check runs on every build:
 
-- **Production deploys on Vercel stop** on any problem: a missing Brevo key,
-  list, confirmation template, `CONFIRM_SECRET` or `CRON_SECRET`;
+- **Production deploys stop** (`DEPLOY_ENV=production`) on any problem: a missing
+  Brevo key, list, confirmation template, `CONFIRM_SECRET` or `CRON_SECRET`;
   `CONTACT_EMAIL_CONFIRMED` still false in `src/config.ts`; a published Privacy
   Policy or Terms that still has `[COMPLETEAZĂ]`/`[VERIFICĂ]`/`[DE DECIS]`
   markers or its draft notice; a published blog post with its review note or
@@ -215,25 +248,28 @@ Lists everything that isn't ready for the public site, using the values in
 - **Warnings** (shown, but not blocking): no Plausible domain, no `SITE_URL`, no
   English confirmation template, a published Demo page without videos, email
   templates with placeholders.
-- Local builds and Vercel preview deploys only print a one-line summary.
+- Local builds and preview deploys only print a one-line summary.
 
 ## Daily clean-up
 
 `/api/cleanup` deletes sign-ups that were never confirmed, 30 days after the
 confirmation email, as the privacy policy promises. It runs every day at 03:00
-UTC as a Vercel Cron Job (registered in `src/integrations/vercel-crons.mjs`),
-which authenticates with `CRON_SECRET`; other callers are refused.
+UTC from a Cron Trigger on a separate Worker (`cron/`, deployed with
+`npm run deploy:cron`), which calls the endpoint with `CRON_SECRET`; other
+callers are refused. It is a separate Worker so a deploy of the site can never
+drop the schedule.
 
 It only deletes contacts that are in **no list** and have a `CONFIRM_SENT_AT`
 older than 30 days: confirmed sign-ups, Founding Partner reservations and
-contacts added by hand are never touched. Results are in the Vercel logs.
+contacts added by hand are never touched. Results are in the Workers logs
+(dashboard → mobilcab-website-cleanup → Logs, or `npx wrangler tail -c cron/wrangler.jsonc`).
 
 - To see what it would delete without deleting anything, call
   `/api/cleanup?dryRun=1` with the `Authorization: Bearer <CRON_SECRET>` header.
 - In local test mode, `/api/cleanup?days=0` treats every unconfirmed sign-up as
   old (the `days` override only works in dev).
-- After the first deploy, check the job appears under the project's Settings →
-  Cron Jobs in Vercel.
+- After the first deploy, check the Cron Trigger appears under Workers →
+  mobilcab-website-cleanup → Settings → Trigger Events.
 
 ## Launching pages
 

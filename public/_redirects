@@ -1,0 +1,3 @@
+# Real 301s at the edge, instead of the meta-refresh page Astro generates for
+# static output. This replaces `redirects: { '/': '/ro/' }` in astro.config.mjs.
+/  /ro/  301

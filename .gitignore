@@ -2,9 +2,14 @@ node_modules/
 dist/
 .astro/
 .vercel/
+.wrangler/
 .env
 .env.*
 !.env.example
+# Wrangler's local development file for Cloudflare bindings and secrets.
+.dev.vars
+deploy.log
 npm-debug.log*
 *.zip
 .DS_Store
+.vercel

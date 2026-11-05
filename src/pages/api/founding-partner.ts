@@ -17,7 +17,7 @@ const spots = (taken: number) => ({
   remaining: Math.max(0, FOUNDING_PARTNER_SPOTS - taken),
 });
 
-/** Spot counter. Cached briefly at Vercel's edge so page views don't each hit Brevo. */
+/** Spot counter. Cached briefly at Cloudflare's edge so page views don't each hit Brevo. */
 export const GET: APIRoute = async () => {
   try {
     return json(spots(await countReservations()), 200, 'public, max-age=0, s-maxage=60, stale-while-revalidate=300');

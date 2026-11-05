@@ -1,0 +1,72 @@
+name: Deploy to Cloudflare Workers
+
+# Deploys with the wrangler CLI and a token: no native GitHub<->Cloudflare
+# integration, so a deploy never depends on who authored the commit.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "DEPLOY_ENV passed to the build (production stops on launch-check errors)"
+        type: choice
+        options:
+          - production
+          - preview
+        default: production
+
+# One deploy at a time; a newer run waits instead of racing it.
+concurrency:
+  group: cloudflare-deploy
+  cancel-in-progress: false
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      DEPLOY_ENV: ${{ inputs.environment || 'production' }}
+      SITE_URL: https://mobilcab.com
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      # Public values read by astro:env at build time, not at request time.
+      PUBLIC_PLAUSIBLE_DOMAIN: ${{ secrets.PUBLIC_PLAUSIBLE_DOMAIN }}
+      PUBLIC_CF_ANALYTICS_TOKEN: ${{ secrets.PUBLIC_CF_ANALYTICS_TOKEN }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test
+        run: npm run test:all
+
+      - name: Sync Worker secrets
+        # These are read at request time, so they are not part of the build.
+        # Missing ones are skipped rather than written as empty strings.
+        env:
+          BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+          BREVO_LIST_ID: ${{ secrets.BREVO_LIST_ID }}
+          BREVO_LIST_ID_EN: ${{ secrets.BREVO_LIST_ID_EN }}
+          BREVO_FP_LIST_ID: ${{ secrets.BREVO_FP_LIST_ID }}
+          BREVO_CONFIRM_TEMPLATE_ID_RO: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_RO }}
+          BREVO_CONFIRM_TEMPLATE_ID_EN: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_EN }}
+          CONFIRM_SECRET: ${{ secrets.CONFIRM_SECRET }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: node scripts/worker-secrets.mjs
+
+      - name: Deploy the site Worker
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee deploy.log
+          echo "### Deployed: https://mobilcab.com" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Deploy the cleanup Worker
+        run: npx wrangler deploy -c cron/wrangler.jsonc
