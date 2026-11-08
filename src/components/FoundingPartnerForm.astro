@@ -1,5 +1,6 @@
 ---
 import type { FoundingPartnerDict, Lang } from '../i18n';
+import { linkMilestones } from '../lib/milestones';
 import { RESERVATION_LIMITS } from '../lib/reservation';
 
 interface Props {
@@ -12,9 +13,15 @@ const { lang, t, privacyHref } = Astro.props;
 const label = 'block text-sm font-semibold text-ink';
 const input =
   'mt-1.5 min-h-12 w-full rounded-md border border-line bg-white px-4 text-base text-ink focus:border-wood focus:ring-2 focus:ring-wood/25 focus:outline-none aria-[invalid=true]:border-red-700';
+const messages = {
+  ...t.messages,
+  reserved: linkMilestones(t.messages.reserved, lang),
+  already: linkMilestones(t.messages.already, lang),
+  full: linkMilestones(t.messages.full, lang),
+};
 ---
 
-<div data-fp-form data-lang={lang} data-messages={JSON.stringify(t.messages)}>
+<div data-fp-form data-lang={lang} data-messages={JSON.stringify(messages)}>
   <form class="space-y-4" novalidate>
     <div>
       <label for="fp-name" class={label}>{t.form.nameLabel}</label>
@@ -124,7 +131,8 @@ const input =
     };
 
     const showDone = (message: string) => {
-      doneText.textContent = message;
+      // Success copy may include M1/M2 links (pre-escaped HTML from the server).
+      doneText.innerHTML = message;
       form.hidden = true;
       done.hidden = false;
       done.focus();

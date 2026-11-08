@@ -37,7 +37,7 @@ documents is adjusted to match.
 | Free-for-everyone duration | Until **billing launches**. Whether FP **closes then** is decided **then** | Fixed public end-date before billing |
 | Public FP scarcity copy | Soft: **“limited — we announce when we close”** | Public “first 15 only” on every CTA |
 | AI on the free plan | **Zero** until AI ships | Build Brief trial AI quotas |
-| Public milestone names | **Product labels** (Debitare / Atelier / CNC / …), not M1/M2 as primary | Marketing that leads with M-codes |
+| Public milestone names | **Product labels** (Debitare / Nesting / CNC / Echipă / AI), not M-codes as primary. **Five stages (M1–M5)** on Roadmap; billing opens at **M2**. **Pricing** shows only current commercial offer (Gratuit + Basic/FP) — no M3+ / AI / CNC plan cards until those launch. Paid plan names: Atelier / Producție / CNC | Marketing that leads with M-codes; old M5=subscriptions + M6=AI; Pricing listing future tiers |
 | Plan/Home app CTA | **„Încearcă gratuit”** / **“Try it free”** — lead-in must **not** repeat the button | Duplicate `final.or` + `hero.ctaSecondary` |
 | CNC trial | **7-day CNC trial off** until payments start | Always-on 7-day CNC trial for new accounts |
 

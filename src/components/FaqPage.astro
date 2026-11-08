@@ -7,9 +7,10 @@ import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
 import { APP_URL, CONTACT_EMAIL } from '../config';
-import { tiers } from '../data/pricing';
+import { coreTiers, FP_DISCOUNT_PERCENT } from '../data/pricing';
 import { useFaqTranslations, type Lang } from '../i18n';
 import { linkFor, pathsFor, published } from '../site';
+import MilestoneText from './MilestoneText.astro';
 
 interface Props {
   lang: Lang;
@@ -21,8 +22,10 @@ const t = useFaqTranslations(lang);
 const paths = pathsFor('faq');
 const fpHref = linkFor('foundingPartner', lang, preview);
 // In-answer links, left out when their page isn't reachable from here.
+const roadmapHref = linkFor('roadmap', lang, preview);
 const linkTargets: Record<string, { href: string; label: string } | undefined> = {
   foundingPartner: fpHref ? { href: fpHref, label: t.links.foundingPartner } : undefined,
+  roadmap: roadmapHref ? { href: `${roadmapHref}#m2`, label: t.links.roadmap } : undefined,
 };
 const [contactBefore, contactAfter] = t.contact.body.split('{email}');
 const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
@@ -61,29 +64,28 @@ const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
                   </summary>
                   <div class="space-y-3 pb-5 text-base leading-relaxed text-graphite">
                     {item.a.map((p) => (
-                      <p>{p}</p>
+                      <MilestoneText text={p} lang={lang} />
                     ))}
                     {item.tiers && (
                       <dl class="divide-y divide-line rounded-md border border-line bg-white text-sm">
-                        {tiers.map((tier) => (
+                        {coreTiers.map((tier) => (
                           <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 px-4 py-2.5">
-                            <dt class="font-semibold text-ink">
-                              {t.tiers.names[tier.key]}
-                              <span class="ml-2 font-normal text-graphite">
-                                {tier.monthly === 0 ? t.tiers.free : t.tiers.perMonth.replace('{price}', String(tier.monthly))}
-                              </span>
-                            </dt>
-                            <dd>
-                              {tier.aiPerMonth === 0
-                                ? t.tiers.aiTrial
-                                : t.tiers.aiPerMonth.replace('{count}', String(tier.aiPerMonth))}
+                            <dt class="font-semibold text-ink">{t.tiers.names[tier.key]}</dt>
+                            <dd class="text-graphite">
+                              {tier.monthly === 0
+                                ? t.tiers.free
+                                : tier.highlight
+                                  ? t.tiers.fpDiscount.replace('{percent}', String(FP_DISCOUNT_PERCENT))
+                                  : tier.monthly == null
+                                    ? t.tiers.priceTbd
+                                    : t.tiers.perMonth.replace('{price}', String(tier.monthly))}
                             </dd>
                           </div>
                         ))}
                       </dl>
                     )}
                     {item.after?.map((p) => (
-                      <p class="text-sm">{p}</p>
+                      <MilestoneText text={p} lang={lang} class="text-sm" />
                     ))}
                     {link && (
                       <a href={link.href} class="link-quiet">

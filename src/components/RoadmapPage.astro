@@ -6,7 +6,9 @@ import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
 import { APP_URL } from '../config';
 import { useRoadmapTranslations, type Lang } from '../i18n';
+import { milestones, type MilestoneCode } from '../lib/milestones';
 import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+import MilestoneText from './MilestoneText.astro';
 
 interface Props {
   lang: Lang;
@@ -28,6 +30,7 @@ const statusClass = (status: StatusKey) => {
   if (status === 'inProgress') return 'border-line bg-white text-ink';
   return 'border-line bg-paper text-graphite';
 };
+
 ---
 
 <Base lang={lang} title={t.meta.title} description={t.meta.description} alternates={preview ? undefined : paths}>
@@ -55,8 +58,11 @@ const statusClass = (status: StatusKey) => {
             t.stages.map((stage, i) => {
               const status = stage.status as StatusKey;
               const last = i === t.stages.length - 1;
+              const code = 'milestone' in stage && stage.milestone ? (stage.milestone as MilestoneCode) : null;
+              const anchorId = code ? milestones[code].id : stage.id;
               return (
-                <li class="relative flex gap-5 pb-10 last:pb-0 sm:gap-8 sm:pb-12">
+                <li id={anchorId} class="relative flex scroll-mt-6 gap-5 pb-10 last:pb-0 sm:gap-8 sm:pb-12">
+                  {code === 'M5' && <span id="m6" class="absolute" aria-hidden="true" />}
                   {!last && (
                     <span
                       class="absolute top-10 bottom-0 left-[1.125rem] w-px bg-line sm:left-[1.375rem]"
@@ -64,7 +70,7 @@ const statusClass = (status: StatusKey) => {
                     />
                   )}
                   <div class="relative z-10 flex size-9 shrink-0 items-center justify-center rounded-full border border-line bg-paper text-sm font-bold text-ink sm:size-11 sm:text-base">
-                    {i + 1}
+                    {code ?? i + 1}
                   </div>
                   <div class="min-w-0 flex-1 pt-0.5 sm:pt-1.5">
                     <div class="flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -78,7 +84,7 @@ const statusClass = (status: StatusKey) => {
                         {t.statuses[status]}
                       </span>
                     </div>
-                    <p class="mt-2 text-base leading-relaxed text-graphite sm:mt-3">{stage.body}</p>
+                    <MilestoneText text={stage.body} lang={lang} class="mt-2 text-base leading-relaxed text-graphite sm:mt-3" />
                   </div>
                 </li>
               );
@@ -103,7 +109,7 @@ const statusClass = (status: StatusKey) => {
                 </summary>
                 <div class="space-y-3 pb-5 text-base leading-relaxed text-graphite">
                   {item.a.map((p) => (
-                    <p>{p}</p>
+                    <MilestoneText text={p} lang={lang} />
                   ))}
                 </div>
               </details>

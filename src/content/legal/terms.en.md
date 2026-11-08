@@ -43,8 +43,8 @@ When a paid plan exists, **our order process is conducted by our online reseller
 ## 6. The Founding Partner program
 
 - The program is limited to the first 15 users on the Founding Partner waitlist, with the possibility of extending it — any extension of the number of spots is announced publicly, not silently.
-- **Joining the waitlist is free and doesn't commit you to anything.** Payment only starts once we open paid Basic with M2 and you choose to subscribe. Access through an access code, when offered, is in explicit exchange for feedback on the app — not an unconditional gift.
-- When the paid plan is activated, Founding Partners on the waitlist get a 20% discount on the Basic (M1+M2) list price, valid for 12 months from activation. Anyone who subscribes later, without a waitlist place, pays list price.
+- **Joining the waitlist is free and doesn't commit you to anything.** Payment only starts once we open the paid Basic plan with [M2](/en/roadmap/#m2) (stage 2: nesting, labels, quotes) and you choose to subscribe. Access through an access code, when offered, is in explicit exchange for feedback on the app — not an unconditional gift.
+- When the paid plan is activated, Founding Partners on the waitlist get a 20% discount on the Basic plan ([M1](/en/roadmap/#m1)+[M2](/en/roadmap/#m2)) list price, valid for 12 months from activation. Anyone who subscribes later, without a waitlist place, pays list price.
 - After the 12 months, the price automatically returns to the standard one — the discount doesn't stay active indefinitely.
 - Founding Partner benefits are personal and can't be transferred.
 

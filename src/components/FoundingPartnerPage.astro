@@ -10,6 +10,7 @@ import { FOUNDING_PARTNER_SHOW_COUNTER } from '../config';
 import { testimonials } from '../data/testimonials';
 import { useFoundingPartnerTranslations, type Lang } from '../i18n';
 import { joinFreeHref as joinFree, linkFor, pathsFor, published } from '../site';
+import MilestoneText from './MilestoneText.astro';
 
 interface Props {
   lang: Lang;
@@ -42,7 +43,7 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
         <div class="dimension-line mb-6" aria-hidden="true"></div>
         <p class="text-sm font-semibold tracking-wide text-wood">{t.hero.label}</p>
         <h1 class="mt-3 text-[2rem] leading-[1.12] font-bold tracking-tight text-balance sm:text-[3rem]">{t.hero.title}</h1>
-        <p class="mt-5 text-lg leading-relaxed text-graphite">{t.hero.body}</p>
+        <MilestoneText text={t.hero.body} lang={lang} class="mt-5 text-lg leading-relaxed text-graphite" />
         {
           FOUNDING_PARTNER_SHOW_COUNTER && (
             <p
@@ -69,8 +70,8 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
           {
             t.included.items.map((item) => (
               <li class="rounded-md border border-line bg-white p-5">
-                <h3 class="text-lg font-bold tracking-tight">{item.title}</h3>
-                <p class="mt-2 text-base leading-relaxed text-graphite">{item.body}</p>
+                <MilestoneText text={item.title} lang={lang} as="h3" class="text-lg font-bold tracking-tight" />
+                <MilestoneText text={item.body} lang={lang} class="mt-2 text-base leading-relaxed text-graphite" />
               </li>
             ))
           }
@@ -85,12 +86,12 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
           <h2 class="text-sm font-semibold tracking-wide text-wood">{t.offer.title}</h2>
           <p class="mt-2 text-[2.25rem] leading-tight font-bold tracking-tight">{t.offer.price}</p>
           <p class="text-lg font-semibold text-graphite">{t.offer.yearly}</p>
-          <p class="mt-3 text-base leading-relaxed text-graphite">{t.offer.detail}</p>
+          <MilestoneText text={t.offer.detail} lang={lang} class="mt-3 text-base leading-relaxed text-graphite" />
           <p class="mt-4 text-sm font-medium text-ink">{t.offer.noPayment}</p>
         </div>
         <div class="rounded-md border border-line bg-white p-6">
-          <h2 class="text-lg font-bold tracking-tight">{t.ai.title}</h2>
-          <p class="mt-3 text-base leading-relaxed text-graphite">{t.ai.body}</p>
+          <MilestoneText text={t.ai.title} lang={lang} as="h2" class="text-lg font-bold tracking-tight" />
+          <MilestoneText text={t.ai.body} lang={lang} class="mt-3 text-base leading-relaxed text-graphite" />
         </div>
       </div>
     </section>
@@ -145,7 +146,7 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
                   <span class="flex size-7 shrink-0 items-center justify-center rounded-full border border-wood text-sm font-semibold text-wood">
                     {i + 1}
                   </span>
-                  <span class="pt-0.5">{step}</span>
+                  <MilestoneText text={step} lang={lang} as="span" class="pt-0.5" />
                 </li>
               ))
             }

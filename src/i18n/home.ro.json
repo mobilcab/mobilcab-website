@@ -1,14 +1,14 @@
 {
   "meta": {
-    "title": "Mobilcab — de la idee la panou, direct din browser",
-    "description": "CAD pentru mobilă care rulează în browser, pe laptop, tabletă sau telefon. Proiectare 3D și listă de debitare — nesting și CNC pe etape."
+    "title": "Mobilcab — de la idee la lista de debitare, direct din browser",
+    "description": "CAD pentru mobilă care rulează în browser, pe laptop, tabletă sau telefon. Acum: proiectare 3D și listă de debitare. Nesting și CNC vin pe etape."
   },
   "hero": {
-    "title": "De la idee la panou, direct din browser.",
-    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Proiectezi și treci la lista de debitare; nesting și CNC vin pe etape.",
+    "title": "De la idee la lista de debitare, direct din browser.",
+    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Acum: proiectare 3D și listă de debitare. Nesting-ul pe placă și exportul CNC vin pe etape, pe măsură ce le livrăm.",
     "ctaPrimary": "Devino Founding Partner",
     "ctaSecondary": "Încearcă gratuit",
-    "note": "Founding Partner: te înscrii pe listă acum; discount pe Basic când dam drumul la M2. Cine se abonează după plătește prețul listă."
+    "note": "Founding Partner: te înscrii pe listă acum; discount pe planul Basic când dam drumul la M2. Cine se abonează după plătește prețul listă."
   },
   "problem": {
     "title": "Sună familiar?",
@@ -20,18 +20,22 @@
     ]
   },
   "features": {
-    "title": "Trei motive pentru care Mobilcab e diferit",
+    "title": "Patru motive pentru care Mobilcab e diferit",
     "items": [
       {
         "title": "100% în browser",
         "body": "Fără instalare, fără server de licențe. Deschizi orice device — laptop, tabletă, telefon — și lucrezi."
       },
       {
-        "title": "Asistent AI la proiectare",
-        "body": "Sugerează layout-uri de panouri și îți semnalează erorile înainte să ajungă la pânza de tăiere."
+        "title": "Pentru tâmplari",
+        "body": "Limbaj de atelier, flux de proiectare pentru mobilă pe comandă — nu un CAD general pe care trebuie să-l „îndoi” ca să-ți iasă un dulap."
       },
       {
-        "title": "De la proiect la debitare",
+        "title": "Începi gratuit",
+        "body": "Folosești aplicația fără abonament. Dacă vrei discount pe planul Basic când dam drumul la M2, te înscrii pe lista Founding Partner — fără plată acum."
+      },
+      {
+        "title": "Până la debitare",
         "body": "Listă de piese pentru atelier; nesting, etichete și ofertă pe măsură ce le livrăm pe etape."
       }
     ]
@@ -51,10 +55,10 @@
     "title": "Prețuri",
     "offerLabel": "Founding Partner",
     "offerPrice": "Listă gratuită acum",
-    "offerDetail": "Te înscrii pe lista FP fără plată. Când deschidem Basic plătit odată cu M2, cei de pe listă primesc discount. Cine vine după plătește prețul întreg.",
-    "aiNote": "Basic la M2 = atelier (fără CNC în plan). AI și CNC vin separat, pe etape.",
-    "free": "Aplicația e gratuită până deschidem planurile plătite.",
-    "cancel": "Înscrierea FP nu te obligă să plătești.",
+    "offerDetail": "Te înscrii gratis. La M2: discount pe planul Basic dacă ești pe listă. După aceea: preț listă.",
+    "aiNote": "Planul Basic = atelier, fără CNC. AI și CNC vin separat.",
+    "free": "Aplicația e gratuită până deschidem plata.",
+    "cancel": "Înscrierea nu te obligă să plătești.",
     "link": "Vezi toate planurile"
   },
   "faq": {
@@ -63,7 +67,7 @@
       { "q": "Trebuie să instalez ceva?", "a": "Nu, Mobilcab rulează direct din browser." },
       { "q": "Funcționează pe tabletă?", "a": "Da, e optimizat pentru laptop, tabletă și telefon." },
       { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Lista de debitare e baza; exportul CNC vine într-o etapă ulterioară pe roadmap." },
-      { "q": "Cât costă?", "a": "Acum: aplicația e gratuită. Te poți înscrie pe lista Founding Partner pentru discount pe Basic când dam drumul la M2. Cine se abonează după plătește prețul listă." }
+      { "q": "Cât costă?", "a": "Acum: aplicația e gratuită. Te poți înscrie pe lista Founding Partner pentru discount pe planul Basic când dam drumul la M2. Cine se abonează după plătește prețul listă." }
     ],
     "link": "Toate întrebările"
   },

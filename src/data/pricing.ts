@@ -1,26 +1,27 @@
-// Plan tiers in RON. Labels live in the page translation files; numbers live here.
-// Phase 1 (docs/DECISIONS.md): app free for everyone; FP waitlist for discount when
-// paid Basic opens with M2. Amounts below are indicative for layout/FAQ only until
-// SRL + checkout. Later / non-FP buyers pay list; no FP yearly figure until lock
-// duration and discount are decided.
+// Plan tiers. Labels live in the page translation files; numbers live here.
+// Phase 1 (docs/DECISIONS.md): app free for everyone; FP waitlist for 20% off
+// when paid plans open with M2. List prices in RON are unpublished until billing
+// — marketing shows FP_DISCOUNT_PERCENT only. Later / non-FP buyers pay list.
+// Future AI / CNC tiers stay out of site marketing until they ship.
+
+/** Founding Partner discount off list when billing opens (locked 6 months). */
+export const FP_DISCOUNT_PERCENT = 20;
 
 export interface Tier {
-  key: 'free' | 'basic' | 'starter' | 'pro' | 'studio';
-  /** RON per month (indicative until paid launch). */
-  monthly: number;
+  key: 'free' | 'basic';
+  /** RON per month when published; null until list prices are set. */
+  monthly: number | null;
   /** Founding Partner yearly price in RON, when published. */
   foundingPartnerYearly?: number;
   /** Highlight this tier on the Pricing page (e.g. Basic / FP path). */
   highlight?: boolean;
-  /** AI-assist requests per month; 0 = only the one-time onboarding trial. */
-  aiPerMonth: number;
 }
 
 export const tiers: Tier[] = [
-  { key: 'free', monthly: 0, aiPerMonth: 0 },
-  // Basic = M1+M2 at paid launch; CNC (M3+) is not included. FP waitlist discount TBD.
-  { key: 'basic', monthly: 49, highlight: true, aiPerMonth: 0 },
-  { key: 'starter', monthly: 99, aiPerMonth: 50 },
-  { key: 'pro', monthly: 179, aiPerMonth: 150 },
-  { key: 'studio', monthly: 289, aiPerMonth: 400 },
+  { key: 'free', monthly: 0 },
+  // Basic = M1+M2 at paid launch. List RON TBD.
+  { key: 'basic', monthly: null, highlight: true },
 ];
+
+/** Free + Basic — shown on Pricing and FAQ. */
+export const coreTiers = tiers;

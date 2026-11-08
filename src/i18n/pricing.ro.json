@@ -1,60 +1,54 @@
 {
   "meta": {
     "title": "Prețuri — Mobilcab",
-    "description": "Acum: aplicație gratuită + listă Founding Partner. La M2: Basic plătit cu discount pentru FP; ulterior, preț listă. Planuri cu AI, anunțate separat."
+    "description": "Acum: aplicație gratuită + listă Founding Partner. La M2: planul Basic plătit cu 20% discount pentru FP; ulterior, preț listă."
   },
   "hero": {
     "label": "Prețuri",
-    "title": "Gratuit acum. Discount FP la M2. Apoi preț listă.",
-    "body": "Folosești aplicația gratuit. Dacă vrei discount pe Basic când dam drumul la M2, te înscrii pe lista Founding Partner. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Cifrele de mai jos sunt orientative până la lansarea plătită."
+    "title": "Gratuit acum. 20% FP la M2. Apoi preț listă.",
+    "body": "Folosești aplicația gratuit. Dacă vrei 20% discount pe planul Basic când dam drumul la M2, te înscrii pe lista Founding Partner. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Sumele listă le anunțăm la lansarea plătită."
   },
   "callout": {
     "title": "Ești nou aici?",
-    "body": "Founding Partner înseamnă înscriere gratuită pe listă acum și discount pe Basic când deschidem plata odată cu M2 — fără obligație. Cine vine mai târziu plătește prețul listă.",
+    "body": "Founding Partner înseamnă înscriere gratuită pe listă acum și 20% discount pe planul Basic când deschidem plata odată cu M2 — fără obligație. Cine vine mai târziu plătește prețul listă.",
     "link": "Despre programul Founding Partner"
   },
-  "perMonth": "RON/lună (orientativ)",
+  "perMonth": "RON/lună",
   "free": "0 RON",
-  "fpYearly": "Founding Partner: discount pe Basic la M2 (sume la lansarea plătită)",
+  "fpDiscount": "discount FP",
+  "fpYearly": "Founding Partner: 20% off prețul listă, 6 luni de la prima plată",
+  "priceTbd": "Preț la lansare",
   "cancel": "Fără contract — anulezi oricând (când există abonament)",
-  "aiTrial": "Asistentul AI: o încercare, la început",
-  "aiPerMonth": "Asistentul AI: {count} cereri pe lună (planuri viitoare)",
+  "notifyMe": "Anunță-mă pe email",
   "plans": {
     "free": {
-      "name": "Gratuit",
+      "name": "Planul Gratuit",
       "for": "Ca să folosești Mobilcab pe proiectele tale până deschidem planurile plătite.",
-      "features": ["Proiectare", "Pe laptop, tabletă și telefon", "Acces în perioada gratuită"],
+      "features": [
+        "Proiectare 3D și listă de debitare",
+        "Primele 10 rânduri din listă pe ecran",
+        "3 descărcări pe cont (CSV, exporturi, .mcab)",
+        "Salvare în cloud, nelimitată",
+        "Pe laptop, tabletă și telefon"
+      ],
       "cta": "Folosește aplicația"
     },
     "basic": {
-      "name": "Basic",
-      "for": "La lansarea plătită cu M2: proiectare, listă de debitare, nesting pe placă, etichete și ofertă — fără CNC și fără AI recurent. FP de pe listă: discount; ulterior: preț listă.",
-      "features": ["Proiectare 3D și debitare", "Nesting, etichete, ofertă", "Fără export CNC în acest plan"],
+      "name": "Planul Basic",
+      "for": "La lansarea plătită cu M2: proiectare, listă de debitare, nesting pe placă, etichete și ofertă. FP de pe listă: 20% off; ulterior: preț listă.",
+      "features": [
+        "Proiectare 3D și debitare",
+        "Nesting pe placă",
+        "Etichete și ofertă către client",
+        "Exporturi nelimitate"
+      ],
       "cta": "Devino Founding Partner"
-    },
-    "starter": {
-      "name": "Starter",
-      "for": "Mai târziu: pentru atelierele care vor asistentul AI la proiectele obișnuite.",
-      "features": ["Tot ce are Basic", "Asistentul AI (cereri pe lună)"],
-      "cta": "Anunță-mă pe email"
-    },
-    "pro": {
-      "name": "Pro",
-      "for": "Mai târziu: pentru atelierele cu multe proiecte pe lună.",
-      "features": ["Tot ce are Starter", "Mai multe cereri AI"],
-      "cta": "Anunță-mă pe email"
-    },
-    "studio": {
-      "name": "Studio",
-      "for": "Mai târziu: pentru atelierele care folosesc asistentul AI la fiecare proiect.",
-      "features": ["Tot ce are Pro", "Cele mai multe cereri AI"],
-      "cta": "Anunță-mă pe email"
     }
   },
-  "why": {
-    "title": "De ce AI-ul e separat?",
-    "body": "Basic e gândit pentru atelier (proiectare până la ofertă). Asistentul AI costă la fiecare cerere, de aceea vine în planuri separate, anunțate când e cazul — nu ca să blocheze Basic."
+  "more": {
+    "title": "Mai multe detalii",
+    "body": "Cum diferă Gratuit de Basic, ce e inclus la M2 și cum funcționează Founding Partner — pe pagina de întrebări."
   },
-  "note": "Nu încasăm abonamente până deschidem Basic plătit odată cu M2. Prețurile din tabel sunt orientative. Discount-ul FP e doar pentru cine e pe lista Founding Partner.",
+  "note": "Nu încasăm abonamente până deschidem planul Basic plătit odată cu M2. Prețurile listă le anunțăm atunci. Discount-ul FP (20%) e doar pentru cine e pe lista Founding Partner.",
   "faqLink": "Întrebări despre planuri"
 }

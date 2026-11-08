@@ -34,7 +34,7 @@ Când te înscrii pe lista Founding Partner, colectăm:
 - orașul;
 - limba în care te-ai înscris și faptul că ți-ai dat acordul.
 
-Folosim aceste date ca să te ținem pe lista eligibilă pentru discount pe planul Basic când deschidem plata odată cu M2, să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită și nu te obligă la nimic. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
+Folosim aceste date ca să te ținem pe lista eligibilă pentru discount pe planul Basic când deschidem plata odată cu [M2](/ro/roadmap/#m2) (etapa 2: nesting, etichete, ofertă), să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită și nu te obligă la nimic. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
 
 **Temeiul legal** este consimțământul tău (art. 6 alin. (1) lit. a) GDPR).
 
@@ -98,7 +98,7 @@ YouTube (Google) prelucrează date ca operator independent, doar dacă pornești
 
 - **Înscrieri neconfirmate:** cel mult 30 de zile.
 - **Lista de noutăți și datele programului de invitații:** până te dezabonezi sau ceri ștergerea. Dacă nu îți mai trimitem niciun email timp de 24 de luni, ștergem lista.
-- **Lista Founding Partner:** până deschidem Basic plătit odată cu M2 și alegi dacă te abonezi. Dacă nu continui, ștergem datele în cel mult 6 luni.
+- **Lista Founding Partner:** până deschidem planul Basic plătit odată cu [M2](/ro/roadmap/#m2) și alegi dacă te abonezi. Dacă nu continui, ștergem datele în cel mult 6 luni.
 - **Contul și proiectele:** cât timp ai cont. La ștergerea contului din aplicație, datele dispar imediat din baza de date activă; copiile de rezervă expiră în cel mult 30 de zile.
 - **Rapoartele de problemă:** sarcina din ClickUp (inclusiv emailul și contextul tehnic) se păstrează cât e util pentru diagnostic, cel mult 24 de luni; o ștergi, la cerere, scriindu-ne. Ștergerea contului nu elimină automat sarcinile din ClickUp.
 - **Facturile** (când vor exista): cât cere legea fiscală, de regulă 10 ani. Paddle, ca merchant of record, emite facturile către cumpărător.

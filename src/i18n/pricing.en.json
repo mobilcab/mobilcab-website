@@ -1,60 +1,54 @@
 {
   "meta": {
     "title": "Pricing — Mobilcab",
-    "description": "Now: free app + Founding Partner waitlist. At M2: paid Basic with an FP discount; later, full list price. AI plans announced separately."
+    "description": "Now: free app + Founding Partner waitlist. At M2: the paid Basic plan with 20% off for FP; later, full list price."
   },
   "hero": {
     "label": "Pricing",
-    "title": "Free now. FP discount at M2. Then list price.",
-    "body": "Use the app for free. If you want a discount on Basic when we ship M2, join the Founding Partner waitlist. Anyone who subscribes later, without a waitlist place, pays full list. The figures below are indicative until paid launch."
+    "title": "Free now. 20% FP at M2. Then list price.",
+    "body": "Use the app for free. If you want 20% off the Basic plan when we ship M2, join the Founding Partner waitlist. Anyone who subscribes later, without a waitlist place, pays full list. We announce list amounts at paid launch."
   },
   "callout": {
     "title": "New here?",
-    "body": "Founding Partner means a free waitlist sign-up now and a discount on Basic when we open payment with M2 — with no obligation. Anyone who comes later pays list price.",
+    "body": "Founding Partner means a free waitlist sign-up now and 20% off the Basic plan when we open payment with M2 — with no obligation. Anyone who comes later pays list price.",
     "link": "About the Founding Partner program"
   },
-  "perMonth": "RON/month (indicative)",
+  "perMonth": "RON/month",
   "free": "0 RON",
-  "fpYearly": "Founding Partner: discount on Basic at M2 (amounts at paid launch)",
+  "fpDiscount": "FP discount",
+  "fpYearly": "Founding Partner: 20% off list, 6 months from first payment",
+  "priceTbd": "Price at launch",
   "cancel": "No contract — cancel anytime (once subscriptions exist)",
-  "aiTrial": "AI assistant: one trial, during onboarding",
-  "aiPerMonth": "AI assistant: {count} requests per month (future plans)",
+  "notifyMe": "Email me updates",
   "plans": {
     "free": {
-      "name": "Free",
+      "name": "Free plan",
       "for": "To use Mobilcab on your own projects until we open paid plans.",
-      "features": ["Design", "On laptop, tablet and phone", "Access during the free period"],
+      "features": [
+        "3D design and cut list",
+        "First 10 cut-list rows on screen",
+        "3 downloads per account (CSV, exports, .mcab)",
+        "Unlimited cloud save",
+        "On laptop, tablet and phone"
+      ],
       "cta": "Use the app"
     },
     "basic": {
-      "name": "Basic",
-      "for": "At paid launch with M2: design, cut lists, sheet nesting, labels and quotes — no CNC and no recurring AI. FP waitlist: discount; later: list price.",
-      "features": ["3D design and cut lists", "Nesting, labels, quotes", "No CNC export in this plan"],
+      "name": "Basic plan",
+      "for": "At paid launch with M2: design, cut lists, sheet nesting, labels and quotes. FP waitlist: 20% off; later: list price.",
+      "features": [
+        "3D design and cut lists",
+        "Sheet nesting",
+        "Labels and client quotes",
+        "Unlimited exports"
+      ],
       "cta": "Become a Founding Partner"
-    },
-    "starter": {
-      "name": "Starter",
-      "for": "Later: for workshops that want the AI assistant on everyday projects.",
-      "features": ["Everything in Basic", "AI assistant (monthly requests)"],
-      "cta": "Email me updates"
-    },
-    "pro": {
-      "name": "Pro",
-      "for": "Later: for workshops with many projects a month.",
-      "features": ["Everything in Starter", "More AI requests"],
-      "cta": "Email me updates"
-    },
-    "studio": {
-      "name": "Studio",
-      "for": "Later: for workshops that use the AI assistant on every project.",
-      "features": ["Everything in Pro", "The most AI requests"],
-      "cta": "Email me updates"
     }
   },
-  "why": {
-    "title": "Why is AI separate?",
-    "body": "Basic is built for the workshop (design through to a quote). The AI assistant costs per request, so it comes in separate plans when the time is right — not as a blocker for Basic."
+  "more": {
+    "title": "More detail",
+    "body": "How Free differs from Basic, what’s included at M2, and how Founding Partner works — on the FAQ page."
   },
-  "note": "We don't charge subscriptions until paid Basic opens with M2. Table prices are indicative. The FP discount is only for people on the Founding Partner waitlist.",
+  "note": "We don't charge subscriptions until the paid Basic plan opens with M2. List prices are announced then. The FP discount (20%) is only for people on the Founding Partner waitlist.",
   "faqLink": "Questions about the plans"
 }

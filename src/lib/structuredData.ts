@@ -27,9 +27,24 @@ export const homeData = (site: URL, lang: Lang): Thing[] => [
   },
 ];
 
-/** Once the product is public: the app, with its price range in RON. */
+/** Once the product is public: the app. Paid list prices unpublished → free offer only. */
 export const softwareData = (site: URL, lang: Lang, description: string): Thing => {
-  const prices = tiers.map((t) => t.monthly);
+  const publishedPrices = tiers.map((t) => t.monthly).filter((p): p is number => p != null);
+  const offers =
+    publishedPrices.length > 1
+      ? {
+          '@type': 'AggregateOffer',
+          priceCurrency: 'RON',
+          lowPrice: Math.min(...publishedPrices),
+          highPrice: Math.max(...publishedPrices),
+          offerCount: publishedPrices.length,
+        }
+      : {
+          '@type': 'Offer',
+          price: 0,
+          priceCurrency: 'RON',
+        };
+
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -39,13 +54,7 @@ export const softwareData = (site: URL, lang: Lang, description: string): Thing 
     description,
     url: new URL(lang === 'ro' ? '/ro/' : '/en/', site).href,
     inLanguage: ['ro-RO', 'en'],
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'RON',
-      lowPrice: Math.min(...prices),
-      highPrice: Math.max(...prices),
-      offerCount: tiers.length,
-    },
+    offers,
     publisher: { '@id': new URL('/#organization', site).href },
   };
 };

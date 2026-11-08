@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Frequently asked questions — Mobilcab",
-    "description": "Straight answers about Mobilcab: installing, tablets, CNC export, pricing, the Basic plan, and how far you can rely on the AI assistant."
+    "description": "Straight answers about Mobilcab: installing, tablets, pricing, the Basic plan, and the product roadmap."
   },
   "hero": {
     "label": "Frequently asked questions",
@@ -24,50 +24,52 @@
       "q": "Can I export directly for my CNC?",
       "a": [
         "The cut list (dimensions, quantities, materials) is the workshop foundation.",
-        "Dedicated CNC machine export comes in a later roadmap stage — after nesting is solid. It is not included in Basic at paid launch."
+        "Dedicated CNC machine export comes at M3 on the roadmap — after nesting is solid. It is not included in the Basic plan at paid launch (M2)."
       ]
+    },
+    {
+      "id": "m2",
+      "q": "What do M1–M5 mean?",
+      "a": [
+        "They're the product stages. M1 = Cut list (3D design + parts list — now, free). M2 = nesting, labels and quotes — when billing opens (Atelier / Producție / CNC; FP: 20% off). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
+        "On the site, you can tap M1–M5 to jump to that stage on the Roadmap page."
+      ],
+      "link": "roadmap"
     },
     {
       "id": "price",
       "q": "How much does it cost?",
       "a": [
-        "The app is free for now and we are not charging subscriptions. If you want a discount on Basic, join the Founding Partner waitlist.",
-        "When we ship M2 and open paid Basic (design, cut lists, nesting, labels, quotes), people on the FP waitlist get a discount versus list price. Anyone who subscribes later, without a waitlist place, pays full list. You are not obliged to pay if you do not want to. AI and CNC plans will be announced separately."
+        "The app is free for now and we are not charging subscriptions. If you want 20% off the Basic plan, join the Founding Partner waitlist.",
+        "When we ship M2 and open the paid Basic plan (design, cut lists, nesting, labels, quotes), people on the FP waitlist get 20% off list (6 months from first payment). Anyone who subscribes later, without a waitlist place, pays full list. You are not obliged to pay if you do not want to. List amounts are announced at paid launch."
       ],
       "link": "foundingPartner"
     },
     {
-      "id": "ai-accuracy",
-      "q": "Is the AI assistant's output guaranteed to be accurate?",
-      "a": [
-        "No. The AI assistant is a helper, not a guarantee. It flags possible problems — for example, a drawer that would hit a hinge — and suggests panel splits, but it can be wrong.",
-        "Always verify dimensions, clearances and the cutlist before cutting. The final call is yours."
-      ]
-    },
-    {
       "id": "plans",
-      "q": "How is Basic different from the other plans?",
+      "q": "How is the Free plan different from Basic?",
       "a": [
-        "At paid launch with M2, Basic is the workshop plan: 3D design, cut list, sheet nesting, labels and client quotes — no CNC and no recurring AI. Founding Partners on the waitlist: discount; later: list price.",
-        "Starter, Pro and Studio (later) add the AI assistant, with more requests per month at each step. The figures below are indicative until we open payment:"
+        "The Free plan is for now: design and cut list, with limits (10 rows on screen, 3 downloads per account). Cloud save is unlimited.",
+        "At paid launch with M2, the Basic plan is the workshop plan: 3D design, cut list, sheet nesting, labels and client quotes, with unlimited exports. Founding Partners on the waitlist: 20% off; later: list price."
       ],
       "tiers": true,
-      "after": ["We do not charge until paid Basic with M2. Final prices are confirmed then."]
+      "after": ["We do not charge until the paid Basic plan opens with M2. List prices are confirmed then."]
     }
   ],
   "tiers": {
-    "names": { "free": "Free", "basic": "Basic", "starter": "Starter", "pro": "Pro", "studio": "Studio" },
+    "names": { "free": "Free plan", "basic": "Basic plan" },
     "perMonth": "{price} RON/month",
     "free": "0 RON",
-    "aiTrial": "AI: one trial, during onboarding",
-    "aiPerMonth": "{count} AI requests per month"
+    "fpDiscount": "−{percent}% FP",
+    "priceTbd": "price at launch"
   },
   "contact": {
     "title": "Didn't find your answer?",
     "body": "Write to us at {email} and we'll answer personally."
   },
   "links": {
-    "foundingPartner": "About the Founding Partner program"
+    "foundingPartner": "About the Founding Partner program",
+    "roadmap": "See the stages on the Roadmap"
   },
   "cta": {
     "primary": "Become a Founding Partner",
