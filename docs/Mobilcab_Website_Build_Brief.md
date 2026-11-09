@@ -9,7 +9,7 @@ This brief consolidates everything from the marketing plan, launch content kit, 
 
 ```
 I'm building the marketing website for Mobilcab, a cloud-based CAD app for
-kitchen/bedroom cabinet design, targeting independent carpenters in Romania
+kitchen/bedroom cabinet design, targeting independent furniture makers in Romania
 first, expanding across Europe later. Build this in two phases — only build
 Phase 1 right now; Phase 2 comes later once I say so.
 
@@ -55,7 +55,7 @@ me before building anything from Phase 2.
 **Content (Romanian, primary):**
 - Headline: *"Mobilcab — proiectare mobilă de bucătărie și dormitor, direct din browser."*
 - One-line value prop: *"Fără instalare. Lucrezi pe laptop, tabletă sau telefon."*
-- Short description (2–3 sentences): a plain-language teaser, no AI/CNC feature claims yet — those get earned once the Home page and demo videos exist in Phase 2. Something like: *"Construim un instrument de proiectare pentru tâmplari și ateliere de mobilă — simplu, rapid, și accesibil. Lasă-ți emailul ca să fii primul care află când lansăm."*
+- Short description (2–3 sentences): a plain-language teaser, no AI/CNC feature claims yet — those get earned once the Home page and demo videos exist in Phase 2. Something like: *"Construim un instrument de proiectare pentru producători de mobilă — simplu, rapid, și accesibil. Lasă-ți emailul ca să fii primul care află când lansăm."*
 - Email input + submit button: *"Anunță-mă la lansare"*
 - Small GDPR consent checkbox: *"Sunt de acord să primesc actualizări prin email. [Vezi politica de confidențialitate]"* — link can point to a placeholder privacy note for now; the full ToS/Privacy Policy is a Phase 2 / Section 4b deliverable, not needed to launch this page.
 - Success state after submit: *"Mulțumim! Te anunțăm imediat ce lansăm."*

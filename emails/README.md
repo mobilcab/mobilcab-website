@@ -61,16 +61,16 @@ The waitlist email follows the Kit's text, with these changes:
 - **"Founding Workshop" → "Founding Partner"**, per `docs/DECISIONS.md`.
 - **The general waitlist isn't Founding Partner.** News only — no FP discount.
   The email points people to the separate FP waitlist for a discount on the
-  Basic plan when the paid Basic plan opens with M2 (no fixed N / 12-month
+  Basic plan when the paid Basic plan opens (no fixed N / 12-month
   lock in copy). Later / non-FP subscribers pay list price.
-- **App free until the paid Basic plan (M2).** Copy no longer frames the
+- **App free until the paid Basic plan.** Copy no longer frames the
   waitlist as “first access”; it frames news + the path to paid plans.
 - **The demo video link** only appears once `demoUrl` is set.
 - **Added a footer**: why they're receiving the email, the sender's company
   line, and an unsubscribe link.
 
 The Founding Partner email covers the FP waitlist (the Kit predates the form).
-It restates: free waitlist now; discount on the paid Basic plan when M2 opens (amounts
-TBD); later subscribers pay list; nothing owed until then; founder-led
-onboarding of the first project per Marketing Plan 5.4. Remove that line if you
-won't offer it.
+It restates: free waitlist now; discount on the paid Basic plan when
+subscriptions open (amounts TBD); later subscribers pay list; nothing owed
+until then; founder-led onboarding of the first project per Marketing Plan 5.4.
+Remove that line if you won't offer it.

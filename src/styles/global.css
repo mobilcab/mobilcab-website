@@ -138,6 +138,12 @@
   .prose-text code {
     @apply text-[0.9em];
   }
+  .prose-text img {
+    @apply mt-4 w-full rounded-md border border-line;
+  }
+  .prose-text figcaption {
+    @apply mt-2 text-sm text-graphite;
+  }
 
   .honeypot {
     position: absolute;

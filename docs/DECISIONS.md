@@ -5,20 +5,21 @@ disagree in places. Where they do, these decisions win. Copy taken from the
 documents is adjusted to match.
 
 **Aligned with CAD** [`docs/plans/m1-public-free-fp.md`](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/plans/m1-public-free-fp.md)
-(2026-11-06 Fineas / Ștefan).
+(2026-11-06), **updated 2026-11-08** (Ștefan: full free until billing; gates only at subscriptions).
 
 | Topic | Decision | Overrides |
 |---|---|---|
 | Early-adopter offer name | **Founding Partner** | "Founding Workshop" (Launch Content Kit 1.1, 1.5, 1.6, 4) |
-| Free access before paid plans | **App is free for everyone** until billing opens (M2). Free use does **not** by itself grant the FP discount. Gratuit has **gates** (cutlist first 10 rows on screen; **3 downloads/account** total for CSV + exports + local `.mcab`; cloud save always free). Nesting / labels / CNC / AI / cloud render / team **not in M1** | Marketing Plan private-beta-only; waitlist-as-gate; unlimited free export |
+| Free access before paid plans | **App is free for everyone** until subscriptions open. **Full M1** for all (design + cutlist): **no** export/download gates and **no** cutlist row cap in this period. Free use does **not** grant the FP discount. Nesting / labels / CNC / AI / cloud render / team **not in M1** | CAD/gates on Gratuit from day one; Marketing Plan private-beta-only; waitlist-as-gate |
+| Free → paid gates | **Only when subscriptions open:** Gratuit gets **3 downloads/account** (CSV + exports + local `.mcab`). Paid plans keep full export. Announce before billing so users are not surprised | Gates during the free period; unlimited free forever |
 | Who is a Founding Partner | Workshop that **opts in** (app and/or site → `app.mobilcab.com/?founding=1`), **approved manually** (Fineas + Ștefan), with **firm proof**. Not automatic for every free user | Funnel Plan “claim spot = pay”; “every free user is FP” |
-| FP on M1 (before billing) | **Free** (no money): unlimited cutlist/export within M1; feedback **contract** (20‑min kickoff call, 1 real project/month to cutlist, monthly 5‑question form). **Demote:** reminder at 60 days with no feedback → back to Gratuit at **90 days** (projects kept; seat freed). Soft perks: recognition + early-access preview slices | “FP = paid Basic from day one”; no feedback obligations |
-| When the FP discount applies | When **billing opens (M2)**: FP who continue **must pay**; **20% off list**, **locked 6 months** from first payment, on paid plans **Atelier / Producție / CNC**. Non‑FP / after window = list price | Vague “when we open payment”; **12‑month** lock; Basic/Starter/Pro/Studio naming on site |
+| FP before billing | **Same full free product as everyone** (no extra unlock). FP = **20% later** + soft perks (recognition, feedback channel, personal notice at billing). Feedback expected (kickoff call, real project use, short monthly form). **Demote** unused FP seats: reminder at 60 days with no feedback → seat freed at **90 days** (projects kept; back to normal free) | “FP = unlimited vs gated Gratuit”; “FP = paid Basic from day one” |
+| When the FP discount applies | When **subscriptions open**: FP who continue **must pay**; **20% off list**, **locked 6 months** from first payment, on paid plans **Atelier / Producție / CNC**. Non‑FP / after window = **list price** | Vague “when we open payment”; **12‑month** lock; Basic/Starter/Pro/Studio naming on site |
 | Founding Partner before SRL | **Free program only** until billing: no payment at sign-up. Checkout only in **app** after SRL + billing live | Funnel Plan payment-at-claim; checkout on website |
 | Number of Founding Partner spots | **First 15**; raise cap + announce if demand is high. Soft copy: “limited — we announce when we close”. Public counter **X of 15** reads **approved apps from the app**, not Brevo | "50" / "100"; Brevo as seat counter |
 | How long the Founding Partner price is locked | **20% off list for 6 months from paid activation**, then list. Marketing shows **% only** until list RON is set | "for life"; **12 months**; fixed 49/549 RON without % |
 | Paid plan names at billing | **Atelier / Producție / CNC** (app scheme, RON). Site Pricing may show them **informatively**. **No** Basic / Starter / Pro / Studio as live paid tiers on site | Website `pricing.ts` Basic/Starter/Pro/Studio; CAD EUR table |
-| What ships in M1 vs later | M1: design + cutlist (gated on Gratuit). Nesting / labels / quote / CNC / AI / team = later milestones — discuss separately | Build Brief Basic row bundling CNC |
+| What ships in M1 vs later | M1: design + cutlist (**full** until billing). Nesting / labels / quote / CNC / AI / team = later — discuss separately | Build Brief Basic row bundling CNC; gated Gratuit in M1 |
 | Site vs app | Site = **informative** (Pricing, FAQ, FP, Roadmap, Terms). **All payments / checkout in app** (`app.mobilcab.com`). CTAs: „Creează cont gratuit” / „Încearcă gratuit” / „Devino Founding Partner” → app | Checkout or plan purchase on mobilcab.com |
 | Waitlist / coming-soon | Coming-soon + waitlist forms → **„Creează cont gratuit”**. Brevo general list = **newsletter** only (not access gate). Existing Brevo signups get email with app link + FP invite | Waitlist as product gate; `/ro/` forever as only entry |
 | FP form on site | Submits into **app** (`?founding=1`); not a separate paid reserve in Brevo | Brevo-only FP reservation as the product path |
@@ -34,10 +35,10 @@ documents is adjusted to match.
 | What counts as a referral | Account + **first real action**; one referral per invitee; no self-referral; max 3 rewarded | “email confirm alone counts” |
 | Interest gate (SRL + paid) | **Superseded** by “when we launch billing, based on client count” | Hard numeric gate as standing rule |
 | General waitlist vs FP | **FP** = program / discount-eligible at billing. **General list** = newsletter, **no** FP discount. Free users who never join FP pay **list** later | Every free user as FP |
-| Free-for-everyone duration | Until **billing launches**. Whether FP **closes then** is decided **then** | Fixed public end-date before billing |
+| Free-for-everyone duration | Until **subscriptions open**. **Internal target ~2–3 months** if traction is good — enough to try the app and decide on FP. **No public fixed calendar date**; announce before billing. Whether FP **closes then** is decided **then** | Fixed “6 months free”; public end-date before billing |
 | Public FP scarcity copy | Soft: **“limited — we announce when we close”** | Public “first 15 only” on every CTA |
 | AI on the free plan | **Zero** until AI ships | Build Brief trial AI quotas |
-| Public milestone names | **Product labels** (Debitare / Nesting / CNC / Echipă / AI), not M-codes as primary. **Five stages (M1–M5)** on Roadmap; billing opens at **M2**. **Pricing** shows only current commercial offer (Gratuit + Basic/FP) — no M3+ / AI / CNC plan cards until those launch. Paid plan names: Atelier / Producție / CNC | Marketing that leads with M-codes; old M5=subscriptions + M6=AI; Pricing listing future tiers |
+| Public milestone names | **Product labels** (Debitare / Nesting / CNC / Echipă / AI), not M-codes as primary. **Five stages (M1–M5)** only on Roadmap (+ FAQ “Ce înseamnă etapele?”). Elsewhere say **„când deschidem abonamentele”** / **when subscriptions open** (nesting, etichete, ofertă) — never bare **M2**. **Pricing** = Gratuit + Basic/FP only until later tiers launch. Paid plan names: Atelier / Producție / CNC | Marketing that leads with M-codes; old M5=subscriptions + M6=AI; Pricing listing future tiers |
 | Plan/Home app CTA | **„Încearcă gratuit”** / **“Try it free”** — lead-in must **not** repeat the button | Duplicate `final.or` + `hero.ctaSecondary` |
 | CNC trial | **7-day CNC trial off** until payments start | Always-on 7-day CNC trial for new accounts |
 
@@ -62,7 +63,8 @@ deploy in one go.
 
 1. [ ] `https://app.mobilcab.com` is reachable and creates accounts (APP_URL).
 2. [ ] Align published Terms/Privacy with this file (operator, FP 15 / 20% /
-      **6 months**, feedback + demote 90d, pay at M2); lawyer review where needed.
+      **6 months**, full free until billing, gates only at subscriptions,
+      feedback + demote 90d); lawyer review where needed.
 3. [ ] Brevo: general list = newsletter; FP path → app `?founding=1`; confirm
       templates; paste regenerated email HTML if needed.
 4. [ ] Env on Cloudflare: `BREVO_*`, `CONFIRM_SECRET`, analytics as needed.

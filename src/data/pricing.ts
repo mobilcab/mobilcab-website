@@ -1,8 +1,8 @@
 // Plan tiers. Labels live in the page translation files; numbers live here.
-// Phase 1 (docs/DECISIONS.md): app free for everyone; FP waitlist for 20% off
-// when paid plans open with M2. List prices in RON are unpublished until billing
-// — marketing shows FP_DISCOUNT_PERCENT only. Later / non-FP buyers pay list.
-// Future AI / CNC tiers stay out of site marketing until they ship.
+// Phase 1 (docs/DECISIONS.md): app free + full M1 for everyone until
+// subscriptions open; FP = 20% off list for 6 months from first payment.
+// Export gates (3 downloads) start on Gratuit only at billing. List RON
+// unpublished until then — marketing shows FP_DISCOUNT_PERCENT only.
 
 /** Founding Partner discount off list when billing opens (locked 6 months). */
 export const FP_DISCOUNT_PERCENT = 20;

@@ -5,7 +5,7 @@
   },
   "ok": {
     "title": "Gata, ești pe listă!",
-    "body": "Mulțumim că ți-ai confirmat adresa. Ești pe lista de noutăți — fără discount Founding Partner. Pentru discount pe planul Basic la M2, înscrie-te pe lista Founding Partner."
+    "body": "Mulțumim că ți-ai confirmat adresa. Ești pe lista de noutăți — fără discount Partener Fondator. Pentru discount pe planul Basic când deschidem abonamentele, înscrie-te pe lista Partener Fondator."
   },
   "error": {
     "linkTitle": "Linkul nu mai e valabil",
@@ -15,8 +15,8 @@
     "again": "Înapoi la înscriere"
   },
   "referral": {
-    "title": "Invită alți tâmplari",
-    "body": "Pentru fiecare tâmplar care se înscrie prin linkul tău și își confirmă adresa, urci în coada pentru beta-ul privat. La {goal} invitații confirmate, ai un loc garantat în beta.",
+    "title": "Invită alți producători de mobilă",
+    "body": "Pentru fiecare producător de mobilă care se înscrie prin linkul tău și își confirmă adresa, urci în coada pentru beta-ul privat. La {goal} invitații confirmate, ai un loc garantat în beta.",
     "linkLabel": "Linkul tău de invitație",
     "copy": "Copiază",
     "copied": "Copiat!",

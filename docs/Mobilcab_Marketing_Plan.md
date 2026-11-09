@@ -11,35 +11,35 @@
 | Stage | Beta, no users yet | We need a **feedback-generating launch**, not a scale launch. First 90 days are about learning and testimonials, not volume. |
 | Team | Solo founder | Every tactic must be low-effort-to-maintain or automatable. No plan that requires daily manual work across 5 channels. |
 | Budget | Near-zero; reinvest profit from day one | We need at least one **free/organic** acquisition engine running before any paid spend, and pricing must generate cash fast enough to fund the reinvestment loop. |
-| Audience | All three: manufacturers, independent carpenters/workshops, designers/architects (DIY not a priority) | A "speak to everyone" launch message will convert no one. We pick a **beachhead segment**, win it, then expand messaging — the product doesn't need to change, only who we talk to first. |
+| Audience | All three: manufacturers, independent furniture makers/workshops, designers/architects (DIY not a priority) | A "speak to everyone" launch message will convert no one. We pick a **beachhead segment**, win it, then expand messaging — the product doesn't need to change, only who we talk to first. |
 | Pricing | Undecided, leaning freemium + subscription | This is actually ideal for a zero-budget launch: free tier = acquisition tool, paid tier (AI-assisted design, CNC/cutlist export) = the reinvestment fuel. |
 | Website/Social | None yet | This is the first deliverable, before any outreach. |
 | Local connections | None yet | We build them deliberately in Phase 0/1 — associations, Facebook groups, trade shows — rather than assuming they'll appear. |
 
 ---
 
-## 2. Recommended Beachhead: Independent Carpenters & Small Workshops
+## 2. Recommended Beachhead: Independent Furniture Makers & Small Workshops
 
 You're right to want all three segments long-term — they're all real buyers of cabinet CAD. But with one person and no budget, trying to message all three at once in the launch will dilute everything. Recommendation:
 
-**Start with independent carpenters / small joinery workshops (tâmplari) in Romania.**
+**Start with independent furniture makers / small joinery workshops (producători de mobilă) in Romania.**
 
 Why this segment first:
-- **Fastest sales cycle** — a solo carpenter can try the app and buy the same week; a manufacturer has procurement processes and a designer has agency approval chains.
+- **Fastest sales cycle** — a solo furniture maker can try the app and buy the same week; a manufacturer has procurement processes and a designer has agency approval chains.
 - **Most price-sensitive to Polyboard/CabinetVision's cost and complexity** — many currently use free/pirated tools or Excel + hand sketches. Your ease-of-use + web-based + fair pricing story is strongest here.
-- **Highly networked offline and on Facebook** — Romanian tâmplari communities are active in Facebook groups and word-of-mouth travels fast within trade circles. This is your lowest-cost distribution channel.
+- **Highly networked offline and on Facebook** — Romanian producători de mobilă communities are active in Facebook groups and word-of-mouth travels fast within trade circles. This is your lowest-cost distribution channel.
 - **They generate your case studies** — real cabinet projects, real time-saved stories, which you'll need later to sell to manufacturers and designers.
 
 Manufacturers and designers become **Phase 2 segments** (months 4–9), once you have testimonials, a case-study project or two, and cash flow from tier-1 subscriptions to fund a more tailored B2B push (which typically needs demos, sales conversations, and longer trust-building — harder to bootstrap solo from zero).
 
 **Market size — how big is this niche, actually?**
 
-Romania has **4,290 active registered companies** under the official "furniture manufacturing" business code (CAEN 3100), with 525 concentrated in Bucharest alone. This is the *formally registered* universe — it excludes solo carpenters and small workshops operating as sole traders (PFA) rather than companies, so the real addressable population is somewhat larger, but the anchor point matters: **this is a market of a few thousand, not millions.**
+Romania has **4,290 active registered companies** under the official "furniture manufacturing" business code (CAEN 3100), with 525 concentrated in Bucharest alone. This is the *formally registered* universe — it excludes solo furniture makers and small workshops operating as sole traders (PFA) rather than companies, so the real addressable population is somewhat larger, but the anchor point matters: **this is a market of a few thousand, not millions.**
 
 That size is actually favorable for a zero-budget launch. For a mass-market product, organic-only growth reaches a tiny sliver of a huge audience — paid ads exist because organic can't scale to millions. Here, the market is small and tightly networked enough (shared Facebook groups, word-of-mouth between people who already know each other's work) that **organic-only can plausibly reach a large share of it**, given enough time. Three real limits to plan around, though:
 
 1. **Ceiling effect within a single channel.** Facebook group membership is fixed — after months of visible, helpful presence, you start reaching the same people again rather than new ones.
-2. **The offline-first slice.** Some real share of that 4,000+ market — often older, less digitally-active carpenters — isn't in Facebook groups at all. This is exactly why trade shows (BIFE-SIM) and associations (APMR) matter as *separate* channels, not redundant ones — they reach a different slice of the same market.
+2. **The offline-first slice.** Some real share of that 4,000+ market — often older, less digitally-active furniture makers — isn't in Facebook groups at all. This is exactly why trade shows (BIFE-SIM) and associations (APMR) matter as *separate* channels, not redundant ones — they reach a different slice of the same market.
 3. **Speed, not reach, is the real trade-off.** Organic can plausibly reach most of this market eventually — but "eventually" likely means 12–24 months of consistent presence, not a few weeks. Paid ads don't expand *who* you can reach so much as they compress *how fast* you reach them.
 
 **Practical implication:** budget realistic time for organic-only growth to work — this is a "slow and steady" market, not a "go viral" one — and treat trade shows/associations as equally important as Facebook groups, since they're the only path to the offline-first portion of the market.
@@ -71,7 +71,7 @@ Real pricing pulled from public listings and reseller/user reports (Sept 2026):
 | Competitor | Model | Price | Notes |
 |---|---|---|---|
 | **PolyBoard** | One-time perpetual license | $2,795–$5,295 | 3 months free premium support, then 50% lifetime discount on support. Additional licenses at 50% off. Version upgrades ~30% of full price. Previously ran a **$15/month membership tier** (full site access + 1 project's manufacturing files/month) — proof a low monthly price has worked in this exact category before. |
-| **CabinetVision** | Perpetual (quote-based) or subscription | Perpetual: ~$16,000 (2018) to ~$30,000 (2020) with CNC modules, reported by shop owners. Subscription: CA$195–245/month entry packages (one reseller, 2022) | No public price list — sold through resellers, custom-quoted per shop's machinery. Enterprise-tier; not a realistic comparison point for a solo Romanian carpenter. |
+| **CabinetVision** | Perpetual (quote-based) or subscription | Perpetual: ~$16,000 (2018) to ~$30,000 (2020) with CNC modules, reported by shop owners. Subscription: CA$195–245/month entry packages (one reseller, 2022) | No public price list — sold through resellers, custom-quoted per shop's machinery. Enterprise-tier; not a realistic comparison point for a solo Romanian furniture maker. |
 | **SketchList 3D** | One-time flat fee | Hobby: $200. Pro: $850 | Desktop-only (Mac/Windows), no cloud or CNC-integration story. Budget/hobbyist end of the market. |
 
 **What this means for Mobilcab's pricing:**
@@ -81,7 +81,7 @@ Real pricing pulled from public listings and reseller/user reports (Sept 2026):
 - **The upfront cost, not the total cost over time, is the real barrier** for a small Romanian workshop deciding whether to try a new CAD tool. A subscription or freemium model removes that barrier — this is a genuine structural advantage, and it should be a direct message in your copy ("no €2,500 upfront, no license server").
 - **Don't position against CabinetVision on features.** It's an enterprise system for larger production shops; trying to match it will dilute your actual advantage. Your real comparison set in messaging is PolyBoard and SketchList.
 - Set the "Founding Workshop" introductory price **under €20/month** so the contrast with PolyBoard's upfront cost feels dramatic rather than incremental.
-- **Caveat:** all the above prices are set for US/UK/international markets. Actual willingness-to-pay among Romanian tâmplari, given local income levels, may be meaningfully lower. Validate the real number through informal conversations in the Facebook groups (Section 6) before locking in the Founding Workshop price — don't treat this table as the final answer, treat it as the ceiling to price under.
+- **Caveat:** all the above prices are set for US/UK/international markets. Actual willingness-to-pay among Romanian producători de mobilă, given local income levels, may be meaningfully lower. Validate the real number through informal conversations in the Facebook groups (Section 6) before locking in the Founding Workshop price — don't treat this table as the final answer, treat it as the ceiling to price under.
 
 **Displayed pricing in RON, not raw EUR conversion:**
 
@@ -96,7 +96,7 @@ Current BNR rate is roughly **5.27 RON per EUR** (Sept 2026). Romanian customers
 
 ## 3b. Freemium & Conversion Strategy — How to Actually Convince Skeptical Buyers
 
-Freemium is the right model here, and it follows directly from Section 3a: the one real structural advantage over PolyBoard/CabinetVision is that they demand a large upfront payment before anyone can try the product. If Mobilcab also asks for money before someone can see whether it works for their own cabinets, that advantage disappears. Free access removes the exact fear a skeptical carpenter has — "what if I pay and it turns out to be useless for my work."
+Freemium is the right model here, and it follows directly from Section 3a: the one real structural advantage over PolyBoard/CabinetVision is that they demand a large upfront payment before anyone can try the product. If Mobilcab also asks for money before someone can see whether it works for their own cabinets, that advantage disappears. Free access removes the exact fear a skeptical furniture maker has — "what if I pay and it turns out to be useless for my work."
 
 **Where to draw the free tier line:**
 - Let people build real, complete designs — full functionality on the design side, no crippling.
@@ -106,7 +106,7 @@ Freemium is the right model here, and it follows directly from Section 3a: the o
 **Beyond price — what actually convinces a skeptical tradesperson to switch tools:**
 - **Show, don't claim.** Trade audiences distrust marketing language and trust demonstrations. The three demo videos (Section on Launch Content Kit — design flow, AI-assist catch, CNC export) do more convincing than any feature list or ad copy.
 - **Let the free tier do the convincing before asking for anything.** Someone trying it themselves, on their own project, at zero risk, is more persuasive than being told it's good.
-- **Real testimonials from real workshops, fast.** The Founding Workshop program isn't just a pricing tactic — it's the first source of "a carpenter like me is using this," which matters far more to this audience than any individual feature. Prioritize getting 3–5 genuinely happy early users talking about it in the Facebook groups over anything else in month 1–2.
+- **Real testimonials from real workshops, fast.** The Founding Workshop program isn't just a pricing tactic — it's the first source of "a furniture maker like me is using this," which matters far more to this audience than any individual feature. Prioritize getting 3–5 genuinely happy early users talking about it in the Facebook groups over anything else in month 1–2.
 - **Remove commitment risk on the paid tier too.** No long contract, cancel anytime, month-to-month. Someone who's never used cloud software before is more willing to try €20/month with an easy exit than a signed annual deal.
 - **Frame value in their terms, not yours.** Not "AI-assisted design" — "catches a costly mistake before it hits the saw." Not "cloud-based" — "you're not stuck at one computer in the shop." Time and material saved, in their language, beats technical features every time.
 - **Address the internet-reliability objection proactively.** A browser-based tool invites one obvious question at a workshop with unreliable internet. Have an honest answer ready — whatever the true offline/caching story is — rather than hoping it doesn't come up.
@@ -182,7 +182,7 @@ Nothing goes out to the public until these exist. With the 6-month pre-launch ti
    - Basic funnel tracking (signup → first design created → first export) from day one — you cannot improve activation you don't measure.
    - In-app feedback widget or simple email ask after first use: "What almost stopped you from finishing your first design?"
 3. **Social presence — pick two, not five**
-   - **Facebook Page** (where Romanian tâmplari communities live) and **YouTube** (for demo/tutorial videos — critical for a visual product like CAD). Per Section 3c, create these quietly at month -6, with content starting only around month -5.
+   - **Facebook Page** (where Romanian producători de mobilă communities live) and **YouTube** (for demo/tutorial videos — critical for a visual product like CAD). Per Section 3c, create these quietly at month -6, with content starting only around month -5.
    - Instagram/TikTok/LinkedIn come later once there's content capacity to spare.
 4. **Pricing decision, at least for launch**
    - Recommendation: **Free tier** (basic design, limited exports/watermarked cutlist) + **Paid tier** (AI-assisted design, full CNC/cutlist export, cloud project storage, multi-device sync). This lets the free tier do your marketing (people share/show designs) while the paid tier funds reinvestment.
@@ -239,7 +239,7 @@ Pair this with a UX safeguard, not just legal wording: a **"verify before cuttin
 
 ### 5.1 Organic / Community Channels (primary engine — this is where the budget-free growth has to come from)
 
-- **Facebook groups for tâmplari/mobilă la comandă in Romania**: Join the 5–10 most active groups (search "tâmplari," "mobilă la comandă," "CNC lemn," "proiectare mobilă"). Don't spam — contribute genuinely (answer questions, share useful tips) for 2–3 weeks before ever mentioning the app. Then share it as "I built this because I got tired of X" — founder-story posts consistently outperform ad-style posts in trade communities.
+- **Facebook groups for producători de mobilă / mobilă la comandă in Romania**: Join the 5–10 most active groups (search "tâmplari," "mobilă la comandă," "CNC lemn," "proiectare mobilă"). Don't spam — contribute genuinely (answer questions, share useful tips) for 2–3 weeks before ever mentioning the app. Then share it as "I built this because I got tired of X" — founder-story posts consistently outperform ad-style posts in trade communities.
 - **YouTube demo/tutorial content**: 5–10 short videos ("How to design a corner kitchen cabinet in 10 minutes," "Cutlist export walkthrough," "AI-assisted layout demo"). This is searchable, evergreen, and doubles as your onboarding material later.
 - **Local associations**: Reach out to Romanian furniture/wood industry associations (e.g., APMR — Asociația Producătorilor de Mobilă din România — or regional wood-processing clusters) — even a mention in a newsletter or a webinar invite is free reach into your exact audience.
 - **Trade shows** (even without a budget for a booth): BIFE-SIM (Bucharest furniture/wood industry fair) and regional wood-industry expos. Attending as a visitor, talking to 20–30 workshop owners directly, and demoing on your tablet costs only your time and travel — extremely high-signal for a B2B niche product.
@@ -260,9 +260,9 @@ Five concrete ways to get real clients even while still in beta, ranked roughly 
 
 1. **Annual prepay lock-in.** Offer the first ~50 beta users 12 months of Basic access for $10/month, paid upfront as $120/year rather than billed monthly. The upfront-annual structure matters more than the price itself: 10 people prepaying $120 puts $1,200 in the account in week one — enough to jump straight to a real ad budget test (Section 5.2) instead of waiting months for the reinvestment loop (Section 6) to build up on its own. Cap this at a firm number (50 users) rather than leaving it open-ended, since the margin on this tier is thin by design (see Section 3b's Basic tier math).
 2. **Founder-led concierge onboarding.** At zero users, trust is the constraint, not volume. Personally offer to build a beta user's actual cabinet project with them live, over video call or in person, the first time they use it. This doubles as a sales demo and a source of real product feedback. Doesn't scale past ~20–30 people, but that's exactly the size needed at beta stage.
-3. **Referral chain within the trade circle.** Beyond the general referral loop in 5.3, give each beta user a concrete reason to bring in one more carpenter specifically — an extra free month, or an AI-request top-up — rather than hoping word-of-mouth happens on its own.
+3. **Referral chain within the trade circle.** Beyond the general referral loop in 5.3, give each beta user a concrete reason to bring in one more furniture maker specifically — an extra free month, or an AI-request top-up — rather than hoping word-of-mouth happens on its own.
 4. **Frame it as "Founding Partner," not "beta tester."** "Beta" signals unfinished and risky to a cautious buyer. Reframe the same offer as co-creation: "help shape the tool Romanian workshops actually need, get locked-in pricing for life as thanks." Visible recognition — a name credit, a private feedback group, first access to new features — makes people meaningfully less price-sensitive than treating them as customers buying unfinished software.
-5. **One well-connected anchor customer.** Identify one respected, well-networked workshop owner in the Facebook groups — someone other carpenters already ask for advice — and give them extra attention (free premium tier, direct support access, co-developing a feature they specifically want). One vocal advocate with real standing in the community is worth more than ten anonymous free signups, because their endorsement carries weight the group already trusts. This is the same anchor customer referenced in the pre-launch runway (Section 3c, month -5).
+5. **One well-connected anchor customer.** Identify one respected, well-networked workshop owner in the Facebook groups — someone other furniture makers already ask for advice — and give them extra attention (free premium tier, direct support access, co-developing a feature they specifically want). One vocal advocate with real standing in the community is worth more than ten anonymous free signups, because their endorsement carries weight the group already trusts. This is the same anchor customer referenced in the pre-launch runway (Section 3c, month -5).
 
 ---
 
@@ -300,7 +300,7 @@ The plan is acquisition-heavy through Phase 3 — this section balances it, beca
 Once there's a base of workshop users, revenue, and testimonials:
 
 - **Bring in designers/architects**: They care about client presentation quality and speed of iteration — position cloud collaboration ("share a live design link with your client") as the hook. Reach them via interior design Facebook/LinkedIn groups and local design-school partnerships (guest webinar, student discount).
-- **Bring in manufacturers**: Longer sales cycle — this is where a few direct outreach conversations (LinkedIn, trade show follow-ups) matter more than ads. Use your carpenter case studies as proof before pitching larger shops.
+- **Bring in manufacturers**: Longer sales cycle — this is where a few direct outreach conversations (LinkedIn, trade show follow-ups) matter more than ads. Use your furniture-maker case studies as proof before pitching larger shops.
 - **Build the first real content/social cadence** — by now there's revenue to justify a few hours/week of paid help (freelance social media management, video editing) instead of doing all of it solo.
 - **Consider hardware/software partnerships**: Fittings distributors (Blum, Hettich, GTV) and CNC machine sellers in Romania have existing relationships with your exact audience. A co-marketing or integration conversation (e.g., "hardware presets" in your app) is a natural, low-cost distribution partnership once you have traction to show them.
 
@@ -348,7 +348,7 @@ Also worth tracking as its own milestone, separate from the monthly table: the *
 3. [ ] Set up basic funnel analytics + in-app feedback prompt
 4. [ ] Create Facebook Page + YouTube channel
 5. [ ] Record 3 short demo videos (design flow, AI assist, CNC/cutlist export)
-6. [ ] Join 5–10 Romanian tâmplari/mobilă Facebook groups; start contributing genuinely
+6. [ ] Join 5–10 Romanian producători de mobilă / mobilă Facebook groups; start contributing genuinely
 7. [ ] Publish 2–3 SEO blog posts targeting Romanian long-tail keywords
 8. [ ] Identify next 2–3 months' trade show/association opportunities in Romania
 9. [ ] Draft GDPR-compliant privacy policy and ToS

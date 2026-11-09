@@ -1,11 +1,11 @@
 {
   "meta": {
     "title": "Blog — Mobilcab",
-    "description": "Practical articles on furniture design, cutlists and CNC, for carpenters and furniture workshops."
+    "description": "Practical articles on furniture design, cutlists and CNC, for furniture makers."
   },
   "hero": {
     "label": "Blog",
-    "title": "Practical articles for carpenters.",
+    "title": "Practical articles for furniture makers.",
     "body": "About furniture design, cutlists, CNC and the tools available to you. No fluff."
   },
   "empty": "The first articles are coming soon.",
@@ -15,7 +15,7 @@
   "back": "All articles",
   "cta": {
     "title": "Want to try Mobilcab on your own projects?",
-    "body": "Mobilcab is a furniture CAD that runs straight from your browser. Use the app free; join the Founding Partner waitlist for a discount on the Basic plan when we ship M2. Later subscribers pay list price.",
+    "body": "Mobilcab is a furniture CAD that runs straight from your browser. Use the app free; join the Founding Partner waitlist for a discount on the Basic plan when we open subscriptions. Later subscribers pay list price.",
     "primary": "About the Founding Partner program",
     "secondary": "Use the app free"
   }

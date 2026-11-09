@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "How it works — Mobilcab",
-    "description": "Three short clips: a corner cabinet designed in under 10 minutes, the AI assistant catching mistakes before cutting, and cutlist export for your CNC."
+    "description": "Three short clips of what’s ready now: 3D design in the browser, the cut list, and save / export (cloud, CSV, .mcab)."
   },
   "hero": {
     "label": "How it works",
-    "title": "From the first panel to the cutting file.",
-    "body": "Three short clips on the same project. Under each one, a quick summary of what happens — in case you don't have time to watch right now."
+    "title": "From the first panel to the cut list.",
+    "body": "Three short clips on the same project — what you can do in Mobilcab today. Under each one, a quick summary — in case you don't have time to watch right now."
   },
   "player": {
     "comingSoon": "Clip coming soon",
@@ -14,32 +14,32 @@
   },
   "videos": [
     {
-      "title": "Design flow",
+      "title": "3D design",
       "aha": "A corner kitchen cabinet from scratch, in under 10 minutes.",
       "points": [
         "Set the cabinet dimensions, place the panels, adjust the corner joint and add the doors and drawers.",
         "Change one dimension, and the other panels adjust automatically.",
-        "All straight from the browser, nothing to install."
+        "All straight from the browser, on a laptop — nothing to install."
       ],
       "note": ""
     },
     {
-      "title": "AI assistant",
-      "aha": "Catches a clearance mistake before it hits the saw.",
+      "title": "Cut list",
+      "aha": "From the design you get the cut list: parts, sizes, quantities and materials.",
       "points": [
-        "The AI notices the drawer would collide with the door hinge — before you send the project to the CNC.",
-        "It suggests a different panel split that reduces material waste.",
-        "It doesn't replace your experience, but it catches mistakes before they cost you material."
+        "Open the cut list on the same project — no manual math for every panel.",
+        "See parts with dimensions, quantities and materials, ready for the workshop.",
+        "That’s the foundation today: design + cut list, before nesting or CNC."
       ],
-      "note": "AI suggestions are advisory: always verify dimensions before cutting."
+      "note": ""
     },
     {
-      "title": "Cutlist & CNC export",
-      "aha": "From design to cutting file, no manual math.",
+      "title": "Save and export",
+      "aha": "The project stays in the cloud; you can download CSV or a .mcab file.",
       "points": [
-        "From a finished design, one click on \"Export cutlist\".",
-        "The list appears instantly, with panel dimensions, quantities and materials.",
-        "The file is ready for your CNC workflow."
+        "Save to the cloud and come back on your laptop — nothing to install.",
+        "Export the list (CSV) or the local project file (.mcab) when you need it.",
+        "Now: exports without limits. Free-plan limits start only when subscriptions open."
       ],
       "note": ""
     }

@@ -14,7 +14,7 @@ Structure: **Hero → Problem → Solution/Features → Demo → Pricing → Soc
 > Mobilcab e un CAD pentru mobilă de bucătărie și dormitor care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Proiectezi, iar cutlist-ul e pregătit pentru CNC într-un click.
 >
 > [**Intră în lista de așteptare — acces beta gratuit**] (CTA button)
-> *Primii 100 tâmplari primesc preț "Founding Workshop" — blocat 12 luni.*
+> *Primii 100 producători de mobilă primesc preț "Founding Workshop" — blocat 12 luni.*
 
 **EN**
 > **From idea to panel, straight from your browser.**
@@ -96,7 +96,7 @@ Structure: **Hero → Problem → Solution/Features → Demo → Pricing → Soc
 
 ### 1.7 Final CTA
 
-**RO:** *"Fii printre primii tâmplari din România care proiectează direct din browser. Intră în lista de așteptare."* [CTA button]
+**RO:** *"Fii printre primii producători de mobilă din România care proiectează direct din browser. Intră în lista de așteptare."* [CTA button]
 
 **EN:** *"Be among the first workshops in Romania designing straight from the browser. Join the waitlist."*
 
@@ -174,13 +174,13 @@ Keep each video 60–90 seconds, screen-recorded, with a simple voiceover — no
 
 > Salut tuturor 👋
 >
-> De câteva luni lucrez la ceva ce cred că multor tâmplari din grupul ăsta le-ar prinde bine, așa că vreau să vă spun povestea, nu doar să dau un link.
+> De câteva luni lucrez la ceva ce cred că multor producători de mobilă din grupul ăsta le-ar prinde bine, așa că vreau să vă spun povestea, nu doar să dau un link.
 >
 > Am tot văzut (și am trecut și eu prin asta) — programe CAD instalate pe un singur calculator din atelier, licențe complicate, și ore pierdute făcând manual cutlist-ul pentru CNC. Așa că am construit Mobilcab — un program de proiectare mobilă (bucătării, dormitoare) care rulează direct din browser, pe laptop, tabletă sau telefon. Fără instalare.
 >
 > Are și un asistent care te ajută la proiectare și îți prinde erorile înainte să ajungă la pânza de tăiere, plus export de cutlist direct pentru CNC, într-un click.
 >
-> E în beta acum, și caut exact tâmplari ca voi să-l testeze și să-mi spună sincer ce nu merge. Primii care se înscriu primesc preț special, blocat pentru un an.
+> E în beta acum, și caut exact producători de mobilă ca voi să-l testeze și să-mi spună sincer ce nu merge. Primii care se înscriu primesc preț special, blocat pentru un an.
 >
 > Nu vând nimic aici — vreau părerea voastră. Cine e curios, las link în comentarii. 🙏
 

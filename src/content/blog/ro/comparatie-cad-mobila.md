@@ -18,8 +18,6 @@ Producătorii de mobilă care caută un program de proiectare întâlnesc deseor
 | Preț public listat pe site (sumă sau interval) | în curând | are | are | are | are |
 | Abonament ca opțiune de licență documentată acum | în curând | nu are | nu are | are | are |
 
-*Note la CNC: Polyboard — în varianta Pro PP (nu Pro); PRO100 — pachet CNC opțional (DXF/native, fără G-code în Pro100); SketchList — DXF către CAM; Cabinet Vision — cu S2M CENTER / xMachining (G-code). Cabinet Vision: Hexagon listează un prag de marketing (~99 USD/lună); pachetul full rămâne quote/reseller. Detalii în secțiunile de mai jos.*
-
 ## Polyboard
 
 Polyboard (PolyBoard 8) e software de proiectare a mobilei, instalat pe calculator (desktop). Vendor: Wood Designer Ltd ([wooddesigner.org](https://wooddesigner.org/)).

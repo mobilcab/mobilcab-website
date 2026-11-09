@@ -40,13 +40,14 @@ Când există un plan plătit, **procesul de comandă este derulat de revânzăt
 
 **Consumatori (OUG 34/2014).** Dacă ești consumator, ai 14 zile să te retragi din contractul de la distanță, de la data comenzii sau, pentru un abonament, de la prima plată. Dreptul nu se aplică serviciului digital început, cu acordul tău expres, înainte de expirarea celor 14 zile. Cererea se face prin Paddle sau scriindu-ne la adresa din secțiunea 17.
 
-## 6. Programul Founding Partner
+## 6. Programul Partener Fondator
 
-- Programul este limitat la primii 15 utilizatori pe lista Founding Partner, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
-- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Plata începe doar când deschidem planul Basic plătit odată cu [M2](/ro/roadmap/#m2) (etapa 2: nesting, etichete, ofertă) și alegi să te abonezi. Accesul prin cod, când e oferit, e în schimbul feedback-ului pe aplicație — nu un cadou necondiționat.
-- La activarea planului plătit, Founding Partners de pe listă primesc o reducere de 20% din prețul listă al planului Basic ([M1](/ro/roadmap/#m1)+[M2](/ro/roadmap/#m2)), valabilă 12 luni de la activare. Cine se abonează după, fără loc pe listă, plătește prețul listă.
-- După cele 12 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
-- Beneficiile Founding Partner sunt personale și nu pot fi transferate.
+- Programul este limitat la primii 15 utilizatori pe lista Partener Fondator, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
+- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Plata începe doar când deschidem abonamentele — planul Basic plătit, odată cu [nesting, etichete și ofertă](/ro/roadmap/#m2), și alegi să te abonezi. Accesul prin cod, când e oferit, e în schimbul feedback-ului pe aplicație — nu un cadou necondiționat.
+- Până deschidem abonamentele, aplicația e gratuită cu acces full pe etapa curentă (proiectare și listă de debitare), pentru toată lumea — inclusiv Parteneri Fondatori. Limitele de descărcare pe planul Gratuit (3 pe cont) apar abia la deschiderea abonamentelor.
+- La activarea planului plătit, Parteneri Fondatori de pe listă primesc o reducere de 20% din prețul listă al planului Basic (proiectare și debitare până la nesting, etichete și ofertă — vezi [Plan](/ro/roadmap/)), valabilă 6 luni de la prima plată. Cine se abonează după, fără loc pe listă, plătește prețul listă.
+- După cele 6 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
+- Beneficiile Partener Fondator sunt personale și nu pot fi transferate.
 
 ## 7. Verifică rezultatele înainte de producție
 

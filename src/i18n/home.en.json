@@ -1,22 +1,21 @@
 {
   "meta": {
     "title": "Mobilcab — from idea to cut list, straight from your browser",
-    "description": "Cloud-based furniture CAD that runs in your browser, on laptop, tablet or phone. Now: 3D design and cut lists. Nesting and CNC come later, by stage."
+    "description": "Cloud-based furniture CAD that runs in your browser, on a laptop. Now: 3D design and cut lists. Nesting and CNC come later, by stage."
   },
   "hero": {
     "title": "From idea to cut list, straight from your browser.",
-    "body": "Mobilcab is a cloud-based CAD for furniture — works on laptop, tablet, or phone. No installs, no license servers. Now: 3D design and cut lists. Sheet nesting and CNC export come later, as we ship each stage.",
+    "body": "Mobilcab is a cloud-based CAD for furniture — works in the browser, on a laptop. No installs, no license servers. Now: 3D design and cut lists. Sheet nesting and CNC export come later, as we ship each stage.",
     "ctaPrimary": "Become a Founding Partner",
-    "ctaSecondary": "Try it free",
-    "note": "Founding Partner: join the waitlist now; discount on the Basic plan when we ship M2. Later subscribers pay list price."
+    "ctaSecondary": "Try it free"
   },
   "problem": {
     "title": "Sound familiar?",
     "items": [
       "Heavy CAD software installed on one single workshop computer",
       "Expensive licenses for features you barely use",
-      "Hours lost manually building the cutlist for your CNC",
-      "No easy way to show a live design to a client on-site, from your phone"
+      "Hours lost manually building the cut list for cutting",
+      "No easy way to show a live design to a client without bringing them to the workshop PC"
     ]
   },
   "features": {
@@ -24,39 +23,39 @@
     "items": [
       {
         "title": "100% browser-based",
-        "body": "No install, no license server. Open it on any device — laptop, tablet, phone."
+        "body": "No install, no license server. Open the browser on your laptop and get to work."
       },
       {
-        "title": "For workshops",
-        "body": "Workshop language and a design flow for made-to-order furniture — not a general CAD you have to bend until a cabinet comes out."
+        "title": "For furniture makers",
+        "body": "Built for the workshop: clear language and a design flow for made-to-order furniture — not a general CAD awkwardly forced into cabinets."
       },
       {
         "title": "Start free",
-        "body": "Use the app with no subscription. If you want a discount on the Basic plan when we ship M2, join the Founding Partner waitlist — nothing to pay now."
+        "body": "Use the app with no subscription. If you want a discount on the Basic plan when we open subscriptions, join the Founding Partner waitlist — nothing to pay now."
       },
       {
-        "title": "Through to cut list",
-        "body": "Parts lists for the workshop; nesting, labels and quotes as we ship each stage."
+        "title": "Workshop-ready cut list",
+        "body": "From the design you get the cut list: parts, sizes, quantities and materials — what you need to cut, without manual calculations."
       }
     ]
   },
   "demo": {
     "title": "See how it works",
-    "intro": "Three short clips on the same project: from the first panels to workshop documents.",
+    "intro": "Three short clips on the same project: from panels to cut list and save.",
     "comingSoon": "Clip coming soon",
     "link": "All clips, in detail",
     "videos": [
-      { "title": "Design flow", "caption": "A corner kitchen cabinet from scratch, in under 10 minutes." },
-      { "title": "AI assistant", "caption": "Catches a clearance mistake before it hits the saw." },
-      { "title": "Cut lists and workshop", "caption": "From design to the parts list — nesting and CNC in later stages." }
+      { "title": "3D design", "caption": "A corner kitchen cabinet from scratch, in under 10 minutes." },
+      { "title": "Cut list", "caption": "From the design you get the cut list: parts, sizes, quantities and materials." },
+      { "title": "Save and export", "caption": "Project in the cloud; CSV or .mcab when you need it." }
     ]
   },
   "pricing": {
     "title": "Pricing",
     "offerLabel": "Founding Partner",
-    "offerPrice": "Free waitlist now",
-    "offerDetail": "Join free. At M2: discount on the Basic plan if you're on the list. After that: list price.",
-    "aiNote": "The Basic plan = workshop tools, no CNC. AI and CNC come separately.",
+    "offerPrice": "−20% when subscriptions open",
+    "offerDetail": "You join the program for free. When we move to paid plans, you get 20% off full price for 6 months from first payment. Anyone who joins later pays full price.",
+    "aiNote": "The Basic plan: design, cut lists, nesting, labels and quotes.",
     "free": "The app is free until we open payment.",
     "cancel": "Joining does not oblige you to pay.",
     "link": "See all plans"
@@ -65,16 +64,16 @@
     "title": "Frequently asked questions",
     "items": [
       { "q": "Do I need to install anything?", "a": "No, Mobilcab runs straight from your browser." },
-      { "q": "Does it work on a tablet?", "a": "Yes, it's built for laptop, tablet and phone." },
+      { "q": "Does it work on tablet or phone?", "a": "Not yet — it's built for laptop. Tablet and phone come later." },
       { "q": "Can I export directly for my CNC?", "a": "The cut list is the foundation; CNC export comes in a later roadmap stage." },
-      { "q": "How much does it cost?", "a": "Now: the app is free. Join the Founding Partner waitlist for a discount on the Basic plan when we ship M2. Later subscribers pay list price." }
+      { "q": "How much does it cost?", "a": "Now: the app is free, with full design and cut list. Join the Founding Partner waitlist for 20% off the Basic plan when we open subscriptions. Later subscribers pay list price." }
     ],
     "link": "All questions"
   },
   "final": {
-    "title": "Be among the first workshops in Romania designing straight from the browser.",
-    "or": "Or try the app now:",
-    "news": "Want email updates only? (no Founding Partner discount)"
+    "title": "Be among the first furniture makers in Romania designing straight from the browser.",
+    "or": "Or use the app now, without joining the program:",
+    "news": "Email updates only — no Founding Partner benefits"
   },
   "footer": {
     "privacy": "Privacy"

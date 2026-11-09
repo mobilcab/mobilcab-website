@@ -25,8 +25,8 @@ export const milestones: Record<
     id: 'm2',
     stageId: 'nesting-offer',
     short: {
-      ro: 'Etapa 2: nesting, etichete, ofertă — atunci se deschide plata',
-      en: 'Stage 2: nesting, labels, quotes — when billing opens',
+      ro: 'Etapa 2: nesting, etichete, ofertă — atunci deschidem abonamentele',
+      en: 'Stage 2: nesting, labels, quotes — when subscriptions open',
     },
   },
   M3: {

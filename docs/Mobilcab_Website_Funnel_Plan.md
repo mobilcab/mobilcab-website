@@ -85,7 +85,7 @@ Standalone home for the three videos (Launch Content Kit Section 2), each with a
 2. AI-assist — "catches a clearance mistake before it hits the saw"
 3. CNC/cutlist export — "from design to cutting file, no manual math"
 
-This page exists separately from the home page embed so it can be linked directly from Facebook group posts and YouTube video descriptions (Marketing Plan Section 5.1) — a skeptical carpenter clicking from a group post should land on proof, not a full sales page.
+This page exists separately from the home page embed so it can be linked directly from Facebook group posts and YouTube video descriptions (Marketing Plan Section 5.1) — a skeptical furniture maker clicking from a group post should land on proof, not a full sales page.
 
 ### 3.5 Blog / Resources
 

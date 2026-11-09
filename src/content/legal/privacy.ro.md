@@ -16,7 +16,7 @@ Când te înscrii pentru noutăți pe email, colectăm:
 - limba în care te-ai înscris (română sau engleză);
 - data înscrierii și faptul că ți-ai dat acordul.
 
-Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrierea pe această listă nu îți conferă discountul Founding Partner.**
+Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrierea pe această listă nu îți conferă discountul Partener Fondator.**
 
 **Confirmarea.** Imediat după înscriere îți trimitem un email cu un link de confirmare. Te adăugăm pe listă abia după ce apeși pe el. Dacă nu confirmi, păstrăm adresa doar cât e nevoie ca linkul să funcționeze și o ștergem în cel mult 30 de zile, printr-un job zilnic.
 
@@ -24,9 +24,9 @@ Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrie
 
 **Programul de invitații.** Când este activ, fiecare persoană înscrisă primește un cod de invitație personal. Dacă te înscrii prin linkul cuiva, reținem codul acelei persoane, iar după ce îți confirmi adresa îi creștem numărul de invitații confirmate. Folosim aceste informații doar ca să acordăm recompensele programului (un loc mai în față sau un loc garantat în beta-ul privat). Persoana care te-a invitat vede doar câte invitații confirmate are, nu cine s-a înscris prin linkul ei. Temeiul este consimțământul tău la înscriere. Programul este oprit până îl activăm explicit.
 
-## 3. Lista Founding Partner
+## 3. Lista Partener Fondator
 
-Când te înscrii pe lista Founding Partner, colectăm:
+Când te înscrii pe lista Partener Fondator, colectăm:
 
 - numele și prenumele;
 - adresa de email;
@@ -34,7 +34,7 @@ Când te înscrii pe lista Founding Partner, colectăm:
 - orașul;
 - limba în care te-ai înscris și faptul că ți-ai dat acordul.
 
-Folosim aceste date ca să te ținem pe lista eligibilă pentru discount pe planul Basic când deschidem plata odată cu [M2](/ro/roadmap/#m2) (etapa 2: nesting, etichete, ofertă), să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită și nu te obligă la nimic. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
+Folosim aceste date ca să te ținem pe lista eligibilă pentru discount pe planul Basic când deschidem abonamentele, odată cu [nesting, etichete și ofertă](/ro/roadmap/#m2), să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită și nu te obligă la nimic. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
 
 **Temeiul legal** este consimțământul tău (art. 6 alin. (1) lit. a) GDPR).
 
@@ -82,7 +82,7 @@ Nu vindem și nu închiriem datele tale și nu le folosim pentru publicitate. Lu
 
 | Furnizor | Rol | Unde sunt datele |
 |---|---|---|
-| Brevo (Sendinblue SAS, Franța) | Lista de noutăți, lista Founding Partner și trimiterea emailurilor, inclusiv cele tranzacționale din aplicație | Uniunea Europeană |
+| Brevo (Sendinblue SAS, Franța) | Lista de noutăți, lista Partener Fondator și trimiterea emailurilor, inclusiv cele tranzacționale din aplicație | Uniunea Europeană |
 | Plausible Insights OÜ (Estonia) | Statistici de vizitare, fără date personale | Uniunea Europeană |
 | Vercel Inc. (SUA) | Găzduirea aplicației; funcțiile de server rulează în Frankfurt | SUA / UE; transferurile în afara UE se bazează pe Cadrul UE–SUA privind protecția datelor și pe clauze contractuale standard |
 | Cloudflare, Inc. (SUA) | Găzduirea site-ului (Cloudflare Workers) și statistici de vizualizări, fără cookie-uri (Cloudflare Web Analytics) | SUA / rețea globală; transferurile în afara UE se bazează pe acordul de prelucrare a datelor și pe clauze contractuale standard |
@@ -98,7 +98,7 @@ YouTube (Google) prelucrează date ca operator independent, doar dacă pornești
 
 - **Înscrieri neconfirmate:** cel mult 30 de zile.
 - **Lista de noutăți și datele programului de invitații:** până te dezabonezi sau ceri ștergerea. Dacă nu îți mai trimitem niciun email timp de 24 de luni, ștergem lista.
-- **Lista Founding Partner:** până deschidem planul Basic plătit odată cu [M2](/ro/roadmap/#m2) și alegi dacă te abonezi. Dacă nu continui, ștergem datele în cel mult 6 luni.
+- **Lista Partener Fondator:** până deschidem abonamentele (planul Basic) — vezi [etapa nesting pe Plan](/ro/roadmap/#m2) și alegi dacă te abonezi. Dacă nu continui, ștergem datele în cel mult 6 luni.
 - **Contul și proiectele:** cât timp ai cont. La ștergerea contului din aplicație, datele dispar imediat din baza de date activă; copiile de rezervă expiră în cel mult 30 de zile.
 - **Rapoartele de problemă:** sarcina din ClickUp (inclusiv emailul și contextul tehnic) se păstrează cât e util pentru diagnostic, cel mult 24 de luni; o ștergi, la cerere, scriindu-ne. Ștergerea contului nu elimină automat sarcinile din ClickUp.
 - **Facturile** (când vor exista): cât cere legea fiscală, de regulă 10 ani. Paddle, ca merchant of record, emite facturile către cumpărător.

@@ -34,7 +34,7 @@ When you join the Founding Partner waitlist, we collect:
 - your city;
 - the language you signed up in and the fact that you gave consent.
 
-We use this to keep you on the list eligible for a discount on the paid Basic plan when we open payment with [M2](/en/roadmap/#m2) (stage 2: nesting, labels, quotes), to contact you personally then, and to send you news about the program. Joining is free and doesn't commit you to anything. Anyone who subscribes later, without a place on this list, pays list price.
+We use this to keep you on the list eligible for a discount on the paid Basic plan when we open subscriptions, together with [nesting, labels and quotes](/en/roadmap/#m2), to contact you personally then, and to send you news about the program. Joining is free and doesn't commit you to anything. Anyone who subscribes later, without a place on this list, pays list price.
 
 **The legal basis** is your consent (Article 6(1)(a) GDPR).
 
@@ -98,7 +98,7 @@ In emails sent through Brevo, we can see whether an email was opened and whether
 
 - **Unconfirmed sign-ups:** 30 days at most.
 - **News waitlist and invite-program data:** until you unsubscribe or ask us to delete it. If we send you no email for 24 months, we delete the list.
-- **Founding Partner waitlist:** until the paid Basic plan opens with [M2](/en/roadmap/#m2) and you decide whether to subscribe. If you don't continue, we delete the waitlist data within 6 months at most.
+- **Founding Partner waitlist:** until the subscriptions open (paid Basic plan) — see the [nesting stage on the Roadmap](/en/roadmap/#m2) and you decide whether to subscribe. If you don't continue, we delete the waitlist data within 6 months at most.
 - **Account and projects:** for as long as you have an account. When you delete the account from the app, the data disappears at once from the live database; backups expire within 30 days at most.
 - **Problem reports:** the ClickUp task (including your email and the technical context) is kept as long as it's useful for diagnosis, 24 months at most; you can have it deleted by writing to us. Deleting your account doesn't automatically remove the ClickUp tasks.
 - **Invoices** (when they exist): for as long as tax law requires, typically 10 years. Paddle, as merchant of record, issues invoices to the buyer.

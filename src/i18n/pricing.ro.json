@@ -1,22 +1,22 @@
 {
   "meta": {
     "title": "Prețuri — Mobilcab",
-    "description": "Acum: aplicație gratuită + listă Founding Partner. La M2: planul Basic plătit cu 20% discount pentru FP; ulterior, preț listă."
+    "description": "Acum: aplicație gratuită + listă Partener Fondator. Când deschidem abonamentele: planul Basic plătit cu 20% discount pentru Partener Fondator; ulterior, preț listă."
   },
   "hero": {
     "label": "Prețuri",
-    "title": "Gratuit acum. 20% FP la M2. Apoi preț listă.",
-    "body": "Folosești aplicația gratuit. Dacă vrei 20% discount pe planul Basic când dam drumul la M2, te înscrii pe lista Founding Partner. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Sumele listă le anunțăm la lansarea plătită."
+    "title": "Gratuit acum. 20% Partener Fondator când deschidem abonamentele. Apoi preț listă.",
+    "body": "Folosești aplicația gratuit, cu proiectare și debitare complete — fără limite de export până deschidem abonamentele. Dacă vrei 20% discount pe planul Basic atunci, te înscrii pe lista Partener Fondator. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Sumele listă le anunțăm la lansarea plătită."
   },
   "callout": {
     "title": "Ești nou aici?",
-    "body": "Founding Partner înseamnă înscriere gratuită pe listă acum și 20% discount pe planul Basic când deschidem plata odată cu M2 — fără obligație. Cine vine mai târziu plătește prețul listă.",
-    "link": "Despre programul Founding Partner"
+    "body": "Partener Fondator înseamnă înscriere gratuită pe listă acum și 20% discount pe planul Basic când deschidem abonamentele — fără obligație. Cine vine mai târziu plătește prețul listă.",
+    "link": "Despre programul Partener Fondator"
   },
   "perMonth": "RON/lună",
   "free": "0 RON",
-  "fpDiscount": "discount FP",
-  "fpYearly": "Founding Partner: 20% off prețul listă, 6 luni de la prima plată",
+  "fpDiscount": "discount PF",
+  "fpYearly": "Partener Fondator: 20% off prețul listă, 6 luni de la prima plată",
   "priceTbd": "Preț la lansare",
   "cancel": "Fără contract — anulezi oricând (când există abonament)",
   "notifyMe": "Anunță-mă pe email",
@@ -26,29 +26,29 @@
       "for": "Ca să folosești Mobilcab pe proiectele tale până deschidem planurile plătite.",
       "features": [
         "Proiectare 3D și listă de debitare",
-        "Primele 10 rânduri din listă pe ecran",
-        "3 descărcări pe cont (CSV, exporturi, .mcab)",
-        "Salvare în cloud, nelimitată",
-        "Pe laptop, tabletă și telefon"
+        "Exporturi și cutlist fără limite (până deschidem abonamentele)",
+        "Salvare în cloud",
+        "Pe laptop, în browser",
+        "La abonamente: 3 descărcări pe cont pe Gratuit"
       ],
       "cta": "Folosește aplicația"
     },
     "basic": {
       "name": "Planul Basic",
-      "for": "La lansarea plătită cu M2: proiectare, listă de debitare, nesting pe placă, etichete și ofertă. FP de pe listă: 20% off; ulterior: preț listă.",
+      "for": "La lansarea planurilor plătite: proiectare, listă de debitare, nesting pe placă, etichete și ofertă. Partenerii Fondatori: 20% off; ulterior: preț listă.",
       "features": [
         "Proiectare 3D și debitare",
         "Nesting pe placă",
         "Etichete și ofertă către client",
         "Exporturi nelimitate"
       ],
-      "cta": "Devino Founding Partner"
+      "cta": "Devino Partener Fondator"
     }
   },
   "more": {
     "title": "Mai multe detalii",
-    "body": "Cum diferă Gratuit de Basic, ce e inclus la M2 și cum funcționează Founding Partner — pe pagina de întrebări."
+    "body": "Cum diferă Gratuit de Basic, ce e inclus la lansarea plătită și cum funcționează Partener Fondator — pe pagina de întrebări."
   },
-  "note": "Nu încasăm abonamente până deschidem planul Basic plătit odată cu M2. Prețurile listă le anunțăm atunci. Discount-ul FP (20%) e doar pentru cine e pe lista Founding Partner.",
+  "note": "Nu încasăm până deschidem planurile plătite. Până atunci: Gratuit full pe proiectare și debitare. La abonamente, pe Gratuit apar 3 descărcări pe cont. Prețurile listă le anunțăm atunci. Discount-ul Partener Fondator (20%, 6 luni) e doar pentru cine e pe lista Partener Fondator.",
   "faqLink": "Întrebări despre planuri"
 }

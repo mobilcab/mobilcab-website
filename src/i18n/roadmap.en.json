@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Mobilcab roadmap — what we ship, and in what order",
-    "description": "Mobilcab ships in stages: cut lists, nesting, CNC, team, then AI. Billing opens at M2. No fake dates — just order and status."
+    "description": "Mobilcab ships in stages: cut lists, nesting, CNC, team, then AI. Subscriptions open with nesting, labels and quotes. No fake dates — just order and status."
   },
   "hero": {
     "label": "Product roadmap",
-    "title": "We ship in stages — each one useful on its own.",
-    "body": "We don't promise “full CAD and CNC tomorrow.” We build in order: workshop basics first (design + cut lists), then the next stage only when the current one is stable on real projects. On the site, stages appear as M1–M5 — tap them anywhere to land here."
+    "title": "Mobilcab stages — in the order we ship them.",
+    "body": "We build in order: workshop basics first (design + cut lists), then the next stage only when the current one is stable on real projects. We don't announce everything at once."
   },
   "statuses": {
     "launch": "Launch",
@@ -58,8 +58,8 @@
         "id": "what-is-m2",
         "q": "What do M1–M5 mean?",
         "a": [
-          "They're the product stages, in order. M1 = Cut list (3D design + parts list — the foundation now, free). M2 = nesting, labels and quotes — when billing opens (Atelier / Producție / CNC; FP: 20% off). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
-          "Elsewhere on the site, wherever you see M1–M5, you can tap them to jump here to that stage."
+          "They're the stages on this page, in order. M1 = Cut list (3D design + parts list — the foundation now, free). M2 = nesting, labels and quotes — when subscriptions open (FP: 20% off). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
+          "Elsewhere on the site we talk about subscriptions and paid launch, not M-codes."
         ]
       },
       {
@@ -73,7 +73,7 @@
         "id": "when-billing",
         "q": "When do subscriptions start?",
         "a": [
-          "At M2 — when nesting, labels and quotes are ready. Until then the app is free. Founding Partners on the waitlist get 20% off list for 6 months from first payment; later subscribers pay list price."
+          "When nesting, labels and quotes are ready. Until then the app is free. Founding Partners get 20% off full price for 6 months from first payment. Anyone who subscribes later pays full price."
         ]
       },
       {
@@ -89,14 +89,35 @@
         "a": [
           "Yes. M1 (Cut list: 3D design + parts list) is the foundation we launch first. You can work with it without waiting for nesting, CNC or AI."
         ]
+      },
+      {
+        "id": "fixed-dates",
+        "q": "Is there a fixed date for each stage?",
+        "a": [
+          "No. We don't publish a fixed calendar. We announce each stage when it's stable on real projects — not when it looks good on paper."
+        ]
+      },
+      {
+        "id": "projects-at-subscriptions",
+        "q": "What happens to my projects when subscriptions open?",
+        "a": [
+          "Your projects stay. When subscriptions open, the Free plan gets export limits (3 downloads per account). On a paid plan, exports stay unlimited."
+        ]
+      },
+      {
+        "id": "fp-and-stages",
+        "q": "Is Founding Partner tied to a stage?",
+        "a": [
+          "No. Founding Partner is a separate program: free to join now, and 20% off full price for 6 months from first payment when subscriptions open. Subscriptions coincide with nesting, labels and quotes — but FP is not an M1–M5 stage."
+        ]
       }
     ]
   },
   "cta": {
-    "title": "Try the foundation now",
-    "body": "Design and cut lists — the next step when you're ready.",
+    "title": "Design and cut lists — ready to use.",
+    "body": "The app is free now. Later stages come when they're stable on real projects.",
     "primary": "Try it free",
-    "secondaryFp": "Or the Founding Partner waitlist",
+    "secondaryFp": "Or the Founding Partner program",
     "secondaryNews": "Or email updates"
   }
 }
