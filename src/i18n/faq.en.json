@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Frequently asked questions — Mobilcab",
-    "description": "Straight answers about Mobilcab: installing, pricing, the Basic plan, and the product roadmap."
+    "description": "Straight answers about Mobilcab: installing, pricing, the Free and Cut list plans, and the product roadmap."
   },
   "hero": {
     "label": "Frequently asked questions",
@@ -24,15 +24,15 @@
       "q": "Can I export directly for my CNC?",
       "a": [
         "The cut list (dimensions, quantities, materials) is the workshop foundation.",
-        "Dedicated CNC machine export comes later on the Roadmap — after nesting is solid. It is not included in the Basic plan at paid launch."
+        "Dedicated machine export comes with the CNC stage on the Roadmap and the CNC plan. It is not included in the Cut list plan at paid launch."
       ]
     },
     {
       "id": "m2",
       "q": "What do M1–M5 mean?",
       "a": [
-        "They're the stages on the Roadmap page, in order. M1 = Cut list (3D design + parts list — the foundation now, free). M2 = nesting, labels and quotes — when subscriptions open (FP: 20% off). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
-        "Elsewhere on the site we talk about subscriptions and paid launch, not M-codes."
+        "They're the stages on the Roadmap, in order. M1 = Cut list (3D design + parts list — free now). M2 = nesting, labels and quotes (the Atelier plan, when we ship it). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
+        "Subscriptions can open with the paid Cut list plan before nesting is ready. Elsewhere we talk about subscriptions, not M-codes."
       ],
       "link": "roadmap"
     },
@@ -40,24 +40,24 @@
       "id": "price",
       "q": "How much does it cost?",
       "a": [
-        "The app is free for now — full design and cut list, with no export limits — and we are not charging subscriptions. If you want 20% off the Basic plan, join the Founding Partner waitlist.",
-        "When we open subscriptions (the paid Basic plan: design, cut lists, nesting, labels, quotes), Free gets 3 downloads per account; people on the FP waitlist get 20% off list (6 months from first payment). Anyone who subscribes later, without a waitlist place, pays full list. You are not obliged to pay if you do not want to. List amounts are announced at paid launch."
+        "Now: Free = full Cut list, no export limits. We are not charging. For 20% off paid plans, join the Founding Partner waitlist (it closes when billing opens).",
+        "At billing: Free gets 3 downloads per account; the paid Cut list plan keeps unlimited exports. Founding Partners on the list: 20% off for 6 months from first payment on paid plans that ship in that window. Anyone who subscribes later, without a waitlist place, pays full list. We announce amounts then."
       ],
       "link": "foundingPartner"
     },
     {
       "id": "plans",
-      "q": "How is the Free plan different from Basic?",
+      "q": "How is Free different from the Cut list plan?",
       "a": [
-        "Now: Free is full on M1 — 3D design, cut list, exports and cloud save, with no download limits.",
-        "When subscriptions open, Free gets 3 downloads per account. Basic is the workshop plan: design, cut lists, nesting, labels and quotes, with unlimited exports. Founding Partners on the waitlist: 20% off for 6 months; later: list price."
+        "Now only Free exists: full Cut list (3D, list, cloud), with no download limits.",
+        "When subscriptions open: Free stays Cut list with 3 downloads per account; paid Cut list is the same product with unlimited exports. Next come Atelier, CNC, Production, AI — each adds what is on the Roadmap. Founding Partners: 20% / 6 months; the waitlist closes at billing."
       ],
       "tiers": true,
-      "after": ["We do not charge until the paid Basic plan opens. List prices are confirmed then."]
+      "after": ["We do not charge until the paid Cut list plan opens. List prices are confirmed then. Higher plans appear on Pricing as coming soon until we ship them."]
     }
   ],
   "tiers": {
-    "names": { "free": "Free plan", "basic": "Basic plan" },
+    "names": { "free": "Free plan", "debitare": "Cut list plan" },
     "perMonth": "{price} RON/month",
     "free": "0 RON",
     "fpDiscount": "−{percent}% FP",

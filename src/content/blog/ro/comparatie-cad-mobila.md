@@ -62,7 +62,7 @@ Cabinet Vision e software de proiectare și producție pentru cabinetry / mobil�
 
 Mobilcab e un CAD pentru mobilă care rulează în browser, pe laptop, fără instalare ([mobilcab.com](https://mobilcab.com/)).
 
-**Licență / preț.** Site-ul descrie aplicația ca **gratuită** pe baza actuală (proiectare 3D și listă de debitare) până deschiderea abonamentelor. **Sumele listă RON nu sunt publicate** pe site la data ciornei. Programul Partener Fondator: înscriere gratuită; discount procentual la abonament când plata e deschisă — detalii pe pagina programului.
+**Licență / preț.** Site-ul descrie aplicația ca **gratuită** pe Debitare (proiectare 3D și listă) până deschiderea abonamentelor. **Sumele listă RON nu sunt publicate** pe site (noiembrie 2026). Programul Partener Fondator: înscriere gratuită doar înainte de billing; 20% / 6 luni pe planurile plătite — detalii pe pagina programului.
 
 **Etape.** Planul public (M1–M5): debitare; nesting, etichete și ofertă; export CNC; echipă și partajare; AI și randări. Exportul CNC e anunțat ca etapă ulterioară, nu ca funcție disponibilă acum.
 

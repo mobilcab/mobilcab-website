@@ -64,7 +64,7 @@ Exporți lista (CSV) sau proiectul (`.mcab`) când vrei o copie locală sau un f
 
 ## Ce lași pe altă dată
 
-- Nesting, etichete, ofertă — când deschidem abonamentele (etapa de pe Plan).
+- Nesting, etichete, ofertă — pe planul Atelier, când etapa e gata pe Plan.
 - Export CNC — etapă ulterioară.
 - Echipă / partajare și AI — etape mai târzii.
 

@@ -1,4 +1,4 @@
-*Last updated: 28 October 2026*
+*Last updated: 9 November 2026*
 
 ## 1. Who we are and what these terms cover
 
@@ -8,7 +8,7 @@ These terms apply to your use of the Mobilcab app and the mobilcab.com website. 
 
 ## 2. The service
 
-Mobilcab is furniture design software that runs in the browser, on laptop, tablet or phone. It lets you design furniture and generate cutlists and CNC export files. The app does not include an AI assistant.
+Mobilcab is furniture design software that runs in the browser, on a **laptop**. It lets you design furniture and generate cut lists and exports (for example CSV or a local project file). Dedicated CNC machine export is listed on the [Roadmap](/en/roadmap/) as a later stage, not as a feature available now. Tablet and phone optimization come later. The app does not include an AI assistant.
 
 The service is in active development: we add, change and sometimes remove features. We reserve the right to do this without prior notice for minor changes; for significant changes we tell you in advance.
 
@@ -27,7 +27,7 @@ We offer a free plan and, when they are turned on, paid plans. The available pla
 - Prices are in Romanian lei (RON). Applicable taxes are calculated and collected by Paddle, as the official seller, based on where you are.
 - We may change prices for future subscription periods. We tell you by email at least 30 days before a new price applies to your subscription.
 
-Until paid plans are activated, access through an **access code** is free, in exchange for the feedback you give on the app.
+Until paid plans are activated, the app is available on the **Free plan** (Cut list: 3D design and cut list), with no export limit.
 
 ## 5. Payment, renewal and cancellation
 
@@ -43,10 +43,12 @@ When a paid plan exists, **our order process is conducted by our online reseller
 ## 6. The Founding Partner program
 
 - The program is limited to the first 15 users on the Founding Partner waitlist, with the possibility of extending it — any extension of the number of spots is announced publicly, not silently.
-- **Joining the waitlist is free and doesn't commit you to anything.** Payment only starts once we open subscriptions — the paid Basic plan, together with [nesting, labels and quotes](/en/roadmap/#m2), and you choose to subscribe. Access through an access code, when offered, is in explicit exchange for feedback on the app — not an unconditional gift.
-- Until we open subscriptions, the app is free with full access on the current stage (design and cut list) for everyone — including Founding Partners. Download limits on the Free plan (3 per account) start only when subscriptions open.
-- When the paid plan is activated, Founding Partners on the waitlist get a 20% discount on the Basic plan (design and cut list through nesting, labels and quotes — see the [Roadmap](/en/roadmap/)) list price, valid for 6 months from first payment. Anyone who subscribes later, without a waitlist place, pays list price.
+- **Joining the waitlist is free and doesn't commit you to anything.** You can join **only before** we open subscriptions. **When billing opens, the Founding Partner waitlist closes** — we do not take new enrollments.
+- The first paid plan is **Cut list** (the same product as Free, with unlimited exports). Later plans (Atelier, CNC, Production, AI) appear on Pricing when we ship them — see the [Roadmap](/en/roadmap/) and [Pricing](/en/pricing/).
+- Until subscriptions open, everyone — including Founding Partners — uses the Free plan with full Cut list (no export limit). When subscriptions open, Free gets **3 downloads per account**.
+- When a paid plan is activated, Founding Partners on the waitlist get **20% off list price** for **6 months from first payment**, on paid plans that ship in that window (starting with Cut list). Anyone who subscribes later, without a waitlist place, pays list price.
 - After the 6 months, the price automatically returns to the standard one — the discount doesn't stay active indefinitely.
+- We expect reasonable feedback (for example real projects and short replies). If a waitlist seat sits unused (no feedback), we may send a reminder at 60 days and free the seat at **90 days**; projects stay, and the account returns to the ordinary Free plan.
 - Founding Partner benefits are personal and can't be transferred.
 
 ## 7. Check the results before production
@@ -69,7 +71,7 @@ This section matters: please read it carefully.
 ## 9. Your projects
 
 - The projects you create belong to you.
-- You only give us the right to store and process them as needed to provide the service (for example, to save them, show them on all your devices and generate exports).
+- You only give us the right to store and process them as needed to provide the service (for example, to save them in the cloud, show them on a laptop in the browser, and generate exports).
 - We reserve the right, in the future, to use **anonymised and aggregated** project data (not raw data) to develop assisted furniture-generation features. When that processing starts, you will be able to object from your account. This is a right reserved for the future, not processing happening today.
 - If we introduce an AI assistant that sends project data to an external provider, we tell you beforehand, and the data and the provider appear in the Privacy Policy.
 

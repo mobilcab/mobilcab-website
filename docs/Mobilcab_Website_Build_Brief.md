@@ -1,6 +1,10 @@
 # Mobilcab — Website Build Brief
 ### For use in Claude Code. Build in two phases: Coming Soon now, full funnel later.
 
+> **Superseded for offers/pricing/device (2026-11-09).** Follow [`docs/DECISIONS.md`](./DECISIONS.md)
+> and the live site (`src/i18n`, `src/data/pricing.ts`). Ignore Basic 49/549 RON, kitchen/bedroom
+> headlines, and tablet/phone claims in the sections below.
+
 This brief consolidates everything from the marketing plan, launch content kit, and website funnel plan into one buildable spec. Bring `Mobilcab_Marketing_Plan.md`, `Mobilcab_Launch_Content_Kit.md`, and `Mobilcab_Website_Funnel_Plan.md` into the Claude Code project folder too — this brief embeds the essentials, but the full video scripts, complete FAQ copy, and SEO blog post bodies live in those files.
 
 ---

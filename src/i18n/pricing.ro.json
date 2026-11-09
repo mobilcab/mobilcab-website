@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Prețuri — Mobilcab",
-    "description": "Acum: aplicație gratuită + listă Partener Fondator. Când deschidem abonamentele: planul Basic plătit cu 20% discount pentru Partener Fondator; ulterior, preț listă."
+    "description": "Acum: Planul Gratuit (Debitare, fără limită de export) + listă Partener Fondator. La billing: Gratuit cu 3 exporturi + planul Debitare plătit; Atelier, CNC, Producție și AI vin pe rând."
   },
   "hero": {
     "label": "Prețuri",
-    "title": "Gratuit acum. 20% Partener Fondator când deschidem abonamentele. Apoi preț listă.",
-    "body": "Folosești aplicația gratuit, cu proiectare și debitare complete — fără limite de export până deschidem abonamentele. Dacă vrei 20% discount pe planul Basic atunci, te înscrii pe lista Partener Fondator. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Sumele listă le anunțăm la lansarea plătită."
+    "title": "Gratuit acum pe Debitare. 20% Partener Fondator când deschidem plata.",
+    "body": "Acum: Planul Gratuit include proiectare 3D și listă de debitare, fără limită de export. Când deschidem abonamentele, pe Gratuit apar 3 descărcări pe cont, iar planul Debitare (plătit) păstrează exporturile nelimitate. Dacă vrei 20% discount pe planurile plătite, te înscrii pe lista Partener Fondator înainte — la billing lista se închide. Sumele listă le anunțăm atunci."
   },
   "callout": {
     "title": "Ești nou aici?",
-    "body": "Partener Fondator înseamnă înscriere gratuită pe listă acum și 20% discount pe planul Basic când deschidem abonamentele — fără obligație. Cine vine mai târziu plătește prețul listă.",
+    "body": "Partener Fondator: înscriere gratuită acum, 20% off prețul listă timp de 6 luni de la prima plată pe planurile plătite livrate în fereastră. La billing închidem înscrierile. Cine vine după plătește prețul listă.",
     "link": "Despre programul Partener Fondator"
   },
   "perMonth": "RON/lună",
@@ -23,32 +23,32 @@
   "plans": {
     "free": {
       "name": "Planul Gratuit",
-      "for": "Ca să folosești Mobilcab pe proiectele tale până deschidem planurile plătite.",
+      "for": "Debitare acum, fără abonament. La billing rămâne Debitare cu 3 descărcări pe cont.",
       "features": [
         "Proiectare 3D și listă de debitare",
-        "Exporturi și cutlist fără limite (până deschidem abonamentele)",
+        "Exporturi fără limite (până deschidem abonamentele)",
         "Salvare în cloud",
         "Pe laptop, în browser",
-        "La abonamente: 3 descărcări pe cont pe Gratuit"
+        "La billing: 3 descărcări pe cont pe Gratuit"
       ],
       "cta": "Folosește aplicația"
     },
-    "basic": {
-      "name": "Planul Basic",
-      "for": "La lansarea planurilor plătite: proiectare, listă de debitare, nesting pe placă, etichete și ofertă. Partenerii Fondatori: 20% off; ulterior: preț listă.",
+    "debitare": {
+      "name": "Planul Debitare",
+      "for": "Primul plan plătit, la deschiderea abonamentelor: același Debitare ca pe Gratuit, cu exporturi nelimitate. Parteneri Fondatori: 20% off; ulterior: preț listă.",
       "features": [
-        "Proiectare 3D și debitare",
-        "Nesting pe placă",
-        "Etichete și ofertă către client",
-        "Exporturi nelimitate"
+        "Proiectare 3D și listă de debitare",
+        "Exporturi nelimitate",
+        "Salvare în cloud",
+        "Pe laptop, în browser"
       ],
       "cta": "Devino Partener Fondator"
     }
   },
   "more": {
     "title": "Mai multe detalii",
-    "body": "Cum diferă Gratuit de Basic, ce e inclus la lansarea plătită și cum funcționează Partener Fondator — pe pagina de întrebări."
+    "body": "Cum diferă Gratuit de Debitare, ce urmează (Atelier, CNC, Producție, AI) și cum funcționează Partener Fondator — pe pagina de întrebări."
   },
-  "note": "Nu încasăm până deschidem planurile plătite. Până atunci: Gratuit full pe proiectare și debitare. La abonamente, pe Gratuit apar 3 descărcări pe cont. Prețurile listă le anunțăm atunci. Discount-ul Partener Fondator (20%, 6 luni) e doar pentru cine e pe lista Partener Fondator.",
+  "note": "Nu încasăm până deschidem planurile plătite. Până atunci: Gratuit = Debitare full, fără limită de export. La billing: Gratuit cu 3 descărcări + Debitare plătit. Urmează pe rând Atelier (nesting, etichete, ofertă), CNC, Producție, AI — pe Prețuri ca „în curând” până le livrăm. Partener Fondator se închide la billing; 20% / 6 luni e doar pentru cine e pe listă.",
   "faqLink": "Întrebări despre planuri"
 }

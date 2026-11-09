@@ -34,7 +34,7 @@ Când te înscrii pe lista Partener Fondator, colectăm:
 - orașul;
 - limba în care te-ai înscris și faptul că ți-ai dat acordul.
 
-Folosim aceste date ca să te ținem pe lista eligibilă pentru discount pe planul Basic când deschidem abonamentele, odată cu [nesting, etichete și ofertă](/ro/roadmap/#m2), să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită și nu te obligă la nimic. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
+Folosim aceste date ca să te ținem pe lista eligibilă pentru **20% discount** pe planurile plătite (începând cu Debitare) când deschidem abonamentele, să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită, nu te obligă la nimic, și e posibilă **doar înainte de billing** — lista se închide când deschidem plata. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
 
 **Temeiul legal** este consimțământul tău (art. 6 alin. (1) lit. a) GDPR).
 
@@ -43,7 +43,7 @@ Folosim aceste date ca să te ținem pe lista eligibilă pentru discount pe plan
 Când îți creezi un cont și folosești aplicația, prelucrăm:
 
 - **datele contului:** adresa de email, parola (stocată de furnizorul de autentificare doar sub formă criptată, nu o vedem) și, dacă o completezi la înregistrare, numele tău;
-- **proiectele tale:** designurile pe care le creezi, ca să le salvăm și să le ai pe toate device-urile. Pot conține date ale clienților tăi (nume, dimensiuni, prețuri) — tu decizi ce introduci. Până la salvare, o ciornă a proiectului rămâne în browserul tău;
+- **proiectele tale:** designurile pe care le creezi, ca să le salvăm în cloud și să le redeschizi pe laptop, în browser. Pot conține date ale clienților tăi (nume, dimensiuni, prețuri) — tu decizi ce introduci. Până la salvare, o ciornă a proiectului rămâne în browserul tău;
 - **setările tale:** preferințele de lucru (de exemplu unitatea de măsură sau lățimea panourilor) și presetările salvate, legate de contul tău;
 - **rapoartele de problemă:** când apeși „Raportează o problemă”, trimitem echipei, **automat**, contextul tehnic de care avem nevoie ca să reproducem problema: versiunea aplicației, mediul și limba interfeței; emailul, identificatorul, planul și rolul contului tău; browserul, dimensiunea ferestrei, densitatea ecranului, placa video (randarea WebGL) și, dacă browserul o spune, memoria dispozitivului; identificatorul și numele proiectului, numărul de elemente pe tip, elementul selectat (identificator, tip și dimensiunile lui), fila și unealta active, unitatea de măsură; ultimele comenzi date (tip și identificator, fără conținut) și erorile recente ale aplicației. **Doar dacă bifezi tu**, atașăm și o captură a vederii 3D sau fișierul întreg al proiectului. Raportul ajunge, printr-o funcție a noastră, ca sarcină în ClickUp;
 - **datele de plată:** când vor exista planuri plătite, plățile se fac prin Paddle, care acționează ca vânzător oficial (merchant of record); noi nu vedem și nu stocăm datele cardului tău, ci doar informații despre abonament și facturi. Până atunci, accesul prin cod este gratuit;
@@ -98,7 +98,7 @@ YouTube (Google) prelucrează date ca operator independent, doar dacă pornești
 
 - **Înscrieri neconfirmate:** cel mult 30 de zile.
 - **Lista de noutăți și datele programului de invitații:** până te dezabonezi sau ceri ștergerea. Dacă nu îți mai trimitem niciun email timp de 24 de luni, ștergem lista.
-- **Lista Partener Fondator:** până deschidem abonamentele (planul Basic) — vezi [etapa nesting pe Plan](/ro/roadmap/#m2) și alegi dacă te abonezi. Dacă nu continui, ștergem datele în cel mult 6 luni.
+- **Lista Partener Fondator:** până deschidem abonamentele (când lista se închide) și alegi dacă te abonezi pe un plan plătit. Dacă nu continui, ștergem datele în cel mult 6 luni.
 - **Contul și proiectele:** cât timp ai cont. La ștergerea contului din aplicație, datele dispar imediat din baza de date activă; copiile de rezervă expiră în cel mult 30 de zile.
 - **Rapoartele de problemă:** sarcina din ClickUp (inclusiv emailul și contextul tehnic) se păstrează cât e util pentru diagnostic, cel mult 24 de luni; o ștergi, la cerere, scriindu-ne. Ștergerea contului nu elimină automat sarcinile din ClickUp.
 - **Facturile** (când vor exista): cât cere legea fiscală, de regulă 10 ani. Paddle, ca merchant of record, emite facturile către cumpărător.

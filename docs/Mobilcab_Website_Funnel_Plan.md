@@ -1,6 +1,10 @@
 # Mobilcab — Website Funnel Plan
 ### Turning visitors into Founding Partners
 
+> **Superseded for pricing/FP (2026-11-09).** Live rules: [`docs/DECISIONS.md`](./DECISIONS.md).
+> Free app (Debitare) for everyone; FP = 20% later, closes at billing; Pricing shows 0 RON + FP %
+> until list prices ship — not Basic 49/549 RON tiers from this draft.
+
 This plan assembles every feature, offer, and piece of copy already developed in the marketing plan and launch content kit into an actual site structure. Cross-references point to `Mobilcab_Marketing_Plan.md` and `Mobilcab_Launch_Content_Kit.md` throughout. The primary conversion goal across every page is the **Founding Partner signup** — the free tier exists to support that goal, not compete with it.
 
 ---

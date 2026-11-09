@@ -1,64 +1,66 @@
 ---
-title: "Polyboard vs. alternative cloud-based: ce se schimbă când proiectezi din browser"
-description: "O comparație corectă între un program de proiectare a mobilei instalat pe calculator și unul care rulează în browser: costuri, lucru pe mai multe device-uri, internet și când e mai bună fiecare variantă."
-date: "2026-10-06"
-published: false
+title: "Polyboard vs. proiectare din browser: ce se schimbă în atelier"
+description: "Desktop instalat vs. CAD în browser pe laptop: cost la început, unde stau proiectele, internet și când are sens fiecare — cu fapte publice despre Polyboard și ce oferă Mobilcab acum."
+date: "2026-11-09"
+published: true
 ---
 
-> **Ciornă pentru fondator — de șters înainte de publicare.** Prețurile Polyboard vin din cercetarea din Marketing Plan (septembrie 2026) și trebuie verificate în luna publicării. Partea despre lucrul fără internet depinde de întrebarea deschisă 4 din `docs/DECISIONS.md`. Planul de conținut cere un ton corect față de concurență: păstrează-l.
+Polyboard e un program matur de proiectare a mobilei, instalat pe calculator, folosit de multe ateliere. Articolul ăsta nu încearcă să-l facă să pară mai slab decât e.
 
-Polyboard e unul dintre cele mai cunoscute programe de proiectare a mobilei. E matur, puternic pe partea de cutlist și CNC și folosit de multe ateliere serioase. Articolul ăsta nu încearcă să-l facă să pară mai slab decât e.
+Întrebarea e alta: ce se schimbă în munca de zi cu zi când proiectezi din **browser, pe laptop**, fără instalare?
 
-Întrebarea e alta: ce se schimbă, concret, în munca de zi cu zi, când programul nu mai e instalat pe un calculator, ci rulează în browser?
+Pentru o privire pe mai mulți vendori (inclusiv prețuri publice), vezi [comparația CAD](/ro/blog/comparatie-cad-mobila/).
 
 ## Instalat pe calculator vs. în browser
 
-**Un program instalat** rulează pe un calculator anume. Proiectele stau, de regulă, pe acel calculator. Licența e legată de el sau de o cheie.
+**Un program instalat** rulează pe un calculator anume. Proiectele stau, de regulă, pe acel PC. Licența e legată de el sau de o cheie.
 
-**Un program în browser** se deschide de pe orice device cu un browser actual. Proiectele stau în cont, nu pe un anume calculator. Nu instalezi nimic și nu ai server de licențe.
+**Un program în browser** (ca Mobilcab) se deschide pe laptop, fără instalare. Proiectele stau în cont (cloud). Nu ai server de licențe pe mașina din atelier.
+
+Mobilcab e gândit acum pentru **laptop**. Tabletă și telefon vin mai târziu — nu le pretindem ca flux principal.
 
 ## 1. Costul: la început vs. în timp
 
-Polyboard se vinde ca licență perpetuă, cu prețuri publice între aproximativ **2.795 și 5.295 de dolari** (septembrie 2026) [VERIFICĂ prețul actual]. Plătești o dată, iar actualizările la versiuni noi costă în plus, în jur de 30% din preț [VERIFICĂ].
+Polyboard se vinde ca licență pe viață. Pe magazinul Wood Designer, PolyBoard 8 apare public cu interval **USD $2,795–$5,295** ([pagina produs](https://wooddesigner.org/product/polyboard/)). Plătești o dată; actualizările majore pot costa extra (confirmă pe site-ul vendorului).
 
-Raportată la trei ani, licența de bază înseamnă în jur de 78 de dolari pe lună. Pentru un atelier care o folosește zilnic ani la rând, e o investiție care se amortizează.
+Pentru un atelier care îl folosește ani la rând, investiția se poate amortiza. Pentru unul mic, piedica e deseori **plata mare la început**, nu neapărat costul pe termen lung.
 
-Pentru un atelier mic, problema nu e costul total, ci **plata de la început**. Un abonament lunar de câteva zeci sau sute de lei, pe care îl poți opri oricând, schimbă complet decizia: poți încerca programul pe proiecte reale fără să riști mii de euro.
+Un CAD în browser cu plan gratuit acum și abonamente mai târziu schimbă decizia: poți lucra pe proiecte reale înainte să semnezi o licență mare. Pe Mobilcab, sumele listă RON apar când deschidem billing-ul — până atunci pe [Prețuri](/ro/pricing/) vezi Gratuit (0 RON) și calea Partener Fondator (20%), fără preț listă.
 
 ## 2. Unde lucrezi
 
-Cu un program instalat, proiectezi acolo unde e calculatorul. Ca să-i arăți clientului, fie îl aduci în atelier, fie exporți imagini și le trimiți.
+Cu un program instalat, proiectezi unde e calculatorul. Ca să arăți clientului, îl aduci în atelier sau trimiți exporturi.
 
-Cu un program în browser, deschizi același proiect pe laptop în atelier, pe tabletă la client și pe telefon, dacă îți trebuie o dimensiune pe drum. Pentru cine măsoară și discută proiectul la fața locului, diferența se simte zilnic.
+Cu un program în browser pe laptop, același proiect e în cont: îl redeschizi pe laptopul din atelier sau pe alt laptop pe care te autentifici — fără stick și fără „versiunea de pe PC-ul vechi”.
 
 ## 3. Internetul
 
-Aici programul instalat are un avantaj clar: **merge și fără internet**. Într-un atelier cu semnal slab, contează.
+Programul instalat are un avantaj clar: **poate merge și offline**, dacă atelierul are semnal slab.
 
-Un program în browser are nevoie de conexiune ca să se deschidă și să salveze proiectele în cont. Cât de bine se descurcă atunci când conexiunea se întrerupe diferă de la program la program, așa că merită să întrebi concret înainte să alegi [VERIFICĂ: comportamentul Mobilcab fără internet].
+Un program în browser are nevoie de conexiune ca să se deschidă și să salveze în cloud. Mobilcab nu promite lucru offline complet; proiectul se salvează în cloud când ești online. Dacă internetul din atelier e critic, ține cont de asta la alegere.
 
-## 4. Actualizări și calculatorul din atelier
+## 4. Actualizări
 
-Un program instalat îl actualizezi tu, iar versiunile mari se plătesc separat. Cere și un calculator destul de puternic, care trebuie întreținut.
+Un program instalat îl actualizezi tu; versiunile mari pot costa separat și cer un PC potrivit.
 
-Un program în browser se actualizează singur, pentru toată lumea, și rulează pe device-uri obișnuite. În schimb, nu tu decizi când apare o versiune nouă.
+Un program în browser se actualizează pentru toată lumea. Nu tu decizi ziua versiunii noi — în schimb nu mai rulezi un installer pe fiecare mașină.
 
 ## Când e mai bun fiecare
 
-**Un program instalat precum Polyboard** e probabil alegerea mai bună dacă:
+**Desktop (ex. Polyboard)** are sens dacă:
 
-- lucrezi aproape numai în atelier, la același calculator;
-- ai internet nesigur și nu vrei să depinzi de el;
-- preferi să plătești o dată și să deții licența.
+- lucrezi aproape numai pe același PC din atelier;
+- ai nevoie clară de offline;
+- preferi licență unică și pachet CNC documentat de vendor (vezi [comparația](/ro/blog/comparatie-cad-mobila/)).
 
-**Un program în browser** are sens mai ales dacă:
+**Browser pe laptop (ex. Mobilcab)** are sens dacă:
 
-- proiectezi și la client, pe tabletă sau telefon;
-- nu vrei o plată mare la început;
-- vrei să lucrezi de pe mai multe device-uri fără să muți fișiere.
+- vrei să începi fără licență mare;
+- vrei proiecte în cloud, pe laptop;
+- te interesează Debitare acum (3D + listă), iar nesting / CNC vin pe etape pe [Plan](/ro/roadmap/).
 
 ## Unde se încadrează Mobilcab
 
-[Mobilcab](/ro/) e un program de proiectare a mobilei care rulează în browser, cu cutlist și export pentru CNC și un asistent AI care semnalează posibile greșeli înainte de tăiere. Va avea un plan gratuit și abonamente lunare în lei, fără contract.
+[Mobilcab](/ro/) e CAD pentru mobilă în browser, pe laptop: **acum** proiectare 3D și listă de debitare pe Planul Gratuit (fără limită de export până la billing). Nesting, etichete, ofertă și export CNC sunt pe etape ulterioare — nu le vindem ca „gata acum”.
 
-E încă în dezvoltare. Dacă vrei să-l compari singur pe proiectele tale, lasă-ne emailul mai jos.
+Partener Fondator: înscriere înainte de billing, 20% / 6 luni pe planurile plătite — [detalii](/ro/founding-partner/).

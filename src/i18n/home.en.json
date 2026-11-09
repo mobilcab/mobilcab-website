@@ -31,7 +31,7 @@
       },
       {
         "title": "Start free",
-        "body": "Use the app with no subscription. If you want a discount on the Basic plan when we open subscriptions, join the Founding Partner waitlist — nothing to pay now."
+        "body": "Use the app free on Cut list. If you want 20% off paid plans when billing opens, join the Founding Partner waitlist — enrollment closes at billing."
       },
       {
         "title": "Workshop-ready cut list",
@@ -55,7 +55,7 @@
     "offerLabel": "Founding Partner",
     "offerPrice": "−20% when subscriptions open",
     "offerDetail": "You join the program for free. When we move to paid plans, you get 20% off full price for 6 months from first payment. Anyone who joins later pays full price.",
-    "aiNote": "The Basic plan: design, cut lists, nesting, labels and quotes.",
+    "aiNote": "At billing: Free (3 exports) + paid Cut list. Then Atelier, CNC, Production, AI.",
     "free": "The app is free until we open payment.",
     "cancel": "Joining does not oblige you to pay.",
     "link": "See all plans"
@@ -66,7 +66,7 @@
       { "q": "Do I need to install anything?", "a": "No, Mobilcab runs straight from your browser." },
       { "q": "Does it work on tablet or phone?", "a": "Not yet — it's built for laptop. Tablet and phone come later." },
       { "q": "Can I export directly for my CNC?", "a": "The cut list is the foundation; CNC export comes in a later roadmap stage." },
-      { "q": "How much does it cost?", "a": "Now: the app is free, with full design and cut list. Join the Founding Partner waitlist for 20% off the Basic plan when we open subscriptions. Later subscribers pay list price." }
+      { "q": "How much does it cost?", "a": "Now: Free = Cut list, no export limit. Founding Partner: 20% / 6 months on paid plans (waitlist closes at billing). At billing: Free with 3 exports + paid Cut list; then Atelier, CNC, Production, AI." }
     ],
     "link": "All questions"
   },

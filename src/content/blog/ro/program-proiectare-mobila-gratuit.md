@@ -53,11 +53,11 @@ Nu înlocuiesc proiectarea 3D și nu calculează singure piesele dintr-un corp. 
 
 [Mobilcab](/ro/) e un CAD pentru mobilă în **browser, pe laptop**, fără instalare.
 
-**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, până deschidem abonamentele. Exporturile nu au limita de descărcări pe Gratuit în această fază; limita de 3 descărcări pe Gratuit apare când deschidem plata — detalii pe [Prețuri](/ro/pricing/).
+**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, fără limită de export. Când deschidem plata: pe Gratuit apar 3 descărcări; planul **Debitare** (plătit) păstrează exporturile nelimitate — detalii pe [Prețuri](/ro/pricing/).
 
-**Nu e încă în acest flux:** nesting, etichete, ofertă, export CNC — pe [Plan](/ro/roadmap/) (etape ulterioare).
+**Nu e încă în acest flux:** nesting, etichete, ofertă, export CNC — pe [Plan](/ro/roadmap/) (etape / planuri ulterioare: Atelier, CNC…).
 
-**Partener Fondator:** înscriere gratuită; când deschidem abonamentele, 20% din prețul listă pe planul Basic, 6 luni de la prima plată — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
+**Partener Fondator:** înscriere gratuită **doar înainte de billing** (lista se închide la deschiderea plății); 20% din prețul listă, 6 luni de la prima plată, pe planurile plătite — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
 
 Fluxul concret: [de la proiect la lista de debitare](/ro/blog/de-la-proiect-la-lista-de-debitare/) și [prima sesiune](/ro/blog/prima-sesiune-in-mobilcab/).
 

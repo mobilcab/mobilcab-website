@@ -34,7 +34,7 @@ When you join the Founding Partner waitlist, we collect:
 - your city;
 - the language you signed up in and the fact that you gave consent.
 
-We use this to keep you on the list eligible for a discount on the paid Basic plan when we open subscriptions, together with [nesting, labels and quotes](/en/roadmap/#m2), to contact you personally then, and to send you news about the program. Joining is free and doesn't commit you to anything. Anyone who subscribes later, without a place on this list, pays list price.
+We use this to keep you on the list eligible for a **20% discount** on paid plans (starting with Cut list) when we open subscriptions, to contact you personally then, and to send you news about the program. Joining is free, doesn't commit you to anything, and is only possible **before billing** — the waitlist closes when we open payment. Anyone who subscribes later, without a place on this list, pays list price.
 
 **The legal basis** is your consent (Article 6(1)(a) GDPR).
 
@@ -43,7 +43,7 @@ We use this to keep you on the list eligible for a discount on the paid Basic pl
 When you create an account and use the app, we process:
 
 - **account data:** your email address, your password (stored by the authentication provider only in encrypted form; we can't see it) and, if you fill it in when signing up, your name;
-- **your projects:** the designs you create, so we can save them and make them available on all your devices. They may contain your own clients' data (names, dimensions, prices) — you decide what you enter. Until you save, a draft of the project stays in your browser;
+- **your projects:** the designs you create, so we can save them in the cloud and reopen them on a laptop, in the browser. They may contain your own clients' data (names, dimensions, prices) — you decide what you enter. Until you save, a draft of the project stays in your browser;
 - **your settings:** your working preferences (for example the unit of measure or panel widths) and saved presets, tied to your account;
 - **problem reports:** when you press "Report a problem", we **automatically** send the team the technical context we need to reproduce the issue: the app version, environment and interface language; your account's email, identifier, plan and role; your browser, window size, screen density, graphics card (WebGL renderer) and, if the browser reports it, device memory; the project's identifier and name, the number of elements by type, the selected element (identifier, type and its dimensions), the active tab and tool, the unit of measure; and your latest commands (type and identifier, no content) and the app's recent errors. **Only if you tick the box**, we also attach a capture of the 3D view or the whole project file. The report reaches us, through a function of ours, as a task in ClickUp;
 - **payment data:** when paid plans exist, payments are processed by Paddle, which acts as the merchant of record; we don't see or store your card details, only information about your subscription and invoices. Until then, access by code is free;
@@ -98,7 +98,7 @@ In emails sent through Brevo, we can see whether an email was opened and whether
 
 - **Unconfirmed sign-ups:** 30 days at most.
 - **News waitlist and invite-program data:** until you unsubscribe or ask us to delete it. If we send you no email for 24 months, we delete the list.
-- **Founding Partner waitlist:** until the subscriptions open (paid Basic plan) — see the [nesting stage on the Roadmap](/en/roadmap/#m2) and you decide whether to subscribe. If you don't continue, we delete the waitlist data within 6 months at most.
+- **Founding Partner waitlist:** until subscriptions open (when the waitlist closes) and you decide whether to subscribe to a paid plan. If you don't continue, we delete the waitlist data within 6 months at most.
 - **Account and projects:** for as long as you have an account. When you delete the account from the app, the data disappears at once from the live database; backups expire within 30 days at most.
 - **Problem reports:** the ClickUp task (including your email and the technical context) is kept as long as it's useful for diagnosis, 24 months at most; you can have it deleted by writing to us. Deleting your account doesn't automatically remove the ClickUp tasks.
 - **Invoices** (when they exist): for as long as tax law requires, typically 10 years. Paddle, as merchant of record, issues invoices to the buyer.

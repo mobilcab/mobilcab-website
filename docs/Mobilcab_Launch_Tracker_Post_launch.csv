@@ -7,14 +7,14 @@ Post · Phase 1 (M1–3),Product,Open app accounts for beta / FP cohort,Todo,APP
 Post · Phase 1 (M1–3),Product,In-app activation tracking (first cutlist/export),Todo,Marketing Plan 4a/9; not evidenced as product analytics event yet,Define activation event + dashboard,Dev
 Post · Phase 1 (M1–3),Product,"First-session feedback ask (email, not modal)",Todo,Marketing Plan 4a,Trigger after first session,Dev
 Post · Phase 1 (M1–3),Growth,Referral reward after launch: 1 free month both sides,Todo,DECISIONS: pre-launch = access rewards; post-launch free month in app,Build in CAD after paid plans exist,Dev
-Post · Phase 1 (M1–3),Monetization,Paid Basic checkout (FP discount) live,Todo,Blocked by SRL + MoR; website Stripe note still “not built”,Implement after interest gate,Dev
+Post · Phase 1 (M1–3),Monetization,Paid Debitare checkout (FP 20%/6mo) live,Todo,Blocked by SRL + MoR; DECISIONS ladder Gratuit→Debitare→…,Implement after billing launch; FP waitlist closes then,Dev
 Post · Phase 1 (M1–3),Content,Case studies 2–3 from real workshops,Todo,testimonials.ts empty,Write with permission; publish on site + Page,Founder
 Post · Phase 1 (M1–3),Retention,Monthly changelog to paying users,Todo,Marketing Plan 6a,Start once first paid users exist,Founder
 Post · Phase 1 (M1–3),Retention,Inactivity outreach (14+ days) + win-back,Todo,Marketing Plan 6a,Automate lightly or do manually at small N,Founder
 Post · Phase 1 (M1–3),Ads,€5–10/day FB/Google only after first profit,Todo,Marketing Plan 5.2; Self-Funding Ad Budget Checker in companion model,Do not spend personal money; wait for profit signal,Founder
 Post · Phase 2 (M4–9),Segments,Expand messaging to designers / manufacturers,Todo,Marketing Plan 7,After furniture-maker case studies exist,Founder
-Post · Phase 2 (M4–9),Product,CNC path (M3+) for paid higher tiers,Todo,DECISIONS: CNC not in Basic; cad europa Q3 CNC milestones,Ship when postprocessor ready; update roadmap/pricing,Dev
-Post · Phase 2 (M4–9),Product,Recurring AI assistant offer,Todo,DECISIONS open Q1; Basic excludes recurring AI,Separate offer when ready; don’t bundle into Basic,Dev
+Post · Phase 2 (M4–9),Product,CNC plan (Atelier + export CNC),Todo,DECISIONS plan ladder; M3 stage,Ship when postprocessor ready; update roadmap/pricing,Dev
+Post · Phase 2 (M4–9),Product,AI plan (Producție + AI + randări),Todo,DECISIONS: AI plan last; zero AI on Gratuit,Separate offer when ready; don’t bundle into Debitare,Dev
 Post · Phase 2 (M4–9),Partnerships,Hardware / CNC distributor co-marketing,Todo,Marketing Plan 7,Only with traction to show,Founder
 Post · Phase 2 (M4–9),Ops,Hire light freelance help (video / social),Todo,Marketing Plan 7 — funded by revenue,Outsource only after MRR covers it,Founder
 Post · Phase 3 (M10+),Expansion,EU localization beyond RO/EN,Todo,Marketing Plan 8; UI already bilingual,Pick next language after RO traction,Founder

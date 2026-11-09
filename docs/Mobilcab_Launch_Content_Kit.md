@@ -1,6 +1,10 @@
 # Mobilcab — Launch Content Kit
 ### Landing Page Copy · Demo Video Scripts · Facebook Launch Post · Waitlist Email
 
+> **Superseded for website copy (2026-11-09).** Use live i18n + [`docs/DECISIONS.md`](./DECISIONS.md).
+> Do not paste kitchen/bedroom, tablet/phone, or “cutlist for CNC in one click” as current product
+> claims. CNC is a later stage/plan.
+
 ---
 
 ## 1. Landing Page Copy

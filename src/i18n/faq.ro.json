@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Întrebări frecvente — Mobilcab",
-    "description": "Răspunsuri directe despre Mobilcab: instalare, prețuri, planul Basic și etapele produsului."
+    "description": "Răspunsuri directe despre Mobilcab: instalare, prețuri, planurile Gratuit și Debitare, și etapele produsului."
   },
   "hero": {
     "label": "Întrebări frecvente",
@@ -24,15 +24,15 @@
       "q": "Pot exporta direct pentru CNC-ul meu?",
       "a": [
         "Lista de debitare (dimensiuni, cantități, materiale) e baza pentru atelier.",
-        "Exportul dedicat pentru mașina CNC vine pe pagina Plan, după nesting stabil. Nu e inclus în planul Basic de la lansarea planurilor plătite."
+        "Exportul dedicat pentru mașină vine pe etapa Export CNC pe Plan și pe planul CNC. Nu e inclus în planul Debitare de la deschiderea abonamentelor."
       ]
     },
     {
       "id": "m2",
       "q": "Ce înseamnă M1–M5?",
       "a": [
-        "Sunt etapele de pe pagina Plan, în ordine. M1 = Debitare (proiectare 3D + listă de piese — baza de acum, gratuit). M2 = nesting, etichete și ofertă — atunci deschidem abonamentele (Partener Fondator: 20% off). M3 = export CNC. M4 = echipă și partajare. M5 = AI + randări.",
-        "Pe restul site-ului vorbim despre abonamente și lansarea plătită, nu despre coduri M."
+        "Sunt etapele de pe pagina Plan, în ordine. M1 = Debitare (proiectare 3D + listă — baza de acum pe Gratuit). M2 = nesting, etichete și ofertă (planul Atelier, când îl livrăm). M3 = export CNC. M4 = echipă și partajare. M5 = AI + randări.",
+        "Abonamentele pot începe cu planul Debitare (plătit) înainte ca nesting-ul să fie gata. Pe restul site-ului vorbim despre abonamente, nu despre coduri M."
       ],
       "link": "roadmap"
     },
@@ -40,24 +40,24 @@
       "id": "pret",
       "q": "Cât costă?",
       "a": [
-        "Acum aplicația e gratuită, cu proiectare și debitare complete (fără limite de export), și nu încasăm abonamente. Dacă vrei 20% discount pe planul Basic, te înscrii pe lista Partener Fondator.",
-        "Când deschidem abonamentele (planul Basic: proiectare, debitare, nesting, etichete, ofertă), pe Gratuit apar 3 descărcări pe cont; Partenerii Fondatori primesc 20% off prețul listă (6 luni de la prima plată). Cine se abonează după, fără loc pe listă, plătește prețul întreg. Nu ești obligat să plătești dacă nu vrei. Sumele listă le anunțăm la lansarea plătită."
+        "Acum: Planul Gratuit = Debitare completă, fără limită de export. Nu încasăm. Pentru 20% discount pe planurile plătite, te înscrii pe lista Partener Fondator (se închide când deschidem plata).",
+        "La billing: pe Gratuit apar 3 descărcări pe cont; planul Debitare (plătit) are exporturi nelimitate. Partenerii Fondatori de pe listă: 20% off, 6 luni de la prima plată, pe planurile plătite livrate în fereastră. Cine se abonează după, fără loc pe listă, plătește prețul listă. Sumele le anunțăm atunci."
       ],
       "link": "foundingPartner"
     },
     {
       "id": "planuri",
-      "q": "Prin ce diferă planul Gratuit de planul Basic?",
+      "q": "Prin ce diferă planul Gratuit de planul Debitare?",
       "a": [
-        "Acum: planul Gratuit e full pe M1 — proiectare 3D, listă de debitare, exporturi și salvare în cloud, fără limite de descărcare.",
-        "Când deschidem abonamentele, pe Gratuit apar 3 descărcări pe cont. Planul Basic e planul de atelier: proiectare, debitare, nesting, etichete și ofertă, cu exporturi nelimitate. Parteneri Fondatori de pe listă: 20% off, 6 luni; ulterior: preț listă."
+        "Acum există doar Gratuit: Debitare full (3D, listă, cloud), fără limite de descărcare.",
+        "Când deschidem abonamentele: Gratuit rămâne Debitare cu 3 descărcări pe cont; Debitare (plătit) e același produs cu exporturi nelimitate. Urmează Atelier, CNC, Producție, AI — fiecare adaugă ce e pe Plan. Parteneri Fondatori: 20% / 6 luni; lista se închide la billing."
       ],
       "tiers": true,
-      "after": ["Nu încasăm până la abonamentele (planul Basic). Prețurile listă se confirmă atunci."]
+      "after": ["Nu încasăm până deschidem planul Debitare plătit. Prețurile listă se confirmă atunci. Planurile mai mari apar pe Prețuri ca «în curând» până le livrăm."]
     }
   ],
   "tiers": {
-    "names": { "free": "Planul Gratuit", "basic": "Planul Basic" },
+    "names": { "free": "Planul Gratuit", "debitare": "Planul Debitare" },
     "perMonth": "{price} RON/lună",
     "free": "0 RON",
     "fpDiscount": "−{percent}% PF",

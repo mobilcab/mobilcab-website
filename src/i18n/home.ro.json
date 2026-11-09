@@ -31,7 +31,7 @@
       },
       {
         "title": "Începi gratuit",
-        "body": "Folosești aplicația fără abonament. Dacă vrei discount pe planul Basic când deschidem abonamentele, te înscrii pe lista Partener Fondator — fără plată acum."
+        "body": "Folosești aplicația fără abonament pe Debitare. Dacă vrei 20% pe planurile plătite când deschidem plata, te înscrii pe lista Partener Fondator — lista se închide la billing."
       },
       {
         "title": "Cutlist gata de atelier",
@@ -55,7 +55,7 @@
     "offerLabel": "Partener Fondator",
     "offerPrice": "−20% când deschidem abonamentele",
     "offerDetail": "Te înscrii gratuit în program. Când trecem pe planuri plătite, ai 20% din prețul întreg, 6 luni de la prima plată. Cine vine după plătește prețul întreg.",
-    "aiNote": "Planul Basic: proiectare, debitare, nesting, etichete și ofertă.",
+    "aiNote": "La billing: Gratuit (3 exporturi) + Debitare plătit. Apoi Atelier, CNC, Producție, AI.",
     "free": "Aplicația e gratuită până deschidem plata.",
     "cancel": "Înscrierea nu te obligă să plătești.",
     "link": "Vezi toate planurile"
@@ -66,7 +66,7 @@
       { "q": "Trebuie să instalez ceva?", "a": "Nu, Mobilcab rulează direct din browser." },
       { "q": "Funcționează pe tabletă sau telefon?", "a": "Momentan nu — e gândit pentru laptop. Tabletă și telefon vin mai târziu." },
       { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Lista de debitare e baza; exportul CNC vine într-o etapă ulterioară pe roadmap." },
-      { "q": "Cât costă?", "a": "Acum: aplicația e gratuită, cu proiectare și debitare complete. Te poți înscrie pe lista Partener Fondator pentru 20% off pe planul Basic când deschidem abonamentele. Cine se abonează după plătește prețul listă." }
+      { "q": "Cât costă?", "a": "Acum: Planul Gratuit = Debitare, fără limită de export. Partener Fondator: 20% / 6 luni pe planurile plătite (lista se închide la billing). La billing: Gratuit cu 3 exporturi + Debitare plătit; apoi Atelier, CNC, Producție, AI." }
     ],
     "link": "Toate întrebările"
   },

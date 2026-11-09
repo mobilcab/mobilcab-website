@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "The Founding Partner program — Mobilcab",
-    "description": "Join the Founding Partner waitlist: when we open subscriptions (the paid Basic plan: design, cut lists, nesting, labels, quotes), you get 20% off. Anyone who subscribes later pays full list price."
+    "description": "Join the Founding Partner waitlist before billing: 20% off paid plans (starting with Cut list) for 6 months from first payment. The waitlist closes when subscriptions open."
   },
   "hero": {
     "label": "The Founding Partner program",
     "title": "Help shape the tool Romanian furniture makers actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join the Founding Partner waitlist for free; when we open subscriptions (the paid Basic plan: nesting, labels, quotes), people on that list get 20% off. Anyone who subscribes later pays full list price.",
+    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join the waitlist free now; when we open subscriptions (first paid plan: Cut list), people on the list get 20% off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list.",
     "cta": "Join the Founding Partner waitlist"
   },
   "counter": {
@@ -18,11 +18,11 @@
     "items": [
       {
         "title": "Free to join",
-        "body": "You pay nothing to sign up. You're not obliged to buy when we open subscriptions."
+        "body": "You pay nothing to sign up. You're not obliged to buy when we open subscriptions. The waitlist closes at billing."
       },
       {
         "title": "20% off your subscription",
-        "body": "When we move to paid plans, you get 20% off list price for 6 months from first payment. Anyone who joins later, without a waitlist place, pays full list."
+        "body": "When we move to paid plans, you get 20% off list for 6 months from first payment — on Cut list and on later plans that ship in that window (Atelier, CNC…). Anyone who joins later, without a waitlist place, pays full list."
       },
       {
         "title": "Your ideas on the development list",
@@ -44,9 +44,9 @@
   "next": {
     "title": "What happens after you join",
     "steps": [
-      "You're on the Founding Partner waitlist — free, in your name.",
-      "You use the app like everyone else — full design and cut list, with no export limits; we build nesting, labels and quotes in parallel.",
-      "When we open subscriptions (the paid Basic plan), we contact you with list price and your 20% discount. Anyone who subscribes later, without a waitlist place, pays full list."
+      "You're on the Founding Partner waitlist — free, in your name (only until billing opens).",
+      "You use the app like everyone else — full Cut list on Free, with no export limits.",
+      "When we open subscriptions, we contact you with list price and your 20% discount. The Founding Partner waitlist closes. Anyone who subscribes later, without a waitlist place, pays full list."
     ]
   },
   "form": {
@@ -62,8 +62,8 @@
   },
   "messages": {
     "sending": "Sending…",
-    "reserved": "You're on the Founding Partner waitlist. We'll contact you personally when we open subscriptions (the paid Basic plan).",
-    "already": "You're already on the Founding Partner waitlist. We'll contact you personally when we open subscriptions (the paid Basic plan).",
+    "reserved": "You're on the Founding Partner waitlist. We'll contact you personally when we open subscriptions.",
+    "already": "You're already on the Founding Partner waitlist. We'll contact you personally when we open subscriptions.",
     "full": "Founding Partner sign-ups are closed for now. You can still use the app for free; a later subscription is at list price.",
     "invalidName": "Enter your name (at least 2 letters).",
     "invalidEmail": "Enter a valid email address.",

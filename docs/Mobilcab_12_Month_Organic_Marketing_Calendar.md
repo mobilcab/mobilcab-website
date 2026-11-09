@@ -1,6 +1,10 @@
 # Mobilcab — 12-Month Organic Marketing Calendar
 ### Week by week, platform by platform: October 2026 → October 2027
 
+> **Commercial copy:** prefer [`docs/DECISIONS.md`](./DECISIONS.md) (2026-11-09) over older
+> calendar rows that say Basic / kitchen-bedroom / tablet. Blog posts are published; list RON
+> prices stay unpublished until billing.
+
 Built from `Mobilcab_Marketing_Plan.md` (Sections 2, 3c, 5, 6a, 7, 9, 11), the
 Launch Content Kit, and `docs/DECISIONS.md`. Organic only: no paid ads (the plan
 starts paid tests only once monthly profit reaches about €150–210, Marketing

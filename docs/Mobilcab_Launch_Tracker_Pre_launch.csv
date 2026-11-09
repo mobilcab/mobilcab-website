@@ -1,38 +1,37 @@
 Phase,Area,Task,Status,Evidence (repo / decision),Next action,Owner
 Pre · Month -6,Website,Coming-soon bilingual + waitlist (email capture),Done,"website: ComingSoonPage, WaitlistForm, /api/subscribe + /api/confirm; README Phase 1",Confirm production Brevo lists + domain live,Founder
 Pre · Month -6,Website,Double opt-in confirmation + confirmed page,Done,"website: /api/confirm, ConfirmedPage, emails/confirm-*.html",Smoke-test one real signup on production,Founder
-Pre · Month -6,Website,Roadmap page public,Done,website: src/site.ts roadmap: true; RoadmapPage + i18n,Keep stages honest as CAD surface changes,Founder
-Pre · Month -6,Website,Temporary privacy notice at live /privacy,Done,website: PrivacyNotice + hasStandIn(privacy); full policy still unpublished,Lawyer-approve full Privacy before referral launch,Founder
+Pre · Month -6,Website,Roadmap page public,Done,website: src/site.ts roadmap: true; stages M1–M5 + plan ladder in i18n,Keep stages honest as CAD surface changes,Founder
+Pre · Month -6,Website,Temporary privacy notice at live /privacy,Done,website: PrivacyNotice stand-in when privacy unpublished; full Privacy published (privacy: true),Keep Terms/Privacy aligned with DECISIONS,Founder
 Pre · Month -6,Website,Analytics wired (Plausible + Vercel Analytics),Done,website: Base.astro Plausible + @vercel/analytics; event hooks on forms/CTA,Set PUBLIC_PLAUSIBLE_DOMAIN in prod if not already,Founder
-Pre · Month -6,Website,"Deploy stack (GitHub → Vercel, domain, Brevo)",Partial,website: code + README assume Vercel/Brevo; cannot prove prod from git alone,Verify mobilcab.com serves coming-soon + waitlist works,Founder
-Pre · Month -6,Website,Email templates (waitlist / confirm / FP),Done,website: emails/*.html + scripts/build-emails.mjs + EMAIL_SETTINGS,Paste into Brevo; fill companyLine/founderName if still placeholders,Founder
-Pre · Month -6,Legal,Privacy + Terms drafts in repo,Partial,website: src/content/legal/* + docs/*-draft.md; site.ts privacy/terms: false,Send to lawyer (calendar week 2); publish after approval,Founder
-Pre · Month -6,Legal / Finance,SRL + Stripe/Paddle + e-Factura,Todo,DECISIONS.md: SRL only after interest gate; CAD docs/lansare-produs research only,Wait for interest gate (≥30 FP or ≥10 pay-intent replies),Founder
+Pre · Month -6,Website,"Deploy stack (GitHub → Vercel, domain, Brevo)",Partial,website: code + README assume Vercel/Brevo; cannot prove prod from git alone,Verify mobilcab.com serves current published pages,Founder
+Pre · Month -6,Website,Email templates (waitlist / confirm / FP),Done,website: emails/*.html + scripts/build-emails.mjs (Gratuit/Debitare/FP close at billing),Paste into Brevo if templates changed,Founder
+Pre · Month -6,Legal,Privacy + Terms in repo and published,Done,website: src/content/legal/*; site.ts privacy/terms: true (2026-11-09 model),Lawyer review when needed; update at SRL,Founder
+Pre · Month -6,Legal / Finance,SRL + Paddle + e-Factura,Todo,DECISIONS.md: open billing by client count then; MoR = Paddle,Open SRL when launching billing; then MoR + app checkout,Founder
 Pre · Month -6,Social,Create Facebook Page (profile only),N/A (manual),Not in either repo,"Create Page: name, logo, cover, one-liner, link",Founder
-Pre · Month -6,Social,Create YouTube channel (profile only),N/A (manual),Not in either repo; demoVideos.ts all youtubeId null,Create channel; leave empty until month -5,Founder
+Pre · Month -6,Social,Create YouTube channel (profile only),N/A (manual),Not in either repo; demoVideos.ts all youtubeId null,Create channel; leave empty until clips ready,Founder
 Pre · Month -6,Community,List + join 5–10 producători de mobilă Facebook groups; observe,N/A (manual),Calendar Tasks week 1–3; no repo evidence,"Join, read rules, start question log",Founder
-Pre · Product,CAD · M1+M2,Live surface = design + workshop docs (Basic scope),Done,cad: environment.prod.ts productSurface: m1m2; DECISIONS Basic = M1+M2,Keep CNC (M3+) off public Basic messaging,Dev
-Pre · Product,CAD · shop path,Cutlist / nesting / labels / quote path in app,Partial,cad: nesting/cutlist/labels UI + europa Q2 plans; Fineas smoke still open in task.md notes,Confirm Fineas can invoice from one real project (Q1 gate),Dev
-Pre · Product,CAD · onboarding,Tutorials E00–E16 + user guide,Done,cad: docs/tutorials/E00–E16 + docs/ghid-utilizator.md,Record VO / publish shorts when needed for marketing,Dev
-Pre · Product,CAD · billing,Paid checkout live in production,Todo,cad: billingCheckoutEnabled false in prod; abonamente-paddle-sandbox plan exists,After SRL: implement MoR webhook + flip flag,Dev
-Pre · Product,CAD · plans UI,Plan settings / Free vs Export overview,Partial,cad: plan_settings migration + Planuri panel work in task.md (admin),Align plan names/limits with website pricing.ts + DECISIONS,Dev
-Pre · Month -5,Community,Answer questions in groups (no promo),N/A (manual),Marketing Plan 3c; calendar weeks 5–8,3–5 real answers/week; update question log,Founder
-Pre · Month -5,Content,Light educational posts / first YouTube tip,N/A (manual),No content assets in website public/ beyond OG,First FB tip + 1 short YT tip,Founder
-Pre · Month -5,Sales,Identify 2–3 anchor-customer candidates,N/A (manual),Not in repo,"Build rapport, no pitch yet",Founder
-Pre · Month -5,Validation,Ask 5–10 furniture makers about tool/price (open Q1 AI free),N/A (manual),DECISIONS open question 1,Run short interviews before fixing free-plan AI,Founder
-Pre · Month -4,Website,Full Home page built (still unpublished),Done,website: HomePage + preview path; home: false,Publish when Privacy approved + ready for soft launch,Founder
-Pre · Month -4,Website,Referral program code ready,Partial,website: referral APIs + REFERRAL_PROGRAM=false (needs published Privacy),Lawyer Privacy → publish privacy → REFERRAL_PROGRAM=true → deploy,Founder
-Pre · Month -4,Website,Publish Home + Privacy + turn on referrals,Todo,site.ts home/privacy false; config REFERRAL_PROGRAM false,Calendar Website steps week 13,Founder
+Pre · Product,CAD · Debitare,Live surface = design + cutlist (Gratuit full until billing),Done,DECISIONS 2026-11-09; website pricing Gratuit + Debitare (FP path),Keep nesting/CNC off as “available now”,Dev
+Pre · Product,CAD · shop path,Cutlist / nesting / labels / quote path in app,Partial,cad: cutlist live; nesting/labels later (Atelier),Confirm Fineas path on real projects,Dev
+Pre · Product,CAD · onboarding,Tutorials + user guide,Done,cad: docs/tutorials + ghid,Record VO / shorts when needed,Dev
+Pre · Product,CAD · billing,Paid checkout live in production,Todo,billing off until SRL + MoR,Implement after billing launch decision,Dev
+Pre · Product,CAD · plans UI,Plan ladder Gratuit → Debitare → Atelier → CNC → Producție → AI,Partial,website pricing.ts + DECISIONS; CAD plan settings TBD,Align CAD plan names with website,Dev
+Pre · Month -5,Community,Answer questions in groups (no promo),N/A (manual),Marketing Plan 3c,3–5 real answers/week,Founder
+Pre · Month -5,Content,Light educational posts / first YouTube tip,N/A (manual),—,First FB tip + 1 short YT tip,Founder
+Pre · Month -5,Sales,Identify 2–3 anchor-customer candidates,N/A (manual),—,"Build rapport, no pitch yet",Founder
+Pre · Month -4,Website,Full Home page built (still unpublished),Done,website: HomePage + preview; home: false,Publish when ready for soft launch,Founder
+Pre · Month -4,Website,Referral program code ready,Partial,REFERRAL_PROGRAM=false until billing (DECISIONS),Turn on after billing + policy,Founder
+Pre · Month -4,Website,Publish Home + FP page,Todo,site.ts home/foundingPartner false,Flip when go-live checklist done,Founder
 Pre · Month -4,Content,Soft mentions + WIP teasers on Page,N/A (manual),—,Behind-the-scenes screenshots; no hard sell,Founder
-Pre · Month -4,Email,Monthly build log to confirmed waitlist,Todo,Brevo list exists in setup docs; no campaign templates beyond transactional,Write first 150–250 word build log,Founder
-Pre · Month -3,Website,Founding Partner page + reservation API,Done,"website: FoundingPartnerPage/Form, /api/founding-partner; foundingPartner: false",Set BREVO_FP_LIST_ID; publish when opening reservations,Founder
-Pre · Month -3,Website,Publish Founding Partner page,Todo,"site.ts foundingPartner: false; DECISIONS open Q2–Q3, Q6–Q7",Decide soft scarcity copy; then foundingPartner: true,Founder
-Pre · Month -3,Product,Private beta (15–20) + concierge onboarding,Todo,Blocked on product ready for real projects (Deadlines week 14),Invite warm waitlist + anchors only when Fineas path is solid,Founder
-Pre · Month -3,Marketing,Collect testimonials with permission,Todo,website: testimonials.ts empty arrays (section hidden),Add real quotes only after written permission,Founder
-Pre · Month -2,Website,3 SEO blog posts drafted,Partial,website: 3 posts under src/content/blog/ro/; each published: false; blog: false,Verify [VERIFICĂ] competitor facts; publish blog + first post,Founder
-Pre · Month -2,Content,Record 3 demo videos (design / AI / export),Todo,website: demoVideos.ts all null; Demo page unpublished,Record on real beta projects; paste YouTube IDs,Founder
-Pre · Month -2,Pricing,Finalize paid Basic list + FP discount (RON),Todo,DECISIONS: amounts TBD; pricing.ts / i18n say indicative,Lock numbers only after beta willingness-to-pay signal,Founder
-Pre · Month -1,Website,Publish Demo + FAQ + Pricing + Terms,Todo,site.ts all false except roadmap; FAQ/pricing/terms built in preview,Flip switches per Website steps weeks 20–23,Founder
-Pre · Month -1,Legal / Finance,Interest gate → SRL → payments,Todo,DECISIONS interest gate; CAD lansare-produs + Paddle plan,Open SRL when gate hits; then MoR + site payment path,Founder
-Pre · Month -1,Marketing,Launch-day founder-story post + FAQ capacity,Todo,Launch Content Kit has copy drafts,Prep post + support hours for launch week,Founder
+Pre · Month -4,Email,Monthly build log to confirmed waitlist,Todo,Brevo newsletter list,Write first 150–250 word build log,Founder
+Pre · Month -3,Website,Founding Partner page + API,Done,FoundingPartnerPage/Form; foundingPartner: false,Publish when opening FP; FP closes at billing,Founder
+Pre · Month -3,Website,Publish Founding Partner page,Todo,site.ts foundingPartner: false,foundingPartner: true after Privacy already true,Founder
+Pre · Month -3,Product,Private beta / early users + feedback,Todo,FP feedback + demote 90d in DECISIONS/Terms,Invite when Fineas path solid,Founder
+Pre · Month -3,Marketing,Collect testimonials with permission,Todo,testimonials.ts empty,Add real quotes only with permission,Founder
+Pre · Month -2,Website,SEO blog posts published,Done,"blog: true; RO posts published (comparatie, corp-600, how-tos, program gratuit, polyboard, cutlist, lansare); EN launch published",Keep facts verified; no CNC-as-now claims,Founder
+Pre · Month -2,Content,Record 3 demo videos (design / cutlist / save),Todo,demoVideos.ts all null; Demo unpublished,Record on real projects; paste YouTube IDs,Founder
+Pre · Month -2,Pricing,"No list RON until billing; page shows Gratuit 0 + Debitare FP %",Done,pricing.ts monthly null on Debitare; i18n −20% PF; pricing: false until publish,Lock list RON only at billing; publish Pricing when ready,Founder
+Pre · Month -1,Website,Publish Demo + FAQ + Pricing,Todo,demo/faq/pricing false in site.ts; terms/privacy/blog/roadmap true,Flip per go-live in DECISIONS,Founder
+Pre · Month -1,Legal / Finance,SRL → payments,Todo,DECISIONS billing by client count,Open SRL then MoR + app checkout,Founder
+Pre · Month -1,Marketing,Launch-day founder-story post + FAQ capacity,Todo,Launch Content Kit (superseded — use live copy),Prep post + support hours,Founder
 Pre · Launch,Website,productPublic = true (SoftwareApplication schema),Todo,website: productPublic false,Only when app accounts are actually public,Founder

@@ -1,8 +1,8 @@
-*Last updated: 28 October 2026*
+*Last updated: 9 November 2026*
 
-This policy applies **only once paid plans are sold through Paddle**. Access by access code is free; nothing is refunded for it, because nothing is charged.
+This policy applies **only once paid plans are sold through Paddle**. The **Free plan** (Cut list, with no charge) does not create refunds: nothing is paid, so nothing is returned.
 
-Prices, plan names and any offers at billing launch appear on the **Pricing** page and at checkout, not in this text.
+List prices, plan names and offers at billing launch appear on the **Pricing** page and at checkout, not in this text. Until then, Pricing may show Free (0 RON) and the Founding Partner path (percent off), without list RON amounts for paid plans.
 
 ## 1. Who issues the refund
 
@@ -33,7 +33,7 @@ We don't refund, outside the legal rights above, where:
 
 - there is evidence of fraud, refund abuse or other manipulative behaviour;
 - the payment method no longer allows a refund (card or PayPal limits, typically after 120–179 days);
-- the request is about free access by access code.
+- the request is about the **Free plan** or any unpaid access (there is no amount to return).
 
 If you receive a refund, paid access to that product ends.
 

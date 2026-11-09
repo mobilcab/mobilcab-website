@@ -1,6 +1,12 @@
 # Mobilcab — Go-to-Market & Marketing Plan
 ### Cloud-based Cabinet Design CAD | Romania Launch → European Expansion
 
+> **Superseded for product/pricing/FP (2026-11-09).** Live commercial rules are only in
+> [`docs/DECISIONS.md`](./DECISIONS.md): laptop-only for now; plan ladder
+> **Gratuit → Debitare → Atelier → CNC → Producție → AI**; FP 20%/6 months, closes at billing;
+> no list RON until billing; CNC/AI not in day-one paid Debitare. Do not use this file’s
+> Basic/Starter/Pro/Studio, tablet/phone, or $10 AI-tier pricing as website copy.
+
 ---
 
 ## 1. Situation Summary

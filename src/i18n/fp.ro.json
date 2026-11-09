@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Programul Partener Fondator — Mobilcab",
-    "description": "Înscrie-te pe lista Partener Fondator: când deschidem abonamentele (planul Basic: proiectare, debitare, nesting, etichete, ofertă), beneficiezi de 20% discount. Cine vine după plătește prețul listă."
+    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% off pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide."
   },
   "hero": {
     "label": "Programul Partener Fondator",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit pe lista Partener Fondator; când deschidem abonamentele (planul Basic: nesting, etichete, ofertă), cei de pe listă primesc 20% discount. Cine se abonează mai târziu plătește prețul întreg.",
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit pe listă acum; când deschidem abonamentele (primul plan plătit: Debitare), cei de pe listă primesc 20% off prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg.",
     "cta": "Înscrie-te pe lista Partener Fondator"
   },
   "counter": {
@@ -18,11 +18,11 @@
     "items": [
       {
         "title": "Înscriere gratuită",
-        "body": "Nu plătești nimic ca să te înscrii. Nu ești obligat să cumperi când deschidem abonamentele."
+        "body": "Nu plătești nimic ca să te înscrii. Nu ești obligat să cumperi când deschidem abonamentele. Lista se închide la billing."
       },
       {
         "title": "20% off la abonament",
-        "body": "Când trecem pe planuri plătite, ai 20% din prețul listă, 6 luni de la prima plată. Cine vine după, fără loc pe listă, plătește prețul întreg."
+        "body": "Când trecem pe planuri plătite, ai 20% din prețul listă, 6 luni de la prima plată — pe Debitare și pe planurile următoare livrate în fereastră (Atelier, CNC…). Cine vine după, fără loc pe listă, plătește prețul întreg."
       },
       {
         "title": "Sugestiile tale pe lista de dezvoltări",
@@ -44,9 +44,9 @@
   "next": {
     "title": "Ce urmează după înscriere",
     "steps": [
-      "Ești pe lista Partener Fondator — gratuit, pe numele tău.",
-      "Folosești aplicația ca toată lumea — full pe proiectare și debitare, fără limite de export; construim nesting, etichete și ofertă în paralel.",
-      "Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
+      "Ești pe lista Partener Fondator — gratuit, pe numele tău (doar până deschidem plata).",
+      "Folosești aplicația ca toată lumea — Debitare full, fără limite de export pe Gratuit.",
+      "Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%. Lista Partener Fondator se închide. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
     ]
   },
   "form": {
