@@ -1,4 +1,4 @@
-*Ultima actualizare: 28 octombrie 2026*
+*Ultima actualizare: 9 noiembrie 2026*
 
 ## 1. Cine suntem și ce acoperă acești termeni
 
@@ -8,7 +8,7 @@ Acești termeni se aplică folosirii aplicației Mobilcab și a site-ului mobilc
 
 ## 2. Serviciul
 
-Mobilcab este un program de proiectare a mobilierului care rulează în browser, pe laptop, tabletă sau telefon. Îți permite să proiectezi mobilier și să generezi cutlist-ul și fișiere de export pentru CNC. Aplicația nu include un asistent AI.
+Mobilcab este un program de proiectare a mobilierului care rulează în browser, pe **laptop**. Îți permite să proiectezi mobilier și să generezi lista de debitare (cutlist) și exporturi (de exemplu CSV sau proiect local). Exportul dedicat pentru mașini CNC este anunțat pe [Plan](/ro/roadmap/) ca etapă ulterioară, nu ca funcție disponibilă acum. Optimizarea pentru tabletă și telefon vine mai târziu. Aplicația nu include un asistent AI.
 
 Serviciul este în dezvoltare activă: adăugăm, schimbăm și, uneori, eliminăm funcții. Ne rezervăm dreptul de a face asta fără notificare prealabilă pentru schimbări minore; pentru schimbări importante te anunțăm din timp.
 
@@ -27,7 +27,7 @@ Oferim un plan gratuit și, când vor fi activate, planuri plătite. Planurile d
 - Prețurile sunt în lei (RON). Taxele aplicabile sunt calculate și colectate de Paddle, ca vânzător oficial, în funcție de locul tău.
 - Putem modifica prețurile pentru perioadele de abonament viitoare. Te anunțăm prin email cu cel puțin 30 de zile înainte ca un preț nou să se aplice abonamentului tău.
 
-Până la activarea planurilor plătite, accesul prin **cod de acces** este gratuit, în schimbul feedback-ului dat aplicației.
+Până la activarea planurilor plătite, aplicația este disponibilă pe **Planul Gratuit** (Debitare: proiectare 3D și listă de debitare), fără limită de export.
 
 ## 5. Plata, reînnoirea și anularea
 
@@ -40,13 +40,16 @@ Când există un plan plătit, **procesul de comandă este derulat de revânzăt
 
 **Consumatori (OUG 34/2014).** Dacă ești consumator, ai 14 zile să te retragi din contractul de la distanță, de la data comenzii sau, pentru un abonament, de la prima plată. Dreptul nu se aplică serviciului digital început, cu acordul tău expres, înainte de expirarea celor 14 zile. Cererea se face prin Paddle sau scriindu-ne la adresa din secțiunea 17.
 
-## 6. Programul Founding Partner
+## 6. Programul Partener Fondator
 
-- Programul este limitat la primii 15 utilizatori pe lista Founding Partner, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
-- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Plata începe doar când deschidem planul Basic plătit odată cu [M2](/ro/roadmap/#m2) (etapa 2: nesting, etichete, ofertă) și alegi să te abonezi. Accesul prin cod, când e oferit, e în schimbul feedback-ului pe aplicație — nu un cadou necondiționat.
-- La activarea planului plătit, Founding Partners de pe listă primesc o reducere de 20% din prețul listă al planului Basic ([M1](/ro/roadmap/#m1)+[M2](/ro/roadmap/#m2)), valabilă 12 luni de la activare. Cine se abonează după, fără loc pe listă, plătește prețul listă.
-- După cele 12 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
-- Beneficiile Founding Partner sunt personale și nu pot fi transferate.
+- Programul este limitat la primii 15 utilizatori pe lista Partener Fondator, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
+- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Poți intra pe listă **doar înainte** să deschidem abonamentele. **Când deschidem plata, lista Partener Fondator se închide** — nu mai acceptăm înscrieri noi.
+- Primul plan plătit este **Debitare** (același produs ca pe Gratuit, cu exporturi nelimitate). Planurile ulterioare (Atelier, CNC, Producție, AI) apar pe Prețuri când le livrăm — vezi [Plan](/ro/roadmap/) și [Prețuri](/ro/pricing/).
+- Până deschidem abonamentele, aplicația e pe Planul Gratuit cu Debitare full (fără limită de export), pentru toată lumea — inclusiv Parteneri Fondatori. La deschiderea abonamentelor, pe Gratuit apar **3 descărcări pe cont**.
+- La activarea unui plan plătit, Partenerii Fondatori de pe listă primesc **20% din prețul listă**, **6 luni de la prima plată**, pe planurile plătite livrate în acea fereastră (începând cu Debitare). Cine se abonează după, fără loc pe listă, plătește prețul listă.
+- După cele 6 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
+- Așteptăm feedback rezonabil (de exemplu proiecte reale și răspunsuri scurte). Dacă un loc pe listă rămâne nefolosit (fără feedback), putem trimite un reminder la 60 de zile și elibera locul la **90 de zile**; proiectele rămân, iar contul revine la Planul Gratuit obișnuit.
+- Beneficiile Partener Fondator sunt personale și nu pot fi transferate.
 
 ## 7. Verifică rezultatele înainte de producție
 
@@ -68,7 +71,7 @@ Această secțiune e importantă: citește-o cu atenție.
 ## 9. Proiectele tale
 
 - Proiectele pe care le creezi îți aparțin.
-- Ne dai doar dreptul de a le stoca și prelucra cât e necesar ca să-ți oferim serviciul (de exemplu, ca să le salvăm, să le afișăm pe toate device-urile tale și să generăm exporturile).
+- Ne dai doar dreptul de a le stoca și prelucra cât e necesar ca să-ți oferim serviciul (de exemplu, ca să le salvăm în cloud, să le afișăm pe laptop în browser și să generăm exporturile).
 - Ne rezervăm dreptul de a folosi, în viitor, date de proiect **anonimizate și agregate** (nu brute) ca să dezvoltăm funcționalități de generare asistată de mobilier. Când această prelucrare va începe, vei putea să te opui din cont. Asta e un drept rezervat, nu o prelucrare activă azi.
 - Dacă introducem un asistent AI care trimite date de proiect unui furnizor extern, te informăm înainte, iar datele și furnizorul apar în Politica de confidențialitate.
 

@@ -3,7 +3,7 @@
 // hreflang alternates; blog posts are listed in their own language only.
 import type { APIRoute } from 'astro';
 import { languages, type Lang } from '../i18n';
-import { isPostPublic, postPath, posts } from '../lib/blog';
+import { isPostPublic, postPath, posts, translationOf } from '../lib/blog';
 import { hasStandIn, livePaths, published, type PageKey } from '../site';
 
 const escapeXml = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
@@ -27,11 +27,19 @@ export const GET: APIRoute = ({ site }) => {
 
   const postEntries = posts
     .filter(isPostPublic)
-    .map(
-      (post) =>
-        `  <url>\n    <loc>${abs(postPath(post))}</loc>\n    <lastmod>${post.date.toISOString().slice(0, 10)}</lastmod>\n  </url>`,
-    );
-
+    .map((post) => {
+      const twin = translationOf(post);
+      const alternates =
+        twin && isPostPublic(twin)
+          ? languages
+              .map((l: Lang) => {
+                const href = l === post.lang ? postPath(post) : postPath(twin);
+                return `    <xhtml:link rel="alternate" hreflang="${l}" href="${abs(href)}"/>`;
+              })
+              .join('\n')
+          : '';
+      return `  <url>\n    <loc>${abs(postPath(post))}</loc>\n    <lastmod>${post.date.toISOString().slice(0, 10)}</lastmod>${alternates ? `\n${alternates}` : ''}\n  </url>`;
+    });
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${[...pageEntries, ...postEntries].join('\n')}

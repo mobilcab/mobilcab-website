@@ -1,16 +1,16 @@
 {
   "meta": {
     "title": "Pricing — Mobilcab",
-    "description": "Now: free app + Founding Partner waitlist. At M2: the paid Basic plan with 20% off for FP; later, full list price."
+    "description": "Now: Free plan (Cut list, unlimited exports) + Founding Partner waitlist. At billing: Free with 3 exports + paid Cut list; Atelier, CNC, Production and AI follow later."
   },
   "hero": {
     "label": "Pricing",
-    "title": "Free now. 20% FP at M2. Then list price.",
-    "body": "Use the app for free. If you want 20% off the Basic plan when we ship M2, join the Founding Partner waitlist. Anyone who subscribes later, without a waitlist place, pays full list. We announce list amounts at paid launch."
+    "title": "Free on Cut list now. 20% Founding Partner when billing opens.",
+    "body": "Now: the Free plan includes 3D design and cut lists, with no export limits. When subscriptions open, Free gets 3 downloads per account, and the paid Cut list plan keeps unlimited exports. For 20% off paid plans, join the Founding Partner waitlist before billing — we close the list then. We announce list amounts at paid launch."
   },
   "callout": {
     "title": "New here?",
-    "body": "Founding Partner means a free waitlist sign-up now and 20% off the Basic plan when we open payment with M2 — with no obligation. Anyone who comes later pays list price.",
+    "body": "Founding Partner: free sign-up now, 20% off list for 6 months from first payment on paid plans that ship in that window. We close enrollment at billing. Anyone who joins later pays list price.",
     "link": "About the Founding Partner program"
   },
   "perMonth": "RON/month",
@@ -23,32 +23,32 @@
   "plans": {
     "free": {
       "name": "Free plan",
-      "for": "To use Mobilcab on your own projects until we open paid plans.",
+      "for": "Cut list now, with no subscription. At billing it stays Cut list with 3 downloads per account.",
       "features": [
         "3D design and cut list",
-        "First 10 cut-list rows on screen",
-        "3 downloads per account (CSV, exports, .mcab)",
-        "Unlimited cloud save",
-        "On laptop, tablet and phone"
+        "Exports without limits (until subscriptions open)",
+        "Cloud save",
+        "On a laptop, in the browser",
+        "At billing: 3 downloads per account on Free"
       ],
       "cta": "Use the app"
     },
-    "basic": {
-      "name": "Basic plan",
-      "for": "At paid launch with M2: design, cut lists, sheet nesting, labels and quotes. FP waitlist: 20% off; later: list price.",
+    "debitare": {
+      "name": "Cut list plan",
+      "for": "First paid plan when subscriptions open: the same Cut list product as Free, with unlimited exports. Founding Partners: 20% off; later: list price.",
       "features": [
-        "3D design and cut lists",
-        "Sheet nesting",
-        "Labels and client quotes",
-        "Unlimited exports"
+        "3D design and cut list",
+        "Unlimited exports",
+        "Cloud save",
+        "On a laptop, in the browser"
       ],
       "cta": "Become a Founding Partner"
     }
   },
   "more": {
     "title": "More detail",
-    "body": "How Free differs from Basic, what’s included at M2, and how Founding Partner works — on the FAQ page."
+    "body": "How Free differs from Cut list, what comes next (Atelier, CNC, Production, AI), and how Founding Partner works — on the FAQ page."
   },
-  "note": "We don't charge subscriptions until the paid Basic plan opens with M2. List prices are announced then. The FP discount (20%) is only for people on the Founding Partner waitlist.",
+  "note": "We don't charge until paid plans open. Until then: Free = full Cut list, no export limit. At billing: Free with 3 downloads + paid Cut list. Next, in order: Atelier (nesting, labels, quotes), CNC, Production, AI — shown as coming soon until each ships. Founding Partner closes at billing; 20% / 6 months is only for people on the waitlist.",
   "faqLink": "Questions about the plans"
 }

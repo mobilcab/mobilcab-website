@@ -1,54 +1,54 @@
 {
   "meta": {
     "title": "Prețuri — Mobilcab",
-    "description": "Acum: aplicație gratuită + listă Founding Partner. La M2: planul Basic plătit cu 20% discount pentru FP; ulterior, preț listă."
+    "description": "Acum: Planul Gratuit (Debitare, fără limită de export) + listă Partener Fondator. La billing: Gratuit cu 3 exporturi + planul Debitare plătit; Atelier, CNC, Producție și AI vin pe rând."
   },
   "hero": {
     "label": "Prețuri",
-    "title": "Gratuit acum. 20% FP la M2. Apoi preț listă.",
-    "body": "Folosești aplicația gratuit. Dacă vrei 20% discount pe planul Basic când dam drumul la M2, te înscrii pe lista Founding Partner. Cine se abonează după, fără loc pe listă, plătește prețul întreg. Sumele listă le anunțăm la lansarea plătită."
+    "title": "Gratuit acum pe Debitare. 20% Partener Fondator când deschidem plata.",
+    "body": "Acum: Planul Gratuit include proiectare 3D și listă de debitare, fără limită de export. Când deschidem abonamentele, pe Gratuit apar 3 descărcări pe cont, iar planul Debitare (plătit) păstrează exporturile nelimitate. Dacă vrei 20% discount pe planurile plătite, te înscrii pe lista Partener Fondator înainte — la billing lista se închide. Sumele listă le anunțăm atunci."
   },
   "callout": {
     "title": "Ești nou aici?",
-    "body": "Founding Partner înseamnă înscriere gratuită pe listă acum și 20% discount pe planul Basic când deschidem plata odată cu M2 — fără obligație. Cine vine mai târziu plătește prețul listă.",
-    "link": "Despre programul Founding Partner"
+    "body": "Partener Fondator: înscriere gratuită acum, 20% off prețul listă timp de 6 luni de la prima plată pe planurile plătite livrate în fereastră. La billing închidem înscrierile. Cine vine după plătește prețul listă.",
+    "link": "Despre programul Partener Fondator"
   },
   "perMonth": "RON/lună",
   "free": "0 RON",
-  "fpDiscount": "discount FP",
-  "fpYearly": "Founding Partner: 20% off prețul listă, 6 luni de la prima plată",
+  "fpDiscount": "discount PF",
+  "fpYearly": "Partener Fondator: 20% off prețul listă, 6 luni de la prima plată",
   "priceTbd": "Preț la lansare",
   "cancel": "Fără contract — anulezi oricând (când există abonament)",
   "notifyMe": "Anunță-mă pe email",
   "plans": {
     "free": {
       "name": "Planul Gratuit",
-      "for": "Ca să folosești Mobilcab pe proiectele tale până deschidem planurile plătite.",
+      "for": "Debitare acum, fără abonament. La billing rămâne Debitare cu 3 descărcări pe cont.",
       "features": [
         "Proiectare 3D și listă de debitare",
-        "Primele 10 rânduri din listă pe ecran",
-        "3 descărcări pe cont (CSV, exporturi, .mcab)",
-        "Salvare în cloud, nelimitată",
-        "Pe laptop, tabletă și telefon"
+        "Exporturi fără limite (până deschidem abonamentele)",
+        "Salvare în cloud",
+        "Pe laptop, în browser",
+        "La billing: 3 descărcări pe cont pe Gratuit"
       ],
       "cta": "Folosește aplicația"
     },
-    "basic": {
-      "name": "Planul Basic",
-      "for": "La lansarea plătită cu M2: proiectare, listă de debitare, nesting pe placă, etichete și ofertă. FP de pe listă: 20% off; ulterior: preț listă.",
+    "debitare": {
+      "name": "Planul Debitare",
+      "for": "Primul plan plătit, la deschiderea abonamentelor: același Debitare ca pe Gratuit, cu exporturi nelimitate. Parteneri Fondatori: 20% off; ulterior: preț listă.",
       "features": [
-        "Proiectare 3D și debitare",
-        "Nesting pe placă",
-        "Etichete și ofertă către client",
-        "Exporturi nelimitate"
+        "Proiectare 3D și listă de debitare",
+        "Exporturi nelimitate",
+        "Salvare în cloud",
+        "Pe laptop, în browser"
       ],
-      "cta": "Devino Founding Partner"
+      "cta": "Devino Partener Fondator"
     }
   },
   "more": {
     "title": "Mai multe detalii",
-    "body": "Cum diferă Gratuit de Basic, ce e inclus la M2 și cum funcționează Founding Partner — pe pagina de întrebări."
+    "body": "Cum diferă Gratuit de Debitare, ce urmează (Atelier, CNC, Producție, AI) și cum funcționează Partener Fondator — pe pagina de întrebări."
   },
-  "note": "Nu încasăm abonamente până deschidem planul Basic plătit odată cu M2. Prețurile listă le anunțăm atunci. Discount-ul FP (20%) e doar pentru cine e pe lista Founding Partner.",
+  "note": "Nu încasăm până deschidem planurile plătite. Până atunci: Gratuit = Debitare full, fără limită de export. La billing: Gratuit cu 3 descărcări + Debitare plătit. Urmează pe rând Atelier (nesting, etichete, ofertă), CNC, Producție, AI — pe Prețuri ca „în curând” până le livrăm. Partener Fondator se închide la billing; 20% / 6 luni e doar pentru cine e pe listă.",
   "faqLink": "Întrebări despre planuri"
 }

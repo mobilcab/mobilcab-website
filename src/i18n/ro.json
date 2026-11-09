@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Mobilcab — proiectare mobilă direct din browser",
-    "description": "Proiectare de mobilă direct din browser. Fără instalare — lucrezi pe laptop, tabletă sau telefon."
+    "description": "Proiectare de mobilă direct din browser. Fără instalare — lucrezi pe laptop."
   },
   "nav": {
     "languageLabel": "Limba",
@@ -12,15 +12,15 @@
     "pricing": "Prețuri",
     "faq": "Întrebări",
     "blog": "Blog",
-    "foundingPartner": "Founding Partner",
+    "foundingPartner": "Partener Fondator",
     "terms": "Termeni",
     "privacy": "Confidențialitate",
     "refund": "Rambursare"
   },
   "hero": {
     "headline": "Mobilcab — proiectare mobilă direct din browser.",
-    "valueProp": "Fără instalare. Lucrezi pe laptop, tabletă sau telefon.",
-    "description": "Construim un instrument de proiectare pentru tâmplari și ateliere de mobilă. Lasă-ți emailul pentru noutăți — sau înscrie-te pe lista Founding Partner pentru discount pe planul Basic când dam drumul la M2."
+    "valueProp": "Fără instalare. Lucrezi pe laptop.",
+    "description": "Construim un instrument de proiectare pentru producători de mobilă. Lasă-ți emailul pentru noutăți — sau înscrie-te pe lista Partener Fondator pentru 20% pe planurile plătite (lista se închide la billing)."
   },
   "form": {
     "emailLabel": "Adresa ta de email",

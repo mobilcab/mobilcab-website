@@ -1,7 +1,7 @@
 ---
 // Pricing (Build Brief 4.3, Funnel Plan 3.3). Numbers come from
-// src/data/pricing.ts, shared with the FAQ. Free + Basic only for now —
-// future AI / CNC plans stay out of marketing until they ship.
+// src/data/pricing.ts, shared with the FAQ. Gratuit + Debitare for now —
+// Atelier / CNC / Producție / AI stay “în curând” until each ships.
 import Base from '../layouts/Base.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
@@ -29,12 +29,12 @@ const wrap = 'mx-auto w-full max-w-6xl px-5 sm:px-8';
 
 function coreHref(tier: Tier) {
   if (tier.key === 'free') return APP_URL;
-  if (tier.key === 'basic' && fpHref) return fpHref;
+  if (tier.key === 'debitare' && fpHref) return fpHref;
   return joinFreeHref;
 }
 
 function coreCta(tier: Tier) {
-  if (tier.key === 'basic' && !fpHref) return t.notifyMe;
+  if (tier.key === 'debitare' && !fpHref) return t.notifyMe;
   return t.plans[tier.key].cta;
 }
 ---
@@ -84,7 +84,7 @@ function coreCta(tier: Tier) {
               const highlighted = tier.highlight === true;
               const href = coreHref(tier);
               const toApp = tier.key === 'free';
-              const toFp = tier.key === 'basic' && fpHref !== null;
+              const toFp = tier.key === 'debitare' && fpHref !== null;
               return (
                 <li
                   id={tier.key}

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Frequently asked questions — Mobilcab",
-    "description": "Straight answers about Mobilcab: installing, tablets, pricing, the Basic plan, and the product roadmap."
+    "description": "Straight answers about Mobilcab: installing, pricing, the Free and Cut list plans, and the product roadmap."
   },
   "hero": {
     "label": "Frequently asked questions",
@@ -12,27 +12,27 @@
     {
       "id": "install",
       "q": "Do I need to install anything?",
-      "a": ["No. Mobilcab runs straight from your browser, on laptop, tablet or phone. Nothing to install, no license server."]
+      "a": ["No. Mobilcab runs straight from your browser, on a laptop. Nothing to install, no license server."]
     },
     {
       "id": "tablet",
-      "q": "Does it work on a tablet?",
-      "a": ["Yes, it's built for laptop, tablet and phone. You can start a project in the workshop and show it to your client on a tablet, on-site."]
+      "q": "Does it work on tablet or phone?",
+      "a": ["Not yet — it's built for laptop. Tablet and phone optimization come later."]
     },
     {
       "id": "cnc-export",
       "q": "Can I export directly for my CNC?",
       "a": [
         "The cut list (dimensions, quantities, materials) is the workshop foundation.",
-        "Dedicated CNC machine export comes at M3 on the roadmap — after nesting is solid. It is not included in the Basic plan at paid launch (M2)."
+        "Dedicated machine export comes with the CNC stage on the Roadmap and the CNC plan. It is not included in the Cut list plan at paid launch."
       ]
     },
     {
       "id": "m2",
       "q": "What do M1–M5 mean?",
       "a": [
-        "They're the product stages. M1 = Cut list (3D design + parts list — now, free). M2 = nesting, labels and quotes — when billing opens (Atelier / Producție / CNC; FP: 20% off). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
-        "On the site, you can tap M1–M5 to jump to that stage on the Roadmap page."
+        "They're the stages on the Roadmap, in order. M1 = Cut list (3D design + parts list — free now). M2 = nesting, labels and quotes (the Atelier plan, when we ship it). M3 = CNC export. M4 = team and sharing. M5 = AI + renders.",
+        "Subscriptions can open with the paid Cut list plan before nesting is ready. Elsewhere we talk about subscriptions, not M-codes."
       ],
       "link": "roadmap"
     },
@@ -40,24 +40,24 @@
       "id": "price",
       "q": "How much does it cost?",
       "a": [
-        "The app is free for now and we are not charging subscriptions. If you want 20% off the Basic plan, join the Founding Partner waitlist.",
-        "When we ship M2 and open the paid Basic plan (design, cut lists, nesting, labels, quotes), people on the FP waitlist get 20% off list (6 months from first payment). Anyone who subscribes later, without a waitlist place, pays full list. You are not obliged to pay if you do not want to. List amounts are announced at paid launch."
+        "Now: Free = full Cut list, no export limits. We are not charging. For 20% off paid plans, join the Founding Partner waitlist (it closes when billing opens).",
+        "At billing: Free gets 3 downloads per account; the paid Cut list plan keeps unlimited exports. Founding Partners on the list: 20% off for 6 months from first payment on paid plans that ship in that window. Anyone who subscribes later, without a waitlist place, pays full list. We announce amounts then."
       ],
       "link": "foundingPartner"
     },
     {
       "id": "plans",
-      "q": "How is the Free plan different from Basic?",
+      "q": "How is Free different from the Cut list plan?",
       "a": [
-        "The Free plan is for now: design and cut list, with limits (10 rows on screen, 3 downloads per account). Cloud save is unlimited.",
-        "At paid launch with M2, the Basic plan is the workshop plan: 3D design, cut list, sheet nesting, labels and client quotes, with unlimited exports. Founding Partners on the waitlist: 20% off; later: list price."
+        "Now only Free exists: full Cut list (3D, list, cloud), with no download limits.",
+        "When subscriptions open: Free stays Cut list with 3 downloads per account; paid Cut list is the same product with unlimited exports. Next come Atelier, CNC, Production, AI — each adds what is on the Roadmap. Founding Partners: 20% / 6 months; the waitlist closes at billing."
       ],
       "tiers": true,
-      "after": ["We do not charge until the paid Basic plan opens with M2. List prices are confirmed then."]
+      "after": ["We do not charge until the paid Cut list plan opens. List prices are confirmed then. Higher plans appear on Pricing as coming soon until we ship them."]
     }
   ],
   "tiers": {
-    "names": { "free": "Free plan", "basic": "Basic plan" },
+    "names": { "free": "Free plan", "debitare": "Cut list plan" },
     "perMonth": "{price} RON/month",
     "free": "0 RON",
     "fpDiscount": "−{percent}% FP",

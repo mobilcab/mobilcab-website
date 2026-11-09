@@ -18,8 +18,6 @@ Producătorii de mobilă care caută un program de proiectare întâlnesc deseor
 | Preț public listat pe site (sumă sau interval) | în curând | are | are | are | are |
 | Abonament ca opțiune de licență documentată acum | în curând | nu are | nu are | are | are |
 
-*Note la CNC: Polyboard — în varianta Pro PP (nu Pro); PRO100 — pachet CNC opțional (DXF/native, fără G-code în Pro100); SketchList — DXF către CAM; Cabinet Vision — cu S2M CENTER / xMachining (G-code). Cabinet Vision: Hexagon listează un prag de marketing (~99 USD/lună); pachetul full rămâne quote/reseller. Detalii în secțiunile de mai jos.*
-
 ## Polyboard
 
 Polyboard (PolyBoard 8) e software de proiectare a mobilei, instalat pe calculator (desktop). Vendor: Wood Designer Ltd ([wooddesigner.org](https://wooddesigner.org/)).
@@ -64,7 +62,7 @@ Cabinet Vision e software de proiectare și producție pentru cabinetry / mobil�
 
 Mobilcab e un CAD pentru mobilă care rulează în browser, pe laptop, fără instalare ([mobilcab.com](https://mobilcab.com/)).
 
-**Licență / preț.** Site-ul descrie aplicația ca **gratuită** pe baza actuală (proiectare 3D și listă de debitare) până deschiderea abonamentelor. **Sumele listă RON nu sunt publicate** pe site la data ciornei. Programul Partener Fondator: înscriere gratuită; discount procentual la abonament când plata e deschisă — detalii pe pagina programului.
+**Licență / preț.** Site-ul descrie aplicația ca **gratuită** pe Debitare (proiectare 3D și listă) până deschiderea abonamentelor. **Sumele listă RON nu sunt publicate** pe site (noiembrie 2026). Programul Partener Fondator: înscriere gratuită doar înainte de billing; 20% / 6 luni pe planurile plătite — detalii pe pagina programului.
 
 **Etape.** Planul public (M1–M5): debitare; nesting, etichete și ofertă; export CNC; echipă și partajare; AI și randări. Exportul CNC e anunțat ca etapă ulterioară, nu ca funcție disponibilă acum.
 

@@ -1,8 +1,8 @@
-*Ultima actualizare: 28 octombrie 2026*
+*Ultima actualizare: 9 noiembrie 2026*
 
-Politica se aplică **doar când există planuri plătite** vândute prin Paddle. Accesul prin cod de acces este gratuit; pentru el nu se rambursează nimic, pentru că nu se încasează nimic.
+Politica se aplică **doar când există planuri plătite** vândute prin Paddle. **Planul Gratuit** (Debitare, fără încasare) nu generează rambursări: nu se plătește nimic, deci nu se returnează nimic.
 
-Prețurile, numele planurilor și eventualele oferte de la lansarea billing-ului apar pe pagina **Prețuri** și la checkout, nu în acest text.
+Prețurile listă, numele planurilor și ofertele de la lansarea billing-ului apar pe pagina **Prețuri** și la checkout, nu în acest text. Până atunci, pe Prețuri poți vedea Gratuit (0 RON) și calea Partener Fondator (procent), fără sume listă RON pentru planurile plătite.
 
 ## 1. Cine emite rambursarea
 
@@ -33,7 +33,7 @@ Nu rambursăm, în afara drepturilor legale de mai sus, când:
 
 - există indicii de fraudă, abuz de rambursări sau alt comportament manipulator;
 - metoda de plată nu mai permite rambursarea (limite ale cardului sau PayPal, de regulă după 120–179 de zile);
-- cererea privește accesul gratuit prin cod de acces.
+- cererea privește **Planul Gratuit** sau orice acces fără plată (nu există sumă de returnat).
 
 Dacă primești o rambursare, accesul plătit la produsul respectiv încetează.
 

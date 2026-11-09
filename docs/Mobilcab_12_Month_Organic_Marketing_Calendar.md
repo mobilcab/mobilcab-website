@@ -1,6 +1,10 @@
 # Mobilcab — 12-Month Organic Marketing Calendar
 ### Week by week, platform by platform: October 2026 → October 2027
 
+> **Commercial copy:** prefer [`docs/DECISIONS.md`](./DECISIONS.md) (2026-11-09) over older
+> calendar rows that say Basic / kitchen-bedroom / tablet. Blog posts are published; list RON
+> prices stay unpublished until billing.
+
 Built from `Mobilcab_Marketing_Plan.md` (Sections 2, 3c, 5, 6a, 7, 9, 11), the
 Launch Content Kit, and `docs/DECISIONS.md`. Organic only: no paid ads (the plan
 starts paid tests only once monthly profit reaches about €150–210, Marketing
@@ -40,7 +44,7 @@ separate routes, because each reaches people the others don't:
 
 1. **Facebook groups**: the online, active part of the trade.
 2. **Associations and trade shows**: the offline-first part, often older
-   carpenters who aren't in any group (Section 2, limit 2).
+   furniture makers who aren't in any group (Section 2, limit 2).
 3. **Search** (blog + YouTube): people actively looking for a tool right now.
 
 Plus two multipliers: **word of mouth through the referral program**, and the
@@ -52,12 +56,12 @@ Plus two multipliers: **word of mouth through the referral program**, and the
 
 | Platform | Job | Cadence (from when) | Notes |
 |---|---|---|---|
-| **Facebook groups** (5–10 tâmplari / mobilă la comandă / CNC lemn groups) | The main engine. Trust first, then product | Answers from week 5; own posts rarely | Read each group's rules; ask admins before any project mention; no links unless allowed (put them in comments) |
+| **Facebook groups** (5–10 producători de mobilă / mobilă la comandă / CNC lemn groups) | The main engine. Trust first, then product | Answers from week 5; own posts rarely | Read each group's rules; ask admins before any project mention; no links unless allowed (put them in comments) |
 | **Facebook Page** (Mobilcab) | Home base people check after seeing you in a group | Created week 1; 1 post / 1–2 weeks from week 5; weekly from week 9; 2/week after launch | Empty pages look abandoned: the early posts are for later visitors, not reach |
 | **YouTube** | Searchable proof: demos and tutorials | Created week 1; first video week 6; demos weeks 18–21; ~1 every 2 weeks after | Romanian titles with the words people search ("cum fac cutlist CNC") |
 | **Blog** (mobilcab.com/ro/blog) | Google traffic from people looking for tools | 3 posts weeks 18–20 (drafts exist); 1/month after launch | Indexing takes weeks, which is why they go out at month -2 |
 | **Email** (Brevo) | Keeps the waitlist warm; launch announcement | Monthly "jurnal de construcție" from week 10; weekly in the last 3 weeks before launch | Only to confirmed sign-ups (double opt-in) |
-| **WhatsApp** | Word of mouth between carpenters | From week 13 (invite links have a WhatsApp button) | Never message people who haven't asked |
+| **WhatsApp** | Word of mouth between furniture makers | From week 13 (invite links have a WhatsApp button) | Never message people who haven't asked |
 | **Associations, trade shows, workshop visits** | The offline slice of the market | First contact week 6; visits monthly | APMR and regional wood clusters (Section 5.1) |
 | **LinkedIn** | Designers, architects, manufacturers (Phase 2) | From week 40 | Not before: one audience at a time (Section 11, "message dilution") |
 | **Instagram / TikTok** | Not this year, unless there's spare time | — | Section 4.3: "pick two, not five". At most, repost the YouTube demos from week 40 |
@@ -107,7 +111,7 @@ No product mentions anywhere public (Section 3c).
 
 **Week 2 · 19 Oct · L−25**
 - **Facebook groups:** join the 5–10 best groups. Read every group's rules; note which allow links or project mentions.
-- **Start a "question log"** (a simple spreadsheet): every question carpenters ask in the groups, word for word. It becomes your FAQ, blog topics and video ideas for the whole year.
+- **Start a "question log"** (a simple spreadsheet): every question furniture makers ask in the groups, word for word. It becomes your FAQ, blog topics and video ideas for the whole year.
 - **Legal:** send the Privacy Policy and Terms drafts (`docs/`) to the lawyer. The Privacy Policy must be approved by week 12.
 
 **Week 3 · 26 Oct · L−24**
@@ -151,7 +155,7 @@ holidays: no announcements.
 - **Facebook Page:** first behind-the-scenes post: a WIP screenshot ("o privire în ce construim").
 
 **Week 10 · 14 Dec · L−17**
-- **Email:** first monthly "jurnal de construcție" (build log) to confirmed waitlist members. 150–250 words: what you built, what you learned from carpenters, one screenshot.
+- **Email:** first monthly "jurnal de construcție" (build log) to confirmed waitlist members. 150–250 words: what you built, what you learned from furniture makers, one screenshot.
 - **Facebook Page:** WIP #2.
 
 **Weeks 11–12 · 21 Dec – 3 Jan · L−16 / L−15** (Christmas, New Year)
@@ -164,7 +168,7 @@ holidays: no announcements.
 - **Email:** to the waitlist, a new-year update with the invite program: "3 confirmed invites = a guaranteed place in the private beta."
 - **Facebook Page:** announce the invite program. Pin it.
 - **Facebook groups:** at most **one** own post per group this month, value-led (e.g. a tip plus one line about the beta), and only where allowed.
-- **WhatsApp:** share your own invite link with carpenters you know personally.
+- **WhatsApp:** share your own invite link with furniture makers you know personally.
 
 ### Month -3 — Private beta (weeks 14–17)
 
@@ -306,7 +310,7 @@ cadence, used to prepare autumn.
 
 **Week 40 · 12 Jul · L+13**
 - **LinkedIn:** company page and refreshed founder profile.
-- **Designer/architect groups** (Facebook and LinkedIn): join and observe. The same trust process as with carpenters, shortened to 2–3 weeks.
+- **Designer/architect groups** (Facebook and LinkedIn): join and observe. The same trust process as with furniture makers, shortened to 2–3 weeks.
 
 **Week 41 · 19 Jul · L+14**
 - **Case study #2.**
@@ -388,7 +392,7 @@ clip). Group content is mostly answers, not posts.
 10. Cum măsori corect la client: lista de verificare.
 
 **Behind the scenes** (from week 9)
-11. WIP screenshot: "a feature a carpenter in a group asked for".
+11. WIP screenshot: "a feature a furniture maker in a group asked for".
 12. "What I learned visiting three workshops."
 13. "Why the app runs in the browser" (the founder's reason).
 14. Build log highlights from the monthly email.

@@ -5,7 +5,7 @@
   },
   "ok": {
     "title": "Done, you're on the list!",
-    "body": "Thanks for confirming your address. You're on the news list — no Founding Partner discount. For a discount on the Basic plan at M2, join the Founding Partner waitlist."
+    "body": "Thanks for confirming your address. You're on the news list — no Founding Partner discount. For 20% off paid plans (before billing), join the Founding Partner waitlist."
   },
   "error": {
     "linkTitle": "This link is no longer valid",
@@ -15,8 +15,8 @@
     "again": "Back to sign-up"
   },
   "referral": {
-    "title": "Invite other carpenters",
-    "body": "For every carpenter who signs up through your link and confirms their address, you move up the queue for the private beta. At {goal} confirmed invites, you get a guaranteed place in the beta.",
+    "title": "Invite other furniture makers",
+    "body": "For every furniture maker who signs up through your link and confirms their address, you move up the queue for the private beta. At {goal} confirmed invites, you get a guaranteed place in the beta.",
     "linkLabel": "Your invite link",
     "copy": "Copy",
     "copied": "Copied!",

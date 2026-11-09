@@ -50,6 +50,29 @@ export const isPostPublic = (post: Post) => published.blog && post.published;
 export const postPath = (post: Post) =>
   `${isPostPublic(post) ? livePaths.blog[post.lang] : previewPath('blog', post.lang)}${post.slug}/`;
 
+/** Same article in both languages: [ro slug, en slug]. */
+const translationPairs: [string, string][] = [
+  ['lansare', 'launch'],
+  ['program-proiectare-mobila-gratuit', 'free-furniture-design-software'],
+  ['cutlist-cnc-fara-calcule-manuale', 'cutlist-without-manual-calculations'],
+  ['polyboard-vs-proiectare-din-browser', 'polyboard-vs-browser-design'],
+  ['prima-sesiune-in-mobilcab', 'first-session-in-mobilcab'],
+  ['comparatie-cad-mobila', 'furniture-cad-comparison'],
+  ['de-la-proiect-la-lista-de-debitare', 'from-project-to-cut-list'],
+  ['corp-600-mobilcab-vs-manual', '600mm-cabinet-paper-vs-mobilcab'],
+];
+
+/** The other-language version of a post, if both sides exist. */
+export const translationOf = (post: Post): Post | undefined => {
+  const pair = translationPairs.find(
+    ([ro, en]) => (post.lang === 'ro' && post.slug === ro) || (post.lang === 'en' && post.slug === en),
+  );
+  if (!pair) return undefined;
+  const otherLang: Lang = post.lang === 'ro' ? 'en' : 'ro';
+  const otherSlug = post.lang === 'ro' ? pair[1] : pair[0];
+  return posts.find((p) => p.lang === otherLang && p.slug === otherSlug);
+};
+
 /** Posts to list on a blog index page; a preview index also lists drafts. */
 export const postsToList = (lang: Lang, fromPreview: boolean) =>
   posts.filter((post) => post.lang === lang && (fromPreview || isPostPublic(post)));

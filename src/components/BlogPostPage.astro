@@ -6,7 +6,7 @@ import Base from '../layouts/Base.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
-import { isPostPublic, postPath, type Post } from '../lib/blog';
+import { isPostPublic, postPath, translationOf, type Post } from '../lib/blog';
 import { languages, useBlogTranslations, type Lang } from '../i18n';
 import { postData } from '../lib/structuredData';
 import { APP_URL } from '../config';
@@ -22,11 +22,18 @@ const preview = !isPostPublic(post);
 const t = useBlogTranslations(lang);
 const { Content } = post;
 
-// The language switch goes to the other language's blog index; there are no
-// translated posts yet, so hreflang only announces this post's own language.
+// Prefer the paired translation for the language switch / hreflang; otherwise
+// fall back to that language's blog index (or home).
+const twin = translationOf(post);
+const twinPublic = twin && (preview || isPostPublic(twin));
 const alternates = Object.fromEntries(
-  languages.map((l) => [l, l === lang ? postPath(post) : (linkFor('blog', l, preview) ?? linkFor('home', l, preview) ?? '/')]),
+  languages.map((l) => {
+    if (l === lang) return [l, postPath(post)];
+    if (twin && twin.lang === l && twinPublic) return [l, postPath(twin)];
+    return [l, linkFor('blog', l, preview) ?? linkFor('home', l, preview) ?? '/'];
+  }),
 ) as Record<Lang, string>;
+const translatedInto: Lang[] = twinPublic ? languages.slice() : [lang];
 const blogHref = linkFor('blog', lang, preview);
 const fpHref = linkFor('foundingPartner', lang, preview);
 const dateLabel = new Intl.DateTimeFormat(lang === 'ro' ? 'ro-RO' : 'en-GB', { dateStyle: 'long', timeZone: 'UTC' }).format(post.date);
@@ -37,7 +44,7 @@ const dateLabel = new Intl.DateTimeFormat(lang === 'ro' ? 'ro-RO' : 'en-GB', { d
   title={`${post.title} — Mobilcab`}
   description={post.description}
   alternates={preview ? undefined : alternates}
-  translatedInto={[lang]}
+  translatedInto={translatedInto}
   structuredData={Astro.site ? [postData(Astro.site, post, new URL(postPath(post), Astro.site).href)] : []}
 >
   {preview && <PreviewBanner lang={lang} />}

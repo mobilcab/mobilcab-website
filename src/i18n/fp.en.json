@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "The Founding Partner program — Mobilcab",
-    "description": "Join the Founding Partner waitlist: when we open the paid Basic plan with M2 (design, cut lists, nesting, labels, quotes), you get 20% off. Anyone who subscribes later pays full list price."
+    "description": "Join the Founding Partner waitlist before billing: 20% off paid plans (starting with Cut list) for 6 months from first payment. The waitlist closes when subscriptions open."
   },
   "hero": {
     "label": "The Founding Partner program",
-    "title": "Help shape the tool Romanian workshops actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for workshops to build it with us. Join the Founding Partner waitlist for free; when we ship M2 and open the paid Basic plan, people on that list get 20% off. Anyone who subscribes later pays full list price.",
+    "title": "Help shape the tool Romanian furniture makers actually need.",
+    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join the waitlist free now; when we open subscriptions (first paid plan: Cut list), people on the list get 20% off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list.",
     "cta": "Join the Founding Partner waitlist"
   },
   "counter": {
@@ -17,41 +17,26 @@
     "title": "What's included",
     "items": [
       {
-        "title": "A place on the Founding Partner waitlist, free",
-        "body": "You pay nothing to join. The 20% discount applies only when we open the paid Basic plan with M2 — and only if you choose to subscribe."
+        "title": "Free to join",
+        "body": "You pay nothing to sign up. You're not obliged to buy when we open subscriptions. The waitlist closes at billing."
       },
       {
-        "title": "20% off the Basic plan at M2",
-        "body": "The Basic plan (M1+M2) covers design, cut lists, sheet nesting, labels and client quotes. Founding Partners: 20% off list, 6 months from first payment. Anyone who comes later, without a waitlist place, pays full list. We announce list amounts when we're ready."
+        "title": "20% off your subscription",
+        "body": "When we move to paid plans, you get 20% off list for 6 months from first payment — on Cut list and on later plans that ship in that window (Atelier, CNC…). Anyone who joins later, without a waitlist place, pays full list."
       },
       {
-        "title": "A say in what we build",
-        "body": "Tell us what's missing in your workshop, and your ideas go straight into the roadmap."
+        "title": "Your ideas on the development list",
+        "body": "What you tell us is missing in the workshop goes onto a list of possible app developments. We build them when more people in the community want them — not just one workshop."
       },
       {
-        "title": "Your name, as a Founding Partner",
+        "title": "Your name on the list",
         "body": "You're listed among the people who helped build Mobilcab."
       },
       {
-        "title": "Private feedback group",
-        "body": "Talk directly with the founders and the other Founding Partners."
-      },
-      {
-        "title": "Personal notice when payment opens",
-        "body": "We contact you when the paid Basic plan (M2) is ready, with list price and your discount — before the FP offer closes."
+        "title": "Direct contact",
+        "body": "You talk with the founders (and the other FPs). We notify you personally when we open subscriptions, with list price and your discount."
       }
     ]
-  },
-  "offer": {
-    "title": "The Founding Partner offer",
-    "price": "−20%",
-    "yearly": "off the Basic plan at M2 · free to join now",
-    "detail": "When we ship M2 and open the paid Basic plan, people on the Founding Partner waitlist buy at 20% off list (6 months). Anyone who wants the paid plan later pays full list price. Waitlist places are limited; we'll say when we close sign-ups.",
-    "noPayment": "Joining is free and doesn't commit you to anything. If you don't want to pay when the Basic plan opens, you decline — and that's it."
-  },
-  "ai": {
-    "title": "What Basic covers at M2",
-    "body": "3D design, cut lists, sheet nesting, labels and client quotes — the workshop flow through to a quote. Founding Partners: 20% off list, 6 months from first payment."
   },
   "proof": {
     "title": "What the first Founding Partners say"
@@ -59,9 +44,9 @@
   "next": {
     "title": "What happens after you join",
     "steps": [
-      "You're on the Founding Partner waitlist — free, in your name.",
-      "You can use the app during the free period while we finish M2 (nesting, labels, quotes).",
-      "When we open the paid Basic plan with M2, we contact you with list price and your 20% discount. Anyone who subscribes later, without a waitlist place, pays full list."
+      "You're on the Founding Partner waitlist — free, in your name (only until billing opens).",
+      "You use the app like everyone else — full Cut list on Free, with no export limits.",
+      "When we open subscriptions, we contact you with list price and your 20% discount. The Founding Partner waitlist closes. Anyone who subscribes later, without a waitlist place, pays full list."
     ]
   },
   "form": {
@@ -77,8 +62,8 @@
   },
   "messages": {
     "sending": "Sending…",
-    "reserved": "You're on the Founding Partner waitlist. We'll contact you personally when we open the paid Basic plan with M2.",
-    "already": "You're already on the Founding Partner waitlist. We'll contact you personally when we open the paid Basic plan with M2.",
+    "reserved": "You're on the Founding Partner waitlist. We'll contact you personally when we open subscriptions.",
+    "already": "You're already on the Founding Partner waitlist. We'll contact you personally when we open subscriptions.",
     "full": "Founding Partner sign-ups are closed for now. You can still use the app for free; a later subscription is at list price.",
     "invalidName": "Enter your name (at least 2 letters).",
     "invalidEmail": "Enter a valid email address.",

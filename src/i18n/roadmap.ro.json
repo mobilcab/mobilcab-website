@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Planul Mobilcab — ce livrăm și în ce ordine",
-    "description": "Mobilcab se livrează pe etape: debitare, nesting, CNC, echipă, apoi AI. Plata începe la M2. Fără date false — doar ordine și status."
+    "description": "Mobilcab se livrează pe etape: debitare, nesting, CNC, echipă, apoi AI. Planurile plătite urmează scara Debitare → Atelier → CNC → Producție → AI. Fără date false — doar ordine și status."
   },
   "hero": {
     "label": "Planul produsului",
-    "title": "Livrăm pe etape — fiecare utilă singură.",
-    "body": "Nu promitem „tot CAD-ul și CNC-ul mâine”. Construim în ordine: mai întâi baza de atelier (proiectare + debitare), apoi ce urmează doar când etapa curentă e stabilă pe proiecte reale. Pe site, etapele apar ca M1–M5 — poți apăsa pe ele oriunde le vezi ca să ajungi aici."
+    "title": "Etapele Mobilcab — în ordinea în care le livrăm.",
+    "body": "Construim în ordine: mai întâi baza de atelier (proiectare + debitare), apoi următoarea etapă doar când cea curentă e stabilă pe proiecte reale. Nu anunțăm totul dintr-odată."
   },
   "statuses": {
     "launch": "Lansare",
@@ -20,35 +20,35 @@
       "milestone": "M1",
       "status": "launch",
       "title": "Debitare — proiectare 3D + listă",
-      "body": "Desenezi mobilierul în 3D, salvezi în cloud și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit. Aplicația e gratuită în această etapă."
+      "body": "Desenezi mobilierul în 3D, salvezi în cloud și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit. Acum e pe Planul Gratuit (fără limită de export). Când deschidem plata, Debitare rămâne și ca plan plătit cu exporturi nelimitate."
     },
     {
       "id": "nesting-offer",
       "milestone": "M2",
       "status": "inProgress",
       "title": "Nesting + etichete + ofertă",
-      "body": "Așezi piesele pe plăci, tipărești etichete și calculezi costuri ca să dai o ofertă clară clientului. Atunci deschidem și plata: planurile Atelier / Producție / CNC. Founding Partners: 20% off prețul listă, 6 luni de la prima plată."
+      "body": "Așezi piesele pe plăci, tipărești etichete și calculezi costuri ca să dai o ofertă clară clientului. Pe Prețuri, asta e planul Atelier (Debitare + nesting + etichete + ofertă), când etapa e gata — nu neapărat în aceeași zi cu prima plată pe Debitare."
     },
     {
       "id": "cnc-export",
       "milestone": "M3",
       "status": "planned",
       "title": "Export CNC",
-      "body": "Fișiere pentru mașină, după ce nesting-ul e stabil. Un flux repetabil pe care te poți baza — nu „toate CNC-urile din lume” dintr-o dată."
+      "body": "Fișiere pentru mașină, după ce nesting-ul e stabil. Pe Prețuri: planul CNC (Atelier + export CNC). Un flux repetabil — nu „toate CNC-urile din lume” dintr-o dată."
     },
     {
       "id": "team-share",
       "milestone": "M4",
       "status": "planned",
       "title": "Echipă și partajare",
-      "body": "Lucru în atelier cu roluri, invitați și un link de vizualizare pentru client — fără să-i dai acces la tot atelierul."
+      "body": "Lucru în atelier cu roluri, invitați și un link de vizualizare pentru client — fără să-i dai acces la tot atelierul. Pe Prețuri: planul Producție (CNC + echipă)."
     },
     {
       "id": "ai-renders",
       "milestone": "M5",
       "status": "planned",
       "title": "AI + randări",
-      "body": "Asistent de layout și vizualizări pentru prezentări. Extra, pe planuri separate — nu blochează etapele de bază din atelier."
+      "body": "Asistent de layout și vizualizări pentru prezentări. Pe Prețuri: planul AI (Producție + AI + randări) — extra, nu blochează etapele de bază din atelier."
     }
   ],
   "faq": {
@@ -58,8 +58,8 @@
         "id": "ce-inseamna-m2",
         "q": "Ce înseamnă M1–M5?",
         "a": [
-          "Sunt etapele produsului, în ordine. M1 = Debitare (proiectare 3D + listă — baza de acum, gratuit). M2 = nesting, etichete și ofertă — atunci deschidem plata (Atelier / Producție / CNC; FP: 20% off). M3 = export CNC. M4 = echipă și partajare. M5 = AI + randări.",
-          "Pe restul site-ului, unde vezi M1–M5, poți apăsa pe ele ca să vii aici, la etapa respectivă."
+          "Sunt etapele de pe această pagină, în ordine. M1 = Debitare. M2 = nesting, etichete și ofertă (planul Atelier). M3 = export CNC (planul CNC). M4 = echipă (planul Producție). M5 = AI + randări (planul AI).",
+          "Pe restul site-ului vorbim despre abonamente și lansarea plătită, nu despre coduri M."
         ]
       },
       {
@@ -73,7 +73,7 @@
         "id": "cand-plata",
         "q": "Când încep abonamentele?",
         "a": [
-          "La M2 — când nesting, etichete și oferta sunt gata. Până atunci aplicația e gratuită. Founding Partners de pe listă primesc 20% off prețul listă, 6 luni de la prima plată; ulterior, preț listă."
+          "Când deschidem billing-ul: pe Gratuit apar 3 descărcări, iar planul Debitare (plătit) păstrează exporturile nelimitate. Nesting vine pe planul Atelier, când etapa e gata. Partener Fondator: 20% / 6 luni pentru cine e pe listă; lista se închide la billing. Cine se abonează după plătește prețul listă."
         ]
       },
       {
@@ -89,14 +89,35 @@
         "a": [
           "Da. M1 (Debitare: proiectare 3D + listă) e baza pe care o lansăm întâi. Poți lucra cu ea fără să aștepți nesting, CNC sau AI."
         ]
+      },
+      {
+        "id": "date-fixe",
+        "q": "Există o dată fixă pentru etape?",
+        "a": [
+          "Nu. Nu publicăm un calendar fix. Anunțăm fiecare etapă când e stabilă pe proiecte reale — nu când sună bine pe hârtie."
+        ]
+      },
+      {
+        "id": "proiecte-la-abonamente",
+        "q": "Ce se întâmplă cu proiectele mele când trecem la abonamente?",
+        "a": [
+          "Proiectele tale rămân. Când deschidem abonamentele, pe planul Gratuit apar 3 descărcări pe cont. Pe planul Debitare (plătit) și pe planurile următoare, exporturile rămân nelimitate."
+        ]
+      },
+      {
+        "id": "fp-si-etape",
+        "q": "Partener Fondator e legat de o etapă?",
+        "a": [
+          "Nu. Partener Fondator e un program separat: înscriere gratuită doar înainte de billing, apoi 20% / 6 luni pe planurile plătite. Se închide când deschidem plata — nu e o etapă M1–M5."
+        ]
       }
     ]
   },
   "cta": {
-    "title": "Încearcă baza acum",
-    "body": "Proiectare și debitare — următorul pas când ești gata.",
+    "title": "Proiectare și debitare — gata de folosit.",
+    "body": "Aplicația e gratuită acum. Următoarele etape vin când sunt stabile pe proiecte reale.",
     "primary": "Încearcă gratuit",
-    "secondaryFp": "Sau lista Founding Partner",
+    "secondaryFp": "Sau programul Partener Fondator",
     "secondaryNews": "Sau noutăți pe email"
   }
 }

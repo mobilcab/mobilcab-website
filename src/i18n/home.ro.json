@@ -1,22 +1,21 @@
 {
   "meta": {
     "title": "Mobilcab — de la idee la lista de debitare, direct din browser",
-    "description": "CAD pentru mobilă care rulează în browser, pe laptop, tabletă sau telefon. Acum: proiectare 3D și listă de debitare. Nesting și CNC vin pe etape."
+    "description": "CAD pentru mobilă care rulează în browser, pe laptop. Acum: proiectare 3D și listă de debitare. Nesting și CNC vin pe etape."
   },
   "hero": {
     "title": "De la idee la lista de debitare, direct din browser.",
-    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop, tabletă sau telefon. Fără instalări, fără licențe complicate. Acum: proiectare 3D și listă de debitare. Nesting-ul pe placă și exportul CNC vin pe etape, pe măsură ce le livrăm.",
-    "ctaPrimary": "Devino Founding Partner",
-    "ctaSecondary": "Încearcă gratuit",
-    "note": "Founding Partner: te înscrii pe listă acum; discount pe planul Basic când dam drumul la M2. Cine se abonează după plătește prețul listă."
+    "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop. Fără instalări, fără licențe complicate. Acum: proiectare 3D și listă de debitare. Nesting-ul pe placă și exportul CNC vin pe etape, pe măsură ce le livrăm.",
+    "ctaPrimary": "Devino Partener Fondator",
+    "ctaSecondary": "Încearcă gratuit"
   },
   "problem": {
     "title": "Sună familiar?",
     "items": [
       "Programe CAD greoaie, instalate doar pe un calculator din atelier",
       "Licențe scumpe pentru funcții pe care le folosești rar",
-      "Ore pierdute făcând manual cutlist-ul pentru CNC",
-      "Nu poți arăta clientului un design live, direct de pe telefon, la fața locului"
+      "Ore pierdute făcând manual cutlist-ul pentru debitare",
+      "Nu poți arăta clientului un design live, fără să-l aduci la calculatorul din atelier"
     ]
   },
   "features": {
@@ -24,39 +23,39 @@
     "items": [
       {
         "title": "100% în browser",
-        "body": "Fără instalare, fără server de licențe. Deschizi orice device — laptop, tabletă, telefon — și lucrezi."
+        "body": "Fără instalare, fără server de licențe. Deschizi browserul pe laptop și lucrezi."
       },
       {
-        "title": "Pentru tâmplari",
-        "body": "Limbaj de atelier, flux de proiectare pentru mobilă pe comandă — nu un CAD general pe care trebuie să-l „îndoi” ca să-ți iasă un dulap."
+        "title": "Pentru producători de mobilă",
+        "body": "Gândit pentru atelier: limbaj clar și un flux de proiectare pentru mobilă pe comandă — nu un CAD general adaptat cu greu la dulapuri."
       },
       {
         "title": "Începi gratuit",
-        "body": "Folosești aplicația fără abonament. Dacă vrei discount pe planul Basic când dam drumul la M2, te înscrii pe lista Founding Partner — fără plată acum."
+        "body": "Folosești aplicația fără abonament pe Debitare. Dacă vrei 20% pe planurile plătite când deschidem plata, te înscrii pe lista Partener Fondator — lista se închide la billing."
       },
       {
-        "title": "Până la debitare",
-        "body": "Listă de piese pentru atelier; nesting, etichete și ofertă pe măsură ce le livrăm pe etape."
+        "title": "Cutlist gata de atelier",
+        "body": "Din proiect iese lista de debitare: piese, dimensiuni, cantități și materiale — ce ai nevoie ca să tai, fără calcule manuale."
       }
     ]
   },
   "demo": {
     "title": "Vezi cum funcționează",
-    "intro": "Trei clipuri scurte, pe același proiect: de la primele panouri la documentele de atelier.",
+    "intro": "Trei clipuri scurte, pe același proiect: de la panouri la lista de debitare și salvare.",
     "comingSoon": "Clip în curând",
     "link": "Toate clipurile, pe larg",
     "videos": [
-      { "title": "Proiectare", "caption": "Un dulap de colț de bucătărie, de la zero, în sub 10 minute." },
-      { "title": "Asistentul AI", "caption": "Prinde o coliziune între sertar și balama înainte să ajungă la pânza de tăiere." },
-      { "title": "Debitare și atelier", "caption": "De la proiect la lista de piese — nesting și CNC pe etapele următoare." }
+      { "title": "Proiectare 3D", "caption": "Un dulap de colț de bucătărie, de la zero, în sub 10 minute." },
+      { "title": "Listă de debitare", "caption": "Din proiect iese cutlist-ul: piese, dimensiuni, cantități și materiale." },
+      { "title": "Salvare și export", "caption": "Proiectul în cloud; CSV sau fișier .mcab când ai nevoie." }
     ]
   },
   "pricing": {
     "title": "Prețuri",
-    "offerLabel": "Founding Partner",
-    "offerPrice": "Listă gratuită acum",
-    "offerDetail": "Te înscrii gratis. La M2: discount pe planul Basic dacă ești pe listă. După aceea: preț listă.",
-    "aiNote": "Planul Basic = atelier, fără CNC. AI și CNC vin separat.",
+    "offerLabel": "Partener Fondator",
+    "offerPrice": "−20% când deschidem abonamentele",
+    "offerDetail": "Te înscrii gratuit în program. Când trecem pe planuri plătite, ai 20% din prețul întreg, 6 luni de la prima plată. Cine vine după plătește prețul întreg.",
+    "aiNote": "La billing: Gratuit (3 exporturi) + Debitare plătit. Apoi Atelier, CNC, Producție, AI.",
     "free": "Aplicația e gratuită până deschidem plata.",
     "cancel": "Înscrierea nu te obligă să plătești.",
     "link": "Vezi toate planurile"
@@ -65,16 +64,16 @@
     "title": "Întrebări frecvente",
     "items": [
       { "q": "Trebuie să instalez ceva?", "a": "Nu, Mobilcab rulează direct din browser." },
-      { "q": "Funcționează pe tabletă?", "a": "Da, e optimizat pentru laptop, tabletă și telefon." },
+      { "q": "Funcționează pe tabletă sau telefon?", "a": "Momentan nu — e gândit pentru laptop. Tabletă și telefon vin mai târziu." },
       { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Lista de debitare e baza; exportul CNC vine într-o etapă ulterioară pe roadmap." },
-      { "q": "Cât costă?", "a": "Acum: aplicația e gratuită. Te poți înscrie pe lista Founding Partner pentru discount pe planul Basic când dam drumul la M2. Cine se abonează după plătește prețul listă." }
+      { "q": "Cât costă?", "a": "Acum: Planul Gratuit = Debitare, fără limită de export. Partener Fondator: 20% / 6 luni pe planurile plătite (lista se închide la billing). La billing: Gratuit cu 3 exporturi + Debitare plătit; apoi Atelier, CNC, Producție, AI." }
     ],
     "link": "Toate întrebările"
   },
   "final": {
-    "title": "Fii printre primii tâmplari din România care proiectează direct din browser.",
-    "or": "Sau încearcă aplicația acum:",
-    "news": "Vrei doar noutăți pe email? (fără discount Founding Partner)"
+    "title": "Fii printre primii producători de mobilă din România care proiectează direct din browser.",
+    "or": "Sau folosește aplicația acum, fără program:",
+    "news": "Doar noutăți pe email — fără beneficiile Partener Fondator"
   },
   "footer": {
     "privacy": "Confidențialitate"

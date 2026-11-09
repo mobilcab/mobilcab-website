@@ -1,67 +1,52 @@
 {
   "meta": {
-    "title": "Programul Founding Partner — Mobilcab",
-    "description": "Înscrie-te pe lista Founding Partner: când deschidem planul Basic plătit odată cu M2 (proiectare, debitare, nesting, etichete, ofertă), beneficiezi de 20% discount. Cine vine după plătește prețul listă."
+    "title": "Programul Partener Fondator — Mobilcab",
+    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% off pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide."
   },
   "hero": {
-    "label": "Programul Founding Partner",
+    "label": "Programul Partener Fondator",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm tâmplari care să-l construiască alături de noi. Te înscrii gratuit pe lista Founding Partner; când dam drumul la M2 și la planul Basic plătit, cei de pe listă primesc 20% discount. Cine se abonează mai târziu plătește prețul întreg.",
-    "cta": "Înscrie-te pe lista Founding Partner"
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit pe listă acum; când deschidem abonamentele (primul plan plătit: Debitare), cei de pe listă primesc 20% off prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg.",
+    "cta": "Înscrie-te pe lista Partener Fondator"
   },
   "counter": {
-    "remaining": "{remaining} din {total} locuri Founding Partner rămase",
-    "full": "Toate cele {total} de locuri Founding Partner au fost ocupate."
+    "remaining": "{remaining} din {total} locuri Partener Fondator rămase",
+    "full": "Toate cele {total} de locuri Partener Fondator au fost ocupate."
   },
   "included": {
     "title": "Ce primești",
     "items": [
       {
-        "title": "Loc pe lista Founding Partner, gratuit",
-        "body": "Nu plătești nimic ca să te înscrii. Discount-ul de 20% se aplică abia când deschidem planul Basic plătit odată cu M2 — și doar dacă vrei să te abonezi."
+        "title": "Înscriere gratuită",
+        "body": "Nu plătești nimic ca să te înscrii. Nu ești obligat să cumperi când deschidem abonamentele. Lista se închide la billing."
       },
       {
-        "title": "20% discount pe planul Basic la M2",
-        "body": "Planul Basic (M1+M2) acoperă proiectarea, lista de debitare, nesting-ul pe placă, etichetele și oferta către client. Founding Partners: 20% off prețul listă, 6 luni de la prima plată. Cine vine după, fără loc pe listă, plătește prețul întreg. Sumele listă le anunțăm când e gata."
+        "title": "20% off la abonament",
+        "body": "Când trecem pe planuri plătite, ai 20% din prețul listă, 6 luni de la prima plată — pe Debitare și pe planurile următoare livrate în fereastră (Atelier, CNC…). Cine vine după, fără loc pe listă, plătește prețul întreg."
       },
       {
-        "title": "Un cuvânt de spus în ce construim",
-        "body": "Ne spui ce îți lipsește în atelier, iar propunerile tale intră direct în planul de dezvoltare."
+        "title": "Sugestiile tale pe lista de dezvoltări",
+        "body": "Ce ne spui că îți lipsește în atelier intră pe o listă de posibile dezvoltări în aplicație. Le construim când sunt dorite de mai mulți din comunitate, nu doar pentru un singur atelier."
       },
       {
-        "title": "Numele tău, ca Founding Partner",
-        "body": "Apari în lista celor care au ajutat la construirea Mobilcab."
+        "title": "Numele tău pe listă",
+        "body": "Apari printre cei care au ajutat la construirea Mobilcab."
       },
       {
-        "title": "Grup privat de feedback",
-        "body": "Vorbești direct cu fondatorii și cu ceilalți Founding Partners."
-      },
-      {
-        "title": "Anunț personal la deschiderea plății",
-        "body": "Te contactăm când planul Basic plătit (M2) e gata, cu prețul listă și discount-ul tău — înainte ca oferta FP să se închidă."
+        "title": "Contact direct",
+        "body": "Vorbești cu fondatorii (și cu ceilalți Parteneri Fondatori). Te anunțăm personal când deschidem abonamentele, cu prețul listă și discount-ul tău."
       }
     ]
   },
-  "offer": {
-    "title": "Oferta Founding Partner",
-    "price": "−20%",
-    "yearly": "discount pe planul Basic la M2 · înscriere gratuită acum",
-    "detail": "Când dam drumul la M2 și la planul Basic plătit, cei de pe lista Founding Partner cumpără cu 20% off prețul listă (6 luni). Restul care vor planul plătit ulterior îl iau la prețul listă. Locurile pe listă sunt limitate; anunțăm când închidem înscrierile.",
-    "noPayment": "Înscrierea e gratuită și nu te obligă la nimic. Dacă nu vrei să plătești când deschidem planul Basic, refuzi — și atât."
-  },
-  "ai": {
-    "title": "Ce acoperă planul Basic la M2",
-    "body": "Proiectare 3D, listă de debitare, nesting pe placă, etichete și ofertă către client — fluxul de atelier până la ofertă. Founding Partners: 20% off prețul listă, 6 luni de la prima plată."
-  },
   "proof": {
-    "title": "Ce spun primii Founding Partners"
+    "title": "Ce spun primii Parteneri Fondatori"
   },
   "next": {
     "title": "Ce urmează după înscriere",
     "steps": [
-      "Ești pe lista Founding Partner — gratuit, pe numele tău.",
-      "Poți folosi aplicația în perioada gratuită; construim M2 (nesting, etichete, ofertă) în paralel.",
-      "Când deschidem planul Basic plătit odată cu M2, te contactăm cu prețul listă și discount-ul tău de 20%. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
+      "Ești pe lista Partener Fondator — gratuit, pe numele tău (doar până deschidem plata).",
+      "Folosești aplicația ca toată lumea — Debitare full, fără limite de export pe Gratuit.",
+      "Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%. Lista Partener Fondator se închide. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
     ]
   },
   "form": {
@@ -71,15 +56,15 @@
     "workshopLabel": "Numele atelierului",
     "optional": "(opțional)",
     "cityLabel": "Orașul",
-    "consent": "Sunt de acord să fiu contactat despre programul Founding Partner și să primesc actualizări prin email.",
+    "consent": "Sunt de acord să fiu contactat despre programul Partener Fondator și să primesc actualizări prin email.",
     "privacyLink": "Vezi politica de confidențialitate",
-    "submit": "Înscrie-te pe lista Founding Partner"
+    "submit": "Înscrie-te pe lista Partener Fondator"
   },
   "messages": {
     "sending": "Se trimite…",
-    "reserved": "Ești pe lista Founding Partner. Te contactăm personal când deschidem planul Basic plătit odată cu M2.",
-    "already": "Ești deja pe lista Founding Partner. Te contactăm personal când deschidem planul Basic plătit odată cu M2.",
-    "full": "Înscrierile Founding Partner sunt închise momentan. Poți folosi aplicația gratuit; la abonament vei plăti prețul listă.",
+    "reserved": "Ești pe lista Partener Fondator. Te contactăm personal când deschidem abonamentele.",
+    "already": "Ești deja pe lista Partener Fondator. Te contactăm personal când deschidem abonamentele.",
+    "full": "Înscrierile Partener Fondator sunt închise momentan. Poți folosi aplicația gratuit; la abonament vei plăti prețul listă.",
     "invalidName": "Scrie-ți numele (cel puțin 2 litere).",
     "invalidEmail": "Introdu o adresă de email validă.",
     "invalidWorkshop": "Numele atelierului e prea lung.",
@@ -88,5 +73,5 @@
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
     "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."
   },
-  "joinFree": "Sau doar noutăți pe email (fără discount FP)"
+  "joinFree": "Sau doar noutăți pe email (fără discount Partener Fondator)"
 }

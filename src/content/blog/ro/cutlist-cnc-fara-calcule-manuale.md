@@ -1,55 +1,53 @@
 ---
-title: "Cum faci cutlist pentru CNC fără să calculezi manual"
-description: "Unde apar greșelile când faci cutlist-ul de mână, cum le eviți și ce schimbă un export automat pentru CNC. Cu un exemplu de calcul pentru un corp de bucătărie."
-date: "2026-10-06"
-published: false
+title: "Cum faci cutlist (listă de debitare) fără să calculezi manual"
+description: "Unde apar greșelile pe hârtie, cum le eviți și ce schimbă o listă generată din proiectul 3D. Exemplu pe un corp de 600 mm — și ce e gata acum în Mobilcab versus exportul CNC pe Plan."
+date: "2026-11-09"
+published: true
 ---
 
-> **Ciornă pentru fondator — de șters înainte de publicare.** Verifică exemplul de calcul cu felul în care lucrați voi (grosimi, cant, rosturi). Exemplele concrete despre Mobilcab sunt marcate [VERIFICĂ] până știm exact ce exportă aplicația. Brief-ul cere și capturi de ecran: adaugă-le când există.
+Cutlist-ul, adică lista de debitare, e puntea dintre proiect și atelier (și, mai târziu, mașină). Dacă e corect, restul merge mai ușor. Dacă are o greșeală, o descoperi deseori abia când placa e deja tăiată.
 
-Cutlist-ul, adică lista de debitare, e puntea dintre proiect și mașină. Dacă e corect, restul merge de la sine. Dacă are o greșeală, o descoperi abia când placa e deja tăiată.
+## De ce e ușor să greșești de mână
 
-## De ce e atât de ușor să greșești de mână
-
-Un corp de bucătărie arată simplu: două laterale, un blat de jos, eventual o polită, un spate și o ușă. Dar fiecare dimensiune depinde de altele:
+Un corp de jos arată simplu: laterale, blat, eventual poliță, spate, ușă. Fiecare dimensiune depinde de altele:
 
 - **grosimea plăcii** se scade din lățimea pieselor dintre laterale;
 - **cantul** se scade din dimensiunea de debitare, dacă lucrezi cu dimensiuni finite;
-- **rosturile ușilor** se scad din dimensiunea frontului;
-- **spatele** depinde de cum se montează: în falț, în canal sau aplicat.
+- **rosturile ușilor** se scad din front;
+- **spatele** depinde de montaj (falț, canal, aplicat).
 
-Un exemplu, pentru un corp de jos cu lățimea de 600 mm, din PAL de 18 mm, cu cant ABS de 2 mm pe muchia din față:
+Exemplu: corp de jos **600 mm**, **PAL 18 mm**, cant **ABS 2 mm** pe față:
 
 - lateralele: 2 bucăți la înălțimea și adâncimea corpului;
-- blatul de jos, montat între laterale: 600 − 2 × 18 = **564 mm** lățime;
-- adâncimea lui, cu cant de 2 mm pe față: se debitează cu 2 mm mai scurt decât adâncimea finită.
+- blatul de jos între laterale: **600 − 2 × 18 = 564 mm** lățime;
+- adâncimea cu cant pe față: se debitează cu 2 mm mai scurt decât adâncimea finită, dacă lucrezi așa.
 
-Fiecare pas e simplu. Problema e că sunt zeci de pași într-o bucătărie întreagă și că orice modificare de la client îi reia de la capăt.
+Pașii sunt simpli. Problema e volumul și modificările de la client. Același tip de calcul e și în [corp 600 mm: hârtie vs. Mobilcab](/ro/blog/corp-600-mobilcab-vs-manual/).
 
 ## Cele mai frecvente patru greșeli
 
-1. **Grosimea scăzută o singură dată.** Piesele dintre două laterale pierd două grosimi, nu una.
-2. **Cantul uitat pe una dintre muchii.** Mai ales când o piesă are cant pe două sau trei laturi, cu grosimi diferite.
-3. **O modificare propagată pe jumătate.** Lățimea corpului s-a schimbat, ușa a fost recalculată, polița nu.
-4. **Greșeli de transcriere.** Lista e corectă pe hârtie, dar o cifră se inversează când o introduci în optimizatorul de debitare sau în programul mașinii.
+1. **Grosimea scăzută o singură dată** — între două laterale pierzi două grosimi.
+2. **Cant uitat** pe o muchie.
+3. **Modificare propagată pe jumătate** — ușa s-a schimbat, polița nu.
+4. **Transcriere** — lista e corectă pe hârtie, cifra se inversează în optimizator sau la mașină.
 
 ## Cum reduci greșelile, chiar și fără program
 
-- Lucrează cu **o singură sursă**: un tabel în care dimensiunile se calculează din formule, nu se scriu de mână.
-- Notează pentru fiecare piesă **pe ce muchii are cant** și ce grosime.
-- După orice modificare, **refă toată lista**, nu doar piesele pe care crezi că le-ai afectat.
-- **Verifică înainte de tăiere** cu o a doua pereche de ochi sau măcar a doua zi, cu mintea limpede.
+- O **singură sursă** (tabel cu formule, nu cifre rescrise).
+- Pentru fiecare piesă: **cant pe ce muchii**.
+- După orice modificare: **refă lista**, nu doar „piesele pe care crezi că le-ai atins”.
+- **Verifică înainte de tăiere**.
 
-## Ce schimbă un export automat
+## Ce schimbă o listă din proiectul 3D
 
-Un program de proiectare a mobilei face aceleași calcule, dar le leagă între ele. Când schimbi lățimea corpului, se recalculează automat toate piesele care depind de ea: blatul, polițele, ușa, spatele.
+Când cutlist-ul e legat de model, o schimbare de lățime actualizează piesele dependente în proiect. Lista pleacă din modelul actual, nu dintr-o copie veche pe hârtie.
 
-Cutlist-ul se generează direct din proiect, cu dimensiunile, cantitățile, materialul și cantul fiecărei piese. Iar exportul pentru CNC sau pentru optimizatorul de debitare se face fără să mai transcrii nimic de mână, deci dispare și greșeala de transcriere.
+Asta **nu** înlocuiește verificarea: programul aplică ce i-ai setat — inclusiv o grosime greșită. Diferența e că o verifici o dată pe setări, nu de zeci de ori pe foaie.
 
-Asta nu înseamnă că nu mai verifici nimic. Un program calculează exact ce i-ai spus, așa că o setare greșită (o grosime de placă, un tip de cant) se propagă la fel de consecvent ca una corectă. Diferența e că o verifici o dată, nu de zeci de ori.
+## Cum o face Mobilcab acum
 
-## Cum o face Mobilcab
+În [Mobilcab](/ro/), pe laptop în browser, din proiect deschizi **lista de debitare**: dimensiuni, cantități, materiale — pe Planul Gratuit, în etapa Debitare. Poți exporta CSV sau proiect local (`.mcab`) când ai nevoie. Fluxul pas cu pas: [de la proiect la listă](/ro/blog/de-la-proiect-la-lista-de-debitare/).
 
-În [Mobilcab](/ro/), dintr-un proiect terminat ajungi la cutlist cu un singur clic: lista apare imediat, cu dimensiunile panourilor, cantitățile și materialele, gata pentru fluxul tău CNC [VERIFICĂ: formatele exportate]. Programul rulează direct din browser, pe laptop, tabletă sau telefon.
+**Exportul dedicat pentru CNC** (fișiere pentru mașină) e pe [Plan](/ro/roadmap/) ca etapă ulterioară (după nesting stabil), pe planul CNC — nu e inclus în Debitare acum. Lista de debitare e baza; nesting-ul și fișierul de mașină vin pe rând.
 
-E încă în dezvoltare. Dacă vrei să-l încerci pe proiectele tale printre primii, lasă-ne emailul mai jos.
+Verificarea înainte de tăiere rămâne a ta.

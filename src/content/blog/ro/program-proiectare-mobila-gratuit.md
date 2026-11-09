@@ -1,63 +1,71 @@
 ---
 title: "Program proiectare mobilă gratuit — ce opțiuni ai în 2026"
-description: "O trecere în revistă cinstită a programelor gratuite și ieftine de proiectare a mobilei pentru tâmplari din România: ce fac bine, unde se opresc și ce să alegi."
-date: "2026-10-06"
-published: false
+description: "Ce înseamnă „gratuit” la proiectarea mobilei: Excel, SketchUp Free, desktop plătit și ce oferă Mobilcab acum pe proiectare 3D și listă de debitare."
+date: "2026-11-09"
+published: true
 ---
 
-> **Ciornă pentru fondator — de șters înainte de publicare.** Fiecare afirmație despre produsul altcuiva (preț, licență, funcții) e marcată [VERIFICĂ] și trebuie confirmată pe site-ul producătorului în luna publicării. Data din antet e provizorie.
+Dacă cauți un **program de proiectare mobilă gratuit**, de obicei vrei două lucruri: să nu plătești mii de euro la început și să ajungi la o **listă de debitare** pe care o poți folosi în atelier — nu doar la un desen frumos pentru client.
 
-Dacă faci mobilă la comandă, știi deja că proiectarea durează. Nu desenul în sine, ci tot ce vine după: lista de panouri, cantul, debitarea, fișierul pentru mașină. Un program bun scurtează exact partea asta. Unul nepotrivit doar mută munca dintr-un loc în altul.
-
-Mai jos sunt opțiunile pe care le are un atelier mic din România dacă nu vrea să plătească de la început mii de euro pe o licență. Le-am grupat după ce fac, nu după cât de cunoscute sunt.
+Mai jos sunt tipurile de opțiuni pe care le întâlnești des. Prețurile de desktop sunt din pagini publice ale vendorilor (reconfirmă pe sursă); detalii și tabel pe [comparația CAD](/ro/blog/comparatie-cad-mobila/).
 
 ## 1. Hârtie, creion și Excel
 
-Mulți tâmplari buni lucrează încă așa, și nu e o rușine. Avantajele sunt reale: nu costă nimic, nu depinzi de nimeni și știi exact ce ai calculat.
+Rămâne o alegere reală în ateliere mici: zero cost de licență, control total pe ce calculezi.
 
-Problema apare la volum și la modificări. Când clientul schimbă lățimea unui corp cu 5 cm, trebuie să refaci de mână dimensiunile tuturor panourilor afectate, cantul și lista de debitare. O singură scădere uitată înseamnă o placă tăiată greșit.
+Limita apare la modificări. Schimbi lățimea unui corp și trebuie să refaci pe rând piesele afectate, cantul și lista. O scădere uitată înseamnă placă tăiată greșit. Un exemplu pe același tip de calcul e în [corp de 600 mm pe hârtie vs. în Mobilcab](/ro/blog/corp-600-mobilcab-vs-manual/).
 
-## 2. Programe 3D generale, gratuite
+## 2. Programe 3D generale, gratuite (ex. SketchUp Free)
 
-Cel mai cunoscut exemplu e **SketchUp Free**, care rulează în browser [VERIFICĂ]. E excelent pentru a arăta clientului cum va arăta bucătăria și se învață destul de repede.
+**SketchUp Free** rulează în browser, fără instalare. E util ca modeler 3D general și pentru prezentare.
 
-Limitele, pentru un atelier:
+Conform documentației Trimble, **SketchUp Free nu e pentru uz comercial** ([SketchUp Free](https://help.sketchup.com/en/admin/sketchup-free)). Pentru un atelier care proiectează la comandă, asta e o limită de licență, nu doar de funcții.
 
-- versiunea gratuită e destinată uzului necomercial [VERIFICĂ: termenii licenței SketchUp Free];
-- nu e făcut special pentru mobilă: nu știe ce e un corp, un raft sau un cant;
-- cutlist-ul și exportul pentru CNC cer, de obicei, extensii, iar extensiile nu sunt disponibile în versiunea gratuită [VERIFICĂ].
+Chiar și ca tool de desen: nu e făcut special pentru corpuri de mobilă (cant, cutlist, flux de atelier). Extensiile și fluxurile de producție apar, de regulă, pe planuri plătite — nu pe Free.
 
-Concluzie: bun pentru prezentare, slab pentru producție.
+**Concluzie:** bun ca modeler general / prezentare; slab ca program de producție pentru mobilă, și restricționat comercial pe planul gratuit.
 
-## 3. Programe dedicate mobilei, pe desktop
+## 3. Programe dedicate mobilei (desktop) — mature, dar nu „gratis”
 
-Aici intră programe precum **PRO100**, foarte răspândit în atelierele din Europa de Est pentru bucătării și dulapuri [VERIFICĂ], sau **Polyboard**, puternic pe partea de cutlist și CNC.
+Aici intră unelte precum **Polyboard** și **PRO100**: înțeleg corpurile, cutlist-ul și, pe pachetele documentate, exportul către CNC. Sunt instalate pe calculator, nu rulează ca aplicație web fără instalare.
 
-Ce fac bine: înțeleg corpurile de mobilă, generează liste de debitare și, în versiunile mai complete, fișiere pentru mașini. Sunt unelte mature, folosite de mulți profesioniști.
+Nu sunt opțiuni gratuite de producție. Exemple de **preț public** (USD, pe canalele verificate în [comparație](/ro/blog/comparatie-cad-mobila/)):
 
-Ce trebuie să știi înainte:
+- **Polyboard 8:** aproximativ **USD $2,795–$5,295**, licență pe viață ([Wood Designer](https://wooddesigner.org/product/polyboard/))
+- **PRO100** (Pro100 USA): Pro100 v7 aproximativ **USD $3,144.99** one-time; pachete cu CNC mai sus pe site ([pricing](https://www.pro100usa.com/pricing-table))
 
-- **costul de intrare.** Polyboard se vinde ca licență perpetuă, cu prețuri publice între aproximativ 2.795 și 5.295 de dolari (septembrie 2026) [VERIFICĂ prețul actual]. PRO100 are și el licență plătită [VERIFICĂ prețul și variantele];
-- **rulează pe un singur calculator.** Proiectul rămâne pe PC-ul din atelier, nu îl deschizi pe tabletă la client;
-- **versiunile de probă** sunt utile, dar de obicei limitate în timp sau în funcții [VERIFICĂ pentru fiecare].
+Demo / trial există pe unele canale, dar de obicei cu limite (timp sau export). Proiectul rămâne pe PC-ul din atelier.
 
 ## 4. Optimizatoare de debitare online
 
-Există și unelte gratuite care fac un singur lucru: primesc lista ta de panouri și îți arată cum să le așezi pe placă cu cât mai puțină pierdere.
+Există unelte (unele gratuite) care primesc o listă de panouri și calculează așezarea pe placă. Ajută la pierdere — **după** ce lista e deja corectă.
 
-Sunt foarte utile, dar presupun că lista de panouri e deja corectă. Nu te ajută să ajungi la ea, iar datele trebuie introduse de mână, cu riscul de a greși la transcriere.
+Nu înlocuiesc proiectarea 3D și nu calculează singure piesele dintr-un corp. Dacă lista e greșită, nesting-ul doar optimizează greșeala.
 
-## Cum alegi
+## Cum alegi rapid
 
-Câteva întrebări care lămuresc repede lucrurile:
-
-1. **Unde proiectezi?** Doar în atelier, sau și la client, pe tabletă sau telefon?
-2. **Ai CNC?** Dacă da, contează mult dacă programul scoate direct fișierul pentru mașină.
-3. **Cât te costă o greșeală de calcul?** O placă de PAL tăiată greșit poate costa mai mult decât un abonament lunar.
-4. **Cât poți plăti la început?** O licență mare se amortizează în timp, dar trebuie plătită de la început.
+1. **Ai voie să-l folosești comercial?** „Gratuit” ≠ permis pentru atelier.
+2. **Ai nevoie de cutlist din model**, sau doar de un desen 3D?
+3. **Plătești o dată mii de euro**, sau vrei să începi fără licență mare?
+4. **Ai CNC acum?** Exportul mașină e pe alt nivel de produs / etapă — nu toate uneltele îl au, iar unele îl țin pe pachete separate.
 
 ## Unde se încadrează Mobilcab
 
-Lucrăm la [Mobilcab](/ro/) exact pentru golul dintre opțiunile de mai sus: un program de proiectare a mobilei care rulează direct din browser, pe laptop, tabletă sau telefon, și care generează cutlist-ul și exportul pentru CNC fără pași manuali. Va avea un plan gratuit și abonamente lunare în lei, fără o plată mare la început.
+[Mobilcab](/ro/) e un CAD pentru mobilă în **browser, pe laptop**, fără instalare.
 
-E încă în dezvoltare. Dacă vrei să-l încerci printre primii, lasă-ne emailul mai jos.
+**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, fără limită de export. Când deschidem plata: pe Gratuit apar 3 descărcări; planul **Debitare** (plătit) păstrează exporturile nelimitate — detalii pe [Prețuri](/ro/pricing/).
+
+**Nu e încă în acest flux:** nesting, etichete, ofertă, export CNC — pe [Plan](/ro/roadmap/) (etape / planuri ulterioare: Atelier, CNC…).
+
+**Partener Fondator:** înscriere gratuită **doar înainte de billing** (lista se închide la deschiderea plății); 20% din prețul listă, 6 luni de la prima plată, pe planurile plătite — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
+
+Fluxul concret: [de la proiect la lista de debitare](/ro/blog/de-la-proiect-la-lista-de-debitare/) și [prima sesiune](/ro/blog/prima-sesiune-in-mobilcab/).
+
+## Surse (prețuri / licențe terți)
+
+- SketchUp Free (uz necomercial): [help.sketchup.com — SketchUp Free](https://help.sketchup.com/en/admin/sketchup-free)
+- Polyboard: [wooddesigner.org/product/polyboard](https://wooddesigner.org/product/polyboard/)
+- PRO100: [pro100usa.com/pricing-table](https://www.pro100usa.com/pricing-table)
+- Comparație pe site: [Polyboard, PRO100, SketchList, Cabinet Vision și Mobilcab](/ro/blog/comparatie-cad-mobila/)
+
+Prețurile se pot schimba — reconfirmă pe sursa citată înainte de o decizie de cumpărare.

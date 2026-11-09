@@ -1,6 +1,10 @@
 # Mobilcab — Website Funnel Plan
 ### Turning visitors into Founding Partners
 
+> **Superseded for pricing/FP (2026-11-09).** Live rules: [`docs/DECISIONS.md`](./DECISIONS.md).
+> Free app (Debitare) for everyone; FP = 20% later, closes at billing; Pricing shows 0 RON + FP %
+> until list prices ship — not Basic 49/549 RON tiers from this draft.
+
 This plan assembles every feature, offer, and piece of copy already developed in the marketing plan and launch content kit into an actual site structure. Cross-references point to `Mobilcab_Marketing_Plan.md` and `Mobilcab_Launch_Content_Kit.md` throughout. The primary conversion goal across every page is the **Founding Partner signup** — the free tier exists to support that goal, not compete with it.
 
 ---
@@ -85,7 +89,7 @@ Standalone home for the three videos (Launch Content Kit Section 2), each with a
 2. AI-assist — "catches a clearance mistake before it hits the saw"
 3. CNC/cutlist export — "from design to cutting file, no manual math"
 
-This page exists separately from the home page embed so it can be linked directly from Facebook group posts and YouTube video descriptions (Marketing Plan Section 5.1) — a skeptical carpenter clicking from a group post should land on proof, not a full sales page.
+This page exists separately from the home page embed so it can be linked directly from Facebook group posts and YouTube video descriptions (Marketing Plan Section 5.1) — a skeptical furniture maker clicking from a group post should land on proof, not a full sales page.
 
 ### 3.5 Blog / Resources
 
