@@ -26,13 +26,15 @@ export type PageKey =
   | 'refund';
 
 export const published: Record<PageKey, boolean> = {
-  home: false,
-  foundingPartner: false,
+  // Soft-launch: waitlist + FP + pricing ladder (no list RON) + FAQ.
+  home: true,
+  foundingPartner: true,
+  // Demo stays preview until YouTube IDs are set in src/data/demoVideos.ts.
   demo: false,
   // Public during waitlist: shows what ships when, without promising dates.
   roadmap: true,
-  pricing: false,
-  faq: false,
+  pricing: true,
+  faq: true,
   // The blog's index page. Each post also has its own `published` flag (src/content/blog/).
   blog: true,
   terms: true,

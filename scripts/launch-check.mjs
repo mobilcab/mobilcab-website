@@ -92,8 +92,8 @@ export function runLaunchChecks({ root, env }) {
   if (draftEmails.length) {
     warnings.push(`Email templates still have placeholders (${draftEmails.join(', ')}): fill in EMAIL_SETTINGS in src/config.ts and run npm run emails.`);
   }
-  if (referrals && !/REFCODE/.test(existsSync(join(emailDir, 'waitlist-ro.html')) ? readFileSync(join(emailDir, 'waitlist-ro.html'), 'utf8') : '')) {
-    warnings.push('REFERRAL_PROGRAM is on but the welcome email has no invite link: run npm run emails and re-paste it in Brevo.');
+  if (referrals && !/REFCODE/.test(existsSync(join(emailDir, 'newsletter-ro.html')) ? readFileSync(join(emailDir, 'newsletter-ro.html'), 'utf8') : '')) {
+    warnings.push('REFERRAL_PROGRAM is on but the newsletter welcome email has no invite link: run npm run emails and re-paste it in Brevo.');
   }
 
   return { errors, warnings };

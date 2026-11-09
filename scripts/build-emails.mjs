@@ -1,7 +1,7 @@
 // Builds the Brevo email templates into emails/*.html (`npm run emails`).
 //
 //   confirm-ro.html / confirm-en.html                      — double opt-in confirmation (transactional)
-//   waitlist-ro.html / waitlist-en.html                    — after a waitlist sign-up is confirmed
+//   newsletter-ro.html / newsletter-en.html                — after news-list sign-up is confirmed
 //   founding-partner-ro.html / founding-partner-en.html    — after a Founding Partner reservation
 //
 // Copy is adapted from Launch Content Kit Section 4 (see emails/README.md for
@@ -152,68 +152,74 @@ const templates = {
   // it carries no unsubscribe link.
   'confirm-ro': {
     lang: 'ro',
-    subject: 'Confirmă-ți înscrierea la Mobilcab',
-    preheader: 'Un singur clic și ești pe lista de așteptare.',
+    subject: 'Confirmă-ți abonarea la noutăți Mobilcab',
+    preheader: 'Un singur clic și primești noutățile pe email.',
     reason: 'Primești acest email pentru că cineva a introdus adresa ta în formularul de pe mobilcab.com. Dacă nu ai fost tu, ignoră-l: fără confirmare, nu te adăugăm pe nicio listă.',
     transactional: true,
     body: [
       p('Salut,'),
-      p('Apasă pe butonul de mai jos ca să-ți confirmi înscrierea pe lista de așteptare Mobilcab.'),
-      button('{{ params.CONFIRM_URL }}', 'Confirmă înscrierea'),
+      p('Apasă pe butonul de mai jos ca să-ți confirmi abonarea la noutățile Mobilcab.'),
+      button('{{ params.CONFIRM_URL }}', 'Confirmă abonarea'),
       p('Linkul e valabil 7 zile.', 'font-size:14px;'),
     ].join('\n'),
   },
   'confirm-en': {
     lang: 'en',
-    subject: 'Confirm your Mobilcab sign-up',
-    preheader: "One click and you're on the waitlist.",
+    subject: 'Confirm your Mobilcab news signup',
+    preheader: 'One click and you’ll get Mobilcab news by email.',
     reason: "You're receiving this email because someone entered your address on mobilcab.com. If it wasn't you, ignore it: without confirmation, we don't add you to any list.",
     transactional: true,
     body: [
       p('Hi,'),
-      p('Click the button below to confirm your sign-up to the Mobilcab waitlist.'),
-      button('{{ params.CONFIRM_URL }}', 'Confirm my sign-up'),
+      p('Click the button below to confirm your signup for Mobilcab news.'),
+      button('{{ params.CONFIRM_URL }}', 'Confirm my signup'),
       p('The link is valid for 7 days.', 'font-size:14px;'),
     ].join('\n'),
   },
-  'waitlist-ro': {
+  'newsletter-ro': {
     lang: 'ro',
-    subject: 'Ești pe listă! Iată ce urmează 🛠️',
-    preheader: 'Mulțumesc că te-ai înscris. Noutăți și drumul până la planul Debitare plătit.',
-    reason: 'Primești acest email pentru că te-ai înscris pe lista de așteptare de pe mobilcab.com.',
+    subject: 'Ești abonat la noutăți Mobilcab 🛠️',
+    preheader: 'Mulțumesc. Îți scriem când apar lucruri importante — fără spam.',
+    reason: 'Primești acest email pentru că te-ai abonat la noutăți pe mobilcab.com.',
     body: [
       p('Salut,'),
-      p('Mulțumesc că te-ai înscris pe lista de așteptare Mobilcab!'),
+      p('Mulțumesc că te-ai abonat la noutățile Mobilcab!'),
       p(
-        'Ești pe lista de noutăți. Acum aplicația e pe Planul Gratuit (Debitare, fără limită de export). Pentru 20% pe planurile plătite când deschidem plata, înscrie-te separat pe lista Partener Fondator — lista se închide la billing.',
+        'Aplicația e deja pe Planul Gratuit (Debitare, fără limită de export) — o poți folosi acum pe laptop, în browser. Acest email e doar pentru noutăți: etape noi, prețuri când deschidem plata, ghiduri scurte. Nu e listă de așteptare și nu include 20% Partener Fondator.',
+      ),
+      p(
+        `Dacă vrei 20% pe planurile plătite (înscriere doar înainte de billing), programul e separat: <a href="${site}/ro/founding-partner/" style="color:${colors.wood};">Partener Fondator</a>.`,
       ),
       p('Ce urmează:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Te anunț personal când deschidem abonamentele (Debitare plătit) și când apar noutăți importante.',
-        'Îți arăt un ghid rapid de 10 minute ca să faci primul tău proiect.',
-        'Îți cer sincer părerea — ce merge, ce nu, ce ai vrea să vezi.',
+        'Te anunț când deschidem abonamentele (Debitare plătit) și când apar noutăți importante.',
+        'Îți trimit din când în când un ghid scurt ca să faci primul proiect.',
+        'Poți folosi aplicația oricând pe Planul Gratuit — nu trebuie să aștepți.',
       ]),
       demoLine('ro'),
       referralBlock('ro'),
       signature('ro'),
     ].join('\n'),
   },
-  'waitlist-en': {
+  'newsletter-en': {
     lang: 'en',
-    subject: "You're on the list! Here's what happens next 🛠️",
-    preheader: "Thanks for signing up. News and the path to the paid Cut list plan.",
-    reason: 'You are receiving this email because you joined the waitlist on mobilcab.com.',
+    subject: "You're subscribed to Mobilcab news 🛠️",
+    preheader: "Thanks. We'll write when something important ships — no spam.",
+    reason: 'You are receiving this email because you subscribed to news on mobilcab.com.',
     body: [
       p('Hi,'),
-      p('Thanks for joining the Mobilcab waitlist!'),
+      p('Thanks for subscribing to Mobilcab news!'),
       p(
-        "You're on the news list. The app is on the Free plan now (Cut list, no export limit). For 20% off paid plans when billing opens, join the Founding Partner waitlist separately — enrollment closes at billing.",
+        "The app is already on the Free plan (Cut list, no export limit) — you can use it now on a laptop, in the browser. This email is news only: new stages, prices when billing opens, short guides. It isn't a waitlist and it doesn't include the 20% Founding Partner discount.",
+      ),
+      p(
+        `If you want 20% off paid plans (signup only before billing), that’s a separate program: <a href="${site}/en/founding-partner/" style="color:${colors.wood};">Founding Partner</a>.`,
       ),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        "I'll let you know personally when we open subscriptions (paid Cut list) and when there's important news.",
-        'A quick 10-minute guide to help you build your first project.',
-        "I'll genuinely ask for your feedback — what works, what doesn't, what you'd want to see.",
+        "I'll let you know when we open subscriptions (paid Cut list) and when there's important news.",
+        "From time to time, a short guide to help you build your first project.",
+        "You can use the Free plan anytime — you don't need to wait.",
       ]),
       demoLine('en'),
       referralBlock('en'),
@@ -246,16 +252,16 @@ const templates = {
   },
   'founding-partner-en': {
     lang: 'en',
-    subject: "You're on the Founding Partner waitlist 🛠️",
-    preheader: "You're on the list. 20% off paid plans; waitlist closes at billing.",
-    reason: 'You are receiving this email because you joined the Founding Partner waitlist on mobilcab.com.',
+    subject: "You're on the Founding Partner list 🛠️",
+    preheader: "You're on the list. 20% off paid plans; enrollment closes at billing.",
+    reason: 'You are receiving this email because you joined the Founding Partner program on mobilcab.com.',
     body: [
       p('Hi {{ contact.FIRSTNAME }},'),
-      p("Thanks for joining the Founding Partner waitlist! You're building Mobilcab with us — nothing to pay now."),
-      p('What the waitlist means:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
+      p("Thanks for joining Founding Partner! You're building Mobilcab with us — nothing to pay now."),
+      p('What the list means:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'When we open subscriptions (first paid plan: Cut list), people on this list get 20% off list for 6 months. The waitlist closes then. Anyone who subscribes later pays full list. We announce amounts then.',
-        "Nothing to pay now. Payment is optional when we open sales; joining the waitlist doesn't commit you.",
+        'When we open subscriptions (first paid plan: Cut list), people on this list get 20% off list for 6 months. Enrollment closes then. Anyone who subscribes later pays full list. We announce amounts then.',
+        "Nothing to pay now. Payment is optional when we open sales; joining doesn't commit you.",
         'You get a real say in what we build next.',
       ]),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
