@@ -1,11 +1,13 @@
 {
   "meta": {
     "title": "Sign-up confirmed — Mobilcab",
-    "description": "Confirmation of your Mobilcab waitlist sign-up."
+    "description": "Confirmation of your Mobilcab news signup."
   },
   "ok": {
-    "title": "Done, you're on the list!",
-    "body": "Thanks for confirming your address. You're on the news list — no Founding Partner discount. For 20% off paid plans (before billing), join the Founding Partner waitlist."
+    "title": "Done — you're subscribed to news.",
+    "body": "Thanks for confirming your address. You'll get product updates by email. This doesn't include the 20% Founding Partner discount — that program is separate.",
+    "appCta": "Try the app free",
+    "fpCta": "Join Founding Partner"
   },
   "error": {
     "linkTitle": "This link is no longer valid",
