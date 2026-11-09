@@ -23,4 +23,4 @@ The foundation (design + cut lists) is on the Free plan now, with no subscriptio
 
 ## Founding Partner
 
-Joining is free, only before billing (then the waitlist closes), and doesn’t oblige you to pay. Founding Partners get 20% off list for 6 months from first payment on paid plans. Anyone who joins later pays full list.
+Joining is free, only before billing (then enrollment closes), and doesn’t oblige you to pay. Founding Partners get 20% off list for 6 months from first payment on paid plans. Anyone who joins later pays full list.

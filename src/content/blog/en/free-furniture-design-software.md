@@ -57,7 +57,7 @@ They don’t replace 3D design and don’t derive parts from a cabinet on their 
 
 **Not in this flow yet:** nesting, labels, quotes, CNC export — on the [Roadmap](/en/roadmap/) (later stages / plans: Atelier, CNC…).
 
-**Founding Partner:** free signup **only before billing** (the waitlist closes when payment opens); 20% off list for 6 months from first payment on paid plans — no purchase obligation. Details on [Founding Partner](/en/founding-partner/).
+**Founding Partner:** free signup **only before billing** (enrollment closes when payment opens); 20% off list for 6 months from first payment on paid plans — no purchase obligation. Details on [Founding Partner](/en/founding-partner/).
 
 Concrete flow: [from project to cut list](/en/blog/from-project-to-cut-list/) and [first session](/en/blog/first-session-in-mobilcab/).
 
