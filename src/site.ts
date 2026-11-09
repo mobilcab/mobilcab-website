@@ -34,7 +34,7 @@ export const published: Record<PageKey, boolean> = {
   pricing: false,
   faq: false,
   // The blog's index page. Each post also has its own `published` flag (src/content/blog/).
-  blog: false,
+  blog: true,
   terms: true,
   privacy: true,
   // Paddle requires this at billing live (CU-1amhxucn004). Draft is in preview until then.
