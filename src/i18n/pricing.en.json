@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Pricing — Mobilcab",
-    "description": "Now: Free plan (Cut list, unlimited exports) + Founding Partner waitlist. At billing: Free with 3 exports + paid Cut list; Atelier, CNC, Production and AI follow later."
+    "description": "Now: Free plan (Cut list, unlimited exports) + Founding Partner program. At billing: Free with 3 exports + paid Cut list; Atelier, CNC, Production and AI follow later."
   },
   "hero": {
     "label": "Pricing",
     "title": "Free on Cut list now. 20% Founding Partner when billing opens.",
-    "body": "Now: the Free plan includes 3D design and cut lists, with no export limits. When subscriptions open, Free gets 3 downloads per account, and the paid Cut list plan keeps unlimited exports. For 20% off paid plans, join the Founding Partner waitlist before billing — we close the list then. We announce list amounts at paid launch."
+    "body": "Now: the Free plan includes 3D design and cut lists, with no export limits. When subscriptions open, Free gets 3 downloads per account, and the paid Cut list plan keeps unlimited exports. For 20% off paid plans, join the Founding Partner program before billing — we close enrollment then. We announce list amounts at paid launch."
   },
   "callout": {
     "title": "New here?",
@@ -49,6 +49,6 @@
     "title": "More detail",
     "body": "How Free differs from Cut list, what comes next (Atelier, CNC, Production, AI), and how Founding Partner works — on the FAQ page."
   },
-  "note": "We don't charge until paid plans open. Until then: Free = full Cut list, no export limit. At billing: Free with 3 downloads + paid Cut list. Next, in order: Atelier (nesting, labels, quotes), CNC, Production, AI — shown as coming soon until each ships. Founding Partner closes at billing; 20% / 6 months is only for people on the waitlist.",
+  "note": "We don't charge until paid plans open. Until then: Free = full Cut list, no export limit. At billing: Free with 3 downloads + paid Cut list. Next, in order: Atelier (nesting, labels, quotes), CNC, Production, AI — shown as coming soon until each ships. Founding Partner enrollment closes at billing; 20% / 6 months is only for people in the program.",
   "faqLink": "Questions about the plans"
 }

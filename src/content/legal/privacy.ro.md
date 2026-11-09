@@ -8,7 +8,7 @@ Suntem operatorii datelor tale personale în sensul Regulamentului (UE) 2016/679
 
 Pentru orice întrebare legată de datele tale, scrie-ne la **contact@mobilcab.com**.
 
-## 2. Lista de noutăți (waitlist general)
+## 2. Lista de noutăți
 
 Când te înscrii pentru noutăți pe email, colectăm:
 

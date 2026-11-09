@@ -42,13 +42,13 @@ When a paid plan exists, **our order process is conducted by our online reseller
 
 ## 6. The Founding Partner program
 
-- The program is limited to the first 15 users on the Founding Partner waitlist, with the possibility of extending it — any extension of the number of spots is announced publicly, not silently.
-- **Joining the waitlist is free and doesn't commit you to anything.** You can join **only before** we open subscriptions. **When billing opens, the Founding Partner waitlist closes** — we do not take new enrollments.
+- The program is limited to the first 15 Founding Partners, with the possibility of extending it — any extension of the number of spots is announced publicly, not silently.
+- **Joining the program is free and doesn't commit you to anything.** You can join **only before** we open subscriptions. **When billing opens, Founding Partner enrollment closes** — we do not take new sign-ups.
 - The first paid plan is **Cut list** (the same product as Free, with unlimited exports). Later plans (Atelier, CNC, Production, AI) appear on Pricing when we ship them — see the [Roadmap](/en/roadmap/) and [Pricing](/en/pricing/).
 - Until subscriptions open, everyone — including Founding Partners — uses the Free plan with full Cut list (no export limit). When subscriptions open, Free gets **3 downloads per account**.
-- When a paid plan is activated, Founding Partners on the waitlist get **20% off list price** for **6 months from first payment**, on paid plans that ship in that window (starting with Cut list). Anyone who subscribes later, without a waitlist place, pays list price.
+- When a paid plan is activated, Founding Partners get **20% off list price** for **6 months from first payment**, on paid plans that ship in that window (starting with Cut list). Anyone who subscribes later, without a place in the program, pays list price.
 - After the 6 months, the price automatically returns to the standard one — the discount doesn't stay active indefinitely.
-- We expect reasonable feedback (for example real projects and short replies). If a waitlist seat sits unused (no feedback), we may send a reminder at 60 days and free the seat at **90 days**; projects stay, and the account returns to the ordinary Free plan.
+- We expect reasonable feedback (for example real projects and short replies). If a Founding Partner seat sits unused (no feedback), we may send a reminder at 60 days and free the seat at **90 days**; projects stay, and the account returns to the ordinary Free plan.
 - Founding Partner benefits are personal and can't be transferred.
 
 ## 7. Check the results before production

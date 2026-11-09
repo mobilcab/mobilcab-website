@@ -40,8 +40,8 @@
       "id": "price",
       "q": "How much does it cost?",
       "a": [
-        "Now: Free = full Cut list, no export limits. We are not charging. For 20% off paid plans, join the Founding Partner waitlist (it closes when billing opens).",
-        "At billing: Free gets 3 downloads per account; the paid Cut list plan keeps unlimited exports. Founding Partners on the list: 20% off for 6 months from first payment on paid plans that ship in that window. Anyone who subscribes later, without a waitlist place, pays full list. We announce amounts then."
+        "Now: Free = full Cut list, no export limits. We are not charging. For 20% off paid plans, join the Founding Partner program (enrollment closes when billing opens).",
+        "At billing: Free gets 3 downloads per account; the paid Cut list plan keeps unlimited exports. Founding Partners: 20% off for 6 months from first payment on paid plans that ship in that window. Anyone who subscribes later, without a place in the program, pays full list. We announce amounts then."
       ],
       "link": "foundingPartner"
     },
@@ -50,7 +50,7 @@
       "q": "How is Free different from the Cut list plan?",
       "a": [
         "Now only Free exists: full Cut list (3D, list, cloud), with no download limits.",
-        "When subscriptions open: Free stays Cut list with 3 downloads per account; paid Cut list is the same product with unlimited exports. Next come Atelier, CNC, Production, AI — each adds what is on the Roadmap. Founding Partners: 20% / 6 months; the waitlist closes at billing."
+        "When subscriptions open: Free stays Cut list with 3 downloads per account; paid Cut list is the same product with unlimited exports. Next come Atelier, CNC, Production, AI — each adds what is on the Roadmap. Founding Partners: 20% / 6 months; enrollment closes at billing."
       ],
       "tiers": true,
       "after": ["We do not charge until the paid Cut list plan opens. List prices are confirmed then. Higher plans appear on Pricing as coming soon until we ship them."]
