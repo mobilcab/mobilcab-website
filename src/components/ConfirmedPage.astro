@@ -3,10 +3,11 @@
 // welcome email links to (?cod=<invite code>). Static: the script reads the
 // address and fetches the invite count. Not indexed.
 import Base from '../layouts/Base.astro';
+import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
-import { REFERRAL_GOAL, REFERRAL_PROGRAM } from '../config';
+import { APP_URL, REFERRAL_GOAL, REFERRAL_PROGRAM } from '../config';
 import { useConfirmTranslations, type Lang } from '../i18n';
-import { confirmedPaths, joinFreeHref, livePaths } from '../site';
+import { confirmedPaths, joinFreeHref, linkFor, livePaths } from '../site';
 import MilestoneText from './MilestoneText.astro';
 
 interface Props {
@@ -16,41 +17,57 @@ interface Props {
 const { lang } = Astro.props;
 const t = useConfirmTranslations(lang);
 const card = 'rounded-md border border-line bg-white p-6';
+const fpHref = linkFor('foundingPartner', lang, false);
+const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
 ---
 
 <Base lang={lang} title={t.meta.title} description={t.meta.description}>
-  <div class="mx-auto flex min-h-dvh max-w-xl flex-col px-5 sm:px-8">
+  <div class={wrap}>
     <SiteHeader lang={lang} alternates={confirmedPaths} />
+  </div>
 
-    <main
-      class="flex flex-1 flex-col justify-center pt-8 pb-16"
-      data-confirmed
-      data-referral={REFERRAL_PROGRAM ? 'on' : 'off'}
-      data-goal={REFERRAL_GOAL}
-      data-home={livePaths.home[lang]}
-      data-text={JSON.stringify(t.referral)}
-    >
+  <main
+    class={`${wrap} flex min-h-[70dvh] flex-col justify-center pt-12 pb-20 sm:pt-16`}
+    data-confirmed
+    data-referral={REFERRAL_PROGRAM ? 'on' : 'off'}
+    data-goal={REFERRAL_GOAL}
+    data-home={livePaths.home[lang]}
+    data-text={JSON.stringify(t.referral)}
+  >
+    <div class="max-w-2xl">
       <div class="dimension-line mb-6" aria-hidden="true"></div>
 
       <section data-state="ok">
-        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight">{t.ok.title}</h1>
-        <MilestoneText text={t.ok.body} lang={lang} class="mt-3 text-base leading-relaxed text-graphite" />
+        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight text-balance sm:text-[2.25rem]">{t.ok.title}</h1>
+        <MilestoneText text={t.ok.body} lang={lang} class="mt-4 text-base leading-relaxed text-graphite sm:text-lg" />
+        <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-5">
+          <a href={APP_URL} class="btn-primary" rel="noopener" data-cta="open_app" data-cta-location="confirmed">
+            {t.ok.appCta}
+          </a>
+          {
+            fpHref && (
+              <a href={fpHref} class="link-quiet" data-cta="founding_partner" data-cta-location="confirmed">
+                {t.ok.fpCta}
+              </a>
+            )
+          }
+        </div>
       </section>
 
       <section data-state="error-link" hidden>
-        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight">{t.error.linkTitle}</h1>
-        <p class="mt-3 text-base leading-relaxed text-graphite">{t.error.linkBody}</p>
-        <a href={joinFreeHref(lang, false)} class="btn-primary mt-6">{t.error.again}</a>
+        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight sm:text-[2.25rem]">{t.error.linkTitle}</h1>
+        <p class="mt-4 text-base leading-relaxed text-graphite sm:text-lg">{t.error.linkBody}</p>
+        <a href={joinFreeHref(lang, false)} class="btn-primary mt-8">{t.error.again}</a>
       </section>
 
       <section data-state="error-server" hidden>
-        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight">{t.error.serverTitle}</h1>
-        <p class="mt-3 text-base leading-relaxed text-graphite">{t.error.serverBody}</p>
+        <h1 class="text-[1.875rem] leading-tight font-bold tracking-tight sm:text-[2.25rem]">{t.error.serverTitle}</h1>
+        <p class="mt-4 text-base leading-relaxed text-graphite sm:text-lg">{t.error.serverBody}</p>
       </section>
 
       {
         REFERRAL_PROGRAM && (
-          <section data-referral-box hidden class:list={[card, 'mt-8']}>
+          <section data-referral-box hidden class:list={[card, 'mt-10']}>
             <h2 class="text-lg font-bold tracking-tight">{t.referral.title}</h2>
             <p class="mt-2 text-base leading-relaxed text-graphite">{t.referral.body.replace('{goal}', String(REFERRAL_GOAL))}</p>
 
@@ -87,8 +104,10 @@ const card = 'rounded-md border border-line bg-white p-6';
           </section>
         )
       }
-    </main>
-  </div>
+    </div>
+  </main>
+
+  <SiteFooter lang={lang} preview={false} />
 </Base>
 
 <script>

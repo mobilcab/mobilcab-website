@@ -1,11 +1,13 @@
 {
   "meta": {
     "title": "Înscriere confirmată — Mobilcab",
-    "description": "Confirmarea înscrierii pe lista de așteptare Mobilcab."
+    "description": "Confirmarea abonării la noutățile Mobilcab."
   },
   "ok": {
-    "title": "Gata, ești pe listă!",
-    "body": "Mulțumim că ți-ai confirmat adresa. Ești pe lista de noutăți — fără discount Partener Fondator. Pentru 20% pe planurile plătite (înainte de billing), înscrie-te pe lista Partener Fondator."
+    "title": "Gata — ești abonat la noutăți.",
+    "body": "Mulțumim că ți-ai confirmat adresa. Primești pe email actualizări despre produs. Asta nu include discountul de 20% Partener Fondator — programul e separat.",
+    "appCta": "Încearcă aplicația gratuit",
+    "fpCta": "Devino Partener Fondator"
   },
   "error": {
     "linkTitle": "Linkul nu mai e valabil",
