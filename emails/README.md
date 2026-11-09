@@ -2,9 +2,9 @@
 
 | File | Sent when | Subject |
 |---|---|---|
-| `confirm-ro.html` / `confirm-en.html` | Right after a waitlist sign-up, by the site (double opt-in) | Confirmă-ți înscrierea la Mobilcab / Confirm your Mobilcab sign-up |
-| `waitlist-ro.html` / `waitlist-en.html` | Someone confirms their sign-up (added to the waitlist list) | Ești pe listă! Iată ce urmează 🛠️ / You're on the list! Here's what happens next 🛠️ |
-| `founding-partner-ro.html` / `founding-partner-en.html` | Someone joins the Founding Partner waitlist | Ești pe lista Founding Partner 🛠️ / You're on the Founding Partner waitlist 🛠️ |
+| `confirm-ro.html` / `confirm-en.html` | Right after a news signup, by the site (double opt-in) | Confirmă-ți abonarea la noutăți Mobilcab / Confirm your Mobilcab news signup |
+| `newsletter-ro.html` / `newsletter-en.html` | Someone confirms news signup (added to **Noutati** list) | Ești abonat la noutăți Mobilcab 🛠️ / You're subscribed to Mobilcab news 🛠️ |
+| `founding-partner-ro.html` / `founding-partner-en.html` | Someone joins the Founding Partner list | Ești pe lista Partener Fondator 🛠️ / You're on the Founding Partner list 🛠️ |
 
 The HTML files are **generated**: edit the copy in `scripts/build-emails.mjs`,
 fill in `EMAIL_SETTINGS` in `src/config.ts`, then run:
@@ -22,7 +22,7 @@ contain visible **[COMPLETEAZĂ] / [FILL IN]** markers:
 - `companyLine`: company name and address. Marketing emails must identify the
   sender (see `docs/privacy-policy-draft.md`).
 - `demoUrl` (optional): once the demo videos exist, a link to them adds a "see
-  how it works" line to the waitlist email.
+  how it works" line to the newsletter welcome email.
 
 ## Setting them up in Brevo
 
@@ -35,42 +35,44 @@ contain visible **[COMPLETEAZĂ] / [FILL IN]** markers:
    `BREVO_CONFIRM_TEMPLATE_ID_RO` / `_EN`. The confirmation link is
    `{{ params.CONFIRM_URL }}`. They have no unsubscribe link, since they're not
    marketing emails.
-2. **Waitlist automation:** Automations → "Contact added to a list" → choose the
-   waitlist list → send `waitlist-ro`. If you use a separate English list
-   (`BREVO_LIST_ID_EN`), make a second automation for it with `waitlist-en`.
-3. **Founding Partner automation:** "Contact added to a list" → the FP waitlist
-   (`BREVO_FP_LIST_ID`) → a condition on the `LANGUAGE` attribute: `en`
-   gets `founding-partner-en`, everything else `founding-partner-ro`.
+2. **Newsletter automation:** Automations → "Contact added to a list" →
+   **Noutati** (`BREVO_LIST_ID`) → send `newsletter-ro`. If you use a separate
+   English list (`BREVO_LIST_ID_EN`), make a second automation with
+   `newsletter-en`.
+3. **Founding Partner automation:** "Contact added to a list" →
+   **Partener Fondator** (`BREVO_FP_LIST_ID`) → a condition on the `LANGUAGE`
+   attribute: `en` gets `founding-partner-en`, everything else
+   `founding-partner-ro`.
 4. Send yourself a test of each before switching the automations on.
 
 [VERIFY in Brevo] The templates use Brevo's template syntax:
 `{{ contact.FIRSTNAME }}` for the name (Founding Partner emails only; the
-waitlist doesn't collect names) and `{{ unsubscribe }}` for the unsubscribe
+news list doesn't collect names) and `{{ unsubscribe }}` for the unsubscribe
 link. Check both render in Brevo's preview; if Brevo's syntax differs, change
 them in `scripts/build-emails.mjs`.
 
 **Invite block:** while `REFERRAL_PROGRAM` is on in `src/config.ts`, `npm run
 emails` adds the person's invite link and a "see your invites" button to the
-welcome email, using `{{ contact.REFCODE }}`. Rebuild and re-paste the waitlist
-templates when you switch the program on.
+newsletter welcome email, using `{{ contact.REFCODE }}`. Rebuild and re-paste
+the newsletter templates when you switch the program on.
 
 ## What changed from Launch Content Kit Section 4
 
-The waitlist email follows the Kit's text, with these changes:
+The newsletter email follows the Kit's waitlist text, with these changes:
 
 - **"Founding Workshop" → "Founding Partner"**, per `docs/DECISIONS.md`.
-- **The general waitlist isn't Founding Partner.** News only — no FP discount.
-  The email points people to the separate FP waitlist for 20% off paid plans
-  (starts with Debitare / Cut list; waitlist closes at billing). Later /
-  non-FP subscribers pay list price.
-- **App free on Debitare until paid Debitare opens.** Copy frames news + the
-  path to paid plans, not “first access”.
+- **News list ≠ Founding Partner.** News only — no FP discount. The email
+  points people to the separate FP program for 20% off paid plans (starts with
+  Debitare / Cut list; enrollment closes at billing). Later / non-FP
+  subscribers pay list price.
+- **App is live on Free (Debitare).** Copy frames news + optional FP, not
+  “wait for access”.
 - **The demo video link** only appears once `demoUrl` is set.
 - **Added a footer**: why they're receiving the email, the sender's company
   line, and an unsubscribe link.
 
-The Founding Partner email covers the FP waitlist (the Kit predates the form).
-It restates: free waitlist now (closes at billing); 20% / 6 months on paid
-plans when subscriptions open (amounts TBD); later subscribers pay list;
-nothing owed until then; founder-led onboarding of the first project per
-Marketing Plan 5.4. Remove that line if you won't offer it.
+The Founding Partner email covers FP enrollment. It restates: free to join
+now (closes at billing); 20% / 6 months on paid plans when subscriptions open
+(amounts TBD); later subscribers pay list; nothing owed until then;
+founder-led onboarding of the first project per Marketing Plan 5.4. Remove
+that line if you won't offer it.

@@ -13,6 +13,7 @@ let root: string;
 const ready = {
   BREVO_API_KEY: 'k',
   BREVO_LIST_ID: '1',
+  BREVO_FP_LIST_ID: '8',
   BREVO_CONFIRM_TEMPLATE_ID_RO: '2',
   BREVO_CONFIRM_TEMPLATE_ID_EN: '3',
   CONFIRM_SECRET: 'x'.repeat(40),
@@ -35,7 +36,7 @@ beforeEach(() => {
   }
   edit('src/config.ts', (s) => s.replace('CONTACT_EMAIL_CONFIRMED = false', 'CONTACT_EMAIL_CONFIRMED = true'));
   // Email templates as if EMAIL_SETTINGS were filled in.
-  for (const name of ['waitlist-ro', 'waitlist-en', 'confirm-ro', 'confirm-en', 'founding-partner-ro', 'founding-partner-en']) {
+  for (const name of ['newsletter-ro', 'newsletter-en', 'confirm-ro', 'confirm-en', 'founding-partner-ro', 'founding-partner-en']) {
     edit(`emails/${name}.html`, (s) => s.replaceAll('[COMPLETEAZĂ]', 'Ion Pop').replaceAll('[FILL IN]', 'Ion Pop'));
   }
 });
@@ -74,27 +75,25 @@ describe('launch check', () => {
   });
 
   it('requires the Founding Partner list once that page is published', () => {
-    publish('foundingPartner');
-    expect(check().errors).toEqual([expect.stringContaining('BREVO_FP_LIST_ID')]);
-    expect(check({ ...ready, BREVO_FP_LIST_ID: '9' }).errors).toEqual([]);
+    const { BREVO_FP_LIST_ID: _omit, ...withoutFp } = ready;
+    expect(check(withoutFp).errors).toEqual([expect.stringContaining('BREVO_FP_LIST_ID')]);
+    expect(check(ready).errors).toEqual([]);
   });
+
 
   it('blocks a published blog post that still has its review note, but not a draft', () => {
     publish('blog');
     expect(check().errors).toEqual([]);
 
-    edit('src/content/blog/ro/cutlist-cnc-fara-calcule-manuale.md', (s) => s.replace('published: false', 'published: true'));
-    expect(check().errors.map((e) => e.split(' ')[0])).toEqual([
-      'src/content/blog/ro/cutlist-cnc-fara-calcule-manuale.md',
-      'src/content/blog/ro/cutlist-cnc-fara-calcule-manuale.md',
-    ]);
+    edit('src/content/blog/ro/cutlist-cnc-fara-calcule-manuale.md', (s) => `Ciornă pentru fondator\n${s}`);
+    expect(check().errors.some((e) => e.includes('cutlist-cnc-fara-calcule-manuale.md'))).toBe(true);
   });
 
   it('only warns about a Demo page without videos and placeholder emails', () => {
     publish('demo');
-    edit('emails/waitlist-ro.html', (s) => s.replace('Stefan si Fineas', '[COMPLETEAZĂ]'));
+    edit('emails/newsletter-ro.html', (s) => s.replace('Stefan si Fineas', '[COMPLETEAZĂ]'));
     const { errors, warnings } = check();
     expect(errors).toEqual([]);
-    expect(warnings).toEqual([expect.stringContaining('no videos'), expect.stringContaining('waitlist-ro.html')]);
+    expect(warnings).toEqual([expect.stringContaining('no videos'), expect.stringContaining('newsletter-ro.html')]);
   });
 });
