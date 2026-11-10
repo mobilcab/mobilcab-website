@@ -178,8 +178,8 @@ const templates = {
   },
   'newsletter-ro': {
     lang: 'ro',
-    subject: 'Ești abonat la noutăți Mobilcab 🛠️',
-    preheader: 'Mulțumesc. Îți scriem când apar lucruri importante — fără spam.',
+    subject: 'Ești abonat la noutăți Mobilcab',
+    preheader: 'Mulțumesc. Îți scriem când apar lucruri importante.',
     reason: 'Primești acest email pentru că te-ai abonat la noutăți pe mobilcab.com.',
     body: [
       p('Salut,'),
@@ -203,8 +203,8 @@ const templates = {
   },
   'newsletter-en': {
     lang: 'en',
-    subject: "You're subscribed to Mobilcab news 🛠️",
-    preheader: "Thanks. We'll write when something important ships — no spam.",
+    subject: "You're subscribed to Mobilcab news",
+    preheader: "Thanks. We'll write when something important ships.",
     reason: 'You are receiving this email because you subscribed to news on mobilcab.com.',
     body: [
       p('Hi,'),
@@ -228,7 +228,7 @@ const templates = {
   },
   'founding-partner-ro': {
     lang: 'ro',
-    subject: 'Ești pe lista Partener Fondator 🛠️',
+    subject: 'Ești pe lista Partener Fondator',
     preheader: 'Ești pe listă. 20% pe planurile plătite; lista se închide la billing.',
     reason: 'Primești acest email pentru că te-ai înscris pe lista Partener Fondator pe mobilcab.com.',
     body: [
@@ -252,7 +252,7 @@ const templates = {
   },
   'founding-partner-en': {
     lang: 'en',
-    subject: "You're on the Founding Partner list 🛠️",
+    subject: "You're on the Founding Partner list",
     preheader: "You're on the list. 20% off paid plans; enrollment closes at billing.",
     reason: 'You are receiving this email because you joined the Founding Partner program on mobilcab.com.',
     body: [

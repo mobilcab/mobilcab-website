@@ -3,8 +3,8 @@
 | File | Sent when | Subject |
 |---|---|---|
 | `confirm-ro.html` / `confirm-en.html` | Right after a news signup, by the site (double opt-in) | Confirmă-ți abonarea la noutăți Mobilcab / Confirm your Mobilcab news signup |
-| `newsletter-ro.html` / `newsletter-en.html` | Someone confirms news signup (added to **Noutati** list) | Ești abonat la noutăți Mobilcab 🛠️ / You're subscribed to Mobilcab news 🛠️ |
-| `founding-partner-ro.html` / `founding-partner-en.html` | Someone joins the Founding Partner list | Ești pe lista Partener Fondator 🛠️ / You're on the Founding Partner list 🛠️ |
+| `newsletter-ro.html` / `newsletter-en.html` | Someone confirms news signup (added to **Noutati** list) | Ești abonat la noutăți Mobilcab / You're subscribed to Mobilcab news |
+| `founding-partner-ro.html` / `founding-partner-en.html` | Someone joins the Founding Partner list | Ești pe lista Partener Fondator / You're on the Founding Partner list |
 
 The HTML files are **generated**: edit the copy in `scripts/build-emails.mjs`,
 fill in `EMAIL_SETTINGS` in `src/config.ts`, then run:
@@ -44,6 +44,12 @@ contain visible **[COMPLETEAZĂ] / [FILL IN]** markers:
    attribute: `en` gets `founding-partner-en`, everything else
    `founding-partner-ro`.
 4. Send yourself a test of each before switching the automations on.
+
+## Deliverability
+
+DNS (SPF / DKIM / DMARC) is already live for `mobilcab.com`. See
+[`DELIVERABILITY.md`](./DELIVERABILITY.md) for the Brevo auth checklist,
+subject lines to re-paste, and warm-up steps.
 
 [VERIFY in Brevo] The templates use Brevo's template syntax:
 `{{ contact.FIRSTNAME }}` for the name (Founding Partner emails only; the
