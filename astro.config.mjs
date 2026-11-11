@@ -60,6 +60,9 @@ export default defineConfig({
       CONFIRM_SECRET: envField.string({ context: 'server', access: 'secret', optional: true }),
       // Sent by the daily Cron Worker to /api/cleanup; any long random string.
       CRON_SECRET: envField.string({ context: 'server', access: 'secret', optional: true }),
+      // Neon Data API of the environment (…/neondb/rest/v1). Unset = Brevo-only:
+      // Founding Partner requests then don't reach the CAD app's admin panel.
+      NEON_DATA_API_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
       PUBLIC_PLAUSIBLE_DOMAIN: envField.string({ context: 'client', access: 'public', optional: true }),
       // Cloudflare Web Analytics site token (dashboard -> Web Analytics). Read at
       // build time; empty means no page-view beacon at all.

@@ -2,13 +2,17 @@ name: Deploy to Cloudflare Workers
 
 # Deploys with the wrangler CLI and a token: no native GitHub<->Cloudflare
 # integration, so a deploy never depends on who authored the commit.
+#
+# Two environments (docs/ENVIRONMENTS.md):
+#   main    -> Worker `mobilcab-website`          -> https://mobilcab.com
+#   develop -> Worker `mobilcab-website-develop`  -> https://web-develop.mobilcab.com (Cloudflare Access)
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
   workflow_dispatch:
     inputs:
       environment:
-        description: "DEPLOY_ENV passed to the build (production stops on launch-check errors)"
+        description: "DEPLOY_ENV passed to the build (production stops on launch-check errors). Only used on main."
         type: choice
         options:
           - production
@@ -24,9 +28,17 @@ jobs:
   Deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # GitHub Environments: a `develop` environment can override any secret below
+    # with its own value (e.g. a test Brevo list); anything it leaves out falls
+    # back to the repository-level secret.
+    environment: ${{ github.ref_name == 'main' && 'production' || 'develop' }}
     env:
-      DEPLOY_ENV: ${{ inputs.environment || 'production' }}
-      SITE_URL: https://mobilcab.com
+      IS_MAIN: ${{ github.ref_name == 'main' }}
+      DEPLOY_ENV: ${{ github.ref_name == 'main' && (inputs.environment || 'production') || 'preview' }}
+      SITE_URL: ${{ github.ref_name == 'main' && 'https://mobilcab.com' || 'https://web-develop.mobilcab.com' }}
+      # Picks the `env.develop` block of wrangler.jsonc (build) and the Worker for secrets.
+      CLOUDFLARE_ENV: ${{ github.ref_name == 'main' && '' || 'develop' }}
+      WRANGLER_ENV: ${{ github.ref_name == 'main' && '' || 'develop' }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       # Public values read by astro:env at build time, not at request time.
@@ -44,6 +56,9 @@ jobs:
       BREVO_CONFIRM_TEMPLATE_ID_EN: ${{ secrets.BREVO_CONFIRM_TEMPLATE_ID_EN }}
       CONFIRM_SECRET: ${{ secrets.CONFIRM_SECRET }}
       CRON_SECRET: ${{ secrets.CRON_SECRET }}
+      # Neon Data API of the matching CAD environment (main = Neon `main`, develop =
+      # Neon `dev`). Unset = Brevo-only.
+      NEON_DATA_API_URL: ${{ secrets.NEON_DATA_API_URL }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
@@ -60,17 +75,21 @@ jobs:
       - name: Test
         run: npm run test:all
 
+      - name: Deploy the site Worker
+        run: |
+          set -euo pipefail
+          npx wrangler deploy 2>&1 | tee deploy.log
+          echo "### Deployed: $SITE_URL" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Sync Worker secrets
+        # Pushed after the deploy so the develop Worker exists on its first run.
         # These are read at request time, so they are not part of the build.
         # Missing ones are skipped rather than written as empty strings.
         # The values come from the job-level env above.
         run: node scripts/worker-secrets.mjs
 
-      - name: Deploy the site Worker
-        run: |
-          set -euo pipefail
-          npx wrangler deploy 2>&1 | tee deploy.log
-          echo "### Deployed: https://mobilcab.com" >> "$GITHUB_STEP_SUMMARY"
-
       - name: Deploy the cleanup Worker
+        # Production only: the daily clean-up of unconfirmed sign-ups has no
+        # business on the gated develop site.
+        if: github.ref_name == 'main'
         run: npx wrangler deploy -c cron/wrangler.jsonc

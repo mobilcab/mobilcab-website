@@ -9,5 +9,18 @@
     { "pattern": "mobilcab.com", "custom_domain": true },
     { "pattern": "www.mobilcab.com", "custom_domain": true }
   ],
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+  "env": {
+    // The `develop` branch: a second Worker, selected with CLOUDFLARE_ENV=develop at
+    // build time and `--env develop` for secrets. Gated by Cloudflare Access
+    // (docs/ENVIRONMENTS.md). `workers_dev` and `preview_urls` are off on purpose:
+    // a *.workers.dev address would bypass Access.
+    "develop": {
+      "name": "mobilcab-website-develop",
+      "routes": [{ "pattern": "web-develop.mobilcab.com", "custom_domain": true }],
+      "workers_dev": false,
+      "preview_urls": false,
+      "observability": { "enabled": true }
+    }
+  }
 }

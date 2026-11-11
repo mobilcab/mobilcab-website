@@ -55,6 +55,7 @@
     "emailLabel": "Email",
     "workshopLabel": "Numele atelierului",
     "optional": "(opțional)",
+    "phoneLabel": "Telefon",
     "cityLabel": "Orașul",
     "consent": "Sunt de acord să fiu contactat despre programul Partener Fondator și să primesc actualizări prin email.",
     "privacyLink": "Vezi politica de confidențialitate",
@@ -69,6 +70,7 @@
     "invalidEmail": "Introdu o adresă de email validă.",
     "invalidWorkshop": "Numele atelierului e prea lung.",
     "invalidCity": "Scrie orașul în care lucrezi.",
+    "invalidPhone": "Introdu un număr de telefon valid.",
     "consentRequired": "Bifează căsuța de acord ca să te putem contacta.",
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
     "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."

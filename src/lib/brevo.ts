@@ -256,6 +256,7 @@ export interface Reservation {
   name: string;
   workshop: string;
   city: string;
+  phone: string;
   lang: Lang;
 }
 
@@ -308,10 +309,7 @@ export async function reserveSpot(r: Reservation, totalSpots: number): Promise<R
       updateEnabled: true,
     },
   });
-  if (res.status === 201 || res.status === 204) {
-    await sendReservationEmails(r);
-    return 'reserved';
-  }
+  if (res.status === 201 || res.status === 204) return 'reserved';
   return fail(res);
 }
 
@@ -325,7 +323,7 @@ const escapeHtml = (s: string) =>
  * If the Brevo "Founding Partner" automation is also on, the person gets two
  * welcome emails: switch one of them off.
  */
-async function sendReservationEmails(r: Reservation): Promise<void> {
+export async function sendReservationEmails(r: Reservation, panelSaved: boolean | null): Promise<void> {
   const sender = { email: CONTACT_EMAIL, name: 'Mobilcab' };
   const en = r.lang === 'en';
   const name = escapeHtml(r.name);
@@ -349,7 +347,7 @@ async function sendReservationEmails(r: Reservation): Promise<void> {
     send({
       to: [{ email: CONTACT_EMAIL }],
       subject: `[Partener Fondator] ${r.workshop || r.city || r.name}`,
-      htmlContent: `<p>Cerere nouă pe lista Partener Fondator:</p><ul><li>Nume: ${name}</li><li>Email: ${escapeHtml(r.email)}</li><li>Atelier: ${escapeHtml(r.workshop) || '-'}</li><li>Oraș: ${escapeHtml(r.city)}</li><li>Limbă: ${r.lang}</li></ul>`,
+      htmlContent: `<p>Cerere nouă pe lista Partener Fondator:</p><ul><li>Nume: ${name}</li><li>Email: ${escapeHtml(r.email)}</li><li>Atelier: ${escapeHtml(r.workshop) || '-'}</li><li>Telefon: ${escapeHtml(r.phone)}</li><li>Oraș: ${escapeHtml(r.city)}</li><li>Limbă: ${r.lang}</li></ul>${panelSaved === false ? '<p><b>Atenție:</b> cererea NU a ajuns în panoul Founding Partners din aplicație (eroare la salvare). E în lista Brevo; adaug-o manual.</p>' : ''}`,
     }),
   ]);
 }
