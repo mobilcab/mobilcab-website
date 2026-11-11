@@ -1,8 +1,9 @@
 import type { APIRoute } from 'astro';
 import { FOUNDING_PARTNER_SPOTS } from '../../config';
-import { countReservations, reserveSpot } from '../../lib/brevo';
+import { countReservations, reserveSpot, sendReservationEmails } from '../../lib/brevo';
 import { isValidEmail, normalizeEmail } from '../../lib/email';
-import { cleanText, isValidField } from '../../lib/reservation';
+import { saveToPanel } from '../../lib/neon';
+import { cleanText, isValidField, isValidPhone } from '../../lib/reservation';
 
 export const prerender = false;
 
@@ -42,16 +43,24 @@ export const POST: APIRoute = async ({ request }) => {
   const name = cleanText(data.name);
   const workshop = cleanText(data.workshop);
   const city = cleanText(data.city);
+  const phone = cleanText(data.phone);
   const lang = data.lang === 'en' ? 'en' : 'ro';
 
   if (!isValidField('name', name)) return json({ error: 'invalid_name' }, 400);
   if (!isValidEmail(email)) return json({ error: 'invalid_email' }, 400);
   if (!isValidField('workshop', workshop)) return json({ error: 'invalid_workshop' }, 400);
   if (!isValidField('city', city)) return json({ error: 'invalid_city' }, 400);
+  if (!isValidPhone(phone)) return json({ error: 'invalid_phone' }, 400);
   if (data.consent !== true) return json({ error: 'consent_required' }, 400);
 
   try {
-    const status = await reserveSpot({ email, name, workshop, city, lang }, FOUNDING_PARTNER_SPOTS);
+    const reservation = { email, name, workshop, city, phone, lang };
+    const status = await reserveSpot(reservation, FOUNDING_PARTNER_SPOTS);
+    if (status === 'reserved') {
+      // Panel first, so the notification can say if it didn't make it there.
+      const panelSaved = await saveToPanel(reservation);
+      await sendReservationEmails(reservation, panelSaved);
+    }
     return json({ status });
   } catch (err) {
     console.error('[founding-partner] reserve failed', err);

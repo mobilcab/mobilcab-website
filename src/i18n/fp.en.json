@@ -55,6 +55,7 @@
     "emailLabel": "Email",
     "workshopLabel": "Workshop name",
     "optional": "(optional)",
+    "phoneLabel": "Phone",
     "cityLabel": "City",
     "consent": "I agree to be contacted about the Founding Partner program and to receive updates by email.",
     "privacyLink": "See the privacy policy",
@@ -69,6 +70,7 @@
     "invalidEmail": "Enter a valid email address.",
     "invalidWorkshop": "The workshop name is too long.",
     "invalidCity": "Enter the city you work in.",
+    "invalidPhone": "Enter a valid phone number.",
     "consentRequired": "Tick the consent box so we can contact you.",
     "network": "Couldn't send. Check your connection and try again.",
     "server": "Something went wrong on our side. Please try again in a few minutes."

@@ -17,6 +17,7 @@ const NAMES = [
   'BREVO_CONFIRM_TEMPLATE_ID_EN',
   'CONFIRM_SECRET',
   'CRON_SECRET',
+  'NEON_DATA_API_URL',
 ];
 
 const present = Object.fromEntries(NAMES.filter((name) => process.env[name]).map((name) => [name, process.env[name]]));
@@ -28,8 +29,9 @@ if (!Object.keys(present).length) {
   process.exit(0);
 }
 
+const envArgs = process.env.WRANGLER_ENV ? ['--env', process.env.WRANGLER_ENV] : [];
 const run = (args, input) => {
-  const res = spawnSync('npx', ['wrangler', ...args], { input, stdio: ['pipe', 'inherit', 'inherit'], shell: process.platform === 'win32' });
+  const res = spawnSync('npx', ['wrangler', ...args, ...envArgs], { input, stdio: ['pipe', 'inherit', 'inherit'], shell: process.platform === 'win32' });
   if (res.status !== 0) process.exit(res.status ?? 1);
 };
 
