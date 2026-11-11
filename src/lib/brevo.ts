@@ -6,6 +6,7 @@ import {
   BREVO_LIST_ID,
   BREVO_LIST_ID_EN,
 } from 'astro:env/server';
+import { APP_URL, CONTACT_EMAIL } from '../config';
 import type { Lang } from '../i18n';
 
 const API = 'https://api.brevo.com/v3';
@@ -307,6 +308,48 @@ export async function reserveSpot(r: Reservation, totalSpots: number): Promise<R
       updateEnabled: true,
     },
   });
-  if (res.status === 201 || res.status === 204) return 'reserved';
+  if (res.status === 201 || res.status === 204) {
+    await sendReservationEmails(r);
+    return 'reserved';
+  }
   return fail(res);
+}
+
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/**
+ * Two transactional emails after a new reservation: a confirmation to the
+ * person and a notification to CONTACT_EMAIL. Best-effort: the reservation is
+ * already saved, so a send failure is logged and never fails the sign-up.
+ * If the Brevo "Founding Partner" automation is also on, the person gets two
+ * welcome emails: switch one of them off.
+ */
+async function sendReservationEmails(r: Reservation): Promise<void> {
+  const sender = { email: CONTACT_EMAIL, name: 'Mobilcab' };
+  const en = r.lang === 'en';
+  const name = escapeHtml(r.name);
+  const send = async (body: Record<string, unknown>) => {
+    try {
+      const res = await brevo('/smtp/email', { method: 'POST', body: { sender, ...body } });
+      if (!res.ok) console.error('[founding-partner] email failed', res.status);
+    } catch (err) {
+      console.error('[founding-partner] email failed', err);
+    }
+  };
+
+  await Promise.all([
+    send({
+      to: [{ email: r.email }],
+      subject: en ? 'You are on the Founding Partner list' : 'Ești pe lista Partener Fondator',
+      htmlContent: en
+        ? `<p>Hi ${name},</p><p>You are on the Mobilcab Founding Partner list, free, in your name. When subscriptions open, we will contact you with the list price and your 20% discount.</p><p>Meanwhile, use the app: ${APP_URL}</p><p>Stefan and Fineas, Mobilcab</p>`
+        : `<p>Salut, ${name},</p><p>Ești pe lista Partener Fondator Mobilcab, gratuit, pe numele tău. Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%.</p><p>Până atunci, folosește aplicația: ${APP_URL}</p><p>Stefan și Fineas, Mobilcab</p>`,
+    }),
+    send({
+      to: [{ email: CONTACT_EMAIL }],
+      subject: `[Partener Fondator] ${r.workshop || r.city || r.name}`,
+      htmlContent: `<p>Cerere nouă pe lista Partener Fondator:</p><ul><li>Nume: ${name}</li><li>Email: ${escapeHtml(r.email)}</li><li>Atelier: ${escapeHtml(r.workshop) || '-'}</li><li>Oraș: ${escapeHtml(r.city)}</li><li>Limbă: ${r.lang}</li></ul>`,
+    }),
+  ]);
 }
