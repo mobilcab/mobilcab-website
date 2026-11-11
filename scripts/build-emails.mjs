@@ -30,6 +30,8 @@ const settings = {
   demoUrl: setting('demoUrl'),
 };
 
+const appUrl = (config.match(/export const APP_URL = '([^']*)'/)?.[1] ?? 'https://app.mobilcab.com').replace(/\/$/, '');
+
 const referralProgram = /export const REFERRAL_PROGRAM = true;/.test(config);
 const referralGoal = config.match(/export const REFERRAL_GOAL = (\d+);/)?.[1] ?? '3';
 
@@ -246,7 +248,9 @@ const templates = {
         'Dacă vrei, facem împreună primul tău proiect, la telefon sau pe video.',
         'Îți cer sincer părerea — ce merge, ce nu, ce ai vrea să vezi.',
       ]),
-      button(`${site}/ro/founding-partner/`, 'Despre programul Partener Fondator'),
+      p(`<strong style="color:${colors.ink};">Folosești aplicația chiar acum.</strong> Ca să intri, ai nevoie de un cont: dacă nu ai încă unul, îl creezi gratuit, în câteva secunde, pe <a href="${escape(appUrl)}" style="color:${colors.wood};">${escape(appUrl.replace('https://', ''))}</a>.`),
+      button(appUrl, 'Deschide aplicația'),
+      p(`<a href="${site}/ro/founding-partner/" style="color:${colors.wood};">Despre programul Partener Fondator</a>`),
       signature('ro'),
     ].join('\n'),
   },
@@ -270,7 +274,9 @@ const templates = {
         "If you'd like, we'll build your first project together, by phone or video call.",
         "I'll genuinely ask for your feedback — what works, what doesn't, what you'd want to see.",
       ]),
-      button(`${site}/en/founding-partner/`, 'About the Founding Partner program'),
+      p(`<strong style="color:${colors.ink};">You can use the app right now.</strong> You need an account to sign in: if you don't have one yet, create it for free, in a few seconds, at <a href="${escape(appUrl)}" style="color:${colors.wood};">${escape(appUrl.replace('https://', ''))}</a>.`),
+      button(appUrl, 'Open the app'),
+      p(`<a href="${site}/en/founding-partner/" style="color:${colors.wood};">About the Founding Partner program</a>`),
       signature('en'),
     ].join('\n'),
   },

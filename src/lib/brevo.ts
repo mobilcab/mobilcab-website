@@ -6,7 +6,7 @@ import {
   BREVO_LIST_ID,
   BREVO_LIST_ID_EN,
 } from 'astro:env/server';
-import { APP_URL, CONTACT_EMAIL } from '../config';
+import { CONTACT_EMAIL } from '../config';
 import type { Lang } from '../i18n';
 
 const API = 'https://api.brevo.com/v3';
@@ -317,37 +317,25 @@ const escapeHtml = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
 /**
- * Two transactional emails after a new reservation: a confirmation to the
- * person and a notification to CONTACT_EMAIL. Best-effort: the reservation is
- * already saved, so a send failure is logged and never fails the sign-up.
- * If the Brevo "Founding Partner" automation is also on, the person gets two
- * welcome emails: switch one of them off.
+ * Notification to CONTACT_EMAIL after a new reservation. The person's own
+ * welcome email is not sent from here: it is the Brevo "Founding Partner"
+ * automation (emails/founding-partner-*.html), triggered by the list add.
+ * Best-effort: the reservation is already saved, so a send failure is logged
+ * and never fails the sign-up.
  */
 export async function sendReservationEmails(r: Reservation, panelSaved: boolean | null): Promise<void> {
-  const sender = { email: CONTACT_EMAIL, name: 'Mobilcab' };
-  const en = r.lang === 'en';
-  const name = escapeHtml(r.name);
-  const send = async (body: Record<string, unknown>) => {
-    try {
-      const res = await brevo('/smtp/email', { method: 'POST', body: { sender, ...body } });
-      if (!res.ok) console.error('[founding-partner] email failed', res.status);
-    } catch (err) {
-      console.error('[founding-partner] email failed', err);
-    }
-  };
-
-  await Promise.all([
-    send({
-      to: [{ email: r.email }],
-      subject: en ? 'You are on the Founding Partner list' : 'Ești pe lista Partener Fondator',
-      htmlContent: en
-        ? `<p>Hi ${name},</p><p>You are on the Mobilcab Founding Partner list, free, in your name. When subscriptions open, we will contact you with the list price and your 20% discount.</p><p>Meanwhile, use the app: ${APP_URL}</p><p>Stefan and Fineas, Mobilcab</p>`
-        : `<p>Salut, ${name},</p><p>Ești pe lista Partener Fondator Mobilcab, gratuit, pe numele tău. Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%.</p><p>Până atunci, folosește aplicația: ${APP_URL}</p><p>Stefan și Fineas, Mobilcab</p>`,
-    }),
-    send({
-      to: [{ email: CONTACT_EMAIL }],
-      subject: `[Partener Fondator] ${r.workshop || r.city || r.name}`,
-      htmlContent: `<p>Cerere nouă pe lista Partener Fondator:</p><ul><li>Nume: ${name}</li><li>Email: ${escapeHtml(r.email)}</li><li>Atelier: ${escapeHtml(r.workshop) || '-'}</li><li>Telefon: ${escapeHtml(r.phone)}</li><li>Oraș: ${escapeHtml(r.city)}</li><li>Limbă: ${r.lang}</li></ul>${panelSaved === false ? '<p><b>Atenție:</b> cererea NU a ajuns în panoul Founding Partners din aplicație (eroare la salvare). E în lista Brevo; adaug-o manual.</p>' : ''}`,
-    }),
-  ]);
+  try {
+    const res = await brevo('/smtp/email', {
+      method: 'POST',
+      body: {
+        sender: { email: CONTACT_EMAIL, name: 'Mobilcab' },
+        to: [{ email: CONTACT_EMAIL }],
+        subject: `[Partener Fondator] ${r.workshop || r.city || r.name}`,
+        htmlContent: `<p>Cerere nouă pe lista Partener Fondator:</p><ul><li>Nume: ${escapeHtml(r.name)}</li><li>Email: ${escapeHtml(r.email)}</li><li>Atelier: ${escapeHtml(r.workshop) || '-'}</li><li>Telefon: ${escapeHtml(r.phone)}</li><li>Oraș: ${escapeHtml(r.city)}</li><li>Limbă: ${r.lang}</li></ul>${panelSaved === false ? '<p><b>Atenție:</b> cererea NU a ajuns în panoul Founding Partners din aplicație (eroare la salvare). E în lista Brevo; adaug-o manual.</p>' : ''}`,
+      },
+    });
+    if (!res.ok) console.error('[founding-partner] notification failed', res.status);
+  } catch (err) {
+    console.error('[founding-partner] notification failed', err);
+  }
 }

@@ -23,7 +23,7 @@ Two long-lived branches, two deployed environments. Same model as the CAD app (`
 1. Brevo list (cap, "already on the list" check).
 2. Neon Data API -> `rpc/submit_waitlist_request`, which fills the admin panel of the CAD app.
    Skipped when `NEON_DATA_API_URL` is unset; a failure never fails the sign-up.
-3. Two emails through Brevo: a confirmation to the person and a notification to `contact@mobilcab.com`
+3. Two emails through Brevo: a notification to `contact@mobilcab.com`; the person gets the Brevo automation email (`emails/founding-partner-*.html`, with the app link and the "create an account" note)
    (it says so when step 2 failed).
 
 ## One-time setup (manual)
