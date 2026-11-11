@@ -10,7 +10,7 @@ vi.mock('astro:env/server', () => ({
   BREVO_FP_LIST_ID: '13',
   BREVO_CONFIRM_TEMPLATE_ID_RO: '101',
   BREVO_CONFIRM_TEMPLATE_ID_EN: undefined,
-  NEON_DATA_API_URL: 'https://neon.test/neondb/rest/v1',
+  NEON_DATA_API_URL: 'https://ep-x.apirest.neon.test/neondb/rest/v1',
 }));
 
 const endpoint = await import('../../src/pages/api/founding-partner');
@@ -28,7 +28,11 @@ beforeEach(() => {
   emails = [];
   neonResponse = () => new Response(JSON.stringify({ ok: true, id: 'x' }), { status: 200 });
   vi.stubGlobal('fetch', (url: string, init?: RequestInit) => {
-    if (url.startsWith('https://neon.test')) {
+    if (url === 'https://ep-x.neonauth.neon.test/neondb/auth/token/anonymous') {
+      return Promise.resolve(new Response(JSON.stringify({ token: 'anon-jwt', expires_at: 1 }), { status: 200 }));
+    }
+    if (url.startsWith('https://ep-x.apirest.neon.test')) {
+      expect((init?.headers as Record<string, string>).authorization).toBe('Bearer anon-jwt');
       neonCalls.push({ url, body: JSON.parse(String(init?.body)) });
       return Promise.resolve(neonResponse());
     }
@@ -57,7 +61,7 @@ describe('POST /api/founding-partner', () => {
   it('saves to the panel and emails the person and contact@', async () => {
     expect(await post(valid)).toEqual({ status: 200, body: { status: 'reserved' } });
     expect(neonCalls).toHaveLength(1);
-    expect(neonCalls[0].url).toBe('https://neon.test/neondb/rest/v1/rpc/submit_waitlist_request');
+    expect(neonCalls[0].url).toBe('https://ep-x.apirest.neon.test/neondb/rest/v1/rpc/submit_waitlist_request');
     expect(neonCalls[0].body).toMatchObject({ p_name: 'Ion Pop', p_email: 'ion@atelier.ro', p_phone: '0712 345 678', p_city: 'Cluj', p_workshop: 'Atelier Pop' });
     expect(emails.map((e) => e.to[0].email).sort()).toEqual(['contact@mobilcab.com', 'ion@atelier.ro']);
   });
