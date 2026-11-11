@@ -143,7 +143,10 @@ describe('Cloudflare Worker config', () => {
     // whole app through this Worker, so only the two marketing hostnames may
     // ever appear.
     const patterns = (config.routes ?? []).map((route) => route.pattern).sort();
-    expect(patterns).toEqual(['mobilcab.com', 'www.mobilcab.com']);
+    // The develop build (CLOUDFLARE_ENV=develop) claims only its own gated hostname.
+    const develop = process.env.CLOUDFLARE_ENV === 'develop';
+    expect(patterns).toEqual(develop ? ['web-develop.mobilcab.com'] : ['mobilcab.com', 'www.mobilcab.com']);
+    expect(config.workers_dev).toBe(develop ? false : config.workers_dev);
     for (const route of config.routes) expect(route.custom_domain).toBe(true);
   });
 

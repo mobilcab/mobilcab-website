@@ -213,7 +213,7 @@ describe('daily clean-up', () => {
 });
 
 describe('Founding Partner reservations', () => {
-  const reservation = (email: string) => ({ email, name: 'Ion Pop', workshop: '', city: 'Cluj', lang: 'ro' as const });
+  const reservation = (email: string) => ({ email, name: 'Ion Pop', workshop: '', city: 'Cluj', phone: '0712 345 678', lang: 'ro' as const });
 
   it('reserves, recognises a repeat, and stops at the cap', async () => {
     expect(await reserveSpot(reservation('a@x.ro'), 2)).toBe('reserved');
@@ -225,7 +225,7 @@ describe('Founding Partner reservations', () => {
 
   it('stores the details and keeps an existing waitlist membership', async () => {
     await join('a@x.ro');
-    await reserveSpot({ email: 'a@x.ro', name: 'Ion Pop', workshop: 'Atelier Pop', city: 'Cluj', lang: 'en' }, 100);
+    await reserveSpot({ email: 'a@x.ro', name: 'Ion Pop', workshop: 'Atelier Pop', city: 'Cluj', phone: '0712 345 678', lang: 'en' }, 100);
     const contact = brevo.get('a@x.ro')!;
     expect([...contact.listIds].sort()).toEqual([WAITLIST, FP_LIST]);
     expect(contact.attributes).toMatchObject({ FIRSTNAME: 'Ion Pop', WORKSHOP: 'Atelier Pop', CITY: 'Cluj', LANGUAGE: 'en' });

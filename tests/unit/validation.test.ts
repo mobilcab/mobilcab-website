@@ -62,3 +62,15 @@ describe('invite codes', () => {
     }
   });
 });
+
+describe('Founding Partner phone', () => {
+  it('accepts common Romanian and international formats', async () => {
+    const { isValidPhone } = await import('../../src/lib/reservation');
+    for (const phone of ['0712 345 678', '+40 712 345 678', '(021) 123-45.67']) expect(isValidPhone(phone), phone).toBe(true);
+  });
+
+  it('rejects short, long and non-phone values', async () => {
+    const { isValidPhone } = await import('../../src/lib/reservation');
+    for (const phone of ['', '12345', 'abcdefgh', '07123456789012345678901234567890', '+++123456']) expect(isValidPhone(phone), phone).toBe(false);
+  });
+});

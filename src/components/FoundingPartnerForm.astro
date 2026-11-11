@@ -42,6 +42,19 @@ const messages = {
         class={input}
       />
     </div>
+    <div>
+      <label for="fp-phone" class={label}>{t.form.phoneLabel}</label>
+      <input
+        id="fp-phone"
+        name="phone"
+        type="tel"
+        inputmode="tel"
+        autocomplete="tel"
+        required
+        maxlength={RESERVATION_LIMITS.phone.max}
+        class={input}
+      />
+    </div>
     <div class="grid gap-4 sm:grid-cols-2">
       <div>
         <label for="fp-workshop" class={label}>
@@ -81,10 +94,11 @@ const messages = {
 
 <script>
   import { isValidEmail, normalizeEmail } from '../lib/email';
-  import { cleanText, isValidField } from '../lib/reservation';
+  import { cleanText, isValidField, isValidPhone } from '../lib/reservation';
 
   type MessageKey =
     | 'sending'
+    | 'invalidPhone'
     | 'reserved'
     | 'already'
     | 'full'
@@ -101,15 +115,16 @@ const messages = {
   for (const root of document.querySelectorAll<HTMLElement>('[data-fp-form]')) {
     const form = root.querySelector('form')!;
     const field = (name: string) => form.elements.namedItem(name) as HTMLInputElement;
-    const [nameInput, emailInput, workshopInput, cityInput, consentInput, honeypot] = [
+    const [nameInput, emailInput, phoneInput, workshopInput, cityInput, consentInput, honeypot] = [
       'name',
       'email',
+      'phone',
       'workshop',
       'city',
       'consent',
       'company',
     ].map(field);
-    const inputs = [nameInput, emailInput, workshopInput, cityInput, consentInput];
+    const inputs = [nameInput, emailInput, phoneInput, workshopInput, cityInput, consentInput];
     const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
     const status = root.querySelector<HTMLElement>('[data-status]')!;
     const done = root.querySelector<HTMLElement>('[data-done]')!;
@@ -143,11 +158,13 @@ const messages = {
 
       const name = cleanText(nameInput.value);
       const email = normalizeEmail(emailInput.value);
+      const phone = cleanText(phoneInput.value);
       const workshop = cleanText(workshopInput.value);
       const city = cleanText(cityInput.value);
 
       if (!isValidField('name', name)) return setError(messages.invalidName, nameInput);
       if (!isValidEmail(email)) return setError(messages.invalidEmail, emailInput);
+      if (!isValidPhone(phone)) return setError(messages.invalidPhone, phoneInput);
       if (!isValidField('workshop', workshop)) return setError(messages.invalidWorkshop, workshopInput);
       if (!isValidField('city', city)) return setError(messages.invalidCity, cityInput);
       if (!consentInput.checked) return setError(messages.consentRequired, consentInput);
@@ -160,7 +177,7 @@ const messages = {
         const res = await fetch('/api/founding-partner', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ name, email, workshop, city, consent: true, lang, company: honeypot.value }),
+          body: JSON.stringify({ name, email, phone, workshop, city, consent: true, lang, company: honeypot.value }),
           signal: AbortSignal.timeout(15000),
         });
         const data: { status?: string; error?: string } = await res.json().catch(() => ({}));
@@ -176,6 +193,7 @@ const messages = {
         const errors: Record<string, [MessageKey, HTMLInputElement]> = {
           invalid_name: ['invalidName', nameInput],
           invalid_email: ['invalidEmail', emailInput],
+          invalid_phone: ['invalidPhone', phoneInput],
           invalid_workshop: ['invalidWorkshop', workshopInput],
           invalid_city: ['invalidCity', cityInput],
           consent_required: ['consentRequired', consentInput],
