@@ -58,12 +58,12 @@ describe('POST /api/founding-partner', () => {
     expect(neonCalls).toHaveLength(0);
   });
 
-  it('saves to the panel and emails the person and contact@', async () => {
+  it('saves to the panel and notifies contact@ only; the welcome email is the Brevo automation', async () => {
     expect(await post(valid)).toEqual({ status: 200, body: { status: 'reserved' } });
     expect(neonCalls).toHaveLength(1);
     expect(neonCalls[0].url).toBe('https://ep-x.apirest.neon.test/neondb/rest/v1/rpc/submit_waitlist_request');
     expect(neonCalls[0].body).toMatchObject({ p_name: 'Ion Pop', p_email: 'ion@atelier.ro', p_phone: '0712 345 678', p_city: 'Cluj', p_workshop: 'Atelier Pop' });
-    expect(emails.map((e) => e.to[0].email).sort()).toEqual(['contact@mobilcab.com', 'ion@atelier.ro']);
+    expect(emails.map((e) => e.to[0].email)).toEqual(['contact@mobilcab.com']);
   });
 
   it('does not repeat anything for someone already on the list', async () => {
