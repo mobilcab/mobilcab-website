@@ -33,10 +33,10 @@ export function runLaunchChecks({ root, env }) {
 
   // --- Settings the site needs to work --------------------------------------
   const required = {
-    BREVO_API_KEY: 'sign-ups go nowhere',
-    BREVO_LIST_ID: 'sign-ups go nowhere',
-    BREVO_CONFIRM_TEMPLATE_ID_RO: 'no confirmation email is sent, so nobody can confirm',
-    CONFIRM_SECRET: 'confirmation links cannot be signed',
+    NEON_MARKETING_CONSENT_URL: 'newsletter sign-ups never reach Neon',
+    BREVO_API_KEY: 'cleanup and Founding Partner calls fail',
+    BREVO_LIST_ID: 'legacy /api/confirm cannot add people to the list',
+    CONFIRM_SECRET: 'legacy confirmation links cannot be verified',
     CRON_SECRET: 'the daily clean-up of unconfirmed sign-ups is refused',
   };
   if (published.foundingPartner) required.BREVO_FP_LIST_ID = 'Founding Partner reservations fail';
@@ -48,7 +48,9 @@ export function runLaunchChecks({ root, env }) {
   }
   if (!env.SITE_URL) warnings.push('SITE_URL is not set; links and the sitemap use https://mobilcab.com.');
   if (!env.PUBLIC_PLAUSIBLE_DOMAIN) warnings.push('PUBLIC_PLAUSIBLE_DOMAIN is not set: no visit or sign-up statistics.');
-  if (!env.BREVO_CONFIRM_TEMPLATE_ID_EN) warnings.push('BREVO_CONFIRM_TEMPLATE_ID_EN is not set: English sign-ups get the Romanian confirmation email.');
+  if (!env.BREVO_CONFIRM_TEMPLATE_ID_EN) {
+    warnings.push('BREVO_CONFIRM_TEMPLATE_ID_EN is unused on the Worker now (Neon sends confirm emails); keep it only if you still edit templates from this repo.');
+  }
 
   // --- Placeholders ---------------------------------------------------------
   if (!flag(config, 'CONTACT_EMAIL_CONFIRMED')) {

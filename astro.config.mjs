@@ -56,10 +56,14 @@ export default defineConfig({
       // Double opt-in: the Brevo transactional templates for the confirmation email.
       BREVO_CONFIRM_TEMPLATE_ID_RO: envField.string({ context: 'server', access: 'secret', optional: true }),
       BREVO_CONFIRM_TEMPLATE_ID_EN: envField.string({ context: 'server', access: 'secret', optional: true }),
+      // Neon marketing-consent endpoint (newsletter from the site → same GDPR row as the app).
+      // e.g. https://br-….neon.tech/marketing-consent (branch `main` in production).
+      NEON_MARKETING_CONSENT_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
       // Signs the confirmation links. Any long random string; keep it secret.
       CONFIRM_SECRET: envField.string({ context: 'server', access: 'secret', optional: true }),
       // Sent by the daily Cron Worker to /api/cleanup; any long random string.
       CRON_SECRET: envField.string({ context: 'server', access: 'secret', optional: true }),
+
       // Neon Data API of the environment (…/neondb/rest/v1). Unset = Brevo-only:
       // Founding Partner requests then don't reach the CAD app's admin panel.
       NEON_DATA_API_URL: envField.string({ context: 'server', access: 'secret', optional: true }),

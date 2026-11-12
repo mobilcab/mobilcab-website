@@ -17,7 +17,7 @@ The only client JS is the small form handler; the language switch is plain links
 | `/ro/confidentialitate/`, `/en/privacy/` | Privacy Policy |
 | `/ro/termeni/`, `/en/terms/` | Terms of Service |
 | `/preview/ro/rambursare/`, `/preview/en/refund/` | Refund Policy draft (published at billing live) |
-| `POST /api/subscribe` | Waitlist sign-up (Brevo) |
+| `POST /api/subscribe` | Newsletter sign-up → Neon `marketing-consent` (`source: web`) |
 
 Copy lives in `src/i18n/ro.json` and `src/i18n/en.json`.
 
@@ -41,20 +41,20 @@ npm run dev
 3. Create these contact attributes (Contacts → Settings → Contact attributes):
    `REFCODE` (text), `REFERRED_BY` (text), `REFERRALS` (number),
    `CONFIRM_SENT_AT` (text), `LANGUAGE` (text).
-4. Set `BREVO_API_KEY`, `BREVO_LIST_ID` and, optionally, `BREVO_LIST_ID_EN`.
-5. Emails: the templates (including the two confirmation emails, whose IDs go
-   in `BREVO_CONFIRM_TEMPLATE_ID_RO` / `_EN`) and step-by-step setup are in
-   [emails/README.md](emails/README.md).
-6. Set `CONFIRM_SECRET` to a long random string.
+4. Set `NEON_MARKETING_CONSENT_URL` to the Neon Functions
+   `…/marketing-consent` URL (production = Neon branch `main`). Newsletter
+   sign-ups go there with `source: "web"` — same GDPR row and confirm email as
+   the CAD app. After confirm, Neon syncs the contact onto the Brevo Noutati list.
+5. Keep `BREVO_API_KEY` / `BREVO_LIST_ID` for Founding Partner, legacy
+   `/api/confirm` links still in flight, and the daily clean-up.
+6. Email templates (still authored here; Neon sends them via the same Brevo
+   template IDs): [emails/README.md](emails/README.md).
+7. Set `CONFIRM_SECRET` for legacy `/api/confirm` verification.
 
-**Sign-ups use double opt-in.** The form creates the contact in Brevo without a
-list and sends a confirmation email. Clicking its link (`/api/confirm`) adds the
-person to the waitlist list, which triggers the welcome email, and lands them on
-`/ro/confirmat/`. Links are signed with `CONFIRM_SECRET` and expire after 7 days;
-the email is resent at most every 10 minutes. Confirmed addresses get the
-"already on the list" message. Unconfirmed contacts stay in Brevo with no list,
-and are deleted automatically after 30 days, as the privacy policy says (see
-"Daily clean-up" below).
+**Sign-ups use double opt-in via Neon.** The form POSTs to
+`/api/subscribe`, which forwards to Neon. Neon sends the confirmation email;
+the link opens Neon's `/marketing-consent/confirm` page (and adds the contact to
+Brevo Noutati). Legacy `/api/confirm?t=…` links remain valid until they expire.
 
 **Invite program** (`REFERRAL_PROGRAM` in `src/config.ts`, off until month -4;
 it requires the full Privacy Policy to be published). Each person gets an invite

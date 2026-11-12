@@ -11,6 +11,7 @@ const project = join(import.meta.dirname, '../..');
 let root: string;
 
 const ready = {
+  NEON_MARKETING_CONSENT_URL: 'https://neon.test/marketing-consent',
   BREVO_API_KEY: 'k',
   BREVO_LIST_ID: '1',
   BREVO_FP_LIST_ID: '8',
@@ -49,7 +50,7 @@ describe('launch check', () => {
 
   it('reports every missing setting', () => {
     const { errors } = check({});
-    for (const name of ['BREVO_API_KEY', 'BREVO_LIST_ID', 'BREVO_CONFIRM_TEMPLATE_ID_RO', 'CONFIRM_SECRET', 'CRON_SECRET']) {
+    for (const name of ['NEON_MARKETING_CONSENT_URL', 'BREVO_API_KEY', 'BREVO_LIST_ID', 'CONFIRM_SECRET', 'CRON_SECRET']) {
       expect(errors.some((e) => e.startsWith(name)), name).toBe(true);
     }
   });
