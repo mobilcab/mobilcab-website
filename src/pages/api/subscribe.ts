@@ -1,9 +1,7 @@
 import type { APIRoute } from 'astro';
-import { REFERRAL_PROGRAM } from '../../config';
-import { requestSignup } from '../../lib/brevo';
+import { NEON_MARKETING_CONSENT_URL } from 'astro:env/server';
 import { isValidEmail, normalizeEmail } from '../../lib/email';
-import { isReferralCode, newReferralCode } from '../../lib/referral';
-import { createConfirmToken } from '../../lib/tokens';
+import { NeonConsentError, requestNeonMarketingConsent } from '../../lib/neon-marketing-consent';
 
 export const prerender = false;
 
@@ -14,10 +12,13 @@ const json = (body: unknown, status = 200) =>
   });
 
 /**
- * Waitlist sign-up, step 1 of double opt-in: sends the confirmation email.
- * Responds { status: 'pending' } (check your inbox) or { status: 'already' }.
+ * Newsletter sign-up, step 1 of double opt-in.
+ *
+ * Forwards to Neon `POST /marketing-consent` with `source: 'web'`. Neon sends the confirmation
+ * email (same Brevo templates as the app) and owns the GDPR row; the confirm link lands on Neon
+ * `/marketing-consent/confirm`. Responds `{ status: 'pending' }` for any valid address.
  */
-export const POST: APIRoute = async ({ request, url }) => {
+export const POST: APIRoute = async ({ request }) => {
   let data: Record<string, unknown>;
   try {
     data = await request.json();
@@ -26,37 +27,34 @@ export const POST: APIRoute = async ({ request, url }) => {
   }
 
   // Honeypot: real visitors never see or fill this field. Report success so
-  // bots have no reason to retry, but don't touch Brevo.
+  // bots have no reason to retry, but don't touch Neon.
   if (typeof data.company === 'string' && data.company.trim() !== '') {
     return json({ status: 'pending' });
   }
 
   const email = typeof data.email === 'string' ? normalizeEmail(data.email) : '';
-  const lang = data.lang === 'en' ? 'en' : 'ro';
-  // Invite links only count while the referral program is on.
-  const referredBy = REFERRAL_PROGRAM && isReferralCode(data.ref) ? data.ref : undefined;
+  const language = data.lang === 'en' ? 'en' : 'ro';
 
   if (!isValidEmail(email)) return json({ error: 'invalid_email' }, 400);
   if (data.consent !== true) return json({ error: 'consent_required' }, 400);
 
   try {
-    const status = await requestSignup({
+    const status = await requestNeonMarketingConsent({
       email,
-      lang,
-      referredBy,
-      confirmUrl: (token) => `${url.origin}/api/confirm?t=${encodeURIComponent(token)}`,
-      makeToken: () => createConfirmToken(email, lang),
-      newCode: newReferralCode,
+      language,
+      endpointUrl: NEON_MARKETING_CONSENT_URL ?? '',
     });
-
-    // Local test mode sends no email, so hand the confirmation link to the page.
-    if (import.meta.env.DEV && status === 'pending') {
-      const { lastConfirmUrl } = await import('../../lib/brevo-mock');
-      const devConfirmUrl = lastConfirmUrl.get(email);
-      if (devConfirmUrl) return json({ status, devConfirmUrl });
-    }
     return json({ status });
   } catch (err) {
+    if (err instanceof NeonConsentError) {
+      if (err.code === 'invalid_email') return json({ error: 'invalid_email' }, 400);
+      if (err.code === 'misconfigured') {
+        console.error('[subscribe] NEON_MARKETING_CONSENT_URL missing');
+        return json({ error: 'server' }, 502);
+      }
+      console.error('[subscribe]', err.code, err.message);
+      return json({ error: 'server' }, 502);
+    }
     console.error('[subscribe]', err);
     return json({ error: 'server' }, 502);
   }

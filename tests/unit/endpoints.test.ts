@@ -1,5 +1,5 @@
-// The sign-up endpoints as a visitor's browser and the confirmation email use
-// them, against the in-memory Brevo.
+// The sign-up endpoints as a visitor's browser uses them — subscribe proxies to
+// Neon; legacy /api/confirm still talks to Brevo for links already in flight.
 import type { APIContext } from 'astro';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { FakeBrevo } from './fake-brevo';
@@ -12,8 +12,10 @@ vi.mock('astro:env/server', () => ({
   BREVO_FP_LIST_ID: undefined,
   BREVO_CONFIRM_TEMPLATE_ID_RO: '101',
   BREVO_CONFIRM_TEMPLATE_ID_EN: undefined,
+  NEON_MARKETING_CONSENT_URL: 'https://neon.test/marketing-consent',
   CONFIRM_SECRET: 'test-secret-that-is-long-enough-1234567890',
   CRON_SECRET: 'cron-secret',
+  NEON_DATA_API_URL: undefined,
 }));
 
 const subscribe = await import('../../src/pages/api/subscribe');
@@ -21,9 +23,24 @@ const confirm = await import('../../src/pages/api/confirm');
 const cleanup = await import('../../src/pages/api/cleanup');
 
 let brevo: FakeBrevo;
+let neonCalls: Array<{ url: string; body: unknown }>;
+
 beforeEach(() => {
   brevo = new FakeBrevo();
-  vi.stubGlobal('fetch', brevo.fetch);
+  neonCalls = [];
+  vi.stubGlobal('fetch', (input: RequestInfo | URL, init?: RequestInit) => {
+    const url = String(input);
+    if (url.includes('/marketing-consent')) {
+      neonCalls.push({ url, body: init?.body ? JSON.parse(String(init.body)) : null });
+      return Promise.resolve(
+        new Response(JSON.stringify({ ok: true, pending: true }), {
+          status: 202,
+          headers: { 'content-type': 'application/json' },
+        }),
+      );
+    }
+    return brevo.fetch(input, init);
+  });
 });
 afterEach(() => vi.unstubAllGlobals());
 
@@ -48,7 +65,7 @@ describe('POST /api/subscribe', () => {
     expect(await post({ email: 'nope', consent: true })).toEqual({ status: 400, body: { error: 'invalid_email' } });
     expect(await post({ email: 'ion@atelier.ro' })).toEqual({ status: 400, body: { error: 'consent_required' } });
     expect(await post({ email: 'ion@atelier.ro', consent: 'yes' })).toEqual({ status: 400, body: { error: 'consent_required' } });
-    expect(brevo.contacts.size).toBe(0);
+    expect(neonCalls).toEqual([]);
   });
 
   it('rejects a body that is not JSON', async () => {
@@ -58,39 +75,33 @@ describe('POST /api/subscribe', () => {
 
   it('quietly drops honeypot submissions', async () => {
     expect(await post({ email: 'bot@spam.ro', consent: true, company: 'Spam SRL' })).toEqual({ status: 200, body: { status: 'pending' } });
+    expect(neonCalls).toEqual([]);
+  });
+
+  it('forwards a valid sign-up to Neon with source web', async () => {
+    expect((await post({ email: ' Ion@Atelier.RO ', consent: true, lang: 'ro' })).body).toMatchObject({ status: 'pending' });
+    expect(neonCalls).toHaveLength(1);
+    expect(neonCalls[0]!.url).toBe('https://neon.test/marketing-consent');
+    expect(neonCalls[0]!.body).toEqual({
+      email: 'ion@atelier.ro',
+      language: 'ro',
+      source: 'web',
+    });
+    // Subscribe no longer writes Brevo contacts itself.
     expect(brevo.contacts.size).toBe(0);
     expect(brevo.sent).toEqual([]);
   });
 
-  it('ignores invite codes while the referral program is off', async () => {
-    await post({ email: 'ion@atelier.ro', consent: true, ref: 'k7Q2xMa9' });
-    expect(brevo.get('ion@atelier.ro')!.attributes.REFERRED_BY).toBe('');
-  });
-
-  it('emails a signed link that confirms the sign-up', async () => {
-    expect((await post({ email: ' Ion@Atelier.RO ', consent: true, lang: 'ro' })).body).toMatchObject({ status: 'pending' });
-    const link = brevo.sent[0]!.params.CONFIRM_URL!;
-    expect(link).toMatch(/^https:\/\/mobilcab\.com\/api\/confirm\?t=/);
-
-    expect(await open(link)).toBe('/ro/confirmat/?nou=1');
-    expect([...brevo.get('ion@atelier.ro')!.listIds]).toEqual([11]);
-
-    // Opening it again lands on the same page, without counting as a new confirmation.
-    expect(await open(link)).toBe('/ro/confirmat/');
+  it('passes English through as language en', async () => {
+    await post({ email: 'ann@example.com', consent: true, lang: 'en' });
+    expect(neonCalls[0]!.body).toMatchObject({ language: 'en', source: 'web' });
   });
 });
 
-describe('GET /api/confirm', () => {
+describe('GET /api/confirm (legacy links)', () => {
   it('rejects a missing or forged token', async () => {
     expect(await open('https://mobilcab.com/api/confirm')).toBe('/ro/confirmat/?eroare=link');
     expect(await open('https://mobilcab.com/api/confirm?t=abc.def')).toBe('/ro/confirmat/?eroare=link');
-  });
-
-  it("rejects a valid link whose contact is gone (e.g. cleaned up)", async () => {
-    await post({ email: 'ion@atelier.ro', consent: true });
-    const link = brevo.sent[0]!.params.CONFIRM_URL!;
-    brevo.contacts.clear();
-    expect(await open(link)).toBe('/ro/confirmat/?eroare=link');
   });
 });
 
