@@ -63,7 +63,7 @@ describe('double opt-in', () => {
     expect(contact.ext_id).toBe(contact.attributes.REFCODE);
     expect(contact.attributes).toMatchObject({ REFERRALS: 0, REFERRED_BY: '', LANGUAGE: 'ro' });
     expect(brevo.sent).toEqual([
-      { to: 'ion@atelier.ro', templateId: 101, params: { CONFIRM_URL: 'https://mobilcab.com/api/confirm?t=token-for-ion@atelier.ro' } },
+      { to: 'ion@atelier.ro', templateId: 101, params: { CONFIRM_URL: 'https://mobilcab.com/api/confirm?t=token-for-ion@atelier.ro', SOURCE: 'mobilcab.com' } },
     ]);
   });
 

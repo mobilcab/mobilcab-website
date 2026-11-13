@@ -138,7 +138,15 @@ export async function requestSignup(r: SignupRequest): Promise<SignupResult> {
 async function sendConfirmation(email: string, lang: Lang, url: string) {
   const templateId = Number(lang === 'en' ? BREVO_CONFIRM_TEMPLATE_ID_EN || BREVO_CONFIRM_TEMPLATE_ID_RO : BREVO_CONFIRM_TEMPLATE_ID_RO);
   if (!templateId) throw new Error('BREVO_CONFIRM_TEMPLATE_ID_RO must be set');
-  const res = await brevo('/smtp/email', { method: 'POST', body: { to: [{ email }], templateId, params: { CONFIRM_URL: url } } });
+  const res = await brevo('/smtp/email', {
+    method: 'POST',
+    body: {
+      to: [{ email }],
+      templateId,
+      // Same footer param as Neon marketing-consent (web subscribe → mobilcab.com).
+      params: { CONFIRM_URL: url, SOURCE: 'mobilcab.com' },
+    },
+  });
   if (!res.ok) return fail(res);
 }
 
