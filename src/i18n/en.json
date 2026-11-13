@@ -37,7 +37,6 @@
   "messages": {
     "sending": "Sending…",
     "pending": "Almost done! We've sent you an email: click the link in it to confirm your sign-up. If you can't find it, check your Spam folder.",
-    "already": "You're already on the list. We'll send you product news.",
     "invalidEmail": "Enter a valid email address.",
     "consentRequired": "Tick the consent box so we can notify you.",
     "network": "Couldn't send. Check your connection and try again.",
