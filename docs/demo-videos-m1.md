@@ -77,7 +77,7 @@ Scripturi + MP3 (CAD): [`docs/tutorials/site-demo/`](https://github.com/mobilcab
 
 VO generat: [W01-vo.mp3](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/tutorials/site-demo/vo-published/W01/W01-vo.mp3) (narațiune legată + intro Ștefan; restul e pauză UI pe 60–90 s).
 
-> Salut, sunt Ștefan, de la Mobilcab — un program de proiectare mobilă care rulează direct în browser, pe laptop, fără instalare. Îți arăt pe scurt cum iese un dulap de colț de bucătărie: deschid aplicația, intru în proiect și am deja un colțar în scenă. Schimb o dimensiune și restul panourilor se ajustează, apoi adaug pe scurt o ușă sau un sertar dacă e nevoie. Asta e baza, proiectare 3D pe laptop, iar următorul pas e lista de debitare.
+> Salut. Sunt Ștefan, de la Mobilcab. Facem un program de proiectare mobilă care rulează în browser, pe laptop, fără să instalezi nimic. Uite pe scurt cum iese un dulap de colț de bucătărie. Deschid aplicația, intru în proiect, și am deja un colțar în scenă. Schimb o cotă, și vezi cum se ajustează și restul panourilor. Dacă e nevoie, mai adaug o ușă sau un sertar. Cam asta e baza: proiectare 3D. Iar următorul pas e lista de debitare.
 
 ### Clip 2 — Listă de debitare
 
