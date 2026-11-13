@@ -37,8 +37,10 @@ jobs:
       DEPLOY_ENV: ${{ github.ref_name == 'main' && (inputs.environment || 'production') || 'preview' }}
       SITE_URL: ${{ github.ref_name == 'main' && 'https://mobilcab.com' || 'https://web-develop.mobilcab.com' }}
       # Picks the `env.develop` block of wrangler.jsonc (build) and the Worker for secrets.
-      CLOUDFLARE_ENV: ${{ github.ref_name == 'main' && '' || 'develop' }}
-      WRANGLER_ENV: ${{ github.ref_name == 'main' && '' || 'develop' }}
+      # Must not use `main && '' || 'develop'`: empty string is falsy in Actions, so
+      # main would incorrectly resolve to develop.
+      CLOUDFLARE_ENV: ${{ github.ref_name == 'develop' && 'develop' || '' }}
+      WRANGLER_ENV: ${{ github.ref_name == 'develop' && 'develop' || '' }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
       CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
       # Public values read by astro:env at build time, not at request time.
@@ -59,6 +61,8 @@ jobs:
       # Neon Data API of the matching CAD environment (main = Neon `main`, develop =
       # Neon `dev`). Unset = Brevo-only.
       NEON_DATA_API_URL: ${{ secrets.NEON_DATA_API_URL }}
+      # Neon Function for newsletter marketing consent (required by launch-check on production).
+      NEON_MARKETING_CONSENT_URL: ${{ secrets.NEON_MARKETING_CONSENT_URL }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
