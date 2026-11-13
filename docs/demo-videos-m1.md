@@ -77,7 +77,9 @@ Scripturi + MP3 (CAD): [`docs/tutorials/site-demo/`](https://github.com/mobilcab
 
 VO generat: [W01-vo.mp3](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/tutorials/site-demo/vo-published/W01/W01-vo.mp3) (narațiune legată + intro Ștefan; restul e pauză UI pe 60–90 s).
 
-> Salut. Sunt Ștefan, de la Mobilcab. Facem un program de proiectare mobilă care rulează în browser, pe laptop, fără să instalezi nimic. Uite pe scurt cum iese un dulap de colț de bucătărie. Deschid programul, intru în proiect, și dulapul de colț e deja pe ecran. Schimb o măsură, și totul se actualizează pe loc. Apoi mai pun o ușă. Dacă vreau, și un sertar jos. Cam asta e proiectarea pe ecran. Următorul pas e lista de tăiere.
+> Salut. Sunt Ștefan, de la Mobilcab. Am dezvoltat o aplicație de proiectat mobilă, ce rulează în browser, pe laptop, fără să instalezi nimic… Uite pe scurt cum iese un dulap de colț de bucătărie. Deschid programul, intru în proiect, și dulapul de colț e deja pe ecran… Schimb o măsură, și totul se actualizează pe loc. Apoi mai pun o ușă. Dacă vreau, și un sertar jos. Cam asta e proiectarea pe ecran. Următorul pas e lista de tăiere.
+>
+> (În CAD: max 2–3 `<break>` SSML + `…` / puncte; speed site ~1.05.)
 
 ### Clip 2 — Listă de debitare
 
