@@ -27,7 +27,10 @@ Scripturi long-form: repo `mobilcab-cad` → `docs/tutorials/` + curriculum
 | `cutlist` | **E09b** (Debitare) — candidat curriculum; obligatoriu pentru acest clip | Fără tab Documente |
 | `save` | E09 (Save Local / Export As) + E12 (cloud) — extras scurt | Clipul 3 = salvare + export, nu verificare Vedere (E10) |
 
-Shorts / Reels (E00–E12) sunt canal social separat; **nu** înlocuiesc aceste 3 embed-uri.
+**Familie separată:** aceste 3 clipuri = **demo site** (embed 60–90 s), nu Tutorial long-form și nu Short/Reel 9:16.  
+Pe Facebook / Instagram **nu** le urci ca Reels — acolo merg shorts din CAD (`docs/tutorials/shorts/`).  
+Hartă canale: [mobilcab-cad `content-channels-m1.md`](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/plans/content-channels-m1.md).  
+Shorts / Reels (E00–E12) **nu** înlocuiesc aceste 3 embed-uri.
 
 ## Spec producție (toate trei)
 
