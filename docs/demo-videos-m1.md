@@ -71,10 +71,15 @@ Shorts / Reels (E00–E12) **nu** înlocuiesc aceste 3 embed-uri.
 
 ## Script VO (RO) — draft pentru montaj
 
-### Clip 1 — Proiectare 3D
+Scripturi + MP3 (CAD): [`docs/tutorials/site-demo/`](https://github.com/mobilcab/mobilcab-cad/tree/develop/docs/tutorials/site-demo) — `npm run vo:site -- W01`.
+
+### Clip 1 — Proiectare 3D (`W01`)
+
+VO generat: [W01-vo.mp3](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/tutorials/site-demo/vo-published/W01/W01-vo.mp3) (~21 s; restul e pauză UI pe 60–90 s).
 
 > Îți arăt cum proiectezi un dulap de colț de bucătărie, direct din browser — fără instalare.
-> Deschid proiectul… așez corpul… schimb o dimensiune, și restul panourilor se ajustează.
+> Deschid aplicația pe laptop. Intru în proiect. Aici e un colțar de bucătărie, deja în scenă.
+> Schimb o dimensiune — și restul panourilor se ajustează. Pe scurt, o ușă sau un sertar, dacă încape în timp.
 > Asta e baza: proiectare 3D pe laptop. Următorul pas e lista de debitare.
 
 ### Clip 2 — Listă de debitare
