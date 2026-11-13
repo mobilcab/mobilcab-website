@@ -20,7 +20,7 @@ const ready = {
   CONFIRM_SECRET: 'x'.repeat(40),
   CRON_SECRET: 'y'.repeat(40),
   SITE_URL: 'https://mobilcab.com',
-  PUBLIC_PLAUSIBLE_DOMAIN: 'mobilcab.com',
+  PUBLIC_CF_ANALYTICS_TOKEN: 'cf-analytics-token',
 };
 
 const edit = (rel: string, change: (text: string) => string) => {

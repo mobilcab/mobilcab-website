@@ -10,12 +10,12 @@ interface Props {
 const { lang, t, privacyHref } = Astro.props;
 ---
 
-<div data-waitlist data-lang={lang} data-messages={JSON.stringify(t.messages)}>
+<div data-newsletter data-lang={lang} data-messages={JSON.stringify(t.messages)}>
   <form class="space-y-4" novalidate>
     <div class="flex flex-col gap-3 sm:flex-row">
-      <label for="waitlist-email" class="sr-only">{t.form.emailLabel}</label>
+      <label for="newsletter-email" class="sr-only">{t.form.emailLabel}</label>
       <input
-        id="waitlist-email"
+        id="newsletter-email"
         name="email"
         type="email"
         inputmode="email"
@@ -60,17 +60,11 @@ const { lang, t, privacyHref } = Astro.props;
 
 <script>
   import { isValidEmail, normalizeEmail } from '../lib/email';
-  import { isReferralCode } from '../lib/referral';
 
-  type MessageKey = 'sending' | 'pending' | 'already' | 'invalidEmail' | 'consentRequired' | 'network' | 'server';
-
-  // An invite code from the address (mobilcab.com/ro/?ref=…). The server only
-  // counts it while the referral program is on. Nothing is stored on the device.
-  const refParam = new URLSearchParams(location.search).get('ref');
-  const ref = isReferralCode(refParam) ? refParam : undefined;
+  type MessageKey = 'sending' | 'pending' | 'invalidEmail' | 'consentRequired' | 'network' | 'server';
   type Plausible = (event: string, options?: { props?: Record<string, string> }) => void;
 
-  for (const root of document.querySelectorAll<HTMLElement>('[data-waitlist]')) {
+  for (const root of document.querySelectorAll<HTMLElement>('[data-newsletter]')) {
     const form = root.querySelector('form')!;
     const emailInput = form.elements.namedItem('email') as HTMLInputElement;
     const consentInput = form.elements.namedItem('consent') as HTMLInputElement;
@@ -112,37 +106,26 @@ const { lang, t, privacyHref } = Astro.props;
       button.textContent = messages.sending;
 
       try {
+        // Neon marketing-consent (source: web). Confirm lands on Functions HTML, not /confirmat/.
         const res = await fetch('/api/subscribe', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ email, consent: true, lang, company: honeypot.value, ref }),
+          body: JSON.stringify({ email, consent: true, lang, company: honeypot.value }),
           signal: AbortSignal.timeout(15000),
         });
-        const data: { status?: string; error?: string; devConfirmUrl?: string } = await res.json().catch(() => ({}));
+        const data: { status?: string; error?: string } = await res.json().catch(() => ({}));
 
         if (res.ok && data.status === 'pending') {
-          // Counts form submissions; confirmed sign-ups are counted as "Waitlist Confirmed".
-          (window as unknown as { plausible?: Plausible }).plausible?.('Waitlist Signup', {
-            props: { lang, invited: ref ? 'yes' : 'no' },
+          (window as unknown as { plausible?: Plausible }).plausible?.('Newsletter Signup', {
+            props: { lang },
           });
           showDone(messages.pending);
-          // Local test mode only: no email is sent, so show the confirmation link.
-          if (data.devConfirmUrl) {
-            const devLink = document.createElement('a');
-            devLink.href = data.devConfirmUrl;
-            devLink.textContent = 'Test mode: open the confirmation link';
-            devLink.className = 'mt-3 block text-sm font-semibold text-wood underline';
-            devLink.dataset.devConfirm = '';
-            successText.after(devLink);
-          }
           return;
         }
-        if (res.ok && data.status === 'already') return showDone(messages.already);
         if (data.error === 'invalid_email') return setError(messages.invalidEmail, emailInput);
         if (data.error === 'consent_required') return setError(messages.consentRequired, consentInput);
         setError(messages.server);
       } catch {
-        // Offline, dropped workshop wifi, or the 15 s timeout: keep the typed email so they can retry.
         setError(messages.network);
       } finally {
         button.disabled = false;

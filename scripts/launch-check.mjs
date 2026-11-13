@@ -47,7 +47,10 @@ export function runLaunchChecks({ root, env }) {
     errors.push('CONFIRM_SECRET is shorter than 32 characters; use a long random string.');
   }
   if (!env.SITE_URL) warnings.push('SITE_URL is not set; links and the sitemap use https://mobilcab.com.');
-  if (!env.PUBLIC_PLAUSIBLE_DOMAIN) warnings.push('PUBLIC_PLAUSIBLE_DOMAIN is not set: no visit or sign-up statistics.');
+  // Plausible is optional until billing; Cloudflare Web Analytics covers free pageviews.
+  if (!env.PUBLIC_CF_ANALYTICS_TOKEN) {
+    warnings.push('PUBLIC_CF_ANALYTICS_TOKEN is not set: no free Cloudflare page-view stats (set from Web Analytics dashboard).');
+  }
   if (!env.BREVO_CONFIRM_TEMPLATE_ID_EN) {
     warnings.push('BREVO_CONFIRM_TEMPLATE_ID_EN is unused on the Worker now (Neon sends confirm emails); keep it only if you still edit templates from this repo.');
   }
