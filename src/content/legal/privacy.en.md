@@ -57,7 +57,7 @@ The app **has no AI assistant** and does not send project data to an AI provider
 
 ## 5. Visit statistics
 
-We use Plausible Analytics to know how many people visit the site, which pages they read and how many sign up. Plausible uses no cookies and stores no personal data: your IP address is only used to generate an anonymous identifier that changes daily, and is not saved. The site also uses Cloudflare Web Analytics for page-view counts, also without cookies or individual profiles. We only see aggregate statistics. The app has no third-party analytics. The legal basis is our legitimate interest in understanding whether the site works (Article 6(1)(f) GDPR).
+We use Cloudflare Web Analytics for page-view counts, without cookies or individual profiles. If we later enable Plausible Analytics (also cookieless; the IP is only used for a daily anonymous identifier that is not stored), we use it to see which pages are read and how many people sign up. We only see aggregate statistics. The app has no third-party analytics. The legal basis is our legitimate interest in understanding whether the site works (Article 6(1)(f) GDPR).
 
 ## 6. Videos
 
@@ -83,7 +83,7 @@ We don't sell or rent your data, and we don't use it for advertising. We work wi
 | Provider | Role | Where the data is |
 |---|---|---|
 | Brevo (Sendinblue SAS, France) | The news list, Founding Partner program and sending emails, including the app's transactional ones | European Union |
-| Plausible Insights OÜ (Estonia) | Visit statistics, no personal data | European Union |
+| Plausible Insights OÜ (Estonia) | Visit statistics (only if enabled on the site), no personal data | European Union |
 | Vercel Inc. (USA) | Hosting of the app; server functions run in Frankfurt | USA / EU; transfers outside the EU rely on the EU–US Data Privacy Framework and Standard Contractual Clauses |
 | Cloudflare, Inc. (USA) | Hosting of the website (Cloudflare Workers) and page-view statistics, without cookies (Cloudflare Web Analytics) | USA / global network; transfers outside the EU rely on the Data Processing Addendum and Standard Contractual Clauses |
 | Supabase | Authentication, the database of accounts, projects and settings, the function that receives problem reports | Ireland, EU (region `eu-west-1`); the provider is a US company, so the DPA and Standard Contractual Clauses cover access from outside the EU |

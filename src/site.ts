@@ -93,8 +93,8 @@ export function linkFor(key: PageKey, lang: Lang, fromPreview: boolean): string 
 }
 
 /**
- * News waitlist (no FP discount): Home `#join` form, or the coming-soon
- * stand-in while Home isn't published (same anchor).
+ * Newsletter form on Home `#join` (or the coming-soon stand-in). Confirms via
+ * Neon marketing-consent, not the legacy waitlist `/api/confirm` page.
  */
 export const joinFreeHref = (lang: Lang, fromPreview: boolean) =>
   `${linkFor('home', lang, fromPreview)}#${useHomeTranslations(lang).anchors.join}`;

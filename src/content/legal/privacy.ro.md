@@ -57,7 +57,7 @@ Aplicația **nu are un asistent AI** și nu trimite date de proiect către un fu
 
 ## 5. Statistici de vizitare
 
-Folosim Plausible Analytics ca să știm câte persoane vizitează site-ul, ce pagini citesc și câte se înscriu. Plausible nu folosește cookie-uri și nu stochează date personale: adresa IP este folosită doar pentru a genera un identificator anonim care se schimbă zilnic și nu este salvată. Site-ul mai folosește Cloudflare Web Analytics pentru numărul de vizualizări de pagină, tot fără cookie-uri și fără profiluri individuale. Vedem doar statistici agregate. În aplicație nu există analytics de terți. Temeiul este interesul nostru legitim de a înțelege dacă site-ul își atinge scopul (art. 6 alin. (1) lit. f) GDPR).
+Folosim Cloudflare Web Analytics pentru numărul de vizualizări de pagină, fără cookie-uri și fără profiluri individuale. Dacă activăm ulterior Plausible Analytics (tot fără cookie-uri; IP-ul e folosit doar pentru un identificator anonim zilnic, nesalvat), îl folosim pentru a vedea ce pagini se citesc și câte înscrieri apar. Vedem doar statistici agregate. În aplicație nu există analytics de terți. Temeiul este interesul nostru legitim de a înțelege dacă site-ul își atinge scopul (art. 6 alin. (1) lit. f) GDPR).
 
 ## 6. Clipurile video
 
@@ -83,7 +83,7 @@ Nu vindem și nu închiriem datele tale și nu le folosim pentru publicitate. Lu
 | Furnizor | Rol | Unde sunt datele |
 |---|---|---|
 | Brevo (Sendinblue SAS, Franța) | Lista de noutăți, lista Partener Fondator și trimiterea emailurilor, inclusiv cele tranzacționale din aplicație | Uniunea Europeană |
-| Plausible Insights OÜ (Estonia) | Statistici de vizitare, fără date personale | Uniunea Europeană |
+| Plausible Insights OÜ (Estonia) | Statistici de vizitare (doar dacă e activat pe site), fără date personale | Uniunea Europeană |
 | Vercel Inc. (SUA) | Găzduirea aplicației; funcțiile de server rulează în Frankfurt | SUA / UE; transferurile în afara UE se bazează pe Cadrul UE–SUA privind protecția datelor și pe clauze contractuale standard |
 | Cloudflare, Inc. (SUA) | Găzduirea site-ului (Cloudflare Workers) și statistici de vizualizări, fără cookie-uri (Cloudflare Web Analytics) | SUA / rețea globală; transferurile în afara UE se bazează pe acordul de prelucrare a datelor și pe clauze contractuale standard |
 | Supabase | Autentificare, baza de date cu conturi, proiecte și setări, funcția care primește rapoartele de problemă | Irlanda, UE (regiunea `eu-west-1`); furnizorul e o companie din SUA, deci DPA-ul și clauzele contractuale standard acoperă accesul din afara UE |

@@ -37,7 +37,6 @@
   "messages": {
     "sending": "Se trimite…",
     "pending": "Aproape gata! Ți-am trimis un email: apasă pe linkul din el ca să-ți confirmi înscrierea. Dacă nu-l găsești, uită-te și în Spam.",
-    "already": "Ești deja pe listă. Te anunțăm cu noutăți despre produs.",
     "invalidEmail": "Introdu o adresă de email validă.",
     "consentRequired": "Bifează căsuța de acord ca să te putem anunța.",
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",

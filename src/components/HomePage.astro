@@ -7,7 +7,7 @@ import SiteHeader from './SiteHeader.astro';
 import SiteFooter from './SiteFooter.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import VideoPlayer from './VideoPlayer.astro';
-import WaitlistForm from './WaitlistForm.astro';
+import NewsletterForm from './NewsletterForm.astro';
 import MilestoneText from './MilestoneText.astro';
 import { APP_URL } from '../config';
 import { demoVideos } from '../data/demoVideos';
@@ -207,7 +207,7 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
             )
           }
           <p class="mt-10 mb-4 text-base font-medium text-graphite">{t.final.news}</p>
-          <WaitlistForm lang={lang} t={formT} privacyHref={privacyHref} />
+          <NewsletterForm lang={lang} t={formT} privacyHref={privacyHref} />
         </div>
       </div>
     </section>

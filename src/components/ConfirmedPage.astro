@@ -130,6 +130,7 @@ const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
     show('ok');
     // A fresh confirmation counts once; revisits from the welcome email don't.
     if (params.get('nou') === '1') {
+      // Legacy waitlist/referral confirm via /api/confirm — newsletter confirms land on Neon.
       track('Waitlist Confirmed');
       params.delete('nou');
       history.replaceState(null, '', `${location.pathname}${params.size ? `?${params}` : ''}`);

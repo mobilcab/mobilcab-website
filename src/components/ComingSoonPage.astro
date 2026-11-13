@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
-import WaitlistForm from './WaitlistForm.astro';
+import NewsletterForm from './NewsletterForm.astro';
 import { useHomeTranslations, useTranslations, type Lang } from '../i18n';
 import { homeData } from '../lib/structuredData';
 import { linkFor, livePaths } from '../site';
@@ -39,7 +39,7 @@ const joinId = useHomeTranslations(lang).anchors.join;
       <p class="mt-3 text-base leading-relaxed text-graphite">{t.hero.description}</p>
 
       <div id={joinId} class="mt-8 scroll-mt-4">
-        <WaitlistForm lang={lang} t={t} privacyHref={linkFor('privacy', lang, false) ?? ''} />
+        <NewsletterForm lang={lang} t={t} privacyHref={linkFor('privacy', lang, false) ?? ''} />
       </div>
     </main>
   </div>

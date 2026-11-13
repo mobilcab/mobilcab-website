@@ -127,12 +127,28 @@ Every post ends with a call-to-action box. Clicks on it send the
 Button clicks everywhere else (any element with `data-cta`, including the
 header menu) are tracked once, site-wide, by `src/components/CtaTracking.astro`.
 
-## Plausible
+## Analytics (free until billing)
 
-1. Add the site in Plausible and set `PUBLIC_PLAUSIBLE_DOMAIN` (read at build time).
-2. Add a custom-event goal named `Waitlist Signup`. It fires only for new
-   sign-ups and carries a `lang` property. Plausible then shows the
-   visits → sign-ups conversion rate.
+Until paid subscriptions exist, **do not subscribe to Plausible**. Use free tools:
+
+1. **Cloudflare Web Analytics** (pageviews) — Cloudflare dashboard → Web
+   Analytics → Add a site for `mobilcab.com` → copy the site token into the
+   GitHub Actions secret `PUBLIC_CF_ANALYTICS_TOKEN` (and local `.env`). Read at
+   **build** time. Cookie-free; $0 on Cloudflare.
+2. **Brevo** — newsletter / Founding Partner sign-ups and confirmation rates
+   (lists + logs). Not page analytics.
+
+Custom events in the code (`Newsletter Signup`, `Waitlist Confirmed` for the
+legacy `/api/confirm` path, `fp_signup_completed`, `cta_click`, …) call
+`window.plausible` when present and are no-ops otherwise. Leave
+`PUBLIC_PLAUSIBLE_DOMAIN` **empty** so the Plausible script does not load.
+Newsletter double opt-in confirms land on Neon Functions, not `/confirmed/`.
+
+### Optional later (after MRR): Plausible
+
+1. Set `PUBLIC_PLAUSIBLE_DOMAIN=mobilcab.com` (GH secret + `.env`) and redeploy.
+2. Add a goal: `Newsletter Signup` (prop `lang`) for the Home form.
+3. `Waitlist Signup` / `Waitlist Confirmed` remain historical (legacy confirm page).
 
 ## Deploying to Cloudflare Workers
 
@@ -245,9 +261,10 @@ Lists everything that isn't ready for the public site, using the values in
   Policy or Terms that still has `[COMPLETEAZĂ]`/`[VERIFICĂ]`/`[DE DECIS]`
   markers or its draft notice; a published blog post with its review note or
   `[VERIFICĂ]` markers.
-- **Warnings** (shown, but not blocking): no Plausible domain, no `SITE_URL`, no
-  English confirmation template, a published Demo page without videos, email
-  templates with placeholders.
+- **Warnings** (shown, but not blocking): no Cloudflare Web Analytics token, no
+  `SITE_URL`, no English confirmation template, a published Demo page without
+  videos, email templates with placeholders. Missing Plausible is expected
+  pre-billing (not warned).
 - Local builds and preview deploys only print a one-line summary.
 
 ## Daily clean-up
