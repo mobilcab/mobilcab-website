@@ -4,6 +4,10 @@
 > **Superseded for website copy (2026-11-09).** Use live i18n + [`docs/DECISIONS.md`](./DECISIONS.md).
 > Do not paste kitchen/bedroom, tablet/phone, or “cutlist for CNC in one click” as current product
 > claims. CNC is a later stage/plan.
+>
+> **Demo video scripts (§2):** superseded **2026-11-13** by [`docs/demo-videos-m1.md`](./demo-videos-m1.md)
+> (trio M1: design → cutlist → save). Ignore the old AI-assist / CNC export scripts below if they
+> reappear in git history; the live site already uses the M1 trio.
 
 ---
 
@@ -106,67 +110,43 @@ Structure: **Hero → Problem → Solution/Features → Demo → Pricing → Soc
 
 ---
 
-## 2. Demo Video Scripts
+## 2. Demo Video Scripts (M1)
 
-Keep each video 60–90 seconds, screen-recorded, with a simple voiceover — no need for on-camera presence. Casual, practical tone: you're a fellow tradesperson showing a shortcut, not a corporate ad.
+> **Canonical brief:** [`docs/demo-videos-m1.md`](./demo-videos-m1.md).
+> Live keys in `src/data/demoVideos.ts`: `design` → `cutlist` → `save`.
+> Do **not** record AI-assist or CNC export for these three slots (later roadmap / plans).
 
-### 2.1 Video 1 — "Design Flow" (Corner Kitchen Cabinet in Under 10 Minutes)
+Keep each video **60–90 seconds**, screen-recorded, simple voiceover. Same sample project on all three.
 
-**Goal:** Show ease of use and speed for someone who's never seen the app.
+### 2.1 Video 1 — `design` — Proiectare 3D
 
-> **[0:00–0:08] Hook**
-> "Îți arăt cum proiectezi un dulap de colț de bucătărie, de la zero, în sub 10 minute — direct din browser."
-> *(I'll show you how to design a corner kitchen cabinet from scratch, in under 10 minutes — straight from your browser.)*
->
-> **[0:08–0:15] Open the app**
-> Show opening Mobilcab in a browser tab — no login delay, no loading screen. "Fără instalare. Doar intri și începi."
->
-> **[0:15–0:45] Core design steps**
-> Screen-record the actual workflow: set cabinet dimensions → place panels → adjust corner joint → add door/drawer fronts. Voiceover narrates each click plainly: "Setez dimensiunile... adaug ușile... ajustez colțul."
->
-> **[0:45–1:10] Highlight one "aha" moment**
-> Zoom in on one genuinely time-saving interaction (e.g., automatic panel resizing when you change a dimension). "Observă — schimb o dimensiune, și restul panourilor se ajustează automat."
->
-> **[1:10–1:20] Close / CTA**
-> "Asta e — dulap complet, pregătit pentru următorul pas. Îl testezi și tu? Link în descriere."
+**Goal:** Ease and speed for someone who has never seen the app. Corner kitchen cabinet, browser only.
 
----
+> **Hook:** „Îți arăt cum proiectezi un dulap de colț de bucătărie, direct din browser — fără instalare.”
+> **Body:** Open app → project with corner cabinet → change one dimension (panels adjust) → short door/drawer if time.
+> **Close:** „Asta e baza: proiectare 3D pe laptop. Următorul pas e lista de debitare.”
 
-### 2.2 Video 2 — "AI-Assisted Design"
+CAD regie: E01 / E08 (compressed). Full scripts in `mobilcab-cad` `docs/tutorials/`.
 
-**Goal:** Make the AI feature concrete, not buzzword-y — show exactly what it catches or suggests.
+### 2.2 Video 2 — `cutlist` — Listă de debitare
 
-> **[0:00–0:10] Hook**
-> "Multe programe zic că au 'AI.' Îți arăt exact ce face al nostru — nu doar ce spune."
->
-> **[0:10–0:40] Show a real catch**
-> Design a panel layout with a deliberate clearance issue (e.g., a drawer that would collide with a hinge). Show the AI assistant flagging it before export. "Aici — AI-ul observă că sertarul se ciocnește cu bisericuța ușii, înainte să trimit la CNC."
->
-> **[0:40–1:00] Show a layout suggestion**
-> Show the assistant suggesting an alternate panel split for material efficiency. "Și aici sugerează o împărțire care reduce risipa de material."
->
-> **[1:00–1:15] Close / CTA**
-> "Nu înlocuiește experiența ta — dar prinde greșelile înainte să te coste materialul. Testează-l gratuit."
+**Goal:** Workshop value of M1 — parts list from the same 3D project, no manual panel math. **Not** CNC.
 
----
+> **Hook:** „Din același proiect deschid Debitare.”
+> **Body:** Tray **Debitare** → table with parts, sizes, quantities, materials. Say nesting/CNC come later on the roadmap.
+> **Close:** „Acum ai proiectare plus debitare.”
 
-### 2.3 Video 3 — "Cutlist & CNC Export"
+CAD regie: **E09b** (Debitare) in the M1 curriculum — required for this marketing clip.
 
-**Goal:** This is the money-saving feature for a workshop — make the "one click" claim visually undeniable.
+### 2.3 Video 3 — `save` — Salvare și export
 
-> **[0:00–0:10] Hook**
-> "Aici e partea care îți economisește cel mai mult timp — exportul cutlist-ului pentru CNC."
->
-> **[0:10–0:35] Show the export**
-> From a finished design, click "Export Cutlist" → show the generated file/list appearing instantly, with panel dimensions, quantities, and material labels visible.
->
-> **[0:35–0:55] Show it feeding the CNC workflow**
-> If feasible, show the file being opened in/compatible with common CNC/cut-optimization software used in Romanian workshops. If not directly demoable, describe the compatible format clearly instead of overclaiming.
->
-> **[0:55–1:10] Close / CTA**
-> "De la proiect la fișierul de tăiere, fără să calculezi nimic manual. Vrei să-l testezi pe proiectul tău? Intră în lista de așteptare — link în descriere."
+**Goal:** Cloud continuity + CSV / `.mcab` when needed. No “one-click CNC file” claim.
 
-**Production tip:** Record all three back-to-back using the same sample project so viewers see one consistent workflow across the series — this also makes editing faster since you reuse the same base design.
+> **Hook:** „Proiectul rămâne în cloud: îl redeschizi pe laptop, tot din browser.”
+> **Body:** Cloud save → export cut list CSV and/or **Proiect ▾** → **Save Local** / **Export As** (`.mcab`). Unlimited exports now; Free limits only at billing.
+> **Close:** Founding Partner or try the app free — link in description.
+
+CAD regie: E09 + E12 (compressed).
 
 ---
 

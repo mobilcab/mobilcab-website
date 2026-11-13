@@ -126,7 +126,7 @@ Full tier table, prices in RON (not EUR, not USD — Marketing Plan Section 3a a
 Callout box above the table pointing back to the Founding Partner page. "Cancel anytime" next to every paid tier.
 
 ### 4.4 Demo / How It Works Page (month -3 to -2)
-Hosts the three demo videos (Launch Content Kit Section 2 — full scripts there) with a short written caption per video pulling out the "aha moment" in text. Built as its own page, separate from the Home embed, so it can be linked directly from Facebook posts and YouTube descriptions.
+Hosts the three M1 demo videos ([`docs/demo-videos-m1.md`](./demo-videos-m1.md) — design → cut list → save/export) with a short written caption per video pulling out the "aha moment" in text. Built as its own page, separate from the Home embed, so it can be linked directly from Facebook posts and YouTube descriptions. No AI-assist or CNC in this trio.
 
 ### 4.5 Blog / Resources (month -2)
 Three SEO posts (outlines in Launch Content Kit Section 5) — publish early enough for Google indexing before launch traffic. Each ends with a soft CTA to the Founding Partner page.
@@ -161,7 +161,7 @@ Starter set in Launch Content Kit Section 1.6, expanded with:
 **Already written (pull directly, don't rewrite):**
 - Hero/problem/solution copy, bilingual — Launch Content Kit Section 1
 - FAQ starter set — Launch Content Kit Section 1.6
-- Three demo video scripts — Launch Content Kit Section 2
+- Three demo video scripts — [`docs/demo-videos-m1.md`](./demo-videos-m1.md) (M1 trio)
 - Facebook founder-story post, waitlist confirmation email — Launch Content Kit Sections 3–4
 - SEO blog post outlines — Launch Content Kit Section 5
 

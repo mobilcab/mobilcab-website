@@ -94,9 +94,11 @@ Test mode never runs in production builds; there, a missing key is an error.
 ## Demo videos
 
 The three demo videos appear on the Home page and on the Demo page
-(`/preview/ro/cum-functioneaza/`). Once a video is on YouTube, add its ID (the
-part after `v=` in the URL) to `src/data/demoVideos.ts`. Until then, its slot
-shows "Clip în curând".
+(`/preview/ro/cum-functioneaza/`). **M1 trio only:** design → cut list → save/export
+— see [`docs/demo-videos-m1.md`](docs/demo-videos-m1.md) for shot lists and VO.
+Once a video is on YouTube, add its ID (the part after `v=` in the URL) to
+`src/data/demoVideos.ts`, then set `demo: true` in `src/site.ts`. Until then,
+its slot shows "Clip în curând".
 
 Each video loads as a thumbnail only; YouTube's player (from the
 privacy-enhanced `youtube-nocookie.com`) loads when someone presses play. Both

@@ -50,7 +50,7 @@ The site's job is to move a visitor smoothly through stages 2–4. Stage 5 happe
 
 This makes the ask explicit on first contact, per the request that visitors specifically be invited to become founders — while still leaving the free door open for anyone not ready to commit.
 
-**Demo section:** embeds all three videos from Launch Content Kit Section 2 (design flow, AI-assist, CNC export), not just one — a skeptical trade audience wants to see the whole workflow before trusting the pitch (Marketing Plan Section 3b: "show, don't claim").
+**Demo section:** embeds all three M1 videos from [`docs/demo-videos-m1.md`](./demo-videos-m1.md) (3D design → cut list → save/export), not just one — a skeptical trade audience wants to see the whole workflow before trusting the pitch (Marketing Plan Section 3b: "show, don't claim"). AI-assist and CNC export are **not** in this trio (later roadmap).
 
 **Social proof section (activates once private beta testimonials exist — Section 3c, month -2):** 3–5 real quotes from Founding Workshop testers, with name, workshop, and city — specific and local beats generic. Until testimonials exist, this section is simply absent, not filled with placeholder text.
 
@@ -84,10 +84,10 @@ Full tier table, all four tiers from the PricingTiers spreadsheet tab, displayed
 
 ### 3.4 Demo / How It Works Page
 
-Standalone home for the three videos (Launch Content Kit Section 2), each with a short written caption pulling the "aha moment" into text for anyone skimming rather than watching:
-1. Design flow — "corner kitchen cabinet in under 10 minutes"
-2. AI-assist — "catches a clearance mistake before it hits the saw"
-3. CNC/cutlist export — "from design to cutting file, no manual math"
+Standalone home for the three M1 videos ([`docs/demo-videos-m1.md`](./demo-videos-m1.md)), each with a short written caption pulling the "aha moment" into text for anyone skimming rather than watching:
+1. 3D design — "corner kitchen cabinet from scratch, in under 10 minutes"
+2. Cut list — "parts, sizes, quantities and materials from the same project" (not CNC)
+3. Save / export — "cloud + CSV / .mcab when you need it"
 
 This page exists separately from the home page embed so it can be linked directly from Facebook group posts and YouTube video descriptions (Marketing Plan Section 5.1) — a skeptical furniture maker clicking from a group post should land on proof, not a full sales page.
 
