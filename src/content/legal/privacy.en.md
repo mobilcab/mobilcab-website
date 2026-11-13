@@ -18,11 +18,11 @@ When you sign up for email updates, we collect:
 
 We use this only to send you product news. **Signing up to this list does not grant the Founding Partner discount.**
 
-**Confirmation.** Right after you sign up, we send you an email with a confirmation link. We only add you to the list once you click it. If you don't confirm, we keep your address only as long as the link needs to work, and delete it within 30 days at most, through a daily job.
+**Confirmation.** Right after you sign up, we send you an email with a confirmation link. We only add you to the list once you click it. If you don't confirm, we keep the pending request only as long as the link needs to work (it expires; unconfirmed rows are not used for mailings).
 
-**The legal basis** is your consent (Article 6(1)(a) GDPR and Article 12 of Romanian Law no. 506/2004). You can withdraw it at any time with the unsubscribe link in any email, or by writing to us. Withdrawing doesn't affect processing that happened before.
+**The legal basis** is your consent (Article 6(1)(a) GDPR and Article 12 of Romanian Law no. 506/2004). You can withdraw it at any time with the unsubscribe link in any email, from the app Preferences when you have an account, or by writing to us. Withdrawing doesn't affect processing that happened before.
 
-**The invite program.** When it is on, everyone who signs up gets a personal invite code. If you sign up through someone's link, we record that person's code, and once you confirm your address we increase their count of confirmed invites. We use this only to give the program's rewards (a better place in the queue, or a guaranteed place in the private beta). The person who invited you only sees how many confirmed invites they have, not who signed up through their link. The legal basis is the consent you give when signing up. The program is off until we turn it on.
+**Invite / referral program.** Planned for when paid plans open (see our product decisions); **it is off today**. We do not issue invite codes or count referrals on newsletter sign-up. If we turn it on later, we will describe here what we store and the legal basis before collecting those data.
 
 ## 3. The Founding Partner program
 
@@ -97,7 +97,7 @@ In emails sent through Brevo, we can see whether an email was opened and whether
 ## 10. How long we keep data
 
 - **Unconfirmed sign-ups:** 30 days at most.
-- **News list and invite-program data:** until you unsubscribe or ask us to delete it. If we send you no email for 24 months, we delete the list.
+- **News list:** until you unsubscribe or ask us to delete it. If we send you no email for 24 months, we delete the list. Invite/referral data: none while that program is off.
 - **Founding Partner program data:** until subscriptions open (when enrollment closes) and you decide whether to subscribe to a paid plan. If you don't continue, we delete that data within 6 months at most.
 - **Account and projects:** for as long as you have an account. When you delete the account from the app, the data disappears at once from the live database; backups expire within 30 days at most.
 - **Problem reports:** the ClickUp task (including your email and the technical context) is kept as long as it's useful for diagnosis, 24 months at most; you can have it deleted by writing to us. Deleting your account doesn't automatically remove the ClickUp tasks.

@@ -1,12 +1,14 @@
 # Mobilcab website
 
-Phase 1: a bilingual coming-soon page with an email waitlist. The spec is in
+Phase 1: bilingual soft-launch site with a newsletter (Neon double opt-in) and
+Founding Partner reservations. The spec is in
 [docs/Mobilcab_Website_Build_Brief.md](docs/Mobilcab_Website_Build_Brief.md).
 
 Stack: Astro 7 + Tailwind CSS 4, deployed to Cloudflare Workers. Every page is
 static HTML served from the asset store.
-The only server code is the `/api/*` routes (waitlist, confirmation, referrals,
-Founding Partner reservations, clean-up), all of which talk to Brevo.
+Server code is the `/api/*` routes: newsletter subscribe → Neon
+`marketing-consent`, plus legacy Brevo confirm/referral/cleanup still in place
+for grace, and Founding Partner (Brevo + Neon `waitlist_requests`).
 The only client JS is the small form handler; the language switch is plain links.
 
 | Path | What |
@@ -33,37 +35,34 @@ cp .env.example .env   # then fill in the values
 npm run dev
 ```
 
-## Brevo
+## Brevo + Neon newsletter
 
-1. Create a list for the waitlist (Contacts → Lists) and note its numeric ID.
-   Optionally create a second list for English sign-ups.
+1. Create the Noutati list (Contacts → Lists) and note its numeric ID
+   (`BREVO_LIST_ID` — same list Neon syncs after marketing-consent confirm).
 2. Create an API key (SMTP & API → API Keys).
-3. Create these contact attributes (Contacts → Settings → Contact attributes):
-   `REFCODE` (text), `REFERRED_BY` (text), `REFERRALS` (number),
-   `CONFIRM_SENT_AT` (text), `LANGUAGE` (text).
+3. Contact attributes still used by legacy / FP paths:
+   `REFCODE`, `REFERRED_BY`, `REFERRALS`, `CONFIRM_SENT_AT`, `LANGUAGE`
+   (text/number as before). Referral attrs can go after the demolish task.
 4. Set `NEON_MARKETING_CONSENT_URL` to the Neon Functions
    `…/marketing-consent` URL (production = Neon branch `main`). Newsletter
    sign-ups go there with `source: "web"` — same GDPR row and confirm email as
-   the CAD app. After confirm, Neon syncs the contact onto the Brevo Noutati list.
+   the CAD app. After confirm, Neon syncs the contact onto Brevo Noutati.
 5. Keep `BREVO_API_KEY` / `BREVO_LIST_ID` for Founding Partner, legacy
-   `/api/confirm` links still in flight, and the daily clean-up.
-6. Email templates (still authored here; Neon sends them via the same Brevo
-   template IDs): [emails/README.md](emails/README.md).
-7. Set `CONFIRM_SECRET` for legacy `/api/confirm` verification.
+   `/api/confirm` links still in flight, and the daily clean-up — until the
+   ClickUp demolish task (grace ~2–4 weeks after Neon cutover).
+6. Email templates (authored here; Neon sends via the same Brevo template
+   IDs): [emails/README.md](emails/README.md).
+7. Set `CONFIRM_SECRET` for legacy `/api/confirm` verification (grace only).
 
 **Sign-ups use double opt-in via Neon.** The form POSTs to
 `/api/subscribe`, which forwards to Neon. Neon sends the confirmation email;
 the link opens Neon's `/marketing-consent/confirm` page (and adds the contact to
 Brevo Noutati). Legacy `/api/confirm?t=…` links remain valid until they expire.
 
-**Invite program** (`REFERRAL_PROGRAM` in `src/config.ts`, off until month -4;
-it requires the full Privacy Policy to be published). Each person gets an invite
-link (`/ro/?ref=<code>`), shown on the confirmed page and in the welcome email.
-An invite counts when the invited person confirms; each address once, no
-self-invites, at most `REFERRAL_CAP` (5) per person. Rewards are given by hand:
-in Brevo, filter on `REFERRALS` (≥ 1 = ahead in the beta queue, ≥ 3 =
-guaranteed beta invite). Invite codes are looked up through the contact's
-`ext_id` [verify this works in your Brevo account with one test invite].
+**Invite / referral program** (`REFERRAL_PROGRAM` in `src/config.ts`) is **off**
+until paid plans. The Home newsletter form does not send `?ref=`. Legacy
+ConfirmedPage + `/api/referral` stay gated by the flag for grace; do not turn
+the program on without updating Privacy and a product decision.
 
 **Founding Partner reservations (Phase 2 preview):** the form at
 `/preview/ro/founding-partner/` adds people to a separate list, with no payment

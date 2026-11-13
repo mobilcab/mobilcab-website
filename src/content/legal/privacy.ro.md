@@ -18,11 +18,11 @@ Când te înscrii pentru noutăți pe email, colectăm:
 
 Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrierea pe această listă nu îți conferă discountul Partener Fondator.**
 
-**Confirmarea.** Imediat după înscriere îți trimitem un email cu un link de confirmare. Te adăugăm pe listă abia după ce apeși pe el. Dacă nu confirmi, păstrăm adresa doar cât e nevoie ca linkul să funcționeze și o ștergem în cel mult 30 de zile, printr-un job zilnic.
+**Confirmarea.** Imediat după înscriere îți trimitem un email cu un link de confirmare. Te adăugăm pe listă abia după ce apeși pe el. Dacă nu confirmi, păstrăm cererea pending doar cât e nevoie ca linkul să funcționeze (expiră; rândurile neconfirmate nu primesc mailuri de noutăți).
 
-**Temeiul legal** este consimțământul tău (art. 6 alin. (1) lit. a) GDPR și art. 12 din Legea nr. 506/2004). Îți poți retrage consimțământul oricând, cu un clic pe linkul de dezabonare din orice email sau scriindu-ne. Retragerea nu afectează legalitatea prelucrării de până atunci.
+**Temeiul legal** este consimțământul tău (art. 6 alin. (1) lit. a) GDPR și art. 12 din Legea nr. 506/2004). Îți poți retrage consimțământul oricând, cu un clic pe linkul de dezabonare din orice email, din Preferințe în aplicație dacă ai cont, sau scriindu-ne. Retragerea nu afectează legalitatea prelucrării de până atunci.
 
-**Programul de invitații.** Când este activ, fiecare persoană înscrisă primește un cod de invitație personal. Dacă te înscrii prin linkul cuiva, reținem codul acelei persoane, iar după ce îți confirmi adresa îi creștem numărul de invitații confirmate. Folosim aceste informații doar ca să acordăm recompensele programului (un loc mai în față sau un loc garantat în beta-ul privat). Persoana care te-a invitat vede doar câte invitații confirmate are, nu cine s-a înscris prin linkul ei. Temeiul este consimțământul tău la înscriere. Programul este oprit până îl activăm explicit.
+**Programul de invitații / referral.** Planificat pentru când deschidem planurile plătite (vezi deciziile de produs); **astăzi e oprit**. Nu emitem coduri de invitație și nu numărăm referral-uri la înscrierea pe lista de noutăți. Dacă îl activăm ulterior, vom descrie aici ce stocăm și temeiul înainte să colectăm acele date.
 
 ## 3. Lista Partener Fondator
 
@@ -97,7 +97,7 @@ YouTube (Google) prelucrează date ca operator independent, doar dacă pornești
 ## 10. Cât timp păstrăm datele
 
 - **Înscrieri neconfirmate:** cel mult 30 de zile.
-- **Lista de noutăți și datele programului de invitații:** până te dezabonezi sau ceri ștergerea. Dacă nu îți mai trimitem niciun email timp de 24 de luni, ștergem lista.
+- **Lista de noutăți:** până te dezabonezi sau ceri ștergerea. Dacă nu îți mai trimitem niciun email timp de 24 de luni, ștergem lista. Date invitații/referral: niciuna cât programul e oprit.
 - **Lista Partener Fondator:** până deschidem abonamentele (când lista se închide) și alegi dacă te abonezi pe un plan plătit. Dacă nu continui, ștergem datele în cel mult 6 luni.
 - **Contul și proiectele:** cât timp ai cont. La ștergerea contului din aplicație, datele dispar imediat din baza de date activă; copiile de rezervă expiră în cel mult 30 de zile.
 - **Rapoartele de problemă:** sarcina din ClickUp (inclusiv emailul și contextul tehnic) se păstrează cât e util pentru diagnostic, cel mult 24 de luni; o ștergi, la cerere, scriindu-ne. Ștergerea contului nu elimină automat sarcinile din ClickUp.

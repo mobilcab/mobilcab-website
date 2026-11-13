@@ -1,7 +1,7 @@
 ---
-// Where the news-list confirmation link lands, and the invite-progress page the
-// welcome email links to (?cod=<invite code>). Static: the script reads the
-// address and fetches the invite count. Not indexed.
+// Legacy Brevo waitlist confirm landing (`/api/confirm`) + optional invite UI
+// when REFERRAL_PROGRAM is on. Newsletter double opt-in confirms on Neon
+// Functions instead. Not indexed.
 import Base from '../layouts/Base.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
