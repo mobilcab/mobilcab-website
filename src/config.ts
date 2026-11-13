@@ -10,10 +10,9 @@ export const FOUNDING_PARTNER_SPOTS = 15;
 /** When false, the FP page does not show a remaining-spots counter. */
 export const FOUNDING_PARTNER_SHOW_COUNTER = false;
 
-// The referral program (docs/DECISIONS.md): invite links, invite counts and the
-// "share your link" block. Planned for month -4 (Marketing Plan 3c). While
-// false, sign-ups still use double opt-in, and ?ref= links are ignored.
-// Turning it on requires the full Privacy Policy to be published (src/site.ts).
+// Referral (docs/DECISIONS.md): off until billing. Newsletter form no longer
+// sends ?ref= (Neon path). Legacy ConfirmedPage /api/referral still gated here.
+// Turning it on requires the full Privacy Policy published (src/site.ts).
 export const REFERRAL_PROGRAM = false;
 /** Confirmed invites for a guaranteed private-beta invite. */
 export const REFERRAL_GOAL = 3;

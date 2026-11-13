@@ -26,12 +26,12 @@ export type PageKey =
   | 'refund';
 
 export const published: Record<PageKey, boolean> = {
-  // Soft-launch: waitlist + FP + pricing ladder (no list RON) + FAQ.
+  // Soft-launch: newsletter + FP + pricing ladder (no list RON) + FAQ.
   home: true,
   foundingPartner: true,
   // Demo stays preview until YouTube IDs are set in src/data/demoVideos.ts.
   demo: false,
-  // Public during waitlist: shows what ships when, without promising dates.
+  // Public during soft launch: shows what ships when, without promising dates.
   roadmap: true,
   pricing: true,
   faq: true,
@@ -66,9 +66,9 @@ export const livePaths: Record<PageKey, Record<Lang, string>> = {
 };
 
 /**
- * Where the waitlist confirmation link lands (and the invite-progress page the
- * welcome email links to). Always available, outside the launch switch, since
- * the sign-up form needs it from day one; not indexed.
+ * Legacy Brevo waitlist/referral landing (`/api/confirm?t=…` and `?cod=` invite UI).
+ * Newsletter confirms land on Neon Functions, not here. Keep until grace ends
+ * (ClickUp demolish task); not indexed.
  */
 export const confirmedPaths: Record<Lang, string> = { ro: '/ro/confirmat/', en: '/en/confirmed/' };
 
