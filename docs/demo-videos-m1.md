@@ -24,7 +24,7 @@ Scripturi long-form: repo `mobilcab-cad` → `docs/tutorials/` + curriculum
 | Clip site | Episoade CAD (sursă regie) | Notă |
 |-----------|----------------------------|------|
 | `design` | E01 (New/Quick Setup) + E08 (colțar) — sau un take scurt pe seed demo | Hook-ul „sub 10 minute” e marketing; take-ul site = **60–90 s**, nu episodul întreg |
-| `cutlist` | **E09b** (Debitare) — candidat curriculum; obligatoriu pentru acest clip | Fără tab Documente |
+| `cutlist` | **[E09b](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/tutorials/E09b-debitare.md)** (Debitare) — long-form + take scurt în același fișier | Fără tab Documente |
 | `save` | E09 (Save Local / Export As) + E12 (cloud) — extras scurt | Clipul 3 = salvare + export, nu verificare Vedere (E10) |
 
 **Familie separată:** aceste 3 clipuri = **demo site** (embed 60–90 s), nu Tutorial long-form și nu Short/Reel 9:16.  
