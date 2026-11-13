@@ -29,7 +29,7 @@ Pre · Month -3,Website,Publish Founding Partner page,Todo,site.ts foundingPartn
 Pre · Month -3,Product,Private beta / early users + feedback,Todo,FP feedback + demote 90d in DECISIONS/Terms,Invite when Fineas path solid,Founder
 Pre · Month -3,Marketing,Collect testimonials with permission,Todo,testimonials.ts empty,Add real quotes only with permission,Founder
 Pre · Month -2,Website,SEO blog posts published,Done,"blog: true; RO posts published (comparatie, corp-600, how-tos, program gratuit, polyboard, cutlist, lansare); EN launch published",Keep facts verified; no CNC-as-now claims,Founder
-Pre · Month -2,Content,Record 3 demo videos (design / cutlist / save),Todo,demoVideos.ts all null; Demo unpublished,Record on real projects; paste YouTube IDs,Founder
+Pre · Month -2,Content,Record 3 demo videos (design / cutlist / save),Todo,demoVideos.ts all null; Demo unpublished; brief docs/demo-videos-m1.md (M1 trio — no AI/CNC),Record per brief; paste YouTube IDs; then demo:true,Founder
 Pre · Month -2,Pricing,"No list RON until billing; page shows Gratuit 0 + Debitare FP %",Done,pricing.ts monthly null on Debitare; i18n −20% PF; pricing: false until publish,Lock list RON only at billing; publish Pricing when ready,Founder
 Pre · Month -1,Website,Publish Demo + FAQ + Pricing,Todo,demo/faq/pricing false in site.ts; terms/privacy/blog/roadmap true,Flip per go-live in DECISIONS,Founder
 Pre · Month -1,Legal / Finance,SRL → payments,Todo,DECISIONS billing by client count,Open SRL then MoR + app checkout,Founder

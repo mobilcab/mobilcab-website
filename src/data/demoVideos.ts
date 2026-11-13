@@ -1,6 +1,9 @@
 // The three demo videos for M1 (design → cut list → save/export), in the same
 // order as the `videos` lists in src/i18n/home.*.json and demo.*.json.
 //
+// Recording brief (shot list, VO, CAD episode map): docs/demo-videos-m1.md
+// Do not use old marketing scripts that put AI-assist or CNC in these slots.
+//
 // Add each video's YouTube ID once it's uploaded: the part after `v=` in
 // https://www.youtube.com/watch?v=XXXXXXXXXXX. `en` falls back to `ro`, so
 // leave it null unless there's a separate English version.

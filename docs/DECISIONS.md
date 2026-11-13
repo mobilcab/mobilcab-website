@@ -35,6 +35,7 @@ documents is adjusted to match.
 | Plan/Home app CTA | **„Încearcă gratuit”** / **“Try it free”** | Duplicate CTA lead-ins |
 | CNC trial | **Off** until payments start | Always-on 7-day CNC trial |
 | AI on Gratuit | **Zero** until AI plan ships | Free AI quotas |
+| Site demo videos (Home + Cum funcționează) | Trio M1 only: **design → cutlist → save** ([`docs/demo-videos-m1.md`](./demo-videos-m1.md)). No AI-assist or CNC in these three slots | Launch Content Kit §2 old AI / CNC scripts; Funnel Plan “AI-assist + CNC export” |
 
 ## Open questions
 

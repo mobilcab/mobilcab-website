@@ -110,7 +110,7 @@ Freemium is the right model here, and it follows directly from Section 3a: the o
 - Don't gate multi-device access (laptop/tablet/phone) — that's a core differentiator that should be felt by everyone, free or not.
 
 **Beyond price — what actually convinces a skeptical tradesperson to switch tools:**
-- **Show, don't claim.** Trade audiences distrust marketing language and trust demonstrations. The three demo videos (Section on Launch Content Kit — design flow, AI-assist catch, CNC export) do more convincing than any feature list or ad copy.
+- **Show, don't claim.** Trade audiences distrust marketing language and trust demonstrations. The three M1 demo videos (design → cut list → save/export — [`docs/demo-videos-m1.md`](./demo-videos-m1.md)) do more convincing than any feature list or ad copy. AI-assist and CNC demos wait until those stages ship.
 - **Let the free tier do the convincing before asking for anything.** Someone trying it themselves, on their own project, at zero risk, is more persuasive than being told it's good.
 - **Real testimonials from real workshops, fast.** The Founding Workshop program isn't just a pricing tactic — it's the first source of "a furniture maker like me is using this," which matters far more to this audience than any individual feature. Prioritize getting 3–5 genuinely happy early users talking about it in the Facebook groups over anything else in month 1–2.
 - **Remove commitment risk on the paid tier too.** No long contract, cancel anytime, month-to-month. Someone who's never used cloud software before is more willing to try €20/month with an easy exit than a signed annual deal.
@@ -353,7 +353,7 @@ Also worth tracking as its own milestone, separate from the monthly table: the *
 2. [ ] Build bilingual (RO/EN) landing page with demo video + waitlist signup
 3. [ ] Set up basic funnel analytics + in-app feedback prompt
 4. [ ] Create Facebook Page + YouTube channel
-5. [ ] Record 3 short demo videos (design flow, AI assist, CNC/cutlist export)
+5. [ ] Record 3 short demo videos (design → cut list → save/export; see docs/demo-videos-m1.md)
 6. [ ] Join 5–10 Romanian producători de mobilă / mobilă Facebook groups; start contributing genuinely
 7. [ ] Publish 2–3 SEO blog posts targeting Romanian long-tail keywords
 8. [ ] Identify next 2–3 months' trade show/association opportunities in Romania
