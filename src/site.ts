@@ -99,9 +99,8 @@ export function linkFor(key: PageKey, lang: Lang, fromPreview: boolean): string 
 export const joinFreeHref = (lang: Lang, fromPreview: boolean) =>
   `${linkFor('home', lang, fromPreview)}#${useHomeTranslations(lang).anchors.join}`;
 
-// The Founding Partner form collects name, workshop and city, which only the
-// full Privacy Policy covers (the temporary notice doesn't). Stop the build
-// rather than publish it without one.
+// FP page links to the app for enrollment; Privacy still covers the program
+// description and any leftover Brevo grace path. Stop the build without it.
 if (published.foundingPartner && !published.privacy) {
   throw new Error('src/site.ts: publish the full Privacy Policy (privacy: true) before the Founding Partner page.');
 }

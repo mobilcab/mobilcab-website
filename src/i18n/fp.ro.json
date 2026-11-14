@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "Programul Partener Fondator — Mobilcab",
-    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% off pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide."
+    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% off pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide. Cererea se face în aplicație."
   },
   "hero": {
     "label": "Programul Partener Fondator",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit pe listă acum; când deschidem abonamentele (primul plan plătit: Debitare), cei de pe listă primesc 20% off prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg.",
-    "cta": "Înscrie-te pe lista Partener Fondator"
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație; când deschidem abonamentele (primul plan plătit: Debitare), cei aprobați primesc 20% off prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
+    "cta": "Înscrie-te din aplicație"
   },
   "counter": {
     "remaining": "{remaining} din {total} locuri Partener Fondator rămase",
@@ -42,12 +42,17 @@
     "title": "Ce spun primii Parteneri Fondatori"
   },
   "next": {
-    "title": "Ce urmează după înscriere",
+    "title": "Ce urmează după cerere",
     "steps": [
-      "Ești pe lista Partener Fondator — gratuit, pe numele tău (doar până deschidem plata).",
-      "Folosești aplicația ca toată lumea — Debitare full, fără limite de export pe Gratuit.",
+      "Trimiți cererea din aplicație (cont + date atelier). Aprobăm manual, cu dovadă firmă.",
+      "Folosești aplicația ca toată lumea — Debitare full, fără limite de export pe Gratuit până la billing.",
       "Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%. Lista Partener Fondator se închide. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
     ]
+  },
+  "apply": {
+    "title": "Înscrie-te din aplicație",
+    "body": "Cererea Partener Fondator se face în aplicație — acolo verificăm contul și atelierul. Pe site doar explicăm programul; nu mai colectăm formularul aici.",
+    "cta": "Deschide aplicația și cere locul"
   },
   "form": {
     "title": "Înscrie-te în program",

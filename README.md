@@ -64,21 +64,13 @@ until paid plans. The Home newsletter form does not send `?ref=`. Legacy
 ConfirmedPage + `/api/referral` stay gated by the flag for grace; do not turn
 the program on without updating Privacy and a product decision.
 
-**Founding Partner reservations (Phase 2 preview):** the form at
-`/preview/ro/founding-partner/` adds people to a separate list, with no payment
-until Stripe exists. Set it up with:
+**Founding Partner:** public page `/ro/founding-partner/` explains the program;
+enrollment CTAs go to `FOUNDING_PARTNER_URL` (`app.mobilcab.com/?founding=1`).
+Site no longer collects the FP form. Legacy `POST /api/founding-partner` + Brevo
+FP list stay until the demolish grace task — do not wire new UI to them.
 
-1. Create a "Founding Partner reservations" list and set `BREVO_FP_LIST_ID`.
-2. Create three text contact attributes (Contacts → Settings → Contact
-   attributes): `WORKSHOP`, `CITY`, `LANGUAGE`. The name goes into the default
-   `FIRSTNAME` attribute. Without these attributes, reservations fail.
-3. The "X din 100 locuri rămase" counter is the number of contacts in that list
-   (cached for a minute). Reservations stop at `FOUNDING_PARTNER_SPOTS` in
-   `src/config.ts`. Removing someone from the list frees their spot.
-
-**Local test mode:** with `npm run dev` and no `BREVO_API_KEY` set, the form talks
-to a stand-in instead of Brevo (`src/lib/brevo-mock.ts`), so every state can be
-tried without an account:
+**Local test mode:** with `npm run dev` and no `BREVO_API_KEY` set, the newsletter
+form talks to a stand-in instead of Brevo (`src/lib/brevo-mock.ts`):
 
 - a new address shows "check your email"; no email is sent, so a "Test mode:
   open the confirmation link" link appears under the message (the link is also
@@ -86,8 +78,6 @@ tried without an account:
 - after confirming, the same address shows "already on the list" (until the dev
   server restarts)
 - an address starting with `fail@` shows the server-error message
-- on the Founding Partner form, the same rules apply, and an address starting
-  with `full@` shows the "all spots taken" message
 
 Test mode never runs in production builds; there, a missing key is an error.
 
