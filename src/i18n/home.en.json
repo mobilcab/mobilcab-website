@@ -6,8 +6,8 @@
   "hero": {
     "title": "From idea to cut list, straight from your browser.",
     "body": "Mobilcab is a cloud-based CAD for furniture — works in the browser, on a laptop. No installs, no license servers. Now: 3D design and cut lists. Sheet nesting and CNC export come later, as we ship each stage.",
-    "ctaPrimary": "Become a Founding Partner",
-    "ctaSecondary": "Try it free"
+    "ctaPrimary": "Try it free",
+    "ctaSecondary": "Become a Founding Partner"
   },
   "problem": {
     "title": "Sound familiar?",
@@ -72,7 +72,7 @@
   },
   "final": {
     "title": "Be among the first furniture makers in Romania designing straight from the browser.",
-    "or": "Or use the app now, without joining the program:",
+    "or": "Want 20% on paid plans when we open subscriptions?",
     "news": "Email updates only — no Founding Partner benefits"
   },
   "footer": {

@@ -69,22 +69,16 @@ const dateLabel = new Intl.DateTimeFormat(lang === 'ro' ? 'ro-RO' : 'en-GB', { d
         <h2 class="text-lg font-bold tracking-tight text-ink">{t.cta.title}</h2>
         <p class="mt-2 text-base leading-relaxed text-graphite">{t.cta.body}</p>
         <div class="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+          <a href={APP_URL} class="btn-primary" data-blog-cta="open_app" data-post={post.slug} rel="noopener">
+            {t.cta.primary}
+          </a>
           {
             fpHref && (
-              <a href={fpHref} class="btn-primary" data-blog-cta="founding_partner" data-post={post.slug}>
-                {t.cta.primary}
+              <a href={fpHref} class="link-quiet" data-blog-cta="founding_partner" data-post={post.slug}>
+                {t.cta.secondary}
               </a>
             )
           }
-          <a
-            href={APP_URL}
-            class={fpHref ? 'link-quiet' : 'btn-primary'}
-            data-blog-cta="open_app"
-            data-post={post.slug}
-            rel="noopener"
-          >
-            {t.cta.secondary}
-          </a>
         </div>
       </aside>
     </article>

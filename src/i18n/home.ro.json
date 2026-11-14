@@ -6,8 +6,8 @@
   "hero": {
     "title": "De la idee la lista de debitare, direct din browser.",
     "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop. Fără instalări, fără licențe complicate. Acum: proiectare 3D și listă de debitare. Nesting-ul pe placă și exportul CNC vin pe etape, pe măsură ce le livrăm.",
-    "ctaPrimary": "Devino Partener Fondator",
-    "ctaSecondary": "Încearcă gratuit"
+    "ctaPrimary": "Încearcă gratuit",
+    "ctaSecondary": "Devino Partener Fondator"
   },
   "problem": {
     "title": "Sună familiar?",
@@ -72,7 +72,7 @@
   },
   "final": {
     "title": "Fii printre primii producători de mobilă din România care proiectează direct din browser.",
-    "or": "Sau folosește aplicația acum, fără program:",
+    "or": "Vrei 20% pe planurile plătite când deschidem abonamentele?",
     "news": "Doar noutăți pe email — fără beneficiile Partener Fondator"
   },
   "footer": {

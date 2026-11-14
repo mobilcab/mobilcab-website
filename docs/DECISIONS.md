@@ -52,7 +52,7 @@ documents is adjusted to match.
       **6 months**, FP **closes at billing**, full free until billing, gates on
       Gratuit only at subscriptions, paid **Debitare** first, feedback + demote
       90d, laptop-only); lawyer review where needed.
-3. [ ] Brevo: newsletter vs FP; FP → app `?founding=1`; regenerate emails if needed.
+3. [x] Brevo: newsletter vs FP; FP → app `?founding=1` (site CTAs + FP page; legacy `/api/founding-partner` kept until demolish).
 4. [ ] Env on Cloudflare: `BREVO_*`, `CONFIRM_SECRET`, analytics as needed.
 5. [ ] Smoke on `/preview/…`: Home, FP → app, Pricing (**Gratuit + Debitare** +
       coming-soon higher plans), FAQ, confirm email flow.
@@ -69,6 +69,6 @@ documents is adjusted to match.
 
 ### After deploy
 
-1. [ ] Re-test production CTAs → app + FP form end-to-end.
+1. [ ] Re-test production CTAs → app + FP (`?founding=1`) end-to-end.
 2. [ ] Confirm newsletter automations (not access-gate waitlist).
 3. [ ] Coming-soon is gone from `/ro/`; roadmap still correct.

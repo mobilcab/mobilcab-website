@@ -1,13 +1,13 @@
 {
   "meta": {
     "title": "The Founding Partner program — Mobilcab",
-    "description": "Join the Founding Partner program before billing: 20% off paid plans (starting with Cut list) for 6 months from first payment. Enrollment closes when subscriptions open."
+    "description": "Join the Founding Partner program before billing: 20% off paid plans (starting with Cut list) for 6 months from first payment. Enrollment closes when subscriptions open. Apply in the app."
   },
   "hero": {
     "label": "The Founding Partner program",
     "title": "Help shape the tool Romanian furniture makers actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join the program free now; when we open subscriptions (first paid plan: Cut list), Founding Partners get 20% off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list.",
-    "cta": "Join the Founding Partner program"
+    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app; when we open subscriptions (first paid plan: Cut list), approved Founding Partners get 20% off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
+    "cta": "Apply in the app"
   },
   "counter": {
     "remaining": "{remaining} of {total} Founding Partner spots remaining",
@@ -42,12 +42,17 @@
     "title": "What the first Founding Partners say"
   },
   "next": {
-    "title": "What happens after you join",
+    "title": "What happens after you apply",
     "steps": [
-      "You're in the Founding Partner program — free, in your name (only until billing opens).",
-      "You use the app like everyone else — full Cut list on Free, with no export limits.",
+      "You submit the request in the app (account + workshop details). We approve manually, with firm proof.",
+      "You use the app like everyone else — full Cut list on Free, with no export limits until billing.",
       "When we open subscriptions, we contact you with list price and your 20% discount. Founding Partner enrollment closes. Anyone who subscribes later, without a place in the program, pays full list."
     ]
+  },
+  "apply": {
+    "title": "Apply in the app",
+    "body": "Founding Partner requests are submitted in the app — that’s where we verify your account and workshop. This site only explains the program; we no longer collect the form here.",
+    "cta": "Open the app and request a spot"
   },
   "form": {
     "title": "Join the program",
