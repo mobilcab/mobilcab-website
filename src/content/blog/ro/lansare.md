@@ -15,7 +15,7 @@ Mobilcab e un CAD pentru mobilă în browser, pe laptop: proiectezi în 3D și s
 - **M4 — Echipă și partajare:** planul Producție
 - **M5 — AI + randări:** planul AI
 
-La billing: Gratuit cu 3 exporturi + planul Debitare plătit; planurile mai mari apar pe Prețuri pe rând. Detalii pe [Plan](/ro/roadmap/) și [Prețuri](/ro/pricing/).
+La billing: Gratuit cu 3 exporturi + planul Debitare plătit; planurile mai mari apar pe Prețuri pe rând. Detalii pe [Plan](/ro/roadmap/) și [Prețuri](/ro/preturi/).
 
 ## Începe gratuit
 

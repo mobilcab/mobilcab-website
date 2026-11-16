@@ -53,7 +53,7 @@ Nu înlocuiesc proiectarea 3D și nu calculează singure piesele dintr-un corp. 
 
 [Mobilcab](/ro/) e un CAD pentru mobilă în **browser, pe laptop**, fără instalare.
 
-**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, fără limită de export. Când deschidem plata: pe Gratuit apar 3 descărcări; planul **Debitare** (plătit) păstrează exporturile nelimitate — detalii pe [Prețuri](/ro/pricing/).
+**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, fără limită de export. Când deschidem plata: pe Gratuit apar 3 descărcări; planul **Debitare** (plătit) păstrează exporturile nelimitate — detalii pe [Prețuri](/ro/preturi/).
 
 **Nu e încă în acest flux:** nesting, etichete, ofertă, export CNC — pe [Plan](/ro/roadmap/) (etape / planuri ulterioare: Atelier, CNC…).
 
