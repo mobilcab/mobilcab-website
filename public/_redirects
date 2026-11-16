@@ -1,3 +1,7 @@
 # Real 301s at the edge, instead of the meta-refresh page Astro generates for
 # static output. This replaces `redirects: { '/': '/ro/' }` in astro.config.mjs.
 /  /ro/  301
+
+# Locale slug mix-ups (RO uses /preturi/, EN uses /pricing/).
+/ro/pricing/  /ro/preturi/  301
+/en/preturi/  /en/pricing/  301

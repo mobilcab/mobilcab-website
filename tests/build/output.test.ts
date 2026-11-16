@@ -195,6 +195,11 @@ describe('Cloudflare static files', () => {
     expect(redirects).toMatch(/^\/\s+\/ro\/\s+301$/m);
   });
 
+  it('redirects mixed-locale pricing slugs to the canonical paths', () => {
+    expect(redirects).toMatch(/^\/ro\/pricing\/\s+\/ro\/preturi\/\s+301$/m);
+    expect(redirects).toMatch(/^\/en\/preturi\/\s+\/en\/pricing\/\s+301$/m);
+  });
+
   it('does not ship a meta-refresh page at the root', () => {
     expect(existsSync(join(staticDir, 'index.html'))).toBe(false);
   });

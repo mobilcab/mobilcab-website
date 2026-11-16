@@ -25,7 +25,7 @@ Polyboard se vinde ca licență pe viață. Pe magazinul Wood Designer, PolyBoar
 
 Pentru un atelier care îl folosește ani la rând, investiția se poate amortiza. Pentru unul mic, piedica e deseori **plata mare la început**, nu neapărat costul pe termen lung.
 
-Un CAD în browser cu plan gratuit acum și abonamente mai târziu schimbă decizia: poți lucra pe proiecte reale înainte să semnezi o licență mare. Pe Mobilcab, sumele listă RON apar când deschidem billing-ul — până atunci pe [Prețuri](/ro/pricing/) vezi Gratuit (0 RON) și calea Partener Fondator (20%), fără preț listă.
+Un CAD în browser cu plan gratuit acum și abonamente mai târziu schimbă decizia: poți lucra pe proiecte reale înainte să semnezi o licență mare. Pe Mobilcab, sumele listă RON apar când deschidem billing-ul — până atunci pe [Prețuri](/ro/preturi/) vezi Gratuit (0 RON) și calea Partener Fondator (20%), fără preț listă.
 
 ## 2. Unde lucrezi
 
