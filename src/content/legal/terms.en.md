@@ -2,7 +2,7 @@
 
 ## 1. Who we are and what these terms cover
 
-Mobilcab is operated by **Ștefan and Fineas**, natural persons, under the trading name Mobilcab ("Mobilcab", "we"). **There is no registered company (SRL) yet.** As soon as one is formed, this section will be updated with the company name, registered office, tax ID (CUI) and Trade Register number.
+Mobilcab is operated by **Fineas & Ștefan**, natural persons, under the trading name Mobilcab ("Mobilcab", "we"). **There is no registered company (SRL) yet.** As soon as one is formed, this section will be updated with the company name, registered office, tax ID (CUI) and Trade Register number.
 
 These terms apply to your use of the Mobilcab app and the mobilcab.com website. Creating an account or continuing to use the service means you have read them and agree to them.
 
@@ -46,7 +46,7 @@ When a paid plan exists, **our order process is conducted by our online reseller
 - **Joining the program is free and doesn't commit you to anything.** You can join **only before** we open subscriptions. **When billing opens, Founding Partner enrollment closes** — we do not take new sign-ups.
 - The first paid plan is **Cut list** (the same product as Free, with unlimited exports). Later plans (Atelier, CNC, Production, AI) appear on Pricing when we ship them — see the [Roadmap](/en/roadmap/) and [Pricing](/en/pricing/).
 - Until subscriptions open, everyone — including Founding Partners — uses the Free plan with full Cut list (no export limit). When subscriptions open, Free gets **3 downloads per account**.
-- When a paid plan is activated, Founding Partners get **20% off list price** for **6 months from first payment**, on paid plans that ship in that window (starting with Cut list). Anyone who subscribes later, without a place in the program, pays list price.
+- When a paid plan is activated, Founding Partners get **20% discount off list price** for **6 months from first payment**, on paid plans that ship in that window (starting with Cut list). Anyone who subscribes later, without a place in the program, pays list price.
 - After the 6 months, the price automatically returns to the standard one — the discount doesn't stay active indefinitely.
 - We expect reasonable feedback (for example real projects and short replies). If a Founding Partner seat sits unused (no feedback), we may send a reminder at 60 days and free the seat at **90 days**; projects stay, and the account returns to the ordinary Free plan.
 - Founding Partner benefits are personal and can't be transferred.

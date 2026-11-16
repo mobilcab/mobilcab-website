@@ -2,7 +2,7 @@
 
 ## 1. Cine suntem
 
-Site-ul mobilcab.com și aplicația Mobilcab sunt operate de **Ștefan și Fineas**, persoane fizice, sub denumirea comercială Mobilcab („Mobilcab”, „noi”). **Nu există încă o societate înregistrată (SRL).** Imediat după înființare, această secțiune va fi actualizată cu denumirea firmei, sediul, CUI-ul și numărul de ordine din Registrul Comerțului.
+Site-ul mobilcab.com și aplicația Mobilcab sunt operate de **Fineas & Ștefan**, persoane fizice, sub denumirea comercială Mobilcab („Mobilcab”, „noi”). **Nu există încă o societate înregistrată (SRL).** Imediat după înființare, această secțiune va fi actualizată cu denumirea firmei, sediul, CUI-ul și numărul de ordine din Registrul Comerțului.
 
 Suntem operatorii datelor tale personale în sensul Regulamentului (UE) 2016/679 („GDPR”).
 

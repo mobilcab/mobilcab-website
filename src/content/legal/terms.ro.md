@@ -2,7 +2,7 @@
 
 ## 1. Cine suntem și ce acoperă acești termeni
 
-Mobilcab este operat de **Ștefan și Fineas**, persoane fizice, sub denumirea comercială Mobilcab („Mobilcab”, „noi”). **Nu există încă o societate înregistrată (SRL).** Imediat după înființare, această secțiune va fi actualizată cu denumirea firmei, sediul, CUI-ul și numărul de ordine din Registrul Comerțului.
+Mobilcab este operat de **Fineas & Ștefan**, persoane fizice, sub denumirea comercială Mobilcab („Mobilcab”, „noi”). **Nu există încă o societate înregistrată (SRL).** Imediat după înființare, această secțiune va fi actualizată cu denumirea firmei, sediul, CUI-ul și numărul de ordine din Registrul Comerțului.
 
 Acești termeni se aplică folosirii aplicației Mobilcab și a site-ului mobilcab.com. Crearea unui cont sau folosirea în continuare a serviciului înseamnă că ai citit termenii și că ești de acord cu ei.
 
@@ -46,7 +46,7 @@ Când există un plan plătit, **procesul de comandă este derulat de revânzăt
 - **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Poți intra pe listă **doar înainte** să deschidem abonamentele. **Când deschidem plata, lista Partener Fondator se închide** — nu mai acceptăm înscrieri noi.
 - Primul plan plătit este **Debitare** (același produs ca pe Gratuit, cu exporturi nelimitate). Planurile ulterioare (Atelier, CNC, Producție, AI) apar pe Prețuri când le livrăm — vezi [Plan](/ro/roadmap/) și [Prețuri](/ro/pricing/).
 - Până deschidem abonamentele, aplicația e pe Planul Gratuit cu Debitare full (fără limită de export), pentru toată lumea — inclusiv Parteneri Fondatori. La deschiderea abonamentelor, pe Gratuit apar **3 descărcări pe cont**.
-- La activarea unui plan plătit, Partenerii Fondatori de pe listă primesc **20% din prețul listă**, **6 luni de la prima plată**, pe planurile plătite livrate în acea fereastră (începând cu Debitare). Cine se abonează după, fără loc pe listă, plătește prețul listă.
+- La activarea unui plan plătit, Partenerii Fondatori de pe listă primesc **20% discount din prețul listă**, **6 luni de la prima plată**, pe planurile plătite livrate în acea fereastră (începând cu Debitare). Cine se abonează după, fără loc pe listă, plătește prețul listă.
 - După cele 6 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
 - Așteptăm feedback rezonabil (de exemplu proiecte reale și răspunsuri scurte). Dacă un loc pe listă rămâne nefolosit (fără feedback), putem trimite un reminder la 60 de zile și elibera locul la **90 de zile**; proiectele rămân, iar contul revine la Planul Gratuit obișnuit.
 - Beneficiile Partener Fondator sunt personale și nu pot fi transferate.

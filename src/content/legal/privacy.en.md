@@ -2,7 +2,7 @@
 
 ## 1. Who we are
 
-The mobilcab.com website and the Mobilcab app are operated by **Ștefan and Fineas**, natural persons, under the trading name Mobilcab ("Mobilcab", "we"). **There is no registered company (SRL) yet.** As soon as one is formed, this section will be updated with the company name, registered office, tax ID (CUI) and Trade Register number.
+The mobilcab.com website and the Mobilcab app are operated by **Fineas & Ștefan**, natural persons, under the trading name Mobilcab ("Mobilcab", "we"). **There is no registered company (SRL) yet.** As soon as one is formed, this section will be updated with the company name, registered office, tax ID (CUI) and Trade Register number.
 
 We are the controllers of your personal data under Regulation (EU) 2016/679 ("GDPR").
 
