@@ -5,7 +5,7 @@ export const CONTACT_EMAIL = 'contact@mobilcab.com';
 export const CONTACT_EMAIL_CONFIRMED = true;
 
 // Soft technical cap (docs/DECISIONS.md: first 15; may raise). Counter hidden by default.
-// FP = waitlist for 20% on paid plans; closes at billing; later buyers pay list.
+// FP = waitlist for 20% discount on paid plans; closes at billing; later buyers pay list.
 export const FOUNDING_PARTNER_SPOTS = 15;
 /** When false, the FP page does not show a remaining-spots counter. */
 export const FOUNDING_PARTNER_SHOW_COUNTER = false;
@@ -32,7 +32,7 @@ export const FOUNDING_PARTNER_URL = `${APP_URL}/?founding=1`;
 // Leave a value empty and the emails show a visible [COMPLETEAZĂ] marker instead.
 export const EMAIL_SETTINGS = {
   /** Signature: "[name], fondatori Mobilcab". */
-  founderName: 'Stefan si Fineas',
+  founderName: 'Fineas & Ștefan',
   /** Sender identification required in marketing emails: company name and address. */
   companyLine: 'Mobilcab, Romania',
   /** Public site address, for links in the emails. */

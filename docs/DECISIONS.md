@@ -24,7 +24,7 @@ documents is adjusted to match.
 | Site vs app | Site informative. **Checkout in app.** CTAs → app / FP | Checkout on mobilcab.com |
 | Waitlist / coming-soon | General Brevo list = **newsletter** only (no FP discount). FP = separate program | Waitlist as product gate |
 | When to form SRL / open billing | When we launch billing, by client count then | Hard interest-gate numbers as standing rule |
-| Legal operator until SRL | **Ștefan and Fineas** as natural persons trading as Mobilcab; update Terms/Privacy when SRL exists. Terms: FP benefits, feedback, demote 90d, close at billing, paid **Debitare** first | Placeholder company; Terms without FP rules |
+| Legal operator until SRL | **Fineas & Ștefan** as natural persons trading as Mobilcab; update Terms/Privacy when SRL exists. Terms: FP benefits, feedback, demote 90d, close at billing, paid **Debitare** first | Placeholder company; Terms without FP rules |
 | Cancelling yearly | Stops renewal; **no** pro-rata refund except 14-day withdrawal + Refund Policy when billing live | “Cancel anytime” implying year refund |
 | Prices | **RON** when paid plans published | € tables in old kits |
 | Phase 2 rollout | Per-page via `src/site.ts`; unpublished at `/preview/…` | Overnight full replace |

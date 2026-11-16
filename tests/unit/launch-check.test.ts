@@ -92,7 +92,7 @@ describe('launch check', () => {
 
   it('only warns about a Demo page without videos and placeholder emails', () => {
     publish('demo');
-    edit('emails/newsletter-ro.html', (s) => s.replace('Stefan si Fineas', '[COMPLETEAZĂ]'));
+    edit('emails/newsletter-ro.html', (s) => s.replace('Fineas & Ștefan', '[COMPLETEAZĂ]'));
     const { errors, warnings } = check();
     expect(errors).toEqual([]);
     expect(warnings).toEqual([expect.stringContaining('no videos'), expect.stringContaining('newsletter-ro.html')]);
