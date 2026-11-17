@@ -210,10 +210,10 @@ const templates = {
       p('Hi,'),
       p('Thanks for subscribing to Mobilcab news!'),
       p(
-        "The app is already on the Free plan (Cut list, no export limit) — you can use it now on a laptop, in the browser. This email is news only: new stages, prices when billing opens, short guides. It isn't a waitlist and it doesn't include the 20% Founding Partner discount.",
+        "The app is already on the Free plan (Cut list, no export limit) — you can use it now on a laptop, in the browser. This email is news only: new stages, prices when paid plans launch, short guides. It isn't a waitlist and it doesn't include the Founding Partner benefit (first 2 months free).",
       ),
       p(
-        `If you want 20% discount on paid plans (signup only before billing), that’s a separate program: <a href="${site}/en/founding-partner/" style="color:${colors.wood};">Founding Partner</a>.`,
+        `If you want the first 2 months free on your chosen plan (signup only during launch), that’s a separate program: <a href="${site}/en/founding-partner/" style="color:${colors.wood};">Founding Partner</a>.`,
       ),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
@@ -236,7 +236,7 @@ const templates = {
       p('Mulțumesc că te-ai înscris pe lista Partener Fondator! Construiești Mobilcab alături de noi — fără plată acum.'),
       p('Ce înseamnă lista:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'La lansarea abonamentelor (primul plan plătit: Debitare, sub costul unei plăci de PAL pe lună), cei de pe listă primesc primele 2 luni gratuite pe planul ales. Înscrierile se închid atunci. Cine se abonează după plătește prețul întreg. Prețurile le anunțăm atunci.',
+        'La lansarea abonamentelor (primul plan plătit: Debitare), cei de pe listă primesc primele 2 luni gratuite pe planul ales (Debitare sub costul unei plăci de PAL pe lună). Înscrierile se închid atunci. Cine se abonează după plătește prețul întreg. Prețurile le anunțăm atunci.',
         'Nu plătești nimic acum. Plata e opțională când deschidem vânzarea; înscrierea nu te obligă.',
         'Ai un cuvânt de spus în ce construim mai departe.',
       ]),
@@ -253,20 +253,20 @@ const templates = {
   'founding-partner-en': {
     lang: 'en',
     subject: "You're on the Founding Partner list",
-    preheader: "You're on the list. 20% discount on paid plans; enrollment closes at billing.",
+    preheader: "You're on the list. First 2 months free on your chosen plan; enrollment closes when paid plans launch.",
     reason: 'You are receiving this email because you joined the Founding Partner program on mobilcab.com.',
     body: [
       p('Hi {{ contact.FIRSTNAME }},'),
       p("Thanks for joining Founding Partner! You're building Mobilcab with us — nothing to pay now."),
       p('What the list means:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'When we open subscriptions (first paid plan: Cut list), people on this list get 20% discount off list for 6 months. Enrollment closes then. Anyone who subscribes later pays full list. We announce amounts then.',
+        'At subscription launch (first paid plan: Cut list), people on this list get the first 2 months free on their chosen plan (Cut list for less than the cost of a single sheet of melamine board per month). Enrollment closes then. Anyone who subscribes later pays full price. We announce amounts then.',
         "Nothing to pay now. Payment is optional when we open sales; joining doesn't commit you.",
         'You get a real say in what we build next.',
       ]),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        "I'll contact you personally when we open subscriptions, with list price and your discount.",
+        "I'll contact you personally when subscriptions launch, with the standard price and your first 2 months free.",
         "If you'd like, we'll build your first project together, by phone or video call.",
         "I'll genuinely ask for your feedback — what works, what doesn't, what you'd want to see.",
       ]),
