@@ -35,7 +35,7 @@
       },
       {
         "title": "Cutlist gata de atelier",
-        "body": "Din proiect iese lista de debitare: piese, dimensiuni, cantități și materiale — ce ai nevoie ca să tai, fără calcule manuale."
+        "body": "Din proiectul 3D iese automat tabelul complet de piese (cote exacte, cantități, canturi și materiale) împreună cu **totalurile pe proiect** (suprafața pe fiecare tip de placă și metrii liniari de cant) — gata de exportat în CSV și trimis la centrul de debitare sau folosit pentru o estimare rapidă de cost. (Optimizarea grafică pe coală / nesting și ofertarea completă vin în etapa următoare)."
       }
     ]
   },
