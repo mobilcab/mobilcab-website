@@ -1,0 +1,10 @@
+Nr,Cabinet,Part name,Material,Length (mm),Width (mm),Quantity,Edge L1,Edge L2,Edge W1,Edge W2,Grain,Notes
+1,Base unit 800,Left side panel,White melamine W980 18mm,720,560,1,2mm,-,0.4mm,0.4mm,Yes,35mm hinge boring
+2,Base unit 800,Right side panel,White melamine W980 18mm,720,560,1,2mm,-,0.4mm,0.4mm,Yes,35mm hinge boring
+3,Base unit 800,Bottom panel,White melamine W980 18mm,764,560,1,2mm,-,-,-,Yes,Between side panels
+4,Base unit 800,Front top rail,White melamine W980 18mm,764,100,1,2mm,0.4mm,-,-,Yes,Between side panels
+5,Base unit 800,Back top rail,White melamine W980 18mm,764,100,1,0.4mm,-,-,-,Yes,Between side panels
+6,Base unit 800,Adjustable shelf,White melamine W980 18mm,762,520,1,2mm,-,-,-,Yes,Set back 40mm
+7,Base unit 800,Left door,Halifax Oak melamine 18mm,716,397,1,2mm,2mm,2mm,2mm,Yes,35mm hinge milling
+8,Base unit 800,Right door,Halifax Oak melamine 18mm,716,397,1,2mm,2mm,2mm,2mm,Yes,35mm hinge milling
+9,Base unit 800,Back panel,White hardboard 4mm,796,716,1,-,-,-,-,No,Applied on the back

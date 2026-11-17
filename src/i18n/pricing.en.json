@@ -1,55 +1,55 @@
 {
   "meta": {
     "title": "Pricing — Mobilcab",
-    "description": "Now: Free plan (Cut list, unlimited exports) + Founding Partner program. At billing: Free with 3 exports + paid Cut list; Atelier, CNC, Production and AI follow later."
+    "description": "Now: Free plan (Cut list, unlimited exports) + Founding Partner list. At subscription launch: Free with 3 exports + paid Cut list; Founding Partners get the first 2 months free."
   },
   "hero": {
     "label": "Pricing",
-    "title": "Free on Cut list now. 20% discount Founding Partner when billing opens.",
-    "body": "Now: the Free plan includes 3D design and cut lists, with no export limits. When subscriptions open, Free gets 3 downloads per account, and the paid Cut list plan keeps unlimited exports. For 20% discount on paid plans, join the Founding Partner program before billing — we close enrollment then. We announce list amounts at paid launch."
+    "title": "Free on Cut list now. 2 months free at launch for Founding Partners.",
+    "body": "Right now you get free 3D design and unlimited cut-list export. After paid plans launch, Free will include 3 exports per account, and the paid Cut list plan keeps unlimited exports. You join the program for free. At subscription launch (where Cut list will cost less than a single sheet of melamine board per month), you get **the first 2 months free** on your chosen plan, with no obligation now. Anyone who joins later pays the standard price."
   },
   "callout": {
     "title": "New here?",
-    "body": "Founding Partner: free sign-up now, 20% discount off list for 6 months from first payment on paid plans that ship in that window. We close enrollment at billing. Anyone who joins later pays list price.",
+    "body": "You join the program for free. At subscription launch (where Cut list will cost less than a single sheet of melamine board per month), you get **the first 2 months free** on your chosen plan, with no obligation now. Anyone who joins later pays the standard price. Enrollment closes when paid plans launch.",
     "link": "About the Founding Partner program"
   },
   "perMonth": "RON/month",
   "free": "0 RON",
-  "fpOfferShort": "−20%",
-  "fpDiscount": "FP discount",
-  "fpYearly": "Founding Partner: 20% discount off list, 6 months from first payment",
+  "fpOfferShort": "2 months free at launch",
+  "fpDiscount": "",
+  "fpYearly": "Founding Partner: first 2 months free on your chosen plan (Cut list for less than the cost of a single sheet of melamine board per month)",
   "priceTbd": "Price at launch",
   "cancel": "No contract — cancel anytime (once subscriptions exist)",
   "notifyMe": "Email me updates",
   "plans": {
     "free": {
       "name": "Free plan",
-      "for": "Cut list now, with no subscription. At billing it stays Cut list with 3 downloads per account.",
+      "for": "Cut list now, with no subscription. After paid plans launch it stays Cut list with 3 exports per account.",
       "features": [
         "3D design and cut list",
-        "Exports without limits (until subscriptions open)",
+        "Exports without limits (during the launch period)",
         "Cloud save",
         "On a laptop, in the browser",
-        "At billing: 3 downloads per account on Free"
+        "After paid plans launch: 3 exports per account on Free"
       ],
       "cta": "Use the app"
     },
     "debitare": {
       "name": "Cut list plan",
-      "for": "First paid plan when subscriptions open: the same Cut list product as Free, with unlimited exports. Founding Partners: 20% discount; later: list price.",
+      "for": "First paid plan at subscription launch: the same Cut list product as Free, with unlimited exports. Founding Partners: first 2 months free; later: standard price.",
       "features": [
         "3D design and cut list",
         "Unlimited exports",
         "Cloud save",
         "On a laptop, in the browser"
       ],
-      "cta": "Become a Founding Partner"
+      "cta": "Founding Partner details"
     }
   },
   "more": {
     "title": "More detail",
-    "body": "How Free differs from Cut list, what comes next (Atelier, CNC, Production, AI), and how Founding Partner works — on the FAQ page."
+    "body": "How Free differs from Cut list and how Founding Partner works — on the [FAQ](/en/faq/). Features we ship in stages are on the [product roadmap](/en/roadmap/)."
   },
-  "note": "We don't charge until paid plans open. Until then: Free = full Cut list, no export limit. At billing: Free with 3 downloads + paid Cut list. Next, in order: Atelier (nesting, labels, quotes), CNC, Production, AI — shown as coming soon until each ships. Founding Partner enrollment closes at billing; 20% discount / 6 months is only for people in the program.",
+  "note": "We don't charge anything until paid plans launch. Until then you get full free access to 3D design and unlimited cut-list export. As we ship new features, you'll find them on the [product roadmap](/en/roadmap/), and as a Founding Partner you get **the first 2 months free** on your chosen plan.",
   "faqLink": "Questions about the plans"
 }

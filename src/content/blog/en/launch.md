@@ -15,7 +15,7 @@ Mobilcab is cloud CAD for furniture in the browser, on a laptop: design in 3D an
 - **M4 — Team and sharing:** the Production plan
 - **M5 — AI + renders:** the AI plan
 
-At billing: Free with 3 exports + paid Cut list; higher plans appear on Pricing in order. Details on the [Roadmap](/en/roadmap/) and [Pricing](/en/pricing/).
+At subscription launch: Free with 3 exports + paid Cut list; higher plans appear on Pricing in order. Details on the [Roadmap](/en/roadmap/) and [Pricing](/en/pricing/).
 
 ## Start free
 
@@ -23,4 +23,4 @@ The foundation (design + cut lists) is on the Free plan now, with no subscriptio
 
 ## Founding Partner
 
-Joining is free, only before billing (then enrollment closes), and doesn’t oblige you to pay. Founding Partners get 20% discount off list for 6 months from first payment on paid plans. Anyone who joins later pays full list.
+Joining is free, only during the launch period (then enrollment closes when paid plans launch), and doesn’t oblige you to pay. Founding Partners get **the first 2 months free** on their chosen plan. Anyone who joins later pays full price.

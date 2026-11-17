@@ -5,7 +5,7 @@ export const CONTACT_EMAIL = 'contact@mobilcab.com';
 export const CONTACT_EMAIL_CONFIRMED = true;
 
 // Soft technical cap (docs/DECISIONS.md: first 15; may raise). Counter hidden by default.
-// FP = waitlist for first 2 months free on paid plans (RO); closes at billing; later buyers pay list.
+// FP = waitlist for first 2 months free on paid plans; closes at subscription launch; later buyers pay list.
 export const FOUNDING_PARTNER_SPOTS = 15;
 /** When false, the FP page does not show a remaining-spots counter. */
 export const FOUNDING_PARTNER_SHOW_COUNTER = false;

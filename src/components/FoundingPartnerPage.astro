@@ -22,7 +22,7 @@ const paths = pathsFor('foundingPartner');
 const joinFreeHref = joinFree(lang, preview);
 const reserveId = lang === 'ro' ? 'rezervare' : 'reserve';
 const quotes = testimonials[lang];
-const showTeam = lang === 'ro' && Boolean(t.team.title);
+const showTeam = Boolean(t.team.title);
 const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
 const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]';
 ---

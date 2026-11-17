@@ -20,7 +20,7 @@
       "milestone": "M1",
       "status": "launch",
       "title": "Cut list — 3D design + parts list",
-      "body": "Design furniture in 3D, save to the cloud, and get the parts list — what you cut in the workshop. That's the foundation: without a cut list, the project isn't worth investing in. Now it's on the Free plan (no export limit). When billing opens, Cut list also exists as a paid plan with unlimited exports."
+      "body": "Design furniture in 3D, save to the cloud, and get the parts list — what you cut in the workshop. That's the foundation: without a cut list, the project isn't worth investing in. Now it's on the Free plan (no export limit). When paid plans launch, Cut list also exists as a paid plan with unlimited exports."
     },
     {
       "id": "nesting-offer",
@@ -73,7 +73,7 @@
         "id": "when-billing",
         "q": "When do subscriptions start?",
         "a": [
-          "When we open billing: Free gets 3 downloads, and the paid Cut list plan keeps unlimited exports. Nesting comes on the Atelier plan when that stage is ready. Founding Partner: 20% discount / 6 months for people on the list; the list closes at billing. Anyone who subscribes later pays list price."
+          "At subscription launch: Free gets 3 exports, and the paid Cut list plan keeps unlimited exports — for less than the cost of a single sheet of melamine board per month. Nesting comes on the Atelier plan when that stage is ready. Founding Partner: **first 2 months free** for people on the list; enrollment closes when paid plans launch. Anyone who subscribes later pays the standard price."
         ]
       },
       {
@@ -108,7 +108,7 @@
         "id": "fp-and-stages",
         "q": "Is Founding Partner tied to a stage?",
         "a": [
-          "No. Founding Partner is a separate program: free to join only before billing, then 20% discount / 6 months on paid plans. It closes when billing opens — it is not an M1–M5 stage."
+          "No. Founding Partner is a separate program: free to join only during the launch period, then **the first 2 months free** on your chosen plan. Enrollment closes when paid plans launch — it is not an M1–M5 stage."
         ]
       }
     ]

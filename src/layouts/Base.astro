@@ -102,7 +102,7 @@ const t = useTranslations(lang);
   </head>
   <body class="blueprint min-h-dvh antialiased">
     <slot />
-    {lang === 'ro' && <MobileHandoffModal />}
+    <MobileHandoffModal lang={lang} />
     <CtaTracking />
     {/* Page views: Cloudflare Web Analytics (no cookies). Custom events stay on Plausible. */}
   </body>

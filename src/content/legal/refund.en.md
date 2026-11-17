@@ -2,7 +2,7 @@
 
 This policy applies **only once paid plans are sold through Paddle**. The **Free plan** (Cut list, with no charge) does not create refunds: nothing is paid, so nothing is returned.
 
-List prices, plan names and offers at billing launch appear on the **Pricing** page and at checkout, not in this text. Until then, Pricing may show Free (0 RON) and the Founding Partner path (percent off), without list RON amounts for paid plans.
+Standard prices, plan names and offers at subscription launch appear on the **Pricing** page and at checkout, not in this text. Until then, Pricing may show Free (0 RON) and the Founding Partner path (first 2 months free), without standard RON amounts for paid plans.
 
 ## 1. Who issues the refund
 

@@ -1,10 +1,10 @@
 // Plan tiers. Labels live in the page translation files; numbers live here.
 // docs/DECISIONS.md (2026-11-09): pre-billing = Gratuit full Debitare;
-// at billing = Gratuit (3 downloads) + paid Debitare (unlimited). Higher
+// at paid launch = Gratuit (3 downloads) + paid Debitare (unlimited). Higher
 // plans (Atelier → CNC → Producție → AI) ship later.
-// RO marketing: first 2 months free. EN site still uses % until updated.
+// Marketing offer (RO + EN): first 2 months free for Founding Partners.
 
-/** Legacy EN FAQ/Pricing percent badge; RO uses i18n “2 luni gratuite”. */
+/** Legacy percent placeholder for older FAQ strings; current i18n uses “2 months free”. */
 export const FP_DISCOUNT_PERCENT = 20;
 
 export interface Tier {

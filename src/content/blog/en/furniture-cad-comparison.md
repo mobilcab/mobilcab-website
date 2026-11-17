@@ -62,7 +62,7 @@ Cabinet Vision is design and production software for cabinetry / furniture, modu
 
 Mobilcab is furniture CAD that runs in the browser, on a laptop, with no install ([mobilcab.com](https://mobilcab.com/)).
 
-**Licence / price.** The site describes the app as **free** on Cut list (3D design and list) until subscriptions open. **List RON amounts are not published** on the site (November 2026). Founding Partner program: free signup only before billing; 20% discount / 6 months on paid plans — details on the program page.
+**Licence / price.** The site describes the app as **free** on Cut list (3D design and list) until subscriptions open. **Standard RON amounts are not published** on the site (November 2026). Founding Partner program: free signup only during launch; first 2 months free on your chosen plan — details on the program page.
 
 **Stages.** Public roadmap (M1–M5): cut list; nesting, labels, and quotes; CNC export; team and sharing; AI and renders. CNC export is announced as a later stage, not as a feature available now.
 
