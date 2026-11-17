@@ -25,7 +25,7 @@ const fpHref = linkFor('foundingPartner', lang, preview);
 const roadmapHref = linkFor('roadmap', lang, preview);
 const linkTargets: Record<string, { href: string; label: string } | undefined> = {
   foundingPartner: fpHref ? { href: fpHref, label: t.links.foundingPartner } : undefined,
-  roadmap: roadmapHref ? { href: `${roadmapHref}#m2`, label: t.links.roadmap } : undefined,
+  roadmap: roadmapHref ? { href: roadmapHref, label: t.links.roadmap } : undefined,
 };
 const [contactBefore, contactAfter] = t.contact.body.split('{email}');
 const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';

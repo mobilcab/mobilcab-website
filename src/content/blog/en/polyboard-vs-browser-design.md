@@ -25,7 +25,7 @@ Polyboard is sold as a lifetime licence. In the Wood Designer store, PolyBoard 8
 
 For a workshop that uses it for years, the investment can pay off. For a small one, the hurdle is often the **large upfront payment**, not necessarily the long-term cost.
 
-Browser CAD with a free plan now and subscriptions later changes the decision: you can work on real projects before signing a large licence. On Mobilcab, standard RON amounts appear when paid plans launch — until then on [Pricing](/en/pricing/) you see Free (0 RON) and the Founding Partner path (first 2 months free), with no list price.
+Browser CAD with a free plan now and subscriptions later changes the decision: you can work on real projects before signing a large licence. On Mobilcab, standard RON amounts appear when paid plans launch — until then on [Pricing](/en/pricing/) you see Free (0 RON) and the Founding Partner path (first 2 months free), without published standard prices yet.
 
 ## 2. Where you work
 

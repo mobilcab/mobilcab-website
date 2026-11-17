@@ -16,7 +16,7 @@ When you sign up for email updates, we collect:
 - the language you signed up in (Romanian or English);
 - the date you signed up and the fact that you gave consent.
 
-We use this only to send you product news. **Signing up to this list does not grant the Founding Partner discount.**
+We use this only to send you product news. **Signing up to this list does not grant the Founding Partner benefit (first 2 months free).**
 
 **Confirmation.** Right after you sign up, we send you an email with a confirmation link. We only add you to the list once you click it. If you don't confirm, we keep the pending request only as long as the link needs to work (it expires; unconfirmed rows are not used for mailings).
 

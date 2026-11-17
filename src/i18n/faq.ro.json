@@ -28,15 +28,16 @@
       "q": "Pot exporta direct pentru CNC-ul meu?",
       "a": [
         "Lista de debitare (dimensiuni, cantități, materiale) e baza pentru atelier.",
-        "Exportul dedicat pentru mașină vine pe etapa Export CNC pe Plan și pe planul CNC. Nu e inclus în planul Debitare de la lansarea abonamentelor."
-      ]
+        "Exportul dedicat pentru mașină vine pe o etapă ulterioară pe Plan. Nu e inclus în planul Debitare de la lansarea abonamentelor."
+      ],
+      "link": "roadmap"
     },
     {
       "id": "m2",
       "q": "Ce înseamnă M1–M5?",
       "a": [
-        "Sunt etapele de pe pagina Plan, în ordine. M1 = Debitare (proiectare 3D + listă — baza de acum pe Gratuit). M2 = nesting, etichete și ofertă (planul Atelier, când îl livrăm). M3 = export CNC. M4 = echipă și partajare. M5 = AI + randări.",
-        "Abonamentele pot începe cu planul Debitare (plătit) înainte ca nesting-ul să fie gata. Pe restul site-ului vorbim despre abonamente, nu despre coduri M."
+        "Sunt etapele de pe pagina Plan, în ordine. M1 = Debitare (proiectare 3D + listă — baza de acum pe Gratuit).",
+        "Abonamentele pot începe cu planul Debitare (plătit) înainte ca nesting-ul să fie gata. Pe restul site-ului vorbim despre abonamente, nu despre coduri M. Detaliile etapelor următoare sunt pe Plan."
       ],
       "link": "roadmap"
     },
