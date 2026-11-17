@@ -25,7 +25,7 @@ Polyboard is sold as a lifetime licence. In the Wood Designer store, PolyBoard 8
 
 For a workshop that uses it for years, the investment can pay off. For a small one, the hurdle is often the **large upfront payment**, not necessarily the long-term cost.
 
-Browser CAD with a free plan now and subscriptions later changes the decision: you can work on real projects before signing a large licence. On Mobilcab, list RON amounts appear when we open billing — until then on [Pricing](/en/pricing/) you see Free (0 RON) and the Founding Partner path (20%), with no list price.
+Browser CAD with a free plan now and subscriptions later changes the decision: you can work on real projects before signing a large licence. On Mobilcab, list RON amounts appear when we open billing — until then on [Pricing](/en/pricing/) you see Free (0 RON) and the Founding Partner path (20% discount), with no list price.
 
 ## 2. Where you work
 
@@ -63,4 +63,4 @@ A browser program updates for everyone. You don’t pick the day of the new vers
 
 [Mobilcab](/en/) is furniture CAD in the browser, on a laptop: **now** 3D design and cut lists on the Free plan (no export limit until billing). Nesting, labels, quotes, and CNC export are later stages — we don’t sell them as “ready now”.
 
-Founding Partner: signup before billing, 20% / 6 months on paid plans — [details](/en/founding-partner/).
+Founding Partner: signup before billing, 20% discount / 6 months on paid plans — [details](/en/founding-partner/).

@@ -31,7 +31,7 @@
       },
       {
         "title": "Start free",
-        "body": "Use the app free on Cut list. If you want 20% off paid plans when billing opens, join the Founding Partner program — enrollment closes at billing."
+        "body": "Use the app free on Cut list. If you want 20% discount on paid plans when billing opens, join the Founding Partner program — enrollment closes at billing."
       },
       {
         "title": "Workshop-ready cut list",
@@ -53,8 +53,8 @@
   "pricing": {
     "title": "Pricing",
     "offerLabel": "Founding Partner",
-    "offerPrice": "−20% when subscriptions open",
-    "offerDetail": "You join the program for free. When we move to paid plans, you get 20% off full price for 6 months from first payment. Anyone who joins later pays full price.",
+    "offerPrice": "−20% discount when subscriptions open",
+    "offerDetail": "You join the program for free. When we move to paid plans, you get 20% discount off full price for 6 months from first payment. Anyone who joins later pays full price.",
     "aiNote": "At billing: Free (3 exports) + paid Cut list. Then Atelier, CNC, Production, AI.",
     "free": "The app is free until we open payment.",
     "cancel": "Joining does not oblige you to pay.",
@@ -64,15 +64,15 @@
     "title": "Frequently asked questions",
     "items": [
       { "q": "Do I need to install anything?", "a": "No, Mobilcab runs straight from your browser." },
-      { "q": "Does it work on tablet or phone?", "a": "Not yet — it's built for laptop. Tablet and phone come later." },
+      { "q": "Does it work on tablet or phone?", "a": "You design on a laptop. On tablet and phone you can open the project for viewing only — in the workshop or with a client." },
       { "q": "Can I export directly for my CNC?", "a": "The cut list is the foundation; CNC export comes in a later roadmap stage." },
-      { "q": "How much does it cost?", "a": "Now: Free = Cut list, no export limit. Founding Partner: 20% / 6 months on paid plans (enrollment closes at billing). At billing: Free with 3 exports + paid Cut list; then Atelier, CNC, Production, AI." }
+      { "q": "How much does it cost?", "a": "Now: Free = Cut list, no export limit. Founding Partner: 20% discount / 6 months on paid plans (enrollment closes at billing). At billing: Free with 3 exports + paid Cut list; then Atelier, CNC, Production, AI." }
     ],
     "link": "All questions"
   },
   "final": {
-    "title": "Be among the first furniture makers in Romania designing straight from the browser.",
-    "or": "Want 20% on paid plans when we open subscriptions?",
+    "title": "Design furniture in the browser — no install, with a cut list ready for the workshop.",
+    "or": "Want 20% discount on paid plans when we open subscriptions?",
     "news": "Email updates only — no Founding Partner benefits"
   },
   "footer": {

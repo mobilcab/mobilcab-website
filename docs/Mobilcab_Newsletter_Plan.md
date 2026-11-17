@@ -6,6 +6,15 @@ Document de lucru pentru implementare ulterioară. Newsletter lunar pentru lista
 
 Un email lunar, scurt și util, care spune ce e nou, de ce s-a ales așa, ce urmează, și cere o singură acțiune clară. Ton prietenos, nu corporatist.
 
+## Cum se diferențiază abonații noi de cei vechi
+
+Newsletterul lunar este **broadcast**, nu o secvență drip pe vârstă de abonat.
+
+- **Welcome** (confirmare + emailul de bun venit la adăugarea pe listă): o dată per persoană, indiferent când se înscrie — orientare, nu arhivă de ediții.
+- **Ediția lunară:** campanie către **toată** lista Noutăți la data trimiterii. Cine se înscrie azi și cine se înscrie peste un an primesc **următoarea** ediție din calendar, nu newsletterele pe care le-au primit deja ceilalți.
+- **„Lunile 1–6”** de mai jos sunt **calendar editorial al produsului** (teme pe luna X de la startul ritmului), nu „capitolul 1–6” pe care îl parcurge fiecare contact. Un abonat nou nu reia Luna 1–5; intră în fluxul curent.
+- Conținut vechi util rămâne pe site / blog / FAQ; în newsletter se poate pune cel mult o linie „dacă ești nou, începe aici”, nu re-trimiterea arhivei.
+
 ## Frecvență
 
 - **Un email principal pe lună**, trimis **marți dimineața**.
@@ -93,6 +102,6 @@ La implementare:
 - [ ] Șablon: subiect cu promisiune concretă → 3–4 paragrafe → un CTA → fără liste lungi de linkuri, fără atașamente.
 - [ ] Regulă: al doilea email doar pentru lansări urgente sau probleme rezolvate.
 - [ ] Canal de reply ușor sau formular pe o linie de feedback.
-- [ ] Calendar conținut luni 1–6 conform secțiunii de mai sus.
+- [ ] Calendar conținut luni 1–6 = teme pe lună de produs (broadcast); abonații noi primesc următoarea ediție, nu arhiva (welcome separat).
 - [ ] Open/click din Brevo; evidență separată pentru reply-uri până există tracking în repo.
 - [ ] Separare clară față de lista și ritmul Partener Fondator.

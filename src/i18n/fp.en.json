@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "The Founding Partner program — Mobilcab",
-    "description": "Join the Founding Partner program before billing: 20% off paid plans (starting with Cut list) for 6 months from first payment. Enrollment closes when subscriptions open. Apply in the app."
+    "description": "Join the Founding Partner program before billing: 20% discount on paid plans (starting with Cut list) for 6 months from first payment. Enrollment closes when subscriptions open. Apply in the app."
   },
   "hero": {
     "label": "The Founding Partner program",
     "title": "Help shape the tool Romanian furniture makers actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app; when we open subscriptions (first paid plan: Cut list), approved Founding Partners get 20% off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
+    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app; when we open subscriptions (first paid plan: Cut list), approved Founding Partners get 20% discount off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
     "cta": "Apply in the app"
   },
   "counter": {
@@ -21,8 +21,8 @@
         "body": "You pay nothing to sign up. You're not obliged to buy when we open subscriptions. Enrollment closes at billing."
       },
       {
-        "title": "20% off your subscription",
-        "body": "When we move to paid plans, you get 20% off list for 6 months from first payment — on Cut list and on later plans that ship in that window (Atelier, CNC…). Anyone who joins later, without a place in the program, pays full list."
+        "title": "20% discount on your subscription",
+        "body": "When we move to paid plans, you get 20% discount off list for 6 months from first payment — on Cut list and on later plans that ship in that window (Atelier, CNC…). Anyone who joins later, without a place in the program, pays full list."
       },
       {
         "title": "Your ideas on the development list",

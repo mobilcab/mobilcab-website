@@ -5,18 +5,18 @@
   },
   "hero": {
     "label": "Prețuri",
-    "title": "Gratuit acum pe Debitare. 20% Partener Fondator când deschidem plata.",
+    "title": "Gratuit acum pe Debitare. 20% discount Partener Fondator când deschidem plata.",
     "body": "Acum: Planul Gratuit include proiectare 3D și listă de debitare, fără limită de export. Când deschidem abonamentele, pe Gratuit apar 3 descărcări pe cont, iar planul Debitare (plătit) păstrează exporturile nelimitate. Dacă vrei 20% discount pe planurile plătite, te înscrii pe lista Partener Fondator înainte — la billing lista se închide. Sumele listă le anunțăm atunci."
   },
   "callout": {
     "title": "Ești nou aici?",
-    "body": "Partener Fondator: înscriere gratuită acum, 20% off prețul listă timp de 6 luni de la prima plată pe planurile plătite livrate în fereastră. La billing închidem înscrierile. Cine vine după plătește prețul listă.",
+    "body": "Partener Fondator: înscriere gratuită acum, 20% discount pe prețul listă timp de 6 luni de la prima plată pe planurile plătite livrate în fereastră. La billing închidem înscrierile. Cine vine după plătește prețul listă.",
     "link": "Despre programul Partener Fondator"
   },
   "perMonth": "RON/lună",
   "free": "0 RON",
   "fpDiscount": "discount PF",
-  "fpYearly": "Partener Fondator: 20% off prețul listă, 6 luni de la prima plată",
+  "fpYearly": "Partener Fondator: 20% discount pe prețul listă, 6 luni de la prima plată",
   "priceTbd": "Preț la lansare",
   "cancel": "Fără contract — anulezi oricând (când există abonament)",
   "notifyMe": "Anunță-mă pe email",
@@ -35,7 +35,7 @@
     },
     "debitare": {
       "name": "Planul Debitare",
-      "for": "Primul plan plătit, la deschiderea abonamentelor: același Debitare ca pe Gratuit, cu exporturi nelimitate. Parteneri Fondatori: 20% off; ulterior: preț listă.",
+      "for": "Primul plan plătit, la deschiderea abonamentelor: același Debitare ca pe Gratuit, cu exporturi nelimitate. Parteneri Fondatori: 20% discount; ulterior: preț listă.",
       "features": [
         "Proiectare 3D și listă de debitare",
         "Exporturi nelimitate",
@@ -49,6 +49,6 @@
     "title": "Mai multe detalii",
     "body": "Cum diferă Gratuit de Debitare, ce urmează (Atelier, CNC, Producție, AI) și cum funcționează Partener Fondator — pe pagina de întrebări."
   },
-  "note": "Nu încasăm până deschidem planurile plătite. Până atunci: Gratuit = Debitare full, fără limită de export. La billing: Gratuit cu 3 descărcări + Debitare plătit. Urmează pe rând Atelier (nesting, etichete, ofertă), CNC, Producție, AI — pe Prețuri ca „în curând” până le livrăm. Partener Fondator se închide la billing; 20% / 6 luni e doar pentru cine e pe listă.",
+  "note": "Nu încasăm până deschidem planurile plătite. Până atunci: Gratuit = Debitare full, fără limită de export. La billing: Gratuit cu 3 descărcări + Debitare plătit. Urmează pe rând Atelier (nesting, etichete, ofertă), CNC, Producție, AI — pe Prețuri ca „în curând” până le livrăm. Partener Fondator se închide la billing; 20% discount / 6 luni e doar pentru cine e pe listă.",
   "faqLink": "Întrebări despre planuri"
 }

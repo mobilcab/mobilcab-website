@@ -23,4 +23,4 @@ Baza (proiectare + debitare) e pe Planul Gratuit acum, fără abonament. Deschiz
 
 ## Partener Fondator
 
-Înscrierea e gratuită, doar înainte de billing (apoi lista se închide), și nu te obligă să plătești. Partenerii Fondatori primesc 20% din prețul listă, 6 luni de la prima plată, pe planurile plătite. Cine vine după plătește prețul întreg.
+Înscrierea e gratuită, doar înainte de billing (apoi lista se închide), și nu te obligă să plătești. Partenerii Fondatori primesc 20% discount din prețul listă, 6 luni de la prima plată, pe planurile plătite. Cine vine după plătește prețul întreg.

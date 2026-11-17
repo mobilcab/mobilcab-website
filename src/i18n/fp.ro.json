@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Programul Partener Fondator — Mobilcab",
-    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% off pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide. Cererea se face în aplicație."
+    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% discount pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide. Cererea se face în aplicație."
   },
   "hero": {
     "label": "Programul Partener Fondator",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație; când deschidem abonamentele (primul plan plătit: Debitare), cei aprobați primesc 20% off prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație; când deschidem abonamentele (primul plan plătit: Debitare), cei aprobați primesc 20% discount pe prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
     "cta": "Înscrie-te din aplicație"
   },
   "counter": {
@@ -21,8 +21,8 @@
         "body": "Nu plătești nimic ca să te înscrii. Nu ești obligat să cumperi când deschidem abonamentele. Lista se închide la billing."
       },
       {
-        "title": "20% off la abonament",
-        "body": "Când trecem pe planuri plătite, ai 20% din prețul listă, 6 luni de la prima plată — pe Debitare și pe planurile următoare livrate în fereastră (Atelier, CNC…). Cine vine după, fără loc pe listă, plătește prețul întreg."
+        "title": "20% discount la abonament",
+        "body": "Când trecem pe planuri plătite, ai 20% discount din prețul listă, 6 luni de la prima plată — pe Debitare și pe planurile următoare livrate în fereastră (Atelier, CNC…). Cine vine după, fără loc pe listă, plătește prețul întreg."
       },
       {
         "title": "Sugestiile tale pe lista de dezvoltări",

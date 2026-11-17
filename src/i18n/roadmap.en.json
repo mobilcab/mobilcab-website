@@ -73,7 +73,7 @@
         "id": "when-billing",
         "q": "When do subscriptions start?",
         "a": [
-          "When we open billing: Free gets 3 downloads, and the paid Cut list plan keeps unlimited exports. Nesting comes on the Atelier plan when that stage is ready. Founding Partner: 20% / 6 months for people on the list; the list closes at billing. Anyone who subscribes later pays list price."
+          "When we open billing: Free gets 3 downloads, and the paid Cut list plan keeps unlimited exports. Nesting comes on the Atelier plan when that stage is ready. Founding Partner: 20% discount / 6 months for people on the list; the list closes at billing. Anyone who subscribes later pays list price."
         ]
       },
       {
@@ -108,7 +108,7 @@
         "id": "fp-and-stages",
         "q": "Is Founding Partner tied to a stage?",
         "a": [
-          "No. Founding Partner is a separate program: free to join only before billing, then 20% / 6 months on paid plans. It closes when billing opens — it is not an M1–M5 stage."
+          "No. Founding Partner is a separate program: free to join only before billing, then 20% discount / 6 months on paid plans. It closes when billing opens — it is not an M1–M5 stage."
         ]
       }
     ]
@@ -117,7 +117,8 @@
     "title": "Design and cut lists — ready to use.",
     "body": "The app is free now. Later stages come when they're stable on real projects.",
     "primary": "Try it free",
-    "secondaryFp": "Or the Founding Partner program",
-    "secondaryNews": "Or email updates"
+    "provokeFp": "Dare to be among those who build it — not just use it?",
+    "secondaryFp": "Become a Founding Partner",
+    "secondaryNews": "Email updates"
   }
 }

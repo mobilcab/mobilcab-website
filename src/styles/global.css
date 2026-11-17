@@ -80,6 +80,10 @@
     @apply inline-flex min-h-12 items-center justify-center rounded-md bg-wood px-6 text-center text-base font-semibold text-white transition-colors hover:bg-wood-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wood;
   }
 
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-md border-2 border-wood bg-transparent px-6 text-center text-base font-semibold text-ink transition-colors hover:bg-wood/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-wood;
+  }
+
   .link-quiet {
     @apply inline-flex min-h-11 items-center font-semibold text-ink underline underline-offset-4 hover:text-wood-dark;
   }

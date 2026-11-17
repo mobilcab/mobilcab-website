@@ -73,7 +73,7 @@
         "id": "cand-plata",
         "q": "Când încep abonamentele?",
         "a": [
-          "Când deschidem billing-ul: pe Gratuit apar 3 descărcări, iar planul Debitare (plătit) păstrează exporturile nelimitate. Nesting vine pe planul Atelier, când etapa e gata. Partener Fondator: 20% / 6 luni pentru cine e pe listă; lista se închide la billing. Cine se abonează după plătește prețul listă."
+          "Când deschidem billing-ul: pe Gratuit apar 3 descărcări, iar planul Debitare (plătit) păstrează exporturile nelimitate. Nesting vine pe planul Atelier, când etapa e gata. Partener Fondator: 20% discount / 6 luni pentru cine e pe listă; lista se închide la billing. Cine se abonează după plătește prețul listă."
         ]
       },
       {
@@ -108,7 +108,7 @@
         "id": "fp-si-etape",
         "q": "Partener Fondator e legat de o etapă?",
         "a": [
-          "Nu. Partener Fondator e un program separat: înscriere gratuită doar înainte de billing, apoi 20% / 6 luni pe planurile plătite. Se închide când deschidem plata — nu e o etapă M1–M5."
+          "Nu. Partener Fondator e un program separat: înscriere gratuită doar înainte de billing, apoi 20% discount / 6 luni pe planurile plătite. Se închide când deschidem plata — nu e o etapă M1–M5."
         ]
       }
     ]
@@ -117,7 +117,8 @@
     "title": "Proiectare și debitare — gata de folosit.",
     "body": "Aplicația e gratuită acum. Următoarele etape vin când sunt stabile pe proiecte reale.",
     "primary": "Încearcă gratuit",
-    "secondaryFp": "Sau programul Partener Fondator",
-    "secondaryNews": "Sau noutăți pe email"
+    "provokeFp": "Îndrăznește să fii printre cei care îl construiesc — nu doar îl folosesc.",
+    "secondaryFp": "Devino Partener Fondator",
+    "secondaryNews": "Noutăți pe email"
   }
 }

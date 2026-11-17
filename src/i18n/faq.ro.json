@@ -17,7 +17,7 @@
     {
       "id": "tableta",
       "q": "Funcționează pe tabletă sau telefon?",
-      "a": ["Momentan nu — e gândit pentru laptop. Optimizarea pentru tabletă și telefon vine mai târziu."]
+      "a": ["Proiectezi pe laptop. Pe tabletă și telefon poți deschide proiectul doar pentru vizualizare — în atelier sau la client."]
     },
     {
       "id": "export-cnc",
@@ -41,7 +41,7 @@
       "q": "Cât costă?",
       "a": [
         "Acum: Planul Gratuit = Debitare completă, fără limită de export. Nu încasăm. Pentru 20% discount pe planurile plătite, te înscrii pe lista Partener Fondator (se închide când deschidem plata).",
-        "La billing: pe Gratuit apar 3 descărcări pe cont; planul Debitare (plătit) are exporturi nelimitate. Partenerii Fondatori de pe listă: 20% off, 6 luni de la prima plată, pe planurile plătite livrate în fereastră. Cine se abonează după, fără loc pe listă, plătește prețul listă. Sumele le anunțăm atunci."
+        "La billing: pe Gratuit apar 3 descărcări pe cont; planul Debitare (plătit) are exporturi nelimitate. Partenerii Fondatori de pe listă: 20% discount, 6 luni de la prima plată, pe planurile plătite livrate în fereastră. Cine se abonează după, fără loc pe listă, plătește prețul listă. Sumele le anunțăm atunci."
       ],
       "link": "foundingPartner"
     },
@@ -50,7 +50,7 @@
       "q": "Prin ce diferă planul Gratuit de planul Debitare?",
       "a": [
         "Acum există doar Gratuit: Debitare full (3D, listă, cloud), fără limite de descărcare.",
-        "Când deschidem abonamentele: Gratuit rămâne Debitare cu 3 descărcări pe cont; Debitare (plătit) e același produs cu exporturi nelimitate. Urmează Atelier, CNC, Producție, AI — fiecare adaugă ce e pe Plan. Parteneri Fondatori: 20% / 6 luni; lista se închide la billing."
+        "Când deschidem abonamentele: Gratuit rămâne Debitare cu 3 descărcări pe cont; Debitare (plătit) e același produs cu exporturi nelimitate. Urmează Atelier, CNC, Producție, AI — fiecare adaugă ce e pe Plan. Parteneri Fondatori: 20% discount / 6 luni; lista se închide la billing."
       ],
       "tiers": true,
       "after": ["Nu încasăm până deschidem planul Debitare plătit. Prețurile listă se confirmă atunci. Planurile mai mari apar pe Prețuri ca «în curând» până le livrăm."]

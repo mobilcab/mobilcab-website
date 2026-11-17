@@ -185,10 +185,10 @@ const templates = {
       p('Salut,'),
       p('Mulțumesc că te-ai abonat la noutățile Mobilcab!'),
       p(
-        'Aplicația e deja pe Planul Gratuit (Debitare, fără limită de export) — o poți folosi acum pe laptop, în browser. Acest email e doar pentru noutăți: etape noi, prețuri când deschidem plata, ghiduri scurte. Nu e listă de așteptare și nu include 20% Partener Fondator.',
+        'Aplicația e deja pe Planul Gratuit (Debitare, fără limită de export) — o poți folosi acum pe laptop, în browser. Acest email e doar pentru noutăți: etape noi, prețuri când deschidem plata, ghiduri scurte. Nu e listă de așteptare și nu include 20% discount Partener Fondator.',
       ),
       p(
-        `Dacă vrei 20% pe planurile plătite (înscriere doar înainte de billing), programul e separat: <a href="${site}/ro/founding-partner/" style="color:${colors.wood};">Partener Fondator</a>.`,
+        `Dacă vrei 20% discount pe planurile plătite (înscriere doar înainte de billing), programul e separat: <a href="${site}/ro/founding-partner/" style="color:${colors.wood};">Partener Fondator</a>.`,
       ),
       p('Ce urmează:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
@@ -213,7 +213,7 @@ const templates = {
         "The app is already on the Free plan (Cut list, no export limit) — you can use it now on a laptop, in the browser. This email is news only: new stages, prices when billing opens, short guides. It isn't a waitlist and it doesn't include the 20% Founding Partner discount.",
       ),
       p(
-        `If you want 20% off paid plans (signup only before billing), that’s a separate program: <a href="${site}/en/founding-partner/" style="color:${colors.wood};">Founding Partner</a>.`,
+        `If you want 20% discount on paid plans (signup only before billing), that’s a separate program: <a href="${site}/en/founding-partner/" style="color:${colors.wood};">Founding Partner</a>.`,
       ),
       p('What happens next:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
@@ -229,14 +229,14 @@ const templates = {
   'founding-partner-ro': {
     lang: 'ro',
     subject: 'Ești pe lista Partener Fondator',
-    preheader: 'Ești pe listă. 20% pe planurile plătite; lista se închide la billing.',
+    preheader: 'Ești pe listă. 20% discount pe planurile plătite; lista se închide la billing.',
     reason: 'Primești acest email pentru că te-ai înscris pe lista Partener Fondator pe mobilcab.com.',
     body: [
       p('Salut, {{ contact.FIRSTNAME }},'),
       p('Mulțumesc că te-ai înscris pe lista Partener Fondator! Construiești Mobilcab alături de noi — fără plată acum.'),
       p('Ce înseamnă lista:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Când deschidem abonamentele (primul plan plătit: Debitare), cei de pe listă primesc 20% off prețul listă, 6 luni. Lista se închide atunci. Cine se abonează după plătește prețul întreg. Sumele le anunțăm atunci.',
+        'Când deschidem abonamentele (primul plan plătit: Debitare), cei de pe listă primesc 20% discount pe prețul listă, 6 luni. Lista se închide atunci. Cine se abonează după plătește prețul întreg. Sumele le anunțăm atunci.',
         'Nu plătești nimic acum. Plata e opțională când deschidem vânzarea; înscrierea nu te obligă.',
         'Ai un cuvânt de spus în ce construim mai departe.',
       ]),
@@ -253,14 +253,14 @@ const templates = {
   'founding-partner-en': {
     lang: 'en',
     subject: "You're on the Founding Partner list",
-    preheader: "You're on the list. 20% off paid plans; enrollment closes at billing.",
+    preheader: "You're on the list. 20% discount on paid plans; enrollment closes at billing.",
     reason: 'You are receiving this email because you joined the Founding Partner program on mobilcab.com.',
     body: [
       p('Hi {{ contact.FIRSTNAME }},'),
       p("Thanks for joining Founding Partner! You're building Mobilcab with us — nothing to pay now."),
       p('What the list means:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'When we open subscriptions (first paid plan: Cut list), people on this list get 20% off list for 6 months. Enrollment closes then. Anyone who subscribes later pays full list. We announce amounts then.',
+        'When we open subscriptions (first paid plan: Cut list), people on this list get 20% discount off list for 6 months. Enrollment closes then. Anyone who subscribes later pays full list. We announce amounts then.',
         "Nothing to pay now. Payment is optional when we open sales; joining doesn't commit you.",
         'You get a real say in what we build next.',
       ]),

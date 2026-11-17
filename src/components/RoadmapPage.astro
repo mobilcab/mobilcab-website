@@ -121,10 +121,12 @@ const statusClass = (status: StatusKey) => {
 
     <section class="border-t border-line bg-white/60">
       <div class:list={[wrap, 'py-14 sm:py-20']}>
-        <div class="max-w-2xl">
-          <h2 class="text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]">{t.cta.title}</h2>
-          <p class="mt-3 text-base leading-relaxed text-graphite">{t.cta.body}</p>
-          <div class="mt-8 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
+        <h2 class="max-w-3xl text-[1.625rem] leading-tight font-bold tracking-tight text-balance sm:text-[2rem]">
+          {t.cta.title}
+        </h2>
+        <p class="mt-3 max-w-2xl text-base leading-relaxed text-graphite">{t.cta.body}</p>
+        <div class="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16 lg:items-start">
+          <div class="flex flex-col items-stretch gap-4 sm:max-w-md">
             <a
               href={APP_URL}
               class="btn-primary"
@@ -134,9 +136,12 @@ const statusClass = (status: StatusKey) => {
             >
               {t.cta.primary}
             </a>
+          </div>
+          <div class="flex flex-col items-stretch gap-4 sm:max-w-md lg:border-l lg:border-line lg:pl-16 lg:max-w-none">
+            {fpHref && <p class="text-base font-medium text-graphite">{t.cta.provokeFp}</p>}
             <a
               href={secondaryHref}
-              class="link-quiet"
+              class="btn-secondary"
               data-cta={fpHref ? 'founding_partner' : 'join_free'}
               data-cta-location="roadmap"
             >

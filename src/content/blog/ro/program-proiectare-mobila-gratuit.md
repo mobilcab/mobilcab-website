@@ -57,7 +57,7 @@ Nu înlocuiesc proiectarea 3D și nu calculează singure piesele dintr-un corp. 
 
 **Nu e încă în acest flux:** nesting, etichete, ofertă, export CNC — pe [Plan](/ro/roadmap/) (etape / planuri ulterioare: Atelier, CNC…).
 
-**Partener Fondator:** înscriere gratuită **doar înainte de billing** (lista se închide la deschiderea plății); 20% din prețul listă, 6 luni de la prima plată, pe planurile plătite — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
+**Partener Fondator:** înscriere gratuită **doar înainte de billing** (lista se închide la deschiderea plății); 20% discount din prețul listă, 6 luni de la prima plată, pe planurile plătite — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
 
 Fluxul concret: [de la proiect la lista de debitare](/ro/blog/de-la-proiect-la-lista-de-debitare/) și [prima sesiune](/ro/blog/prima-sesiune-in-mobilcab/).
 
