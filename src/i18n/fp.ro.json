@@ -87,5 +87,8 @@
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
     "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."
   },
-  "joinFree": "Sau doar noutăți pe email (fără beneficiul Partener Fondator)"
+  "joinFree": {
+    "label": "Doar noutăți pe email",
+    "note": "(fără beneficiul Partener Fondator)"
+  }
 }
