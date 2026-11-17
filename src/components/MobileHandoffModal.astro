@@ -40,6 +40,9 @@ const waHref = `https://wa.me/?text=${encodeURIComponent(copy.waText)}`;
   id="mobile-handoff"
   class="mobile-handoff fixed inset-0 z-50 m-0 flex h-dvh max-h-none w-screen max-w-none items-end justify-center border-0 bg-transparent p-0 open:backdrop:bg-ink/40 sm:items-center"
   aria-labelledby="mobile-handoff-title"
+  data-app-url={APP_URL}
+  data-copy-label={copy.copy}
+  data-copied-label={copy.copied}
 >
   <div class="mobile-handoff__panel relative w-full max-w-md rounded-t-2xl border border-line bg-[#FAF8F5] p-6 shadow-lg sm:rounded-2xl sm:p-8">
     <button
@@ -123,9 +126,14 @@ const waHref = `https://wa.me/?text=${encodeURIComponent(copy.waText)}`;
   }
 </style>
 
-<script define:vars={{ appUrl: APP_URL, copyLabel: copy.copy, copiedLabel: copy.copied }}>
+<script>
+  // Values live on the dialog as data-* so this stays a processed module
+  // (script-src 'self') — define:vars would emit an unhashed inline script.
   const dialog = document.getElementById('mobile-handoff');
   if (dialog instanceof HTMLDialogElement) {
+    const appUrl = dialog.dataset.appUrl ?? '';
+    const copyLabel = dialog.dataset.copyLabel ?? '';
+    const copiedLabel = dialog.dataset.copiedLabel ?? '';
     const copyBtn = dialog.querySelector('[data-handoff-copy]');
     const continueLink = dialog.querySelector('[data-handoff-continue]');
     const closeBtns = dialog.querySelectorAll('[data-handoff-close]');
@@ -133,7 +141,7 @@ const waHref = `https://wa.me/?text=${encodeURIComponent(copy.waText)}`;
 
     const isNarrow = () => window.matchMedia('(max-width: 767px)').matches;
 
-    const isAppLink = (anchor) => {
+    const isAppLink = (anchor: Element | null): anchor is HTMLAnchorElement => {
       if (!(anchor instanceof HTMLAnchorElement)) return false;
       if (anchor.hasAttribute('data-mobile-handoff-allow')) return false;
       try {
@@ -143,7 +151,7 @@ const waHref = `https://wa.me/?text=${encodeURIComponent(copy.waText)}`;
       }
     };
 
-    const open = (continueHref) => {
+    const open = (continueHref: string) => {
       if (continueLink instanceof HTMLAnchorElement) {
         continueLink.href = continueHref || appUrl;
       }
