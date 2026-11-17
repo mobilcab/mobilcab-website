@@ -26,7 +26,7 @@ export const APP_URL = 'https://app.mobilcab.com';
  * Founding Partner opt-in in the app (docs/DECISIONS.md).
  * Site FP page explains the program; enrollment happens here — not via Brevo form.
  */
-export const FOUNDING_PARTNER_URL = `${APP_URL}/?intent=founding-partner`;
+export const FOUNDING_PARTNER_URL = `${APP_URL}/?founding=1`;
 
 // Used by the Brevo email templates (scripts/build-emails.mjs, `npm run emails`).
 // Leave a value empty and the emails show a visible [COMPLETEAZĂ] marker instead.

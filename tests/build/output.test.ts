@@ -10,6 +10,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { describe, expect, it } from 'vitest';
+import { FOUNDING_PARTNER_URL } from '../../src/config';
 
 const root = join(import.meta.dirname, '../..');
 const output = join(root, 'dist');
@@ -70,6 +71,15 @@ describe('built pages', () => {
   it('keeps the confirmation pages out of search engines', () => {
     for (const url of ['/ro/confirmat/', '/en/confirmed/']) {
       expect(noindex(pages.find((p) => p.url === url)!.html), url).toBe(true);
+    }
+  });
+
+  it('sends Founding Partner CTAs into the app waitlist deep-link', () => {
+    expect(FOUNDING_PARTNER_URL).toMatch(/[?&]founding=1\b/);
+    for (const url of ['/ro/founding-partner/', '/en/founding-partner/']) {
+      const html = pages.find((p) => p.url === url)!.html;
+      expect(html, url).toContain(`href="${FOUNDING_PARTNER_URL}"`);
+      expect(html, url).toContain('data-cta="founding_partner"');
     }
   });
 

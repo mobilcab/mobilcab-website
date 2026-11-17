@@ -69,6 +69,9 @@ enrollment CTAs go to `FOUNDING_PARTNER_URL` (`app.mobilcab.com/?founding=1`).
 Site no longer collects the FP form. Legacy `POST /api/founding-partner` + Brevo
 FP list stay until the demolish grace task — do not wire new UI to them.
 
+Live smoke (site CTA → app waitlist submit): `npm run test:smoke:fp`
+(defaults to production; override with `SITE_URL` / `APP_URL`).
+
 **Local test mode:** with `npm run dev` and no `BREVO_API_KEY` set, the newsletter
 form talks to a stand-in instead of Brevo (`src/lib/brevo-mock.ts`):
 

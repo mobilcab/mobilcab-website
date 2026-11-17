@@ -16,7 +16,9 @@
     "check-launch": "node scripts/launch-check.mjs",
     "test": "vitest run tests/unit",
     "test:build": "astro build && vitest run tests/build",
-    "test:all": "npm test && npm run test:build"
+    "test:all": "npm test && npm run test:build",
+    "test:smoke": "playwright test",
+    "test:smoke:fp": "playwright test tests/smoke/fp-website-to-app.spec.ts"
   },
   "dependencies": {
     "@astrojs/cloudflare": "^14.4.4",
@@ -26,6 +28,7 @@
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
+    "@playwright/test": "^1.56.1",
     "vitest": "^5.0.3",
     "wrangler": "^4.157.0"
   }
