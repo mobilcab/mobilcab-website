@@ -16,7 +16,7 @@ Când te înscrii pentru noutăți pe email, colectăm:
 - limba în care te-ai înscris (română sau engleză);
 - data înscrierii și faptul că ți-ai dat acordul.
 
-Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrierea pe această listă nu îți conferă discountul Partener Fondator.**
+Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrierea pe această listă nu îți conferă beneficiul Partener Fondator (primele 2 luni gratuite).**
 
 **Confirmarea.** Imediat după înscriere îți trimitem un email cu un link de confirmare. Te adăugăm pe listă abia după ce apeși pe el. Dacă nu confirmi, păstrăm cererea pending doar cât e nevoie ca linkul să funcționeze (expiră; rândurile neconfirmate nu primesc mailuri de noutăți).
 
@@ -34,7 +34,7 @@ Când te înscrii pe lista Partener Fondator, colectăm:
 - orașul;
 - limba în care te-ai înscris și faptul că ți-ai dat acordul.
 
-Folosim aceste date ca să te ținem pe lista eligibilă pentru **20% discount** pe planurile plătite (începând cu Debitare) când deschidem abonamentele, să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită, nu te obligă la nimic, și e posibilă **doar înainte de billing** — lista se închide când deschidem plata. Cine se abonează după, fără loc pe această listă, plătește prețul listă.
+Folosim aceste date ca să te ținem pe lista eligibilă pentru **primele 2 luni gratuite** pe planurile plătite (începând cu Debitare) la lansarea abonamentelor, să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită, nu te obligă la nimic, și e posibilă **doar în perioada de lansare** — înscrierile se închid odată cu lansarea abonamentelor. Cine se abonează după, fără loc pe această listă, plătește prețul standard.
 
 **Temeiul legal** este consimțământul tău (art. 6 alin. (1) lit. a) GDPR).
 

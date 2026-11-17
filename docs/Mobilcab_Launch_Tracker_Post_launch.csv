@@ -7,7 +7,7 @@ Post · Phase 1 (M1–3),Product,Open app accounts for beta / FP cohort,Todo,APP
 Post · Phase 1 (M1–3),Product,In-app activation tracking (first cutlist/export),Todo,Marketing Plan 4a/9; not evidenced as product analytics event yet,Define activation event + dashboard,Dev
 Post · Phase 1 (M1–3),Product,"First-session feedback ask (email, not modal)",Todo,Marketing Plan 4a,Trigger after first session,Dev
 Post · Phase 1 (M1–3),Growth,Referral reward after launch: 1 free month both sides,Todo,DECISIONS: pre-launch = access rewards; post-launch free month in app,Build in CAD after paid plans exist,Dev
-Post · Phase 1 (M1–3),Monetization,Paid Debitare checkout (FP 20%/6mo) live,Todo,Blocked by SRL + MoR; DECISIONS ladder Gratuit→Debitare→…,Implement after billing launch; FP waitlist closes then,Dev
+Post · Phase 1 (M1–3),Monetization,Paid Debitare checkout (FP 2 mo free RO / 20% EN until aligned) live,Todo,Blocked by SRL + MoR; DECISIONS ladder Gratuit→Debitare→…,Implement after billing launch; FP waitlist closes then,Dev
 Post · Phase 1 (M1–3),Content,Case studies 2–3 from real workshops,Todo,testimonials.ts empty,Write with permission; publish on site + Page,Founder
 Post · Phase 1 (M1–3),Retention,Monthly changelog to paying users,Todo,Marketing Plan 6a,Start once first paid users exist,Founder
 Post · Phase 1 (M1–3),Retention,Inactivity outreach (14+ days) + win-back,Todo,Marketing Plan 6a,Automate lightly or do manually at small N,Founder

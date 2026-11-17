@@ -11,7 +11,8 @@ interface Props {
 
 const { lang, preview = false } = Astro.props;
 const t = useTranslations(lang);
-const links = (['roadmap', 'faq', 'terms', 'privacy', 'refund'] as const)
+// Marketing order matches the header (Plan → Prețuri → Întrebări → Blog → FP), then legal.
+const links = (['roadmap', 'pricing', 'faq', 'blog', 'foundingPartner', 'terms', 'privacy', 'refund'] as const)
   .map((key) => ({ label: t.nav[key], href: linkFor(key, lang, preview) }))
   .filter((link) => link.href !== null);
 ---

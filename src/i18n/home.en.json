@@ -35,7 +35,8 @@
       },
       {
         "title": "Workshop-ready cut list",
-        "body": "From the design you get the cut list: parts, sizes, quantities and materials — what you need to cut, without manual calculations."
+        "body": "From the design you get the cut list: parts, sizes, quantities and materials — what you need to cut, without manual calculations.",
+        "sampleCsvLabel": ""
       }
     ]
   },

@@ -25,7 +25,7 @@
     },
     {
       "title": "Listă de debitare",
-      "aha": "Din proiect iese cutlist-ul: piese, dimensiuni, cantități și materiale.",
+      "aha": "Din proiect iese lista de debitare: piese, dimensiuni, cantități și materiale.",
       "points": [
         "Deschizi lista de debitare pe același proiect — fără să calculezi manual fiecare panou.",
         "Vezi piesele cu dimensiuni, cantități și materiale, gata de folosit în atelier.",
@@ -39,7 +39,7 @@
       "points": [
         "Salvezi în cloud și revii la proiect de pe laptop, fără instalare.",
         "Exporti lista (CSV) sau proiectul local (.mcab) când ai nevoie.",
-        "Acum: exporturi fără limite. Limitele pe Gratuit apar abia când deschidem abonamentele."
+        "Acum: exporturi fără limite pe Gratuit, în perioada de lansare."
       ],
       "note": ""
     }

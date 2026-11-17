@@ -5,7 +5,7 @@ date: "2026-11-09"
 published: true
 ---
 
-Mobilcab rulează în browser, pe laptop. Nu instalezi un program pe un calculator din atelier și nu ai nevoie de server de licențe. Pe etapa actuală (Debitare) lucrezi cu proiectare 3D și cu lista de piese — cutlist-ul pe care îl folosești la debitare.
+Mobilcab rulează în browser, pe laptop. Nu instalezi un program pe un calculator din atelier și nu ai nevoie de server de licențe. Pe etapa actuală (Debitare) lucrezi cu proiectare 3D și cu lista de piese — lista de debitare pe care o folosești la debitare.
 
 Mai jos sunt pașii, în ordinea în care îi faci. Nu e un cronometru și nu e o promisiune de viteză: e fluxul documentat pe site pentru ce e disponibil acum.
 
@@ -23,7 +23,7 @@ Setezi dimensiunile corpului, așezi panourile, adaugi uși sau sertare după cu
 
 ## 3. Deschizi lista de debitare
 
-Din același proiect scoți cutlist-ul: piese, dimensiuni, cantități și materiale. Asta e baza de atelier pe care o livrăm întâi pe Plan (M1), înainte de nesting, etichete, ofertă sau export CNC.
+Din același proiect scoți lista de debitare: piese, dimensiuni, cantități și materiale. Asta e baza de atelier pe care o livrăm întâi pe Plan (M1), înainte de nesting, etichete, ofertă sau export CNC.
 
 ![Listă de debitare în Mobilcab — piese, dimensiuni, cantități și materiale](/blog/corp-600/lista-debitare.png)
 

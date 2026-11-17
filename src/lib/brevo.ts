@@ -350,7 +350,7 @@ export async function sendReservationEmails(r: Reservation, panelSaved: boolean 
       subject: en ? 'You are on the Founding Partner list' : 'Ești pe lista Partener Fondator',
       htmlContent: en
         ? `<p>Hi ${name},</p><p>You are on the Mobilcab Founding Partner list, free, in your name. When subscriptions open, we will contact you with the list price and your 20% discount.</p><p>Meanwhile, use the app: ${APP_URL}</p><p>Fineas & Ștefan, Mobilcab</p>`
-        : `<p>Salut, ${name},</p><p>Ești pe lista Partener Fondator Mobilcab, gratuit, pe numele tău. Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%.</p><p>Până atunci, folosește aplicația: ${APP_URL}</p><p>Fineas & Ștefan, Mobilcab</p>`,
+        : `<p>Salut, ${name},</p><p>Ești pe lista Partener Fondator Mobilcab, gratuit, pe numele tău. La lansarea abonamentelor, te contactăm cu prețul standard și cele 2 luni gratuite pe planul ales.</p><p>Până atunci, folosește aplicația: ${APP_URL}</p><p>Fineas & Ștefan, Mobilcab</p>`,
     }),
     send({
       to: [{ email: CONTACT_EMAIL }],

@@ -5,7 +5,7 @@ export const CONTACT_EMAIL = 'contact@mobilcab.com';
 export const CONTACT_EMAIL_CONFIRMED = true;
 
 // Soft technical cap (docs/DECISIONS.md: first 15; may raise). Counter hidden by default.
-// FP = waitlist for 20% discount on paid plans; closes at billing; later buyers pay list.
+// FP = waitlist for first 2 months free on paid plans (RO); closes at billing; later buyers pay list.
 export const FOUNDING_PARTNER_SPOTS = 15;
 /** When false, the FP page does not show a remaining-spots counter. */
 export const FOUNDING_PARTNER_SHOW_COUNTER = false;
@@ -26,7 +26,7 @@ export const APP_URL = 'https://app.mobilcab.com';
  * Founding Partner opt-in in the app (docs/DECISIONS.md).
  * Site FP page explains the program; enrollment happens here — not via Brevo form.
  */
-export const FOUNDING_PARTNER_URL = `${APP_URL}/?founding=1`;
+export const FOUNDING_PARTNER_URL = `${APP_URL}/?intent=founding-partner`;
 
 // Used by the Brevo email templates (scripts/build-emails.mjs, `npm run emails`).
 // Leave a value empty and the emails show a visible [COMPLETEAZĂ] marker instead.

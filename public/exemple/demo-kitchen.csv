@@ -1,0 +1,10 @@
+﻿Nr,Corp,Denumire piesă,Material,Lungime (mm),Lățime (mm),Cantitate,Cant L1,Cant L2,Cant l1,Cant l2,Fibră,Observații
+1,Corp inferior 800,Laterală stânga,PAL Alb W980 18mm,720,560,1,2mm,-,0.4mm,0.4mm,Da,Găurire balamale 35mm
+2,Corp inferior 800,Laterală dreapta,PAL Alb W980 18mm,720,560,1,2mm,-,0.4mm,0.4mm,Da,Găurire balamale 35mm
+3,Corp inferior 800,Fund corp,PAL Alb W980 18mm,764,560,1,2mm,-,-,-,Da,Între laterale
+4,Corp inferior 800,Traversă superioară față,PAL Alb W980 18mm,764,100,1,2mm,0.4mm,-,-,Da,Între laterale
+5,Corp inferior 800,Traversă superioară spate,PAL Alb W980 18mm,764,100,1,0.4mm,-,-,-,Da,Între laterale
+6,Corp inferior 800,Poliță mobilă,PAL Alb W980 18mm,762,520,1,2mm,-,-,-,Da,Retrasă 40mm
+7,Corp inferior 800,Ușă stânga,PAL Stejar Halifax 18mm,716,397,1,2mm,2mm,2mm,2mm,Da,Frezare balamale 35mm
+8,Corp inferior 800,Ușă dreapta,PAL Stejar Halifax 18mm,716,397,1,2mm,2mm,2mm,2mm,Da,Frezare balamale 35mm
+9,Corp inferior 800,Spate PFL,PFL Alb 4mm,796,716,1,-,-,-,-,Nu,Aplicat pe spate

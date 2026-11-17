@@ -1,9 +1,10 @@
 // Plan tiers. Labels live in the page translation files; numbers live here.
 // docs/DECISIONS.md (2026-11-09): pre-billing = Gratuit full Debitare;
 // at billing = Gratuit (3 downloads) + paid Debitare (unlimited). Higher
-// plans (Atelier → CNC → Producție → AI) ship later. FP = 20% discount / 6 months.
+// plans (Atelier → CNC → Producție → AI) ship later.
+// RO marketing: first 2 months free. EN site still uses % until updated.
 
-/** Founding Partner discount off list when billing opens (locked 6 months). */
+/** Legacy EN FAQ/Pricing percent badge; RO uses i18n “2 luni gratuite”. */
 export const FP_DISCOUNT_PERCENT = 20;
 
 export interface Tier {

@@ -5,7 +5,7 @@ date: "2026-11-09"
 published: true
 ---
 
-> Prețurile și capabilitățile CNC de mai jos sunt luate din pagini publice ale vendorilor / distribuitorilor. Sumele se pot schimba — reconfirmă pe sursa citată. Mobilcab e descris pe baza mobilcab.com (fără preț listă RON publicat încă).
+> Prețurile și capabilitățile CNC de mai jos sunt luate din pagini publice ale vendorilor / distribuitorilor. Sumele se pot schimba — reconfirmă pe sursa citată. Mobilcab e descris pe baza mobilcab.com (fără preț standard RON publicat încă).
 
 Producătorii de mobilă care caută un program de proiectare întâlnesc deseori aceleași nume. Tabelul de mai jos folosește doar fapte verificate în acest articol (și pe sursele citate). Celulele sunt **are** / **nu are** pentru ce e documentat public **acum** — nu un clasament.
 
@@ -62,7 +62,7 @@ Cabinet Vision e software de proiectare și producție pentru cabinetry / mobil�
 
 Mobilcab e un CAD pentru mobilă care rulează în browser, pe laptop, fără instalare ([mobilcab.com](https://mobilcab.com/)).
 
-**Licență / preț.** Site-ul descrie aplicația ca **gratuită** pe Debitare (proiectare 3D și listă) până deschiderea abonamentelor. **Sumele listă RON nu sunt publicate** pe site (noiembrie 2026). Programul Partener Fondator: înscriere gratuită doar înainte de billing; 20% discount / 6 luni pe planurile plătite — detalii pe pagina programului.
+**Licență / preț.** Site-ul descrie aplicația ca **gratuită** pe Debitare (proiectare 3D și listă) până lansarea abonamentelor. **Prețurile standard în RON nu sunt publicate** pe site (noiembrie 2026). Programul Partener Fondator: înscriere gratuită doar în perioada de lansare; **primele 2 luni gratuite** pe planul ales — detalii pe pagina programului.
 
 **Etape.** Planul public (M1–M5): debitare; nesting, etichete și ofertă; export CNC; echipă și partajare; AI și randări. Exportul CNC e anunțat ca etapă ulterioară, nu ca funcție disponibilă acum.
 

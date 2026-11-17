@@ -1,0 +1,176 @@
+---
+// RO-only: on narrow viewports, intercept app.mobilcab.com CTAs so phone users
+// can WhatsApp/copy the link for laptop instead of landing in a desktop UI.
+import { APP_URL } from '../config';
+
+const waText = `De deschis pe laptop: ${APP_URL} — Mobilcab (proiectare 3D și listă de debitare)`;
+const waHref = `https://wa.me/?text=${encodeURIComponent(waText)}`;
+---
+
+<dialog
+  id="mobile-handoff"
+  class="mobile-handoff fixed inset-0 z-50 m-0 flex h-dvh max-h-none w-screen max-w-none items-end justify-center border-0 bg-transparent p-0 open:backdrop:bg-ink/40 sm:items-center"
+  aria-labelledby="mobile-handoff-title"
+>
+  <div class="mobile-handoff__panel relative w-full max-w-md rounded-t-2xl border border-line bg-[#FAF8F5] p-6 shadow-lg sm:rounded-2xl sm:p-8">
+    <button
+      type="button"
+      class="absolute top-3 right-3 inline-flex size-11 items-center justify-center rounded-md text-graphite transition-colors hover:bg-ink/5 hover:text-ink"
+      data-handoff-close
+      aria-label="Închide"
+    >
+      <span aria-hidden="true" class="text-xl leading-none">✕</span>
+    </button>
+
+    <h2 id="mobile-handoff-title" class="pr-10 text-xl font-bold tracking-tight text-ink sm:text-[1.375rem]">
+      Mobilcab rulează pe laptop, direct în browser
+    </h2>
+    <p class="mt-3 text-base leading-relaxed text-graphite">
+      Proiectarea 3D are nevoie de un ecran mare și mouse. Trimite-ți linkul acum ca să îl deschizi ușor când
+      ajungi la laptop, sau creează-ți contul pe loc.
+    </p>
+
+    <div class="mt-6 flex flex-col gap-3">
+      <a
+        href={waHref}
+        class="btn-primary w-full"
+        target="_blank"
+        rel="noopener"
+        data-handoff-whatsapp
+        data-cta="mobile_handoff_whatsapp"
+        data-cta-location="mobile_handoff"
+      >
+        Trimite-mi linkul pe WhatsApp
+      </a>
+      <button type="button" class="btn-secondary w-full" data-handoff-copy>
+        Copiază linkul aplicației
+      </button>
+      <a
+        href={APP_URL}
+        class="mt-1 text-center text-sm font-semibold text-graphite underline-offset-4 hover:text-ink hover:underline"
+        data-handoff-continue
+        data-mobile-handoff-allow
+        rel="noopener"
+      >
+        Am deja cont sau vreau să îmi fac cont acum →
+      </a>
+    </div>
+  </div>
+</dialog>
+
+<style>
+  #mobile-handoff[open] {
+    animation: handoff-fade 180ms ease-out;
+  }
+
+  #mobile-handoff[open] .mobile-handoff__panel {
+    animation: handoff-rise 220ms ease-out;
+  }
+
+  @keyframes handoff-fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes handoff-rise {
+    from {
+      opacity: 0.85;
+      transform: translateY(0.75rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #mobile-handoff[open],
+    #mobile-handoff[open] .mobile-handoff__panel {
+      animation: none;
+    }
+  }
+</style>
+
+<script define:vars={{ appUrl: APP_URL }}>
+  const dialog = document.getElementById('mobile-handoff');
+  if (dialog instanceof HTMLDialogElement) {
+    const copyBtn = dialog.querySelector('[data-handoff-copy]');
+    const continueLink = dialog.querySelector('[data-handoff-continue]');
+    const closeBtns = dialog.querySelectorAll('[data-handoff-close]');
+    const copyLabel = 'Copiază linkul aplicației';
+    const copiedLabel = 'Link copiat ✓';
+    let copyTimer = 0;
+
+    const isNarrow = () => window.matchMedia('(max-width: 767px)').matches;
+
+    const isAppLink = (anchor) => {
+      if (!(anchor instanceof HTMLAnchorElement)) return false;
+      if (anchor.hasAttribute('data-mobile-handoff-allow')) return false;
+      try {
+        return new URL(anchor.href).hostname === new URL(appUrl).hostname;
+      } catch {
+        return false;
+      }
+    };
+
+    const open = (continueHref) => {
+      if (continueLink instanceof HTMLAnchorElement) {
+        continueLink.href = continueHref || appUrl;
+      }
+      if (!dialog.open) dialog.showModal();
+    };
+
+    const close = () => {
+      if (dialog.open) dialog.close();
+    };
+
+    document.addEventListener(
+      'click',
+      (event) => {
+        if (!isNarrow()) return;
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const anchor = target.closest('a');
+        if (!isAppLink(anchor)) return;
+        event.preventDefault();
+        open(anchor.href);
+      },
+      true,
+    );
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) close();
+    });
+
+    for (const btn of closeBtns) {
+      btn.addEventListener('click', close);
+    }
+
+    if (copyBtn instanceof HTMLButtonElement) {
+      copyBtn.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(appUrl);
+        } catch {
+          const input = document.createElement('input');
+          input.value = appUrl;
+          input.setAttribute('readonly', '');
+          input.style.position = 'fixed';
+          input.style.opacity = '0';
+          document.body.appendChild(input);
+          input.select();
+          document.execCommand('copy');
+          input.remove();
+        }
+        copyBtn.textContent = copiedLabel;
+        window.clearTimeout(copyTimer);
+        copyTimer = window.setTimeout(() => {
+          copyBtn.textContent = copyLabel;
+        }, 2000);
+      });
+    }
+  }
+</script>

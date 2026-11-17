@@ -1,11 +1,11 @@
 ---
-title: "Cum faci cutlist (listă de debitare) fără să calculezi manual"
+title: "Cum faci lista de debitare fără să calculezi manual"
 description: "Unde apar greșelile pe hârtie, cum le eviți și ce schimbă o listă generată din proiectul 3D. Exemplu pe un corp de 600 mm — și ce e gata acum în Mobilcab versus exportul CNC pe Plan."
 date: "2026-11-09"
 published: true
 ---
 
-Cutlist-ul, adică lista de debitare, e puntea dintre proiect și atelier (și, mai târziu, mașină). Dacă e corect, restul merge mai ușor. Dacă are o greșeală, o descoperi deseori abia când placa e deja tăiată.
+Lista de debitare e puntea dintre proiect și atelier (și, mai târziu, mașină). Dacă e corectă, restul merge mai ușor. Dacă are o greșeală, o descoperi deseori abia când placa e deja tăiată.
 
 ## De ce e ușor să greșești de mână
 
@@ -40,7 +40,7 @@ Pașii sunt simpli. Problema e volumul și modificările de la client. Același 
 
 ## Ce schimbă o listă din proiectul 3D
 
-Când cutlist-ul e legat de model, o schimbare de lățime actualizează piesele dependente în proiect. Lista pleacă din modelul actual, nu dintr-o copie veche pe hârtie.
+Când lista de debitare e legată de model, o schimbare de lățime actualizează piesele dependente în proiect. Lista pleacă din modelul actual, nu dintr-o copie veche pe hârtie.
 
 Asta **nu** înlocuiește verificarea: programul aplică ce i-ai setat — inclusiv o grosime greșită. Diferența e că o verifici o dată pe setări, nu de zeci de ori pe foaie.
 

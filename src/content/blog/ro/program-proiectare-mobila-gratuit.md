@@ -21,13 +21,13 @@ Limita apare la modificări. Schimbi lățimea unui corp și trebuie să refaci 
 
 Conform documentației Trimble, **SketchUp Free nu e pentru uz comercial** ([SketchUp Free](https://help.sketchup.com/en/admin/sketchup-free)). Pentru un atelier care proiectează la comandă, asta e o limită de licență, nu doar de funcții.
 
-Chiar și ca tool de desen: nu e făcut special pentru corpuri de mobilă (cant, cutlist, flux de atelier). Extensiile și fluxurile de producție apar, de regulă, pe planuri plătite — nu pe Free.
+Chiar și ca tool de desen: nu e făcut special pentru corpuri de mobilă (cant, listă de debitare, flux de atelier). Extensiile și fluxurile de producție apar, de regulă, pe planuri plătite — nu pe Free.
 
 **Concluzie:** bun ca modeler general / prezentare; slab ca program de producție pentru mobilă, și restricționat comercial pe planul gratuit.
 
 ## 3. Programe dedicate mobilei (desktop) — mature, dar nu „gratis”
 
-Aici intră unelte precum **Polyboard** și **PRO100**: înțeleg corpurile, cutlist-ul și, pe pachetele documentate, exportul către CNC. Sunt instalate pe calculator, nu rulează ca aplicație web fără instalare.
+Aici intră unelte precum **Polyboard** și **PRO100**: înțeleg corpurile, lista de debitare și, pe pachetele documentate, exportul către CNC. Sunt instalate pe calculator, nu rulează ca aplicație web fără instalare.
 
 Nu sunt opțiuni gratuite de producție. Exemple de **preț public** (USD, pe canalele verificate în [comparație](/ro/blog/comparatie-cad-mobila/)):
 
@@ -45,7 +45,7 @@ Nu înlocuiesc proiectarea 3D și nu calculează singure piesele dintr-un corp. 
 ## Cum alegi rapid
 
 1. **Ai voie să-l folosești comercial?** „Gratuit” ≠ permis pentru atelier.
-2. **Ai nevoie de cutlist din model**, sau doar de un desen 3D?
+2. **Ai nevoie de listă de debitare din model**, sau doar de un desen 3D?
 3. **Plătești o dată mii de euro**, sau vrei să începi fără licență mare?
 4. **Ai CNC acum?** Exportul mașină e pe alt nivel de produs / etapă — nu toate uneltele îl au, iar unele îl țin pe pachete separate.
 
@@ -53,11 +53,11 @@ Nu înlocuiesc proiectarea 3D și nu calculează singure piesele dintr-un corp. 
 
 [Mobilcab](/ro/) e un CAD pentru mobilă în **browser, pe laptop**, fără instalare.
 
-**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, fără limită de export. Când deschidem plata: pe Gratuit apar 3 descărcări; planul **Debitare** (plătit) păstrează exporturile nelimitate — detalii pe [Prețuri](/ro/preturi/).
+**Acum (etapa Debitare / M1):** proiectare 3D și **listă de debitare**, pe planul **Gratuit**, fără limită de export. După lansarea abonamentelor: pe Gratuit apar 3 exporturi; planul **Debitare** (plătit) păstrează exporturile nelimitate — detalii pe [Prețuri](/ro/preturi/).
 
 **Nu e încă în acest flux:** nesting, etichete, ofertă, export CNC — pe [Plan](/ro/roadmap/) (etape / planuri ulterioare: Atelier, CNC…).
 
-**Partener Fondator:** înscriere gratuită **doar înainte de billing** (lista se închide la deschiderea plății); 20% discount din prețul listă, 6 luni de la prima plată, pe planurile plătite — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
+**Partener Fondator:** înscriere gratuită **doar în perioada de lansare** (înscrierile se închid odată cu lansarea abonamentelor); **primele 2 luni gratuite** pe planul ales — fără obligație de cumpărare. Detalii pe [Partener Fondator](/ro/founding-partner/).
 
 Fluxul concret: [de la proiect la lista de debitare](/ro/blog/de-la-proiect-la-lista-de-debitare/) și [prima sesiune](/ro/blog/prima-sesiune-in-mobilcab/).
 

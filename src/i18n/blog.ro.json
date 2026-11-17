@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Blog — Mobilcab",
-    "description": "Articole practice despre proiectarea mobilei, cutlist și CNC, pentru producători de mobilă."
+    "description": "Articole practice despre proiectarea mobilei, lista de debitare și CNC, pentru producători de mobilă."
   },
   "hero": {
     "label": "Blog",
     "title": "Articole practice pentru producători de mobilă.",
-    "body": "Despre proiectarea mobilei, cutlist, CNC și uneltele pe care le ai la dispoziție. Fără vorbe goale."
+    "body": "Despre proiectarea mobilei, lista de debitare, CNC și uneltele pe care le ai la dispoziție. Fără vorbe goale."
   },
   "empty": "Primele articole apar în curând.",
   "langNote": "",
@@ -15,7 +15,7 @@
   "back": "Toate articolele",
   "cta": {
     "title": "Vrei să încerci Mobilcab pe proiectele tale?",
-    "body": "Mobilcab e un CAD pentru mobilă care rulează direct din browser. Poți folosi aplicația gratuit pe Debitare; te înscrii pe lista Partener Fondator pentru 20% discount pe planurile plătite (lista se închide la billing). Cine se abonează după plătește prețul listă.",
+    "body": "Mobilcab e un CAD pentru mobilă care rulează direct din browser. Poți folosi aplicația gratuit pe Debitare; te înscrii pe lista Partener Fondator pentru **primele 2 luni gratuite** pe planul ales (înscrierile se închid odată cu lansarea abonamentelor). Cine se abonează după plătește prețul standard.",
     "primary": "Încearcă gratuit",
     "secondary": "Despre programul Partener Fondator"
   }

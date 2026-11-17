@@ -20,7 +20,7 @@
       "milestone": "M1",
       "status": "launch",
       "title": "Debitare — proiectare 3D + listă",
-      "body": "Desenezi mobilierul în 3D, salvezi în cloud și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit. Acum e pe Planul Gratuit (fără limită de export). Când deschidem plata, Debitare rămâne și ca plan plătit cu exporturi nelimitate."
+      "body": "Desenezi mobilierul în 3D, salvezi în cloud și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit. Acum e pe Planul Gratuit (fără limită de export). La lansarea abonamentelor, Debitare rămâne și ca plan plătit cu exporturi nelimitate."
     },
     {
       "id": "nesting-offer",
@@ -73,7 +73,7 @@
         "id": "cand-plata",
         "q": "Când încep abonamentele?",
         "a": [
-          "Când deschidem billing-ul: pe Gratuit apar 3 descărcări, iar planul Debitare (plătit) păstrează exporturile nelimitate. Nesting vine pe planul Atelier, când etapa e gata. Partener Fondator: 20% discount / 6 luni pentru cine e pe listă; lista se închide la billing. Cine se abonează după plătește prețul listă."
+          "La lansarea abonamentelor: pe Gratuit apar 3 exporturi, iar planul Debitare (plătit) păstrează exporturile nelimitate — sub costul unei plăci de PAL pe lună. Nesting vine pe planul Atelier, când etapa e gata. Partener Fondator: **primele 2 luni gratuite** pentru cine e pe listă; înscrierile se închid odată cu lansarea abonamentelor. Cine se abonează după plătește prețul standard."
         ]
       },
       {
@@ -108,7 +108,7 @@
         "id": "fp-si-etape",
         "q": "Partener Fondator e legat de o etapă?",
         "a": [
-          "Nu. Partener Fondator e un program separat: înscriere gratuită doar înainte de billing, apoi 20% discount / 6 luni pe planurile plătite. Se închide când deschidem plata — nu e o etapă M1–M5."
+          "Nu. Partener Fondator e un program separat: înscriere gratuită doar în perioada de lansare, apoi **primele 2 luni gratuite** pe planul ales. Înscrierile se închid odată cu lansarea abonamentelor — nu e o etapă M1–M5."
         ]
       }
     ]

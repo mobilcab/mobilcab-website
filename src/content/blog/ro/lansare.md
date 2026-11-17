@@ -15,7 +15,7 @@ Mobilcab e un CAD pentru mobilă în browser, pe laptop: proiectezi în 3D și s
 - **M4 — Echipă și partajare:** planul Producție
 - **M5 — AI + randări:** planul AI
 
-La billing: Gratuit cu 3 exporturi + planul Debitare plătit; planurile mai mari apar pe Prețuri pe rând. Detalii pe [Plan](/ro/roadmap/) și [Prețuri](/ro/preturi/).
+La lansarea abonamentelor: Gratuit cu 3 exporturi + planul Debitare plătit; planurile mai mari apar pe Prețuri pe rând. Detalii pe [Plan](/ro/roadmap/) și [Prețuri](/ro/preturi/).
 
 ## Începe gratuit
 
@@ -23,4 +23,4 @@ Baza (proiectare + debitare) e pe Planul Gratuit acum, fără abonament. Deschiz
 
 ## Partener Fondator
 
-Înscrierea e gratuită, doar înainte de billing (apoi lista se închide), și nu te obligă să plătești. Partenerii Fondatori primesc 20% discount din prețul listă, 6 luni de la prima plată, pe planurile plătite. Cine vine după plătește prețul întreg.
+Înscrierea e gratuită, doar în perioada de lansare (apoi înscrierile se închid odată cu lansarea abonamentelor), și nu te obligă să plătești. Partenerii Fondatori primesc **primele 2 luni gratuite** pe planul ales. Cine vine după plătește prețul întreg.

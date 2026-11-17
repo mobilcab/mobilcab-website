@@ -67,10 +67,10 @@ the newsletter templates when you switch the program on.
 The newsletter email follows the Kit's waitlist text, with these changes:
 
 - **"Founding Workshop" → "Founding Partner"**, per `docs/DECISIONS.md`.
-- **News list ≠ Founding Partner.** News only — no FP discount. The email
-  points people to the separate FP program for 20% discount on paid plans (starts with
-  Debitare / Cut list; enrollment closes at billing). Later / non-FP
-  subscribers pay list price.
+- **News list ≠ Founding Partner.** News only — no FP benefit. The email
+  points people to the separate FP program (**RO: first 2 months free**; EN still
+  20%/6mo until aligned; starts with Debitare / Cut list; enrollment closes at
+  billing). Later / non-FP subscribers pay list price.
 - **App is live on Free (Debitare).** Copy frames news + optional FP, not
   “wait for access”.
 - **The demo video link** only appears once `demoUrl` is set.
@@ -78,7 +78,8 @@ The newsletter email follows the Kit's waitlist text, with these changes:
   line, and an unsubscribe link.
 
 The Founding Partner email covers FP enrollment. It restates: free to join
-now (closes at billing); 20% discount / 6 months on paid plans when subscriptions open
-(amounts TBD); later subscribers pay list; nothing owed until then;
+now (closes at billing); **RO: first 2 months free** on the chosen plan when
+subscriptions open (Debitare under ~1 PAL sheet/month; amounts TBD); EN template
+still 20%/6mo until aligned; later subscribers pay list; nothing owed until then;
 founder-led onboarding of the first project per Marketing Plan 5.4. Remove
 that line if you won't offer it.
