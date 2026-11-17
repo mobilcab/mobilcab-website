@@ -3,6 +3,7 @@
 // clicks send `blog_to_signup` (Build Brief 5). Nothing is stored on the
 // device, so "read a post, signed up later" isn't tracked.
 import Base from '../layouts/Base.astro';
+import MilestoneText from './MilestoneText.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
@@ -67,7 +68,7 @@ const dateLabel = new Intl.DateTimeFormat(lang === 'ro' ? 'ro-RO' : 'en-GB', { d
 
       <aside class="mt-12 rounded-md border border-line border-l-4 border-l-wood bg-white p-6">
         <h2 class="text-lg font-bold tracking-tight text-ink">{t.cta.title}</h2>
-        <p class="mt-2 text-base leading-relaxed text-graphite">{t.cta.body}</p>
+        <MilestoneText text={t.cta.body} lang={lang} class="mt-2 text-base leading-relaxed text-graphite" />
         <div class="mt-5 flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-6">
           <a href={APP_URL} class="btn-primary" data-blog-cta="open_app" data-post={post.slug} rel="noopener">
             {t.cta.primary}
