@@ -7,14 +7,14 @@
     "title": "De la idee la lista de debitare, direct din browser.",
     "body": "Mobilcab e un CAD pentru mobilă care rulează în browser — pe laptop. Fără instalări, fără licențe complicate. Acum: proiectare 3D și listă de debitare. Nesting-ul pe placă și exportul CNC vin pe etape, pe măsură ce le livrăm.",
     "ctaPrimary": "Încearcă gratuit",
-    "ctaSecondary": "Devino Partener Fondator"
+    "ctaSecondary": "Detalii Partener Fondator"
   },
   "problem": {
     "title": "Sună familiar?",
     "items": [
       "Programe CAD greoaie, instalate doar pe un calculator din atelier",
       "Licențe scumpe pentru funcții pe care le folosești rar",
-      "Ore pierdute făcând manual cutlist-ul pentru debitare",
+      "Ore pierdute făcând manual lista de debitare",
       "Nu poți arăta clientului un design live, fără să-l aduci la calculatorul din atelier"
     ]
   },
@@ -31,11 +31,12 @@
       },
       {
         "title": "Începi gratuit",
-        "body": "Folosești aplicația cu modulul de Debitare gratuit. Înscrie-te ca Partener Fondator și primești 20% discount pe planurile plătite când deschidem plata. Perioada în care poți deveni Partener Fondator e limitată și se încheie în curând."
+        "body": "Folosești aplicația cu modulul de Debitare gratuit. Înscrie-te ca Partener Fondator și primești **primele 2 luni gratuite** pe planul ales la lansarea abonamentelor. Perioada în care poți deveni Partener Fondator e limitată și se încheie în curând."
       },
       {
-        "title": "Cutlist gata de atelier",
-        "body": "Din proiectul 3D iese automat tabelul complet de piese (cote exacte, cantități, canturi și materiale) împreună cu **totalurile pe proiect** (suprafața pe fiecare tip de placă și metrii liniari de cant) — gata de exportat în CSV și trimis la centrul de debitare sau folosit pentru o estimare rapidă de cost. (Optimizarea grafică pe coală / nesting și ofertarea completă vin în etapa următoare)."
+        "title": "Listă de debitare gata de atelier",
+        "body": "Din proiectul 3D iese automat tabelul complet de piese (cote exacte, cantități, canturi și materiale) împreună cu **totalurile pe proiect** (suprafața pe fiecare tip de placă și metrii liniari de cant) — gata de exportat în CSV și trimis la centrul de debitare sau folosit pentru o estimare rapidă de cost. (Optimizarea grafică pe coală / nesting și ofertarea completă vin în etapa următoare).",
+        "sampleCsvLabel": "Descarcă un exemplu de listă de debitare (.csv)"
       }
     ]
   },
@@ -46,15 +47,15 @@
     "link": "Toate clipurile, pe larg",
     "videos": [
       { "title": "Proiectare 3D", "caption": "Proiectezi un dulap de colț de bucătărie, de la zero, în sub 10 minute." },
-      { "title": "Listă de debitare", "caption": "Din proiect iese cutlist-ul: piese, dimensiuni, cantități și materiale." },
+      { "title": "Listă de debitare", "caption": "Din proiect iese lista de debitare: piese, dimensiuni, cantități și materiale." },
       { "title": "Salvare și export", "caption": "Proiectul în cloud; CSV sau fișier .mcab când ai nevoie." }
     ]
   },
   "pricing": {
     "title": "Prețuri",
     "offerLabel": "Partener Fondator",
-    "offerPrice": "−20% discount când deschidem abonamentele",
-    "offerDetail": "Folosești Modulul Debitare gratuit. Partener Fondator = 20% discount când deschidem plata. Lista se închide în curând.",
+    "offerPrice": "2 luni gratuite la lansare",
+    "offerDetail": "Te înscrii gratuit în program. La lansarea abonamentelor (unde planul Debitare va fi sub costul unei singure plăci de PAL pe lună), primești **primele 2 luni gratuite** pe planul ales, fără obligații acum. Cine vine după plătește prețul standard. Înscrierile se închid în curând.",
     "aiNote": "",
     "free": "",
     "cancel": "",
@@ -66,13 +67,13 @@
       { "q": "Trebuie să instalez ceva?", "a": "Nu, Mobilcab rulează direct din browser." },
       { "q": "Funcționează pe tabletă sau telefon?", "a": "Proiectezi pe laptop. Pe tabletă și telefon poți deschide proiectul doar pentru vizualizare — în atelier sau la client." },
       { "q": "Pot exporta direct pentru CNC-ul meu?", "a": "Lista de debitare e baza; exportul CNC vine într-o etapă ulterioară pe roadmap." },
-      { "q": "Cât costă?", "a": "Acum: Planul Gratuit = Debitare, fără limită de export. Partener Fondator: 20% discount / 6 luni pe planurile plătite (lista se închide la billing). La billing: Gratuit cu 3 exporturi + Debitare plătit; apoi Atelier, CNC, Producție, AI." }
+      { "q": "Cât costă?", "a": "Acum aplicația este gratuită, fără limită de export pentru lista de debitare. După lansarea abonamentelor, planul Gratuit va include 3 exporturi per cont, iar planul Debitare va păstra exporturile nelimitate (sub costul unei plăci de PAL pe lună). Partenerii Fondatori primesc **primele 2 luni gratuite**. Vezi [Planul produsului](/ro/roadmap/) pentru funcțiile viitoare." }
     ],
     "link": "Toate întrebările"
   },
   "final": {
     "title": "Proiectează mobilă din browser — fără instalare, cu listă de debitare gata de atelier.",
-    "or": "Vrei 20% discount pe planurile plătite când deschidem abonamentele?",
+    "or": "Vrei primele 2 luni gratuite pe planul ales la lansarea abonamentelor?",
     "news": "Doar noutăți pe email — fără beneficiile Partener Fondator"
   },
   "footer": {

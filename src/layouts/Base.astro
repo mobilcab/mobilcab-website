@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import CtaTracking from '../components/CtaTracking.astro';
+import MobileHandoffModal from '../components/MobileHandoffModal.astro';
 import fontLatin from '@fontsource-variable/manrope/files/manrope-latin-wght-normal.woff2?url';
 import fontLatinExt from '@fontsource-variable/manrope/files/manrope-latin-ext-wght-normal.woff2?url';
 import { PUBLIC_PLAUSIBLE_DOMAIN, PUBLIC_CF_ANALYTICS_TOKEN } from 'astro:env/client';
@@ -101,6 +102,7 @@ const t = useTranslations(lang);
   </head>
   <body class="blueprint min-h-dvh antialiased">
     <slot />
+    <MobileHandoffModal lang={lang} />
     <CtaTracking />
     {/* Page views: Cloudflare Web Analytics (no cookies). Custom events stay on Plausible. */}
   </body>

@@ -1,6 +1,6 @@
 ---
 title: "Un corp de 600 mm: pe hârtie vs. în Mobilcab"
-description: "Același exemplu de corp de jos 600 mm, PAL 18 mm: ce calculezi manual la cutlist și cum trece același tip de proiect prin proiectare 3D și listă de debitare în Mobilcab."
+description: "Același exemplu de corp de jos 600 mm, PAL 18 mm: ce calculezi manual la lista de debitare și cum trece același tip de proiect prin proiectare 3D și listă de debitare în Mobilcab."
 date: "2026-11-09"
 published: true
 ---

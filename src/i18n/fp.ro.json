@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Programul Partener Fondator — Mobilcab",
-    "description": "Înscrie-te pe lista Partener Fondator înainte de billing: 20% discount pe planurile plătite (începând cu Debitare), 6 luni de la prima plată. La deschiderea abonamentelor lista se închide. Cererea se face în aplicație."
+    "description": "Înscrie-te pe lista Partener Fondator în perioada de lansare: primele 2 luni gratuite pe planul ales la lansarea abonamentelor (Debitare sub costul unei plăci de PAL pe lună). Înscrierile se închid odată cu lansarea abonamentelor. Cererea se face în aplicație."
   },
   "hero": {
     "label": "Programul Partener Fondator",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație; când deschidem abonamentele (primul plan plătit: Debitare), cei aprobați primesc 20% discount pe prețul listă, 6 luni. Înscrierile se închid la billing. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație (nume atelier + CUI, fără documente); la lansarea abonamentelor (primul plan plătit: Debitare, sub costul unei plăci de PAL pe lună), cei de pe listă primesc **primele 2 luni gratuite** pe planul ales. Înscrierile se închid odată cu lansarea abonamentelor. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
     "cta": "Înscrie-te din aplicație"
   },
   "counter": {
@@ -18,11 +18,11 @@
     "items": [
       {
         "title": "Înscriere gratuită",
-        "body": "Nu plătești nimic ca să te înscrii. Nu ești obligat să cumperi când deschidem abonamentele. Lista se închide la billing."
+        "body": "Nu plătești nimic ca să te înscrii. Nu ești obligat să cumperi la lansarea abonamentelor. Înscrierile se închid odată cu lansarea abonamentelor."
       },
       {
-        "title": "20% discount la abonament",
-        "body": "Când trecem pe planuri plătite, ai 20% discount din prețul listă, 6 luni de la prima plată — pe Debitare și pe planurile următoare livrate în fereastră (Atelier, CNC…). Cine vine după, fără loc pe listă, plătește prețul întreg."
+        "title": "Primele 2 luni gratuite",
+        "body": "La lansarea abonamentelor, ai primele 2 luni gratuite pe planul Debitare (care va costa sub prețul unei singure coli de PAL pe lună) sau pe planurile superioare disponibile. Înscrierile se închid odată cu lansarea abonamentelor — cine vine după plătește prețul standard."
       },
       {
         "title": "Sugestiile tale pe lista de dezvoltări",
@@ -34,24 +34,31 @@
       },
       {
         "title": "Contact direct",
-        "body": "Vorbești cu fondatorii (și cu ceilalți Parteneri Fondatori). Te anunțăm personal când deschidem abonamentele, cu prețul listă și discount-ul tău."
+        "body": "Vorbești cu fondatorii (și cu ceilalți Parteneri Fondatori). Te anunțăm personal la lansarea abonamentelor, cu prețul standard și cele 2 luni gratuite."
       }
     ]
   },
   "proof": {
     "title": "Ce spun primii Parteneri Fondatori"
   },
+  "team": {
+    "title": "Cine construiește Mobilcab",
+    "names": "Fineas & Ștefan",
+    "role": "Fondatori",
+    "body": "Salut! Construim Mobilcab în România cu un scop simplu: să înlocuim Excel-urile de debitare și programele CAD greoaie cu un instrument rapid, direct în browser. Ca Partener Fondator, vorbești direct cu noi, ne spui ce îți lipsește în atelier și influențezi ordinea în care lansăm funcțiile noi.",
+    "contactBefore": "Scrie-ne direct la "
+  },
   "next": {
     "title": "Ce urmează după cerere",
     "steps": [
-      "Trimiți cererea din aplicație (cont + date atelier). Aprobăm manual, cu dovadă firmă.",
-      "Folosești aplicația ca toată lumea — Debitare full, fără limite de export pe Gratuit până la billing.",
-      "Când deschidem abonamentele, te contactăm cu prețul listă și discount-ul tău de 20%. Lista Partener Fondator se închide. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
+      "Trimiți cererea din aplicație în 15 secunde (doar numele atelierului și CUI-ul). Confirmăm rapid locul tău pe listă — fără acte sau documente de încărcat.",
+      "Folosești aplicația ca toată lumea — Debitare completă pe Gratuit, cu export nelimitat al listei de debitare în perioada de lansare.",
+      "La lansarea abonamentelor, te contactăm cu prețul standard și cele 2 luni gratuite pe planul ales. Înscrierile Partener Fondator se închid. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
     ]
   },
   "apply": {
     "title": "Înscrie-te din aplicație",
-    "body": "Cererea Partener Fondator se face în aplicație — acolo verificăm contul și atelierul. Pe site doar explicăm programul; nu mai colectăm formularul aici.",
+    "body": "Cererea Partener Fondator se trimite direct din contul tău gratuit din aplicație — ai nevoie doar de numele atelierului și CUI, fără documente de încărcat.",
     "cta": "Deschide aplicația și cere locul"
   },
   "form": {
@@ -68,9 +75,9 @@
   },
   "messages": {
     "sending": "Se trimite…",
-    "reserved": "Ești pe lista Partener Fondator. Te contactăm personal când deschidem abonamentele.",
-    "already": "Ești deja pe lista Partener Fondator. Te contactăm personal când deschidem abonamentele.",
-    "full": "Înscrierile Partener Fondator sunt închise momentan. Poți folosi aplicația gratuit; la abonament vei plăti prețul listă.",
+    "reserved": "Ești pe lista Partener Fondator. Te contactăm personal la lansarea abonamentelor.",
+    "already": "Ești deja pe lista Partener Fondator. Te contactăm personal la lansarea abonamentelor.",
+    "full": "Înscrierile Partener Fondator sunt închise momentan. Poți folosi aplicația gratuit; la abonament vei plăti prețul standard.",
     "invalidName": "Scrie-ți numele (cel puțin 2 litere).",
     "invalidEmail": "Introdu o adresă de email validă.",
     "invalidWorkshop": "Numele atelierului e prea lung.",
@@ -80,5 +87,5 @@
     "network": "Nu s-a putut trimite. Verifică conexiunea și încearcă din nou.",
     "server": "Ceva n-a mers de partea noastră. Încearcă din nou în câteva minute."
   },
-  "joinFree": "Sau doar noutăți pe email (fără discount Partener Fondator)"
+  "joinFree": "Sau doar noutăți pe email (fără beneficiul Partener Fondator)"
 }

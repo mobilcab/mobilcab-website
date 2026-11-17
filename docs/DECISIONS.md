@@ -6,6 +6,7 @@ documents is adjusted to match.
 
 **Aligned with CAD** [`docs/plans/m1-public-free-fp.md`](https://github.com/mobilcab/mobilcab-cad/blob/develop/docs/plans/m1-public-free-fp.md)
 (2026-11-06), **updated 2026-11-09** (plan ladder: Gratuit → Debitare → Atelier → CNC → Producție → AI; FP closes at billing).
+**RO offer update 2026-11-17:** FP benefit on the Romanian site is **primele 2 luni gratuite** (with Debitare price anchored under one sheet of particle board / month) — replaces the former **20% / 6 months** copy on `/ro/`. English site still uses 20%/6mo until explicitly updated.
 
 | Topic | Decision | Overrides |
 |---|---|---|
@@ -15,9 +16,10 @@ documents is adjusted to match.
 | Pre-billing (now) | **Gratuit only:** full Debitare (3D + cutlist), **unlimited** exports. Nesting / labels / quote / CNC / team / AI **not** in product yet | Gated Gratuit before billing; paid Debitare before billing |
 | At billing open | **FP waitlist closes** (no new FP). **Gratuit** = Debitare + **3 downloads/account**. **Debitare (paid)** = same Debitare product, **unlimited** exports. Pricing live cards: **Gratuit + Debitare** only. **Atelier / CNC / Producție / AI** = “în curând” until each ships | Billing opens together with nesting; Basic = M1+M2 features |
 | Later paid plans (when each ships) | **Atelier** = Debitare + nesting + etichete + ofertă. **CNC** = Atelier + export CNC. **Producție** = CNC + echipă/partajare. **AI** = Producție + AI + randări | Selling empty higher tiers at billing; CNC plan before export exists |
-| Who is a Founding Partner | Workshop that **opts in** (app and/or site → `app.mobilcab.com/?founding=1`), **approved manually**, with **firm proof**. Not automatic for every free user | “Every free user is FP” |
-| FP before billing | Same full free product as everyone (no extra unlock). FP = **20% later** + soft perks. Feedback expected. **Demote** unused seats: reminder 60d → free seat at **90d** (projects kept) | “FP = unlimited vs gated Gratuit”; FP paid from day one |
-| FP discount | **20% off list**, **6 months** from first payment, on **any paid plan** that exists during that window (starts with Debitare; includes Atelier/CNC/… if they ship in-window). After 6 months = list. Marketing shows **% only** until list RON set | 12-month lock; discount only on “Basic”; FP stays open after billing |
+| Who is a Founding Partner | Workshop that **opts in** (app and/or site → `app.mobilcab.com/?intent=founding-partner`), **confirmed quickly** from workshop name + **CUI** (no document upload). Not automatic for every free user | “Every free user is FP”; old “firm proof” / file upload |
+| FP before billing | Same full free product as everyone (no extra unlock). FP = **first 2 months free later** (RO) + soft perks. Feedback expected. **Demote** unused seats: reminder 60d → free seat at **90d** (projects kept) | “FP = unlimited vs gated Gratuit”; FP paid from day one |
+| FP benefit (RO site) | **Primele 2 luni gratuite** on the chosen paid plan at billing (starts with Debitare; higher plans if available). Marketing anchor: Debitare **under the cost of one sheet of particle board (PAL) per month**. After 2 free months = list. List RON amounts still TBD | Old **20% off list / 6 months**; 12-month lock; discount only on “Basic”; FP stays open after billing |
+| FP benefit (EN site) | Still **20% off list / 6 months** until EN copy is updated to match RO | — |
 | FP enrollment window | **Only before billing.** When billing opens, **FP closes** — no new seats | “Decide later whether FP closes”; open FP after paid launch |
 | Founding Partner before SRL | Free program only until billing; checkout only in **app** after SRL + billing | Payment at FP claim on website |
 | Number of Founding Partner spots | **First 15**; may raise + announce. Soft public copy: “limited — we announce when we close”. Counter (if shown) = approved apps | "50" / "100"; config 500 as public promise |
@@ -40,18 +42,20 @@ documents is adjusted to match.
 ## Open questions
 
 1. **Unreliable workshop internet (FAQ).** Confirm app behaviour before writing the answer.
-2. **List prices in RON** for Debitare / Atelier / CNC / Producție / AI — set when each is published; until then **% only** for FP.
-3. **Whether FP 20% + referral 15% stack** — decide at billing.
+2. **List prices in RON** for Debitare / Atelier / CNC / Producție / AI — set when each is published; until then RO markets **2 free months + PAL price anchor**; EN still **%** for FP.
+3. **Whether FP free months (or EN 20%) + referral 15% stack** — decide at billing.
+4. **Align EN site** with RO “2 months free” offer when ready.
 
 ## Go-live flip (do not flip until ready)
 
 ### Before flipping switches in `src/site.ts`
 
 1. [ ] `https://app.mobilcab.com` is reachable and creates accounts (APP_URL).
-2. [ ] Align published Terms/Privacy with this file (operator, FP 15 / 20% /
-      **6 months**, FP **closes at billing**, full free until billing, gates on
-      Gratuit only at subscriptions, paid **Debitare** first, feedback + demote
-      90d, laptop-only); lawyer review where needed.
+2. [ ] Align published Terms/Privacy with this file (operator, FP 15 /
+      **RO: 2 months free** / EN: 20%×6mo until aligned, FP **closes at billing**,
+      full free until billing, gates on Gratuit only at subscriptions, paid
+      **Debitare** first, feedback + demote 90d, laptop-only); lawyer review
+      where needed.
 3. [x] Brevo: newsletter vs FP; FP → app `?founding=1` (site CTAs + FP page; legacy `/api/founding-partner` kept until demolish).
 4. [ ] Env on Cloudflare: `BREVO_*`, `CONFIRM_SECRET`, analytics as needed.
 5. [ ] Smoke on `/preview/…`: Home, FP → app, Pricing (**Gratuit + Debitare** +

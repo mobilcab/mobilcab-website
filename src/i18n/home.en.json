@@ -7,7 +7,7 @@
     "title": "From idea to cut list, straight from your browser.",
     "body": "Mobilcab is a cloud-based CAD for furniture — works in the browser, on a laptop. No installs, no license servers. Now: 3D design and cut lists. Sheet nesting and CNC export come later, as we ship each stage.",
     "ctaPrimary": "Try it free",
-    "ctaSecondary": "Become a Founding Partner"
+    "ctaSecondary": "Founding Partner details"
   },
   "problem": {
     "title": "Sound familiar?",
@@ -31,17 +31,18 @@
       },
       {
         "title": "Start free",
-        "body": "Use the app free on Cut list. If you want 20% discount on paid plans when billing opens, join the Founding Partner program — enrollment closes at billing."
+        "body": "Use the app free on Cut list. Join as a Founding Partner and get **the first 2 months free** on your chosen plan when paid plans launch. The window to become a Founding Partner is limited and closing soon."
       },
       {
         "title": "Workshop-ready cut list",
-        "body": "From the design you get the cut list: parts, sizes, quantities and materials — what you need to cut, without manual calculations."
+        "body": "From the 3D project you automatically get the full parts table (exact sizes, quantities, edgebanding and materials) plus **project totals** (surface area for each board type and linear metres of edgebanding) — ready to export as CSV and send to a cutting centre or use for a quick cost estimate. (Sheet nesting / graphical optimisation and full quoting come in the next stage).",
+        "sampleCsvLabel": "Download a real cut-list sample (.csv)"
       }
     ]
   },
   "demo": {
     "title": "See how it works",
-    "intro": "Three short clips on the same project: from panels to cut list and save.",
+    "intro": "Three short clips on the same project: from design to cut list and save.",
     "comingSoon": "Clip coming soon",
     "link": "All clips, in detail",
     "videos": [
@@ -53,11 +54,11 @@
   "pricing": {
     "title": "Pricing",
     "offerLabel": "Founding Partner",
-    "offerPrice": "−20% discount when subscriptions open",
-    "offerDetail": "You join the program for free. When we move to paid plans, you get 20% discount off full price for 6 months from first payment. Anyone who joins later pays full price.",
-    "aiNote": "At billing: Free (3 exports) + paid Cut list. Then Atelier, CNC, Production, AI.",
-    "free": "The app is free until we open payment.",
-    "cancel": "Joining does not oblige you to pay.",
+    "offerPrice": "2 months free at launch",
+    "offerDetail": "You join the program for free. At subscription launch (where Cut list will cost less than a single sheet of melamine board per month), you get **the first 2 months free** on your chosen plan, with no obligation now. Anyone who joins later pays the standard price. Enrollment closes soon.",
+    "aiNote": "",
+    "free": "",
+    "cancel": "",
     "link": "See all plans"
   },
   "faq": {
@@ -66,13 +67,13 @@
       { "q": "Do I need to install anything?", "a": "No, Mobilcab runs straight from your browser." },
       { "q": "Does it work on tablet or phone?", "a": "You design on a laptop. On tablet and phone you can open the project for viewing only — in the workshop or with a client." },
       { "q": "Can I export directly for my CNC?", "a": "The cut list is the foundation; CNC export comes in a later roadmap stage." },
-      { "q": "How much does it cost?", "a": "Now: Free = Cut list, no export limit. Founding Partner: 20% discount / 6 months on paid plans (enrollment closes at billing). At billing: Free with 3 exports + paid Cut list; then Atelier, CNC, Production, AI." }
+      { "q": "How much does it cost?", "a": "The app is free now, with no export limit on the cut list. After paid plans launch, Free will include 3 exports per account, and the Cut list plan keeps unlimited exports (less than the cost of a single sheet of melamine board per month). Founding Partners get **the first 2 months free**. See the [product roadmap](/en/roadmap/) for upcoming features." }
     ],
     "link": "All questions"
   },
   "final": {
     "title": "Design furniture in the browser — no install, with a cut list ready for the workshop.",
-    "or": "Want 20% discount on paid plans when we open subscriptions?",
+    "or": "Want the first 2 months free on your chosen plan when paid plans launch?",
     "news": "Email updates only — no Founding Partner benefits"
   },
   "footer": {

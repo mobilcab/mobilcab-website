@@ -12,19 +12,23 @@
     {
       "id": "instalare",
       "q": "Trebuie să instalez ceva?",
-      "a": ["Nu. Mobilcab rulează direct din browser, pe laptop. Nu instalezi nimic și nu ai nevoie de server de licențe."]
+      "a": [
+        "Nu. Mobilcab rulează direct din browser, pe laptop. Nu instalezi nimic și nu ai nevoie de server de licențe."
+      ]
     },
     {
       "id": "tableta",
       "q": "Funcționează pe tabletă sau telefon?",
-      "a": ["Proiectezi pe laptop. Pe tabletă și telefon poți deschide proiectul doar pentru vizualizare — în atelier sau la client."]
+      "a": [
+        "Proiectezi pe laptop. Pe tabletă și telefon poți deschide proiectul doar pentru vizualizare — în atelier sau la client."
+      ]
     },
     {
       "id": "export-cnc",
       "q": "Pot exporta direct pentru CNC-ul meu?",
       "a": [
         "Lista de debitare (dimensiuni, cantități, materiale) e baza pentru atelier.",
-        "Exportul dedicat pentru mașină vine pe etapa Export CNC pe Plan și pe planul CNC. Nu e inclus în planul Debitare de la deschiderea abonamentelor."
+        "Exportul dedicat pentru mașină vine pe etapa Export CNC pe Plan și pe planul CNC. Nu e inclus în planul Debitare de la lansarea abonamentelor."
       ]
     },
     {
@@ -40,8 +44,7 @@
       "id": "pret",
       "q": "Cât costă?",
       "a": [
-        "Acum: Planul Gratuit = Debitare completă, fără limită de export. Nu încasăm. Pentru 20% discount pe planurile plătite, te înscrii pe lista Partener Fondator (se închide când deschidem plata).",
-        "La billing: pe Gratuit apar 3 descărcări pe cont; planul Debitare (plătit) are exporturi nelimitate. Partenerii Fondatori de pe listă: 20% discount, 6 luni de la prima plată, pe planurile plătite livrate în fereastră. Cine se abonează după, fără loc pe listă, plătește prețul listă. Sumele le anunțăm atunci."
+        "Acum aplicația este gratuită, fără limită de export pentru lista de debitare. După lansarea abonamentelor, planul Gratuit va include 3 exporturi per cont, iar planul Debitare va păstra exporturile nelimitate (sub costul unei plăci de PAL pe lună). Partenerii Fondatori primesc **primele 2 luni gratuite**. Vezi [Planul produsului](/ro/roadmap/) pentru funcțiile viitoare."
       ],
       "link": "foundingPartner"
     },
@@ -49,18 +52,23 @@
       "id": "planuri",
       "q": "Prin ce diferă planul Gratuit de planul Debitare?",
       "a": [
-        "Acum există doar Gratuit: Debitare full (3D, listă, cloud), fără limite de descărcare.",
-        "Când deschidem abonamentele: Gratuit rămâne Debitare cu 3 descărcări pe cont; Debitare (plătit) e același produs cu exporturi nelimitate. Urmează Atelier, CNC, Producție, AI — fiecare adaugă ce e pe Plan. Parteneri Fondatori: 20% discount / 6 luni; lista se închide la billing."
+        "Acum există doar Gratuit: Debitare completă (3D, listă, cloud), fără limite de export.",
+        "La lansarea abonamentelor: Gratuit rămâne Debitare cu 3 exporturi pe cont; Debitare (plătit) e același produs cu exporturi nelimitate. Parteneri Fondatori: **primele 2 luni gratuite**; înscrierile se închid odată cu lansarea abonamentelor."
       ],
       "tiers": true,
-      "after": ["Nu încasăm până deschidem planul Debitare plătit. Prețurile listă se confirmă atunci. Planurile mai mari apar pe Prețuri ca «în curând» până le livrăm."]
+      "after": [
+        "Nu încasăm până lansăm planul Debitare plătit. Prețurile standard se confirmă atunci. Etapele următoare sunt pe [Planul produsului](/ro/roadmap/)."
+      ]
     }
   ],
   "tiers": {
-    "names": { "free": "Planul Gratuit", "debitare": "Planul Debitare" },
+    "names": {
+      "free": "Planul Gratuit",
+      "debitare": "Planul Debitare"
+    },
     "perMonth": "{price} RON/lună",
     "free": "0 RON",
-    "fpDiscount": "−{percent}% PF",
+    "fpDiscount": "2 luni gratuite",
     "priceTbd": "preț la lansare"
   },
   "contact": {

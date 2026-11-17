@@ -77,10 +77,14 @@ function anchor(code: MilestoneCode, lang: Lang): string {
 /**
  * Escape plain text, then turn M1–M5 / M1+M2 into roadmap links
  * with a native title tooltip. Legacy M6 → same as M5 (AI stage).
+ * Also turns safe relative markdown links `[label](/path/)` into anchors.
  */
 export function linkMilestones(text: string, lang: Lang): string {
   const escaped = escapeHtml(text);
-  return escaped.replace(/\bM1\+M2\b|\bM[1-6]\b/g, (match) => {
+  const withMd = escaped.replace(/\[([^\]]+)\]\((\/[^)\s]*)\)/g, (_m, label: string, href: string) => {
+    return `<a href="${href}" class="font-semibold text-ink underline underline-offset-2">${label}</a>`;
+  });
+  return withMd.replace(/\bM1\+M2\b|\bM[1-6]\b/g, (match) => {
     if (match === 'M1+M2') {
       return `${anchor('M1', lang)}+${anchor('M2', lang)}`;
     }

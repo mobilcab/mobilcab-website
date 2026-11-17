@@ -53,11 +53,11 @@ They don’t replace 3D design and don’t derive parts from a cabinet on their 
 
 [Mobilcab](/en/) is furniture CAD in the **browser, on a laptop**, with no install.
 
-**Now (Cut list stage / M1):** 3D design and a **cut list**, on the **Free** plan, with no export limit. When we open billing: Free gets 3 downloads; the paid **Cut list** plan keeps unlimited exports — details on [Pricing](/en/pricing/).
+**Now (Cut list stage / M1):** 3D design and a **cut list**, on the **Free** plan, with no export limit. When paid plans launch: Free gets 3 exports; the paid **Cut list** plan keeps unlimited exports — details on [Pricing](/en/pricing/).
 
 **Not in this flow yet:** nesting, labels, quotes, CNC export — on the [Roadmap](/en/roadmap/) (later stages / plans: Atelier, CNC…).
 
-**Founding Partner:** free signup **only before billing** (enrollment closes when payment opens); 20% discount off list for 6 months from first payment on paid plans — no purchase obligation. Details on [Founding Partner](/en/founding-partner/).
+**Founding Partner:** free signup **only during launch** (enrollment closes when paid plans launch); **first 2 months free** on your chosen plan — no purchase obligation. Details on [Founding Partner](/en/founding-partner/).
 
 Concrete flow: [from project to cut list](/en/blog/from-project-to-cut-list/) and [first session](/en/blog/first-session-in-mobilcab/).
 

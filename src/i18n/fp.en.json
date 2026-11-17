@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "The Founding Partner program — Mobilcab",
-    "description": "Join the Founding Partner program before billing: 20% discount on paid plans (starting with Cut list) for 6 months from first payment. Enrollment closes when subscriptions open. Apply in the app."
+    "description": "Join the Founding Partner list during launch: first 2 months free on your chosen plan when paid plans launch (Cut list for less than the cost of a single sheet of melamine board per month). Enrollment closes at subscription launch. Apply in the app."
   },
   "hero": {
     "label": "The Founding Partner program",
-    "title": "Help shape the tool Romanian furniture makers actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app; when we open subscriptions (first paid plan: Cut list), approved Founding Partners get 20% discount off list for 6 months. Enrollment closes at billing. Anyone who joins later pays full list. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
+    "title": "Help shape the tool furniture workshops actually need.",
+    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app (workshop / company name only — no document upload); at subscription launch (first paid plan: Cut list, less than the cost of a single sheet of melamine board per month), people on the list get **the first 2 months free** on their chosen plan. Enrollment closes when paid plans launch. Anyone who joins later pays full price. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
     "cta": "Apply in the app"
   },
   "counter": {
@@ -18,11 +18,11 @@
     "items": [
       {
         "title": "Free to join",
-        "body": "You pay nothing to sign up. You're not obliged to buy when we open subscriptions. Enrollment closes at billing."
+        "body": "You pay nothing to sign up. You're not obliged to buy when paid plans launch. Enrollment closes at subscription launch."
       },
       {
-        "title": "20% discount on your subscription",
-        "body": "When we move to paid plans, you get 20% discount off list for 6 months from first payment — on Cut list and on later plans that ship in that window (Atelier, CNC…). Anyone who joins later, without a place in the program, pays full list."
+        "title": "First 2 months free",
+        "body": "At subscription launch, you get the first 2 months free on the Cut list plan (less than the cost of a single sheet of melamine board per month) or on higher plans that are available. Enrollment closes when paid plans launch — anyone who joins later pays the standard price."
       },
       {
         "title": "Your ideas on the development list",
@@ -34,31 +34,38 @@
       },
       {
         "title": "Direct contact",
-        "body": "You talk with the founders (and the other FPs). We notify you personally when we open subscriptions, with list price and your discount."
+        "body": "You talk with the founders (and the other Founding Partners). We notify you personally at subscription launch, with the standard price and your 2 free months."
       }
     ]
   },
   "proof": {
     "title": "What the first Founding Partners say"
   },
+  "team": {
+    "title": "Who builds Mobilcab",
+    "names": "Fineas & Ștefan",
+    "role": "Founders",
+    "body": "Hi! We're building Mobilcab in Romania with a simple goal: replace cut-list spreadsheets and heavy CAD with a fast tool that runs in the browser. As a Founding Partner, you talk to us directly, tell us what's missing in the workshop, and influence the order we ship new features.",
+    "contactBefore": "Write to us at "
+  },
   "next": {
     "title": "What happens after you apply",
     "steps": [
-      "You submit the request in the app (account + workshop details). We approve manually, with firm proof.",
-      "You use the app like everyone else — full Cut list on Free, with no export limits until billing.",
-      "When we open subscriptions, we contact you with list price and your 20% discount. Founding Partner enrollment closes. Anyone who subscribes later, without a place in the program, pays full list."
+      "You submit the request in the app in about 15 seconds (workshop / company name only). We confirm your place on the list quickly — no documents to upload.",
+      "You use the app like everyone else — full Cut list on Free, with unlimited cut-list export during the launch period.",
+      "At subscription launch, we contact you with the standard price and the first 2 months free on your chosen plan. Founding Partner enrollment closes. Anyone who subscribes later, without a place on the list, pays full price."
     ]
   },
   "apply": {
     "title": "Apply in the app",
-    "body": "Founding Partner requests are submitted in the app — that’s where we verify your account and workshop. This site only explains the program; we no longer collect the form here.",
+    "body": "Founding Partner requests are submitted from your free account in the app — you only need the workshop / company name, with no documents to upload.",
     "cta": "Open the app and request a spot"
   },
   "form": {
     "title": "Join the program",
     "nameLabel": "Full name",
     "emailLabel": "Email",
-    "workshopLabel": "Workshop name",
+    "workshopLabel": "Workshop / Company name",
     "optional": "(optional)",
     "phoneLabel": "Phone",
     "cityLabel": "City",
@@ -68,9 +75,9 @@
   },
   "messages": {
     "sending": "Sending…",
-    "reserved": "You're in the Founding Partner program. We'll contact you personally when we open subscriptions.",
-    "already": "You're already in the Founding Partner program. We'll contact you personally when we open subscriptions.",
-    "full": "Founding Partner sign-ups are closed for now. You can still use the app for free; a later subscription is at list price.",
+    "reserved": "You're on the Founding Partner list. We'll contact you personally when paid plans launch.",
+    "already": "You're already on the Founding Partner list. We'll contact you personally when paid plans launch.",
+    "full": "Founding Partner sign-ups are closed for now. You can still use the app for free; a later subscription is at the standard price.",
     "invalidName": "Enter your name (at least 2 letters).",
     "invalidEmail": "Enter a valid email address.",
     "invalidWorkshop": "The workshop name is too long.",
@@ -80,5 +87,5 @@
     "network": "Couldn't send. Check your connection and try again.",
     "server": "Something went wrong on our side. Please try again in a few minutes."
   },
-  "joinFree": "Or email updates only (no FP discount)"
+  "joinFree": "Or email updates only (no Founding Partner benefit)"
 }

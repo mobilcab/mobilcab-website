@@ -34,7 +34,7 @@ When you join the Founding Partner program, we collect:
 - your city;
 - the language you signed up in and the fact that you gave consent.
 
-We use this to keep you eligible for a **20% discount** on paid plans (starting with Cut list) when we open subscriptions, to contact you personally then, and to send you news about the program. Joining is free, doesn't commit you to anything, and is only possible **before billing** — enrollment closes when we open payment. Anyone who subscribes later, without a place in the program, pays list price.
+We use this to keep you eligible for **the first 2 months free** on paid plans (starting with Cut list) when paid plans launch, to contact you personally then, and to send you news about the program. Joining is free, doesn't commit you to anything, and is only possible **during the launch period** — enrollment closes when paid plans launch. Anyone who subscribes later, without a place in the program, pays the standard price.
 
 **The legal basis** is your consent (Article 6(1)(a) GDPR).
 

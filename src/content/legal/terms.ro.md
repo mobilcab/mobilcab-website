@@ -8,7 +8,7 @@ Acești termeni se aplică folosirii aplicației Mobilcab și a site-ului mobilc
 
 ## 2. Serviciul
 
-Mobilcab este un program de proiectare a mobilierului care rulează în browser, pe **laptop**. Îți permite să proiectezi mobilier și să generezi lista de debitare (cutlist) și exporturi (de exemplu CSV sau proiect local). Exportul dedicat pentru mașini CNC este anunțat pe [Plan](/ro/roadmap/) ca etapă ulterioară, nu ca funcție disponibilă acum. Optimizarea pentru tabletă și telefon vine mai târziu. Aplicația nu include un asistent AI.
+Mobilcab este un program de proiectare a mobilierului care rulează în browser, pe **laptop**. Îți permite să proiectezi mobilier și să generezi lista de debitare și exporturi (de exemplu CSV sau proiect local). Exportul dedicat pentru mașini CNC este anunțat pe [Plan](/ro/roadmap/) ca etapă ulterioară, nu ca funcție disponibilă acum. Optimizarea pentru tabletă și telefon vine mai târziu. Aplicația nu include un asistent AI.
 
 Serviciul este în dezvoltare activă: adăugăm, schimbăm și, uneori, eliminăm funcții. Ne rezervăm dreptul de a face asta fără notificare prealabilă pentru schimbări minore; pentru schimbări importante te anunțăm din timp.
 
@@ -43,11 +43,11 @@ Când există un plan plătit, **procesul de comandă este derulat de revânzăt
 ## 6. Programul Partener Fondator
 
 - Programul este limitat la primii 15 utilizatori pe lista Partener Fondator, cu posibilitate de extindere — orice extindere a numărului de locuri se anunță public, nu tăcut.
-- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Poți intra pe listă **doar înainte** să deschidem abonamentele. **Când deschidem plata, lista Partener Fondator se închide** — nu mai acceptăm înscrieri noi.
+- **Înscrierea pe listă este gratuită și nu te obligă la nimic.** Poți intra pe listă **doar în perioada de lansare**. **Odată cu lansarea abonamentelor, înscrierile Partener Fondator se închid** — nu mai acceptăm înscrieri noi.
 - Primul plan plătit este **Debitare** (același produs ca pe Gratuit, cu exporturi nelimitate). Planurile ulterioare (Atelier, CNC, Producție, AI) apar pe Prețuri când le livrăm — vezi [Plan](/ro/roadmap/) și [Prețuri](/ro/preturi/).
-- Până deschidem abonamentele, aplicația e pe Planul Gratuit cu Debitare full (fără limită de export), pentru toată lumea — inclusiv Parteneri Fondatori. La deschiderea abonamentelor, pe Gratuit apar **3 descărcări pe cont**.
-- La activarea unui plan plătit, Partenerii Fondatori de pe listă primesc **20% discount din prețul listă**, **6 luni de la prima plată**, pe planurile plătite livrate în acea fereastră (începând cu Debitare). Cine se abonează după, fără loc pe listă, plătește prețul listă.
-- După cele 6 luni, prețul revine automat la cel standard — reducerea nu rămâne activă pe termen nelimitat.
+- Până lansăm abonamentele, aplicația e pe Planul Gratuit cu Debitare completă (fără limită de export), pentru toată lumea — inclusiv Parteneri Fondatori. La lansarea abonamentelor, pe Gratuit apar **3 exporturi pe cont**.
+- La activarea unui plan plătit, Partenerii Fondatori de pe listă primesc **primele 2 luni gratuite** pe planul ales (începând cu Debitare; Debitare va costa sub prețul unei coli de PAL pe lună). Cine se abonează după, fără loc pe listă, plătește prețul standard.
+- După cele 2 luni gratuite, prețul revine automat la cel standard — beneficiul nu rămâne activ pe termen nelimitat.
 - Așteptăm feedback rezonabil (de exemplu proiecte reale și răspunsuri scurte). Dacă un loc pe listă rămâne nefolosit (fără feedback), putem trimite un reminder la 60 de zile și elibera locul la **90 de zile**; proiectele rămân, iar contul revine la Planul Gratuit obișnuit.
 - Beneficiile Partener Fondator sunt personale și nu pot fi transferate.
 
@@ -55,11 +55,11 @@ Când există un plan plătit, **procesul de comandă este derulat de revânzăt
 
 Această secțiune e importantă: citește-o cu atenție.
 
-1. **Mobilcab este un ajutor real în proiectare și în exportul cotelor, dar rezultatele sunt orientative.** Dimensiunile, cutlist-urile, fișierele de export pentru CNC și orice sugestie a aplicației sunt propuneri, nu verificări tehnice sau garanții.
-2. **Verificarea finală îți aparține.** Înainte de a tăia, de a comanda material sau de a trimite un fișier la CNC, ești responsabil să verifici dimensiunile, tăierile, gabaritele, îmbinările, feroneria și cutlist-ul.
+1. **Mobilcab este un ajutor real în proiectare și în exportul cotelor, dar rezultatele sunt orientative.** Dimensiunile, listele de debitare, fișierele de export pentru CNC și orice sugestie a aplicației sunt propuneri, nu verificări tehnice sau garanții.
+2. **Verificarea finală îți aparține.** Înainte de a tăia, de a comanda material sau de a trimite un fișier la CNC, ești responsabil să verifici dimensiunile, tăierile, gabaritele, îmbinările, feroneria și lista de debitare.
 3. **Nu garantăm** că proiectele rezultate sunt corecte, complete, realizabile sau compatibile cu mașinile, materialele ori feroneria pe care le folosești, iar Mobilcab nu răspunde pentru erori de fabricație.
 4. Dacă aplicația va include un asistent AI, sugestiile lui vor fi de același fel: propuneri, nu verificări.
-5. Folosirea serviciului, inclusiv generarea de cutlist-uri sau exporturi CNC, înseamnă că ai citit și înțeles această secțiune.
+5. Folosirea serviciului, inclusiv generarea de liste de debitare sau exporturi CNC, înseamnă că ai citit și înțeles această secțiune.
 
 ## 8. Răspunderea noastră
 

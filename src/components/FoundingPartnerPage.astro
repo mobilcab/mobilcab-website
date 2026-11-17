@@ -1,11 +1,11 @@
 ---
-// Founding Partner program (docs/DECISIONS.md): opt-in for 20% discount on paid plans;
-// enrollment closes at billing. Site is informative; apply in app (?founding=1).
+// Founding Partner program (docs/DECISIONS.md): opt-in for first 2 months free;
+// enrollment closes at paid launch. Site explains; apply in app (?intent=founding-partner).
 import Base from '../layouts/Base.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
-import { FOUNDING_PARTNER_URL } from '../config';
+import { CONTACT_EMAIL, FOUNDING_PARTNER_URL } from '../config';
 import { testimonials } from '../data/testimonials';
 import { useFoundingPartnerTranslations, type Lang } from '../i18n';
 import { joinFreeHref as joinFree, pathsFor, published } from '../site';
@@ -22,6 +22,7 @@ const paths = pathsFor('foundingPartner');
 const joinFreeHref = joinFree(lang, preview);
 const reserveId = lang === 'ro' ? 'rezervare' : 'reserve';
 const quotes = testimonials[lang];
+const showTeam = Boolean(t.team.title);
 const wrap = 'mx-auto w-full max-w-5xl px-5 sm:px-8';
 const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:text-[2rem]';
 ---
@@ -88,6 +89,37 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
                   </figcaption>
                 </figure>
               ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
+
+    {
+      showTeam && (
+        <section class="border-t border-line bg-white/60" aria-labelledby="fp-team-heading">
+          <div class:list={[wrap, 'py-14 sm:py-20']}>
+            <h2 id="fp-team-heading" class={sectionTitle}>
+              {t.team.title}
+            </h2>
+            <div class="mt-8 flex flex-col gap-6 rounded-md border border-line bg-white p-5 sm:flex-row sm:items-start sm:gap-8 sm:p-8">
+              {/* TODO: înlocuiește cu foto fondator */}
+              <div
+                class="aspect-square w-28 shrink-0 rounded-md border border-line bg-[linear-gradient(145deg,rgba(196,149,106,0.18),rgba(44,36,28,0.06))] sm:w-36"
+                role="img"
+                aria-label={`${t.team.names}, ${t.team.role}`}
+              ></div>
+              <div class="min-w-0">
+                <p class="text-lg font-bold tracking-tight text-ink">{t.team.names}</p>
+                <p class="mt-0.5 text-sm font-semibold tracking-wide text-wood">{t.team.role}</p>
+                <p class="mt-4 text-base leading-relaxed text-graphite">„{t.team.body}”</p>
+                <p class="mt-4 text-base text-graphite">
+                  {t.team.contactBefore}
+                  <a href={`mailto:${CONTACT_EMAIL}`} class="font-semibold text-ink underline underline-offset-2">
+                    {CONTACT_EMAIL}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </section>

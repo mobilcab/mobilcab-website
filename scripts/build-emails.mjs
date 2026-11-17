@@ -185,10 +185,10 @@ const templates = {
       p('Salut,'),
       p('Mulțumesc că te-ai abonat la noutățile Mobilcab!'),
       p(
-        'Aplicația e deja pe Planul Gratuit (Debitare, fără limită de export) — o poți folosi acum pe laptop, în browser. Acest email e doar pentru noutăți: etape noi, prețuri când deschidem plata, ghiduri scurte. Nu e listă de așteptare și nu include 20% discount Partener Fondator.',
+        'Aplicația e deja pe Planul Gratuit (Debitare, fără limită de export) — o poți folosi acum pe laptop, în browser. Acest email e doar pentru noutăți: etape noi, prețuri la lansarea abonamentelor, ghiduri scurte. Nu e listă de așteptare și nu include beneficiul Partener Fondator (primele 2 luni gratuite).',
       ),
       p(
-        `Dacă vrei 20% discount pe planurile plătite (înscriere doar înainte de billing), programul e separat: <a href="${site}/ro/founding-partner/" style="color:${colors.wood};">Partener Fondator</a>.`,
+        `Dacă vrei primele 2 luni gratuite pe planul ales (înscriere doar în perioada de lansare), programul e separat: <a href="${site}/ro/founding-partner/" style="color:${colors.wood};">Partener Fondator</a>.`,
       ),
       p('Ce urmează:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
@@ -229,20 +229,20 @@ const templates = {
   'founding-partner-ro': {
     lang: 'ro',
     subject: 'Ești pe lista Partener Fondator',
-    preheader: 'Ești pe listă. 20% discount pe planurile plătite; lista se închide la billing.',
+    preheader: 'Ești pe listă. Primele 2 luni gratuite pe planul ales; înscrierile se închid odată cu lansarea abonamentelor.',
     reason: 'Primești acest email pentru că te-ai înscris pe lista Partener Fondator pe mobilcab.com.',
     body: [
       p('Salut, {{ contact.FIRSTNAME }},'),
       p('Mulțumesc că te-ai înscris pe lista Partener Fondator! Construiești Mobilcab alături de noi — fără plată acum.'),
       p('Ce înseamnă lista:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Când deschidem abonamentele (primul plan plătit: Debitare), cei de pe listă primesc 20% discount pe prețul listă, 6 luni. Lista se închide atunci. Cine se abonează după plătește prețul întreg. Sumele le anunțăm atunci.',
+        'La lansarea abonamentelor (primul plan plătit: Debitare, sub costul unei plăci de PAL pe lună), cei de pe listă primesc primele 2 luni gratuite pe planul ales. Înscrierile se închid atunci. Cine se abonează după plătește prețul întreg. Prețurile le anunțăm atunci.',
         'Nu plătești nimic acum. Plata e opțională când deschidem vânzarea; înscrierea nu te obligă.',
         'Ai un cuvânt de spus în ce construim mai departe.',
       ]),
       p('Ce urmează:', `font-weight:700;color:${colors.ink};margin-bottom:10px;`),
       steps([
-        'Te contactez personal când deschidem abonamentele, cu prețul listă și discount-ul tău.',
+        'Te contactez personal la lansarea abonamentelor, cu prețul standard și cele 2 luni gratuite.',
         'Dacă vrei, facem împreună primul tău proiect, la telefon sau pe video.',
         'Îți cer sincer părerea — ce merge, ce nu, ce ai vrea să vezi.',
       ]),
