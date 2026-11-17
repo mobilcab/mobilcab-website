@@ -87,5 +87,8 @@
     "network": "Couldn't send. Check your connection and try again.",
     "server": "Something went wrong on our side. Please try again in a few minutes."
   },
-  "joinFree": "Or email updates only (no Founding Partner benefit)"
+  "joinFree": {
+    "label": "Email updates only",
+    "note": "(no Founding Partner benefit)"
+  }
 }
