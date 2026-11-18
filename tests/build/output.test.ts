@@ -78,8 +78,11 @@ describe('built pages', () => {
     expect(FOUNDING_PARTNER_URL).toMatch(/[?&]founding=1\b/);
     for (const [url, lang] of [['/ro/founding-partner/', 'ro'], ['/en/founding-partner/', 'en']] as const) {
       const html = pages.find((p) => p.url === url)!.html;
-      expect(html, url).toContain(`href="${foundingPartnerAppUrl(lang)}"`);
+      // HTML serializes `&` as `&amp;` in attributes.
+      const href = foundingPartnerAppUrl(lang).replaceAll('&', '&amp;');
+      expect(html, url).toContain(`href="${href}"`);
       expect(html, url).toContain('data-cta="founding_partner"');
+      expect(html, url).toContain(`lang=${lang}`);
     }
   });
 
