@@ -2,7 +2,7 @@
 
 Politica se aplică **doar când există planuri plătite** vândute prin Paddle. **Planul Gratuit** (Debitare, fără încasare) nu generează rambursări: nu se plătește nimic, deci nu se returnează nimic.
 
-Prețurile standard, numele planurilor și ofertele de la lansarea abonamentelor apar pe pagina **Prețuri** și la checkout, nu în acest text. Până atunci, pe Prețuri poți vedea Gratuit (0 RON) și calea Partener Fondator (procent), fără prețuri standard în RON pentru planurile plătite.
+Prețurile standard, numele planurilor și ofertele de la lansarea abonamentelor apar pe pagina **Prețuri** și la checkout, nu în acest text. Până atunci, pe Prețuri poți vedea Gratuit (0 RON) și calea Partener Fondator (primele 2 luni gratuite), fără prețuri standard în RON pentru planurile plătite.
 
 ## 1. Cine emite rambursarea
 

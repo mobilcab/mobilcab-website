@@ -16,7 +16,7 @@ documents is adjusted to match.
 | Pre-billing (now) | **Gratuit only:** full Debitare (3D + cutlist), **unlimited** exports. Nesting / labels / quote / CNC / team / AI **not** in product yet | Gated Gratuit before billing; paid Debitare before billing |
 | At billing open | **FP waitlist closes** (no new FP). **Gratuit** = Debitare + **3 downloads/account**. **Debitare (paid)** = same Debitare product, **unlimited** exports. Pricing live cards: **Gratuit + Debitare** only. **Atelier / CNC / Producție / AI** = “în curând” until each ships | Billing opens together with nesting; Basic = M1+M2 features |
 | Later paid plans (when each ships) | **Atelier** = Debitare + nesting + etichete + ofertă. **CNC** = Atelier + export CNC. **Producție** = CNC + echipă/partajare. **AI** = Producție + AI + randări | Selling empty higher tiers at billing; CNC plan before export exists |
-| Who is a Founding Partner | Workshop that **opts in** (app and/or site → `app.mobilcab.com/?intent=founding-partner`), **confirmed quickly** from workshop name + **CUI** (no document upload). Not automatic for every free user | “Every free user is FP”; old “firm proof” / file upload |
+| Who is a Founding Partner | Workshop that **opts in** (app and/or site → `app.mobilcab.com/?founding=1`), **confirmed quickly** from workshop name + **CUI** (no document upload). Not automatic for every free user | “Every free user is FP”; old “firm proof” / file upload |
 | FP before billing | Same full free product as everyone (no extra unlock). FP = **first 2 months free later** (RO) + soft perks. Feedback expected. **Demote** unused seats: reminder 60d → free seat at **90d** (projects kept) | “FP = unlimited vs gated Gratuit”; FP paid from day one |
 | FP benefit (RO site) | **Primele 2 luni gratuite** on the chosen paid plan at billing (starts with Debitare; higher plans if available). Marketing anchor: Debitare **under the cost of one sheet of particle board (PAL) per month**. After 2 free months = list. List RON amounts still TBD | Old **20% off list / 6 months**; 12-month lock; discount only on “Basic”; FP stays open after billing |
 | FP benefit (EN site) | Same as RO: **first 2 months free**; Cut list **less than one sheet of melamine board / month** | Old **20% off list / 6 months** |
@@ -42,9 +42,9 @@ documents is adjusted to match.
 ## Open questions
 
 1. **Unreliable workshop internet (FAQ).** Confirm app behaviour before writing the answer.
-2. **List prices in RON** for Debitare / Atelier / CNC / Producție / AI — set when each is published; until then RO markets **2 free months + PAL price anchor**; EN still **%** for FP.
+2. **List prices in RON** for Debitare / Atelier / CNC / Producție / AI — set when each is published; until then RO+EN market **2 free months** + board-price anchor (PAL / melamine).
 3. **Whether FP free months + referral 15% stack** — decide at billing.
-4. **Align EN site** with RO “2 months free” offer when ready.
+4. **Align app EN + CAD docs** with website “2 months free” (site EN already aligned 2026-11-17); deploy app copy before treating live app as source of truth.
 
 ## Go-live flip (do not flip until ready)
 
