@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { FOUNDING_PARTNER_URL } from '../../src/config';
+import { FOUNDING_PARTNER_URL, foundingPartnerAppUrl } from '../../src/config';
 
 const root = join(import.meta.dirname, '../..');
 const output = join(root, 'dist');
@@ -76,9 +76,9 @@ describe('built pages', () => {
 
   it('sends Founding Partner CTAs into the app waitlist deep-link', () => {
     expect(FOUNDING_PARTNER_URL).toMatch(/[?&]founding=1\b/);
-    for (const url of ['/ro/founding-partner/', '/en/founding-partner/']) {
+    for (const [url, lang] of [['/ro/founding-partner/', 'ro'], ['/en/founding-partner/', 'en']] as const) {
       const html = pages.find((p) => p.url === url)!.html;
-      expect(html, url).toContain(`href="${FOUNDING_PARTNER_URL}"`);
+      expect(html, url).toContain(`href="${foundingPartnerAppUrl(lang)}"`);
       expect(html, url).toContain('data-cta="founding_partner"');
     }
   });

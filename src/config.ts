@@ -25,8 +25,17 @@ export const APP_URL = 'https://app.mobilcab.com';
 /**
  * Founding Partner opt-in in the app (docs/DECISIONS.md).
  * Site FP page explains the program; enrollment happens here — not via Brevo form.
+ * Pass `lang` so the app opens the waitlist in the same language as the site CTA.
  */
-export const FOUNDING_PARTNER_URL = `${APP_URL}/?founding=1`;
+export function foundingPartnerAppUrl(lang: 'ro' | 'en' = 'ro'): string {
+  const url = new URL(APP_URL);
+  url.searchParams.set('founding', '1');
+  url.searchParams.set('lang', lang);
+  return url.toString();
+}
+
+/** @deprecated Prefer `foundingPartnerAppUrl(lang)` so EN CTAs open the app in English. */
+export const FOUNDING_PARTNER_URL = foundingPartnerAppUrl('ro');
 
 // Used by the Brevo email templates (scripts/build-emails.mjs, `npm run emails`).
 // Leave a value empty and the emails show a visible [COMPLETEAZĂ] marker instead.

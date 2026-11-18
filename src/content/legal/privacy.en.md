@@ -1,4 +1,4 @@
-*Last updated: 28 October 2026*
+*Last updated: 18 November 2026*
 
 ## 1. Who we are
 
@@ -26,13 +26,15 @@ We use this only to send you product news. **Signing up to this list does not gr
 
 ## 3. The Founding Partner program
 
-When you join the Founding Partner program, we collect:
+When you join the Founding Partner program (in the app, at `app.mobilcab.com/?founding=1`), we collect:
 
 - your full name;
 - your email address;
-- your workshop name (optional);
-- your city;
+- your workshop name;
+- your company ID (CUI / VAT ID);
 - the language you signed up in and the fact that you gave consent.
+
+We do not ask for a phone number or city for this signup.
 
 We use this to keep you eligible for **the first 2 months free** on paid plans (starting with Cut list) when paid plans launch, to contact you personally then, and to send you news about the program. Joining is free, doesn't commit you to anything, and is only possible **during the launch period** — enrollment closes when paid plans launch. Anyone who subscribes later, without a place in the program, pays the standard price.
 

@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test';
-import { APP_URL, FOUNDING_PARTNER_URL } from '../../src/config';
+import { APP_URL, foundingPartnerAppUrl } from '../../src/config';
 
 /**
  * Smoke: marketing site → app Founding Partner waitlist.
@@ -18,7 +18,7 @@ async function openFpFormFromSite(page: Page) {
 
   const cta = page.locator('a[data-cta="founding_partner"][data-cta-location="fp_hero"]');
   await expect(cta).toBeVisible();
-  await expect(cta).toHaveAttribute('href', FOUNDING_PARTNER_URL);
+  await expect(cta).toHaveAttribute('href', foundingPartnerAppUrl('ro'));
 
   await Promise.all([
     page.waitForURL((url) => url.origin === APP && url.searchParams.get('founding') === '1'),
@@ -34,8 +34,23 @@ async function openFpFormFromSite(page: Page) {
 
 test.describe('website → app Partener Fondator', () => {
   test('RO FP page CTA opens the app waitlist form', async ({ page }) => {
-    expect(FOUNDING_PARTNER_URL).toBe(`${APP}/?founding=1`);
+    expect(foundingPartnerAppUrl('ro')).toContain('founding=1');
+    expect(foundingPartnerAppUrl('ro')).toContain('lang=ro');
     await openFpFormFromSite(page);
+  });
+
+  test('EN FP page CTA opens the app waitlist in English', async ({ page }) => {
+    await page.goto(`${SITE_URL}/en/founding-partner/`, { waitUntil: 'domcontentloaded' });
+    const cta = page.locator('a[data-cta="founding_partner"][data-cta-location="fp_hero"]');
+    await expect(cta).toHaveAttribute('href', foundingPartnerAppUrl('en'));
+    await Promise.all([
+      page.waitForURL((url) => url.origin === APP && url.searchParams.get('founding') === '1' && url.searchParams.get('lang') === 'en'),
+      cta.click(),
+    ]);
+    await fpModal(page).waitFor({ state: 'visible', timeout: 30_000 });
+    await expect(page.locator('[data-testid="auth-fp-benefits"]')).toBeVisible({ timeout: 15_000 });
+    const benefits = page.locator('[data-testid="auth-fp-benefits"] li');
+    await expect(benefits.nth(2)).toContainText(/2\s*months|months free/i);
   });
 
   test('from the site CTA, a visitor can submit an FP request in the app', async ({ page }) => {
@@ -44,13 +59,11 @@ test.describe('website → app Partener Fondator', () => {
     const stamp = Date.now().toString(36);
     await page.locator('[data-testid="fp-name"]').fill('Smoke Website FP');
     await page.locator('[data-testid="fp-email"]').fill(`smoke.web.fp.${stamp}@mobilcab.test`);
-    // Prod form requires phone + city; workshop/CUI are optional there.
-    const phone = page.locator('[data-testid="fp-phone"]');
-    if (await phone.count()) await phone.fill('0700000000');
+    // Prod form: workshop + CUI required; phone/city optional and not shown.
     await page.locator('[data-testid="fp-workshop"]').fill('Atelier Smoke Web');
-    const city = page.locator('[data-testid="fp-city"]');
-    if (await city.count()) await city.fill('Cluj-Napoca');
     await page.locator('[data-testid="fp-cui"]').fill('RO12345678');
+    await expect(page.locator('[data-testid="fp-phone"]')).toHaveCount(0);
+    await expect(page.locator('[data-testid="fp-city"]')).toHaveCount(0);
     await page.locator('[data-testid="fp-consent"]').check();
     await page.locator('[data-testid="fp-terms-accepted"]').check();
 

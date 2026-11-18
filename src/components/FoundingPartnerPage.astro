@@ -5,7 +5,7 @@ import Base from '../layouts/Base.astro';
 import PreviewBanner from './PreviewBanner.astro';
 import SiteFooter from './SiteFooter.astro';
 import SiteHeader from './SiteHeader.astro';
-import { CONTACT_EMAIL, FOUNDING_PARTNER_URL } from '../config';
+import { CONTACT_EMAIL, foundingPartnerAppUrl } from '../config';
 import { testimonials } from '../data/testimonials';
 import { useFoundingPartnerTranslations, type Lang } from '../i18n';
 import { joinFreeHref as joinFree, pathsFor, published } from '../site';
@@ -20,6 +20,7 @@ const preview = !published.foundingPartner;
 const t = useFoundingPartnerTranslations(lang);
 const paths = pathsFor('foundingPartner');
 const joinFreeHref = joinFree(lang, preview);
+const fpAppHref = foundingPartnerAppUrl(lang);
 const reserveId = lang === 'ro' ? 'rezervare' : 'reserve';
 const quotes = testimonials[lang];
 const showTeam = false; // momentan ascuns (foto/zonă team)
@@ -45,7 +46,7 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
       <MilestoneText text={t.hero.body} lang={lang} class="mt-5 max-w-4xl text-lg leading-relaxed text-graphite sm:text-xl" />
       <div class="mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-start sm:gap-4">
         <a
-          href={FOUNDING_PARTNER_URL}
+          href={fpAppHref}
           class="btn-primary shrink-0 whitespace-nowrap"
           data-cta="founding_partner"
           data-cta-location="fp_hero"
@@ -143,7 +144,7 @@ const sectionTitle = 'text-[1.625rem] leading-tight font-bold tracking-tight sm:
           <h2 class={sectionTitle}>{t.apply.title}</h2>
           <MilestoneText text={t.apply.body} lang={lang} class="mt-4 text-base leading-relaxed text-graphite" />
           <a
-            href={FOUNDING_PARTNER_URL}
+            href={fpAppHref}
             class="btn-primary mt-8"
             data-cta="founding_partner"
             data-cta-location="fp_apply"

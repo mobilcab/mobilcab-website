@@ -1,4 +1,4 @@
-*Ultima actualizare: 28 octombrie 2026*
+*Ultima actualizare: 18 noiembrie 2026*
 
 ## 1. Cine suntem
 
@@ -26,13 +26,15 @@ Folosim aceste date doar ca să-ți trimitem noutăți despre produs. **Înscrie
 
 ## 3. Lista Partener Fondator
 
-Când te înscrii pe lista Partener Fondator, colectăm:
+Când te înscrii pe lista Partener Fondator (în aplicație, pe `app.mobilcab.com/?founding=1`), colectăm:
 
 - numele și prenumele;
 - adresa de email;
-- numele atelierului (opțional);
-- orașul;
+- numele atelierului;
+- CUI-ul;
 - limba în care te-ai înscris și faptul că ți-ai dat acordul.
+
+Nu cerem telefon sau oraș pentru această înscriere.
 
 Folosim aceste date ca să te ținem pe lista eligibilă pentru **primele 2 luni gratuite** pe planurile plătite (începând cu Debitare) la lansarea abonamentelor, să te contactăm personal atunci și să-ți trimitem noutăți despre program. Înscrierea este gratuită, nu te obligă la nimic, și e posibilă **doar în perioada de lansare** — înscrierile se închid odată cu lansarea abonamentelor. Cine se abonează după, fără loc pe această listă, plătește prețul standard.
 
