@@ -23,7 +23,7 @@ Creezi cont și intri în aplicație. Pe etapa actuală, proiectarea și debitar
 
 *Intrare în aplicație din browser: autentificare sau creare cont.*
 
-Dacă vrei reducere la abonament la lansarea abonamentelor, programul **Partener Fondator** e separat — înscriere gratuită, fără obligație de cumpărare. Poți folosi aplicația și fără să te înscrii în program.
+Dacă vrei **primele 2 luni gratuite** pe planul ales la lansarea abonamentelor, programul **Partener Fondator** e separat — înscriere gratuită, fără obligație de cumpărare. Poți folosi aplicația și fără să te înscrii în program.
 
 ## Pasul 2 — Un proiect nou
 

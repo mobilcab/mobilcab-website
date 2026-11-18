@@ -24,14 +24,14 @@ documents is adjusted to match.
 | Founding Partner before SRL | Free program only until billing; checkout only in **app** after SRL + billing | Payment at FP claim on website |
 | Number of Founding Partner spots | **First 15**; may raise + announce. Soft public copy: “limited — we announce when we close”. Counter (if shown) = approved apps | "50" / "100"; config 500 as public promise |
 | Site vs app | Site informative. **Checkout in app.** CTAs → app / FP | Checkout on mobilcab.com |
-| Waitlist / coming-soon | General Brevo list = **newsletter** only (no FP discount). FP = separate program | Waitlist as product gate |
+| Waitlist / coming-soon | General Brevo list = **newsletter** only (no FP free months). FP = separate program | Waitlist as product gate |
 | When to form SRL / open billing | When we launch billing, by client count then | Hard interest-gate numbers as standing rule |
 | Legal operator until SRL | **Fineas & Ștefan** as natural persons trading as Mobilcab; update Terms/Privacy when SRL exists. Terms: FP benefits, feedback, demote 90d, close at billing, paid **Debitare** first | Placeholder company; Terms without FP rules |
 | Cancelling yearly | Stops renewal; **no** pro-rata refund except 14-day withdrawal + Refund Policy when billing live | “Cancel anytime” implying year refund |
 | Prices | **RON** when paid plans published | € tables in old kits |
 | Phase 2 rollout | Per-page via `src/site.ts`; unpublished at `/preview/…` | Overnight full replace |
 | Referral | **Off** until billing live. Then 15% off first paid month; max 3; real in-app action | Referral as M1 FP seat reward |
-| General waitlist vs FP | FP = discount-eligible (if enrolled before close). Newsletter = no discount | Every free user as FP |
+| General waitlist vs FP | FP = eligible for **2 free months** (if enrolled before close). Newsletter = no FP benefit | Every free user as FP |
 | Device for now | **Laptop + browser.** Tablet/phone later — don’t claim them in Terms/marketing | “All devices” / phone in Terms §2 |
 | Public milestone wording | Product labels primary. Elsewhere: **„când deschidem abonamentele”** — never bare **M2**. Don’t equate billing with nesting (Atelier) | “Subscriptions open = nesting ships” as the only story |
 | Plan/Home app CTA | **„Încearcă gratuit”** / **“Try it free”** | Duplicate CTA lead-ins |
