@@ -23,7 +23,7 @@ Create an account and open the app. On the current stage, design and cut lists a
 
 *Entering the app from the browser: sign in or create an account.*
 
-If you want a discount on the subscription when we open payment, the **Founding Partner** program is separate — free signup, no purchase obligation. You can use the app without joining the program.
+If you want **the first 2 months free** on your chosen plan when we open payment, the **Founding Partner** program is separate — free signup, no purchase obligation. You can use the app without joining the program.
 
 ## Step 2 — A new project
 
