@@ -90,7 +90,7 @@
 
   /* M1/M2/M3 → roadmap anchors; title attribute = short definition (tooltip). */
   .milestone-ref {
-    @apply font-semibold text-ink underline decoration-dotted underline-offset-2 hover:text-wood-dark;
+    @apply font-semibold text-wood-dark underline underline-offset-2 hover:text-wood;
   }
 
   /* Long text rendered from Markdown: legal pages and blog posts. */
