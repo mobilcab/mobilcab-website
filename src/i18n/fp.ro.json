@@ -6,7 +6,7 @@
   "hero": {
     "label": "Programul Partener Fondator",
     "title": "Ajută-ne să construim instrumentul de care atelierele din România chiar au nevoie.",
-    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație (nume atelier + CUI, fără documente); la lansarea abonamentelor (primul plan plătit: Debitare, sub costul unei plăci de PAL pe lună), cei de pe listă primesc **primele 2 luni gratuite** pe planul ales. Înscrierile se închid odată cu lansarea abonamentelor. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
+    "body": "Nu căutăm testeri pentru un program neterminat. Căutăm producători de mobilă care să-l construiască alături de noi. Te înscrii gratuit din aplicație (doar numele și e-mailul sunt obligatorii; numele atelierului și CUI sunt opționale, fără documente); la lansarea abonamentelor (primul plan plătit: Debitare, sub costul unei plăci de PAL pe lună), cei de pe listă primesc **primele 2 luni gratuite** pe planul ales. Înscrierile se închid odată cu lansarea abonamentelor. Cine vine după plătește prețul întreg. Aplicația Debitare e gratuită pentru toată lumea — Partener Fondator nu e poarta de acces.",
     "cta": "Înscrie-te din aplicație"
   },
   "counter": {
@@ -51,14 +51,14 @@
   "next": {
     "title": "Ce urmează după cerere",
     "steps": [
-      "Trimiți cererea din aplicație în 15 secunde (doar numele atelierului și CUI-ul). Confirmăm rapid locul tău pe listă — fără acte sau documente de încărcat.",
+      "Trimiți cererea din aplicație în 15 secunde (numele atelierului și CUI-ul sunt opționale). Confirmăm rapid locul tău pe listă — fără acte sau documente de încărcat.",
       "Folosești aplicația ca toată lumea — Debitare completă pe Gratuit, cu export nelimitat al listei de debitare în perioada de lansare.",
       "La lansarea abonamentelor, te contactăm cu prețul standard și cele 2 luni gratuite pe planul ales. Înscrierile Partener Fondator se închid. Cine se abonează după, fără loc pe listă, plătește prețul întreg."
     ]
   },
   "apply": {
     "title": "Înscrie-te din aplicație",
-    "body": "Cererea Partener Fondator se trimite direct din contul tău gratuit din aplicație — ai nevoie doar de numele atelierului și CUI, fără documente de încărcat.",
+    "body": "Cererea Partener Fondator se trimite direct din contul tău gratuit din aplicație — numele atelierului și CUI sunt opționale, iar documente nu cerem.",
     "cta": "Deschide aplicația și cere locul"
   },
   "form": {
