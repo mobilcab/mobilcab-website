@@ -67,6 +67,10 @@ export default defineConfig({
       // Neon Data API of the environment (…/neondb/rest/v1). Unset = Brevo-only:
       // Founding Partner requests then don't reach the CAD app's admin panel.
       NEON_DATA_API_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
+      // Neon Functions host of the same environment (https://br-…-api.compute….neon.tech, no trailing
+      // slash). After a Founding Partner request is saved the site asks it to send the queued emails
+      // (/drain-outbox/immediate); unset = the hourly drain sends them instead.
+      NEON_FUNCTIONS_URL: envField.string({ context: 'server', access: 'secret', optional: true }),
       PUBLIC_PLAUSIBLE_DOMAIN: envField.string({ context: 'client', access: 'public', optional: true }),
       // Cloudflare Web Analytics site token (dashboard -> Web Analytics). Read at
       // build time; empty means no page-view beacon at all.
