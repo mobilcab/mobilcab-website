@@ -1,4 +1,4 @@
-import { NEON_DATA_API_URL } from 'astro:env/server';
+import { NEON_DATA_API_URL, NEON_FUNCTIONS_URL } from 'astro:env/server';
 
 export interface PanelRequest {
   name: string;
@@ -6,6 +6,8 @@ export interface PanelRequest {
   phone: string;
   workshop: string;
   city: string;
+  /** Site language the person signed up in; picks the language of the confirmation email. */
+  lang?: 'ro' | 'en';
 }
 
 const trimSlash = (url: string) => url.replace(/\/$/, '');
@@ -54,6 +56,7 @@ export async function saveToPanel(r: PanelRequest, consentAt = new Date()): Prom
         p_city: r.city,
         p_cui: null,
         p_consent_at: consentAt.toISOString(),
+        p_lang: r.lang === 'en' ? 'en' : 'ro',
       }),
       signal: AbortSignal.timeout(8000),
     });
@@ -63,6 +66,31 @@ export async function saveToPanel(r: PanelRequest, consentAt = new Date()): Prom
     return false;
   } catch (err) {
     console.error('[founding-partner] panel save failed', err);
+    return false;
+  }
+}
+
+/**
+ * Asks the CAD backend to send the emails queued by the request that was just saved: the person's
+ * confirmation and the notification to contact@ (both from the app, one template per language).
+ * Without this call they would wait for the scheduled drain.
+ *
+ * Returns `null` when no Functions URL is configured, `true` when the drain ran, `false` on any
+ * failure. Never throws: the request is already saved and the queue is retried by the schedule.
+ */
+export async function drainOutbox(): Promise<boolean | null> {
+  if (!NEON_FUNCTIONS_URL) return null;
+  try {
+    const res = await fetch(`${trimSlash(NEON_FUNCTIONS_URL)}/drain-outbox/immediate`, {
+      method: 'POST',
+      headers: { accept: 'application/json' },
+      signal: AbortSignal.timeout(15000),
+    });
+    if (res.ok) return true;
+    console.error('[founding-partner] outbox drain failed', res.status);
+    return false;
+  } catch (err) {
+    console.error('[founding-partner] outbox drain failed', err);
     return false;
   }
 }

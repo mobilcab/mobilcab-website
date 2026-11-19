@@ -1,8 +1,8 @@
 import type { APIRoute } from 'astro';
 import { FOUNDING_PARTNER_SPOTS } from '../../config';
-import { countReservations, reserveSpot, sendReservationEmails } from '../../lib/brevo';
+import { countReservations, reserveSpot, sendFallbackEmails } from '../../lib/brevo';
 import { isValidEmail, normalizeEmail } from '../../lib/email';
-import { saveToPanel } from '../../lib/neon';
+import { drainOutbox, saveToPanel } from '../../lib/neon';
 import { cleanText, isValidField, isValidPhone } from '../../lib/reservation';
 
 export const prerender = false;
@@ -57,9 +57,12 @@ export const POST: APIRoute = async ({ request }) => {
     const reservation = { email, name, workshop, city, phone, lang };
     const status = await reserveSpot(reservation, FOUNDING_PARTNER_SPOTS);
     if (status === 'reserved') {
-      // Panel first, so the notification can say if it didn't make it there.
+      // The panel is the single source of the emails: saving there queues the person's confirmation
+      // and the notification to contact@ (RO/EN, one template); the drain sends them now. Only when the
+      // panel save did not happen does the site send its own fallback emails.
       const panelSaved = await saveToPanel(reservation);
-      await sendReservationEmails(reservation, panelSaved);
+      if (panelSaved === true) await drainOutbox();
+      else await sendFallbackEmails(reservation, panelSaved);
     }
     return json({ status });
   } catch (err) {

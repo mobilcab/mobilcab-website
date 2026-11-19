@@ -63,6 +63,8 @@ jobs:
       NEON_DATA_API_URL: ${{ secrets.NEON_DATA_API_URL }}
       # Neon Function for newsletter marketing consent (required by launch-check on production).
       NEON_MARKETING_CONSENT_URL: ${{ secrets.NEON_MARKETING_CONSENT_URL }}
+      # Neon Functions host of the same environment; unset = emails wait for the scheduled drain.
+      NEON_FUNCTIONS_URL: ${{ secrets.NEON_FUNCTIONS_URL }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6

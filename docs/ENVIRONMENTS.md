@@ -21,10 +21,15 @@ Two long-lived branches, two deployed environments. Same model as the CAD app (`
 `POST /api/founding-partner` (name, email, phone, city required; workshop optional):
 
 1. Brevo list (cap, "already on the list" check).
-2. Neon Data API -> `rpc/submit_waitlist_request`, which fills the admin panel of the CAD app.
-   Skipped when `NEON_DATA_API_URL` is unset; a failure never fails the sign-up.
-3. Two emails through Brevo: a confirmation to the person and a notification to `contact@mobilcab.com`
-   (it says so when step 2 failed).
+2. Neon Data API -> `rpc/submit_waitlist_request` (with `p_lang`, `ro`|`en`), which fills the admin panel of the
+   CAD app and queues two emails there. Skipped when `NEON_DATA_API_URL` is unset; a failure never fails the sign-up.
+3. When the panel save worked: `POST {NEON_FUNCTIONS_URL}/drain-outbox/immediate` makes the app send them now: the
+   person's confirmation (RO or EN, from the app's template) and the notification to `contact@mobilcab.com`.
+   **The site sends no email itself** and the Brevo "Founding Partner" automation
+   (`emails/founding-partner-*.html`) must be switched OFF, otherwise the person gets two. If `NEON_FUNCTIONS_URL`
+   is unset or the call fails, the app's scheduled drain sends them later.
+4. When the panel save did NOT work (or Neon is not configured): the site sends a short confirmation to the person
+   and a flagged notification to `contact@mobilcab.com`.
 
 ## One-time setup (manual)
 
@@ -32,6 +37,8 @@ Two long-lived branches, two deployed environments. Same model as the CAD app (`
    working for both; add environment secrets only where `develop` must differ:
    - `NEON_DATA_API_URL`: `production` = Data API of Neon `main`; `develop` = Data API of Neon `dev`
      (`.../neondb/rest/v1`, see `environment.m1-dev.ts` in mobilcab-cad), or leave empty for Brevo-only.
+   - `NEON_FUNCTIONS_URL`: Functions host of the same Neon branch (`https://br-…-api.compute….neon.tech`, no trailing
+     slash). Optional: without it the app's scheduled drain sends the emails.
    - `BREVO_FP_LIST_ID`, `BREVO_LIST_ID`, `BREVO_LIST_ID_EN`, and `BREVO_API_KEY` if you want a separate
      Brevo account: test sign-ups from `web-develop` must not land in the real lists.
 2. **Cloudflare Access** for `web-develop.mobilcab.com`: add the domain to `.claude/scripts/cloudflare-access-setup.mjs`

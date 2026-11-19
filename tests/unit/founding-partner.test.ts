@@ -1,4 +1,4 @@
-// POST /api/founding-partner: Brevo list, the CAD app's panel (Neon RPC) and the two emails.
+// POST /api/founding-partner: Brevo list, the CAD app's panel (Neon RPC), the outbox drain and the fallback emails.
 import type { APIContext } from 'astro';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { FakeBrevo } from './fake-brevo';
@@ -11,6 +11,7 @@ vi.mock('astro:env/server', () => ({
   BREVO_CONFIRM_TEMPLATE_ID_RO: '101',
   BREVO_CONFIRM_TEMPLATE_ID_EN: undefined,
   NEON_DATA_API_URL: 'https://ep-x.apirest.neon.test/neondb/rest/v1',
+  NEON_FUNCTIONS_URL: 'https://br-x-api.compute.neon.test/',
 }));
 
 const endpoint = await import('../../src/pages/api/founding-partner');
@@ -21,11 +22,15 @@ let brevo: FakeBrevo;
 let neonCalls: { url: string; body: Record<string, unknown> }[];
 let neonResponse: () => Response;
 let emails: { to: { email: string }[]; subject: string; htmlContent: string }[];
+let drainCalls: string[];
+let drainStatus: number;
 
 beforeEach(() => {
   brevo = new FakeBrevo();
   neonCalls = [];
   emails = [];
+  drainCalls = [];
+  drainStatus = 200;
   neonResponse = () => new Response(JSON.stringify({ ok: true, id: 'x' }), { status: 200 });
   vi.stubGlobal('fetch', (url: string, init?: RequestInit) => {
     if (url === 'https://ep-x.neonauth.neon.test/neondb/auth/token/anonymous') {
@@ -35,6 +40,10 @@ beforeEach(() => {
       expect((init?.headers as Record<string, string>).authorization).toBe('Bearer anon-jwt');
       neonCalls.push({ url, body: JSON.parse(String(init?.body)) });
       return Promise.resolve(neonResponse());
+    }
+    if (url.startsWith('https://br-x-api.compute.neon.test')) {
+      drainCalls.push(`${init?.method} ${url}`);
+      return Promise.resolve(new Response('{}', { status: drainStatus }));
     }
     if (url.endsWith('/smtp/email')) {
       emails.push(JSON.parse(String(init?.body)));
@@ -58,26 +67,48 @@ describe('POST /api/founding-partner', () => {
     expect(neonCalls).toHaveLength(0);
   });
 
-  it('saves to the panel and emails the person and contact@', async () => {
+  it('saves to the panel with the site language and asks the app to send the emails; the site sends none', async () => {
     expect(await post(valid)).toEqual({ status: 200, body: { status: 'reserved' } });
     expect(neonCalls).toHaveLength(1);
     expect(neonCalls[0].url).toBe('https://ep-x.apirest.neon.test/neondb/rest/v1/rpc/submit_waitlist_request');
-    expect(neonCalls[0].body).toMatchObject({ p_name: 'Ion Pop', p_email: 'ion@atelier.ro', p_phone: '0712 345 678', p_city: 'Cluj', p_workshop: 'Atelier Pop' });
-    expect(emails.map((e) => e.to[0].email).sort()).toEqual(['contact@mobilcab.com', 'ion@atelier.ro']);
+    expect(neonCalls[0].body).toMatchObject({ p_name: 'Ion Pop', p_email: 'ion@atelier.ro', p_phone: '0712 345 678', p_city: 'Cluj', p_workshop: 'Atelier Pop', p_lang: 'ro' });
+    expect(drainCalls).toEqual(['POST https://br-x-api.compute.neon.test/drain-outbox/immediate']);
+    expect(emails).toHaveLength(0);
+  });
+
+  it('passes English through, so the app sends the English confirmation', async () => {
+    await post({ ...valid, lang: 'en' });
+    expect(neonCalls[0].body).toMatchObject({ p_lang: 'en' });
+  });
+
+  it('still succeeds, and sends nothing itself, when the drain call fails (the schedule retries)', async () => {
+    drainStatus = 500;
+    expect(await post(valid)).toEqual({ status: 200, body: { status: 'reserved' } });
+    expect(emails).toHaveLength(0);
   });
 
   it('does not repeat anything for someone already on the list', async () => {
     await post(valid);
     neonCalls = [];
     emails = [];
+    drainCalls = [];
     expect(await post(valid)).toEqual({ status: 200, body: { status: 'already' } });
     expect(neonCalls).toHaveLength(0);
+    expect(drainCalls).toHaveLength(0);
     expect(emails).toHaveLength(0);
   });
 
-  it('keeps the sign-up and flags it in the notification when the panel save fails', async () => {
+  it('falls back to its own emails when the panel save fails: contact@ flagged, and the person confirmed', async () => {
     neonResponse = () => new Response('boom', { status: 500 });
     expect(await post(valid)).toEqual({ status: 200, body: { status: 'reserved' } });
+    expect(drainCalls).toHaveLength(0);
     expect(emails.find((e) => e.to[0].email === 'contact@mobilcab.com')?.htmlContent).toContain('NU a ajuns în panoul');
+    expect(emails.find((e) => e.to[0].email === 'ion@atelier.ro')?.subject).toContain('Founding Partner');
+  });
+
+  it('the fallback confirmation follows the language', async () => {
+    neonResponse = () => new Response('boom', { status: 500 });
+    await post({ ...valid, lang: 'en' });
+    expect(emails.find((e) => e.to[0].email === 'ion@atelier.ro')?.subject).toBe('We received your Founding Partner request — Mobilcab');
   });
 });
