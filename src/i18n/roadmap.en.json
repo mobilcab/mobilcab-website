@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Mobilcab roadmap — what we ship, and in what order",
-    "description": "Mobilcab ships in stages: cut lists, nesting, CNC, team, then AI. Paid plans follow Cut list → Atelier → CNC → Production → AI. No fake dates — just order and status."
+    "description": "Mobilcab ships in stages: cut lists, nesting (parts on the sheet), CNC (machine file), team, then AI. Paid plans follow Cut list → Atelier → CNC → Production → AI. No fake dates — just order and status."
   },
   "hero": {
     "label": "Product roadmap",
     "title": "Mobilcab stages — in the order we ship them.",
-    "body": "We build in order: workshop basics first (design + cut lists), then the next stage only when the current one is stable on real projects. We don't announce everything at once."
+    "body": "We build in order: workshop basics first (design + cut list), then the next stage only when the current one is stable on real projects. We don't announce everything at once."
   },
   "statuses": {
     "launch": "Launch",
@@ -20,21 +20,21 @@
       "milestone": "M1",
       "status": "launch",
       "title": "Cut list — 3D design + parts list",
-      "body": "Design furniture in 3D, save to the cloud, and get the parts list — what you cut in the workshop. That's the foundation: without a cut list, the project isn't worth investing in. Now it's on the Free plan (no export limit). When paid plans launch, Cut list also exists as a paid plan with unlimited exports."
+      "body": "Design furniture in 3D, save to the cloud (in your account), and get the parts list — what you cut in the workshop. That's the foundation: without a cut list, the project isn't worth investing in. Now it's on the Free plan (no export / download limit). When paid plans launch, Cut list also exists as a paid plan with unlimited exports."
     },
     {
       "id": "nesting-offer",
       "milestone": "M2",
       "status": "inProgress",
       "title": "Nesting + labels + quotes",
-      "body": "Lay parts on sheets, print labels, and work out costs so you can give the client a clear quote. On Pricing, that's the Atelier plan (Cut list + nesting + labels + quotes) when the stage is ready — not necessarily the same day as the first paid Cut list plan."
+      "body": "Nesting: lay parts on sheets so you cut efficiently; print labels and work out costs so you can give the client a clear quote. On Pricing, that's the Atelier plan (Cut list + nesting + labels + quotes) when the stage is ready — not necessarily the same day as the first paid Cut list plan."
     },
     {
       "id": "cnc-export",
       "milestone": "M3",
       "status": "planned",
       "title": "CNC export",
-      "body": "Machine files once nesting is solid. On Pricing: the CNC plan (Atelier + CNC export). A repeatable flow — not “every CNC in the world” on day one."
+      "body": "Files for the workshop CNC machine once nesting is solid. On Pricing: the CNC plan (Atelier + CNC export). A repeatable flow — not “every CNC in the world” on day one."
     },
     {
       "id": "team-share",
@@ -48,7 +48,7 @@
       "milestone": "M5",
       "status": "planned",
       "title": "AI + renders",
-      "body": "A layout assistant and visuals for presentations. On Pricing: the AI plan (Production + AI + renders) — extras that don't block the core workshop stages."
+      "body": "AI (layout suggestions) and renders (realistic images for the client). On Pricing: the AI plan (Production + AI + renders) — extras that don't block the core workshop stages."
     }
   ],
   "faq": {

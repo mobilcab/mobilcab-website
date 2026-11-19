@@ -93,9 +93,10 @@
     @apply font-semibold text-wood-dark underline underline-offset-2 hover:text-wood;
   }
 
-  /* Long text rendered from Markdown: legal pages and blog posts. */
+  /* Long text rendered from Markdown: legal pages and blog posts.
+   * Body, links, and table cells stay ink — graphite washed out on the grid. */
   .prose-text {
-    @apply text-base leading-relaxed text-graphite;
+    @apply text-base leading-relaxed text-ink;
   }
   .prose-text h2 {
     @apply mt-10 text-lg font-bold tracking-tight text-ink;
@@ -120,21 +121,26 @@
   .prose-text strong {
     @apply font-semibold text-ink;
   }
-  .prose-text a {
-    @apply text-ink underline underline-offset-2;
+  /* :any-link covers :link + :visited (Safari can lighten visited otherwise). */
+  .prose-text a,
+  .prose-text a:any-link {
+    color: var(--color-ink);
+    -webkit-text-fill-color: var(--color-ink);
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
   }
   .prose-text blockquote {
-    @apply mt-6 rounded-md border border-line bg-white px-4 py-3 text-sm;
+    @apply mt-6 rounded-md border border-line bg-white px-4 py-3 text-sm text-ink;
   }
   .prose-text blockquote p {
     @apply mt-0;
   }
   .prose-text table {
-    @apply mt-4 block w-full overflow-x-auto border-collapse text-sm;
+    @apply mt-4 block w-full overflow-x-auto border-collapse text-sm text-ink;
   }
   .prose-text th,
   .prose-text td {
-    @apply border border-line px-3 py-2 text-left align-top;
+    @apply border border-line px-3 py-2 text-left align-top text-ink;
   }
   .prose-text th {
     @apply bg-white font-semibold text-ink;
@@ -146,7 +152,7 @@
     @apply mt-4 w-full rounded-md border border-line;
   }
   .prose-text figcaption {
-    @apply mt-2 text-sm text-graphite;
+    @apply mt-2 text-sm text-ink;
   }
 
   .honeypot {

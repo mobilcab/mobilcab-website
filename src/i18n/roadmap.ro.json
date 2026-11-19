@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Planul Mobilcab — ce livrăm și în ce ordine",
-    "description": "Mobilcab se livrează pe etape: debitare, nesting, CNC, echipă, apoi AI. Planurile plătite urmează scara Debitare → Atelier → CNC → Producție → AI. Fără date false — doar ordine și status."
+    "description": "Mobilcab se livrează pe etape: debitare, nesting (așezare pe placă), CNC (fișier pentru mașină), echipă, apoi AI. Planurile plătite: Debitare → Atelier → CNC → Producție → AI. Fără date false — doar ordine și status."
   },
   "hero": {
     "label": "Planul produsului",
     "title": "Etapele Mobilcab — în ordinea în care le livrăm.",
-    "body": "Construim în ordine: mai întâi baza de atelier (proiectare + debitare), apoi următoarea etapă doar când cea curentă e stabilă pe proiecte reale. Nu anunțăm totul dintr-odată."
+    "body": "Construim în ordine: mai întâi baza de atelier (proiectare + listă de debitare), apoi următoarea etapă doar când cea curentă e stabilă pe proiecte reale. Nu anunțăm totul dintr-odată."
   },
   "statuses": {
     "launch": "Lansare",
@@ -20,21 +20,21 @@
       "milestone": "M1",
       "status": "launch",
       "title": "Debitare — proiectare 3D + listă",
-      "body": "Desenezi mobilierul în 3D, salvezi în cloud și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit. Acum e pe Planul Gratuit (fără limită de export). La lansarea abonamentelor, Debitare rămâne și ca plan plătit cu exporturi nelimitate."
+      "body": "Desenezi mobilierul în 3D, salvezi în cloud (în cont) și scoți lista de piese — ce tai în atelier. Asta e baza: fără debitare, proiectul nu merită investit. Acum e pe Planul Gratuit (fără limită de export / descărcare). La lansarea abonamentelor, Debitare rămâne și ca plan plătit cu exporturi nelimitate."
     },
     {
       "id": "nesting-offer",
       "milestone": "M2",
       "status": "inProgress",
       "title": "Nesting + etichete + ofertă",
-      "body": "Așezi piesele pe plăci, tipărești etichete și calculezi costuri ca să dai o ofertă clară clientului. Pe Prețuri, asta e planul Atelier (Debitare + nesting + etichete + ofertă), când etapa e gata — nu neapărat în aceeași zi cu prima plată pe Debitare."
+      "body": "Nesting: așezi piesele pe plăci ca să tai eficient; tipărești etichete și calculezi costuri ca să dai o ofertă clară clientului. Pe Prețuri, asta e planul Atelier (Debitare + nesting + etichete + ofertă), când etapa e gata — nu neapărat în aceeași zi cu prima plată pe Debitare."
     },
     {
       "id": "cnc-export",
       "milestone": "M3",
       "status": "planned",
       "title": "Export CNC",
-      "body": "Fișiere pentru mașină, după ce nesting-ul e stabil. Pe Prețuri: planul CNC (Atelier + export CNC). Un flux repetabil — nu „toate CNC-urile din lume” dintr-o dată."
+      "body": "Fișiere pentru mașina CNC din atelier, după ce nesting-ul e stabil. Pe Prețuri: planul CNC (Atelier + export CNC). Un flux repetabil — nu „toate CNC-urile din lume” dintr-o dată."
     },
     {
       "id": "team-share",
@@ -48,7 +48,7 @@
       "milestone": "M5",
       "status": "planned",
       "title": "AI + randări",
-      "body": "Asistent de layout și vizualizări pentru prezentări. Pe Prețuri: planul AI (Producție + AI + randări) — extra, nu blochează etapele de bază din atelier."
+      "body": "AI (sugestii de aranjare) și randări (imagini realistice pentru client). Pe Prețuri: planul AI (Producție + AI + randări) — extra, nu blochează etapele de bază din atelier."
     }
   ],
   "faq": {

@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Pricing — Mobilcab",
-    "description": "Now: Free plan (Cut list, unlimited exports) + Founding Partner list. At subscription launch: Free with 3 exports + paid Cut list; Founding Partners get the first 2 months free."
+    "description": "Now: Free plan (Cut list = 3D + parts list, unlimited exports) + Founding Partner list. At subscription launch: Free with 3 exports + paid Cut list; Founding Partners get the first 2 months free."
   },
   "hero": {
     "label": "Pricing",
     "title": "Free on Cut list now. 2 months free at launch for Founding Partners.",
-    "body": "Right now you get free 3D design and unlimited cut-list export. After paid plans launch, Free will include 3 exports per account, and the paid Cut list plan keeps unlimited exports. You join the program for free. At subscription launch (where Cut list will cost less than a single sheet of melamine board per month), you get **the first 2 months free** on your chosen plan, with no obligation now. Anyone who joins later pays the standard price."
+    "body": "Right now you get free 3D design and unlimited cut-list export (download). After paid plans launch, Free will include 3 exports per account, and the paid Cut list plan (3D + parts list) keeps unlimited exports. You join the program for free. At subscription launch (where Cut list will cost less than a single sheet of melamine board per month), you get **the first 2 months free** on your chosen plan, with no obligation now. Anyone who joins later pays the standard price."
   },
   "callout": {
     "title": "New here?",
@@ -24,11 +24,11 @@
   "plans": {
     "free": {
       "name": "Free plan",
-      "for": "Cut list now, with no subscription. After paid plans launch it stays Cut list with 3 exports per account.",
+      "for": "Cut list (3D + parts list) now, with no subscription. After paid plans launch it stays Cut list with 3 exports per account.",
       "features": [
         "3D design and cut list",
-        "Exports without limits (during the launch period)",
-        "Cloud save",
+        "Exports (downloads) without limits (during the launch period)",
+        "Cloud save (in your account)",
         "On a laptop, in the browser",
         "After paid plans launch: 3 exports per account on Free"
       ],
@@ -36,11 +36,11 @@
     },
     "debitare": {
       "name": "Cut list plan",
-      "for": "First paid plan at subscription launch: the same Cut list product as Free, with unlimited exports. Founding Partners: first 2 months free; later: standard price.",
+      "for": "First paid plan at subscription launch: the same Cut list (3D + parts list) as Free, with unlimited exports. Founding Partners: first 2 months free; later: standard price.",
       "features": [
         "3D design and cut list",
-        "Unlimited exports",
-        "Cloud save",
+        "Unlimited exports (downloads)",
+        "Cloud save (in your account)",
         "On a laptop, in the browser"
       ],
       "cta": "Founding Partner details"
