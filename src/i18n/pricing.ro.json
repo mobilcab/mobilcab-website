@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Prețuri — Mobilcab",
-    "description": "Acum: Planul Gratuit (Debitare, export nelimitat) + listă Partener Fondator. La lansarea abonamentelor: Gratuit cu 3 exporturi + planul Debitare plătit; Partenerii Fondatori primesc primele 2 luni gratuite."
+    "description": "Acum: Planul Gratuit (Debitare = 3D + listă, export nelimitat) + listă Partener Fondator. La lansarea abonamentelor: Gratuit cu 3 exporturi + planul Debitare plătit; Partenerii Fondatori primesc primele 2 luni gratuite."
   },
   "hero": {
     "label": "Prețuri",
     "title": "Gratuit acum pe Debitare. 2 luni gratuite la lansare pentru Partener Fondator.",
-    "body": "Acum folosești gratuit proiectarea 3D și exportul nelimitat al listei de debitare. După lansarea abonamentelor, planul Gratuit va include 3 exporturi per cont, iar abonamentul Debitare va păstra exporturile nelimitate. Te înscrii gratuit în program. La lansarea abonamentelor (unde planul Debitare va fi sub costul unei singure plăci de PAL pe lună), primești **primele 2 luni gratuite** pe planul ales, fără obligații acum. Cine vine după plătește prețul standard."
+    "body": "Acum folosești gratuit proiectarea 3D și exportul (descărcarea) nelimitat al listei de debitare. După lansarea abonamentelor, planul Gratuit va include 3 exporturi per cont, iar abonamentul Debitare (3D + listă de piese) va păstra exporturile nelimitate. Te înscrii gratuit în program. La lansarea abonamentelor (unde planul Debitare va fi sub costul unei singure plăci de PAL pe lună), primești **primele 2 luni gratuite** pe planul ales, fără obligații acum. Cine vine după plătește prețul standard."
   },
   "callout": {
     "title": "Ești nou aici?",
@@ -24,11 +24,11 @@
   "plans": {
     "free": {
       "name": "Planul Gratuit",
-      "for": "Debitare acum, fără abonament. După lansarea abonamentelor rămâne Debitare cu 3 exporturi pe cont.",
+      "for": "Debitare (3D + listă de piese) acum, fără abonament. După lansarea abonamentelor rămâne Debitare cu 3 exporturi pe cont.",
       "features": [
         "Proiectare 3D și listă de debitare",
-        "Exporturi fără limite (în perioada de lansare)",
-        "Salvare în cloud",
+        "Exporturi (descărcări) fără limite (în perioada de lansare)",
+        "Salvare în cloud (în contul tău)",
         "Pe laptop, în browser",
         "După lansarea abonamentelor: 3 exporturi pe cont pe Gratuit"
       ],
@@ -36,11 +36,11 @@
     },
     "debitare": {
       "name": "Planul Debitare",
-      "for": "Primul plan plătit, la lansarea abonamentelor: același Debitare ca pe Gratuit, cu exporturi nelimitate. Parteneri Fondatori: primele 2 luni gratuite; ulterior: prețul standard.",
+      "for": "Primul plan plătit, la lansarea abonamentelor: același Debitare (3D + listă) ca pe Gratuit, cu exporturi nelimitate. Parteneri Fondatori: primele 2 luni gratuite; ulterior: prețul standard.",
       "features": [
         "Proiectare 3D și listă de debitare",
-        "Exporturi nelimitate",
-        "Salvare în cloud",
+        "Exporturi (descărcări) nelimitate",
+        "Salvare în cloud (în contul tău)",
         "Pe laptop, în browser"
       ],
       "cta": "Detalii Partener Fondator"

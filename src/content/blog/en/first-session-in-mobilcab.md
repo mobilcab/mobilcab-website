@@ -10,7 +10,7 @@ The first session doesn’t need to cover the whole Roadmap (M1–M5). It covers
 ## Before you start
 
 - A laptop with a current browser.
-- An internet connection (the app is in the cloud).
+- An internet connection (the app is in the cloud — the project lives in your account).
 - A real project or a simple cabinet you know (for example a base unit), so you can check the list against what you expect.
 
 No install, and no licence tied to a particular workshop machine.
@@ -47,7 +47,7 @@ If something doesn’t match, check the project settings (board thickness, edgin
 
 ## Step 4 — Save
 
-Save to the cloud. Next time you open it on the laptop, the project is there — no file moved on a stick.
+Save to the cloud (in your account). Next time you open it on the laptop, the project is there — no file moved on a stick.
 
 ![Project menu in Mobilcab — Save to cloud](/blog/prima-sesiune/04-salvare.png)
 
@@ -55,7 +55,7 @@ Save to the cloud. Next time you open it on the laptop, the project is there —
 
 ## Step 5 — Export, if you need it
 
-Export the list (CSV) or the project (`.mcab`) when you want a local copy or a file to pass into your current flow. Right now on Free, exports have no download limit; the 3-download limit on Free appears when we open subscriptions.
+Export (download) the list as CSV (Excel-style table) or the project as `.mcab` (Mobilcab project file) when you want a local copy or a file to pass into your current flow. Right now on Free, exports have no download limit; the 3-download limit on Free appears when we open subscriptions.
 
 ![Export from the cut list in Mobilcab — CSV download](/blog/prima-sesiune/05-export.png)
 
@@ -64,8 +64,8 @@ Export the list (CSV) or the project (`.mcab`) when you want a local copy or a f
 
 ## What you leave for another day
 
-- Nesting, labels, quotes — on the Atelier plan, when that stage is ready on the Roadmap.
-- CNC export — a later stage.
+- Nesting (laying parts on the sheet), labels, quotes — on the Atelier plan, when that stage is ready on the Roadmap.
+- CNC export (a file for the workshop machine) — a later stage.
 - Team / sharing and AI — later stages.
 
-The first session succeeds if you have a saved project and a cut list you can read in the workshop — not if you’ve walked the whole roadmap.
+The first session succeeds if you have a saved project and a cut list you can read in the workshop — not if you’ve walked the whole Roadmap.

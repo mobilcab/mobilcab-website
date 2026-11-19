@@ -24,7 +24,7 @@
       "q": "Can I export directly for my CNC?",
       "a": [
         "The cut list (dimensions, quantities, materials) is the workshop foundation.",
-        "Dedicated machine export comes in a later Roadmap stage. It is not included in the Cut list plan when subscriptions launch."
+        "CNC export (a file for the workshop machine) comes in a later Roadmap stage. It is not included in the Cut list plan (3D + parts list) when subscriptions launch."
       ],
       "link": "roadmap"
     },
@@ -33,7 +33,7 @@
       "q": "What do M1–M5 mean?",
       "a": [
         "They're the stages on the Roadmap, in order. M1 = Cut list (3D design + parts list — free now).",
-        "Subscriptions can open with the paid Cut list plan before nesting is ready. Elsewhere we talk about subscriptions, not M-codes. Later stages are on the Roadmap."
+        "Subscriptions can open with the paid Cut list plan before nesting (laying parts on the sheet) is ready. Elsewhere we talk about subscriptions, not M-codes. Later stages are on the Roadmap."
       ],
       "link": "roadmap"
     },
@@ -41,7 +41,7 @@
       "id": "price",
       "q": "How much does it cost?",
       "a": [
-        "The app is free now, with no export limit on the cut list. After paid plans launch, Free will include 3 exports per account, and the Cut list plan keeps unlimited exports (less than the cost of a single sheet of melamine board per month). Founding Partners get **the first 2 months free**. See the [product roadmap](/en/roadmap/) for upcoming features."
+        "The app is free now, with no export (download) limit on the cut list. After paid plans launch, Free will include 3 exports per account, and the Cut list plan (3D + parts list) keeps unlimited exports (less than the cost of a single sheet of melamine board per month). Founding Partners get **the first 2 months free**. See the [product Roadmap](/en/roadmap/) for upcoming features."
       ],
       "link": "foundingPartner"
     },
@@ -49,7 +49,7 @@
       "id": "plans",
       "q": "How is Free different from the Cut list plan?",
       "a": [
-        "Now only Free exists: full Cut list (3D, list, cloud), with no export limits.",
+        "Now only Free exists: full Cut list (3D, list, cloud = in your account), with no export limits.",
         "At subscription launch: Free stays Cut list with 3 exports per account; paid Cut list is the same product with unlimited exports. Founding Partners: **first 2 months free**; enrollment closes when paid plans launch."
       ],
       "tiers": true,

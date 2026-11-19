@@ -5,12 +5,12 @@ date: "2026-11-09"
 published: true
 ---
 
-Prima sesiune nu trebuie să acopere tot Planul (M1–M5). Acoperă **baza**: proiectare 3D și listă de debitare, plus salvare și export. Totul pe laptop, în browser.
+Prima sesiune nu trebuie să acopere tot Planul (M1–M5). Acoperă **baza**: proiectare 3D și listă de debitare, plus salvare și export (descărcare). Totul pe laptop, în browser.
 
 ## Înainte să începi
 
 - Un laptop cu browser actual.
-- Conexiune la internet (aplicația e în cloud).
+- Conexiune la internet (aplicația e în cloud — proiectul stă în contul tău).
 - Un proiect real sau un corp simplu pe care îl știi (de exemplu un corp de jos), ca să verifici lista cu ce ai în cap.
 
 Nu e nevoie de instalare și nu e nevoie de licență pe un anume calculator din atelier.
@@ -47,7 +47,7 @@ Dacă ceva nu bate, verifică setările din proiect (grosime placă, cant, cum e
 
 ## Pasul 4 — Salvare
 
-Salvezi în cloud. La următoarea deschidere pe laptop, proiectul e acolo, fără fișier mutat pe stick.
+Salvezi în cloud (în cont). La următoarea deschidere pe laptop, proiectul e acolo, fără fișier mutat pe stick.
 
 ![Meniu Proiect în Mobilcab — Salvează în cloud](/blog/prima-sesiune/04-salvare.png)
 
@@ -55,7 +55,7 @@ Salvezi în cloud. La următoarea deschidere pe laptop, proiectul e acolo, făr�
 
 ## Pasul 5 — Export, dacă ai nevoie
 
-Exporți lista (CSV) sau proiectul (`.mcab`) când vrei o copie locală sau un fișier de dat mai departe în fluxul tău actual. Acum, pe Gratuit, exporturile nu au limita de descărcări; limita de 3 descărcări pe cont pe Gratuit apare când deschidem abonamentele.
+Exporți (descarci) lista ca CSV (tabel tip Excel) sau proiectul ca `.mcab` (fișierul proiectului Mobilcab) când vrei o copie locală sau un fișier de dat mai departe în fluxul tău actual. Acum, pe Gratuit, exporturile nu au limita de descărcări; limita de 3 descărcări pe cont pe Gratuit apare când deschidem abonamentele.
 
 ![Export din lista de debitare în Mobilcab — descărcare CSV](/blog/prima-sesiune/05-export.png)
 
@@ -64,8 +64,8 @@ Exporți lista (CSV) sau proiectul (`.mcab`) când vrei o copie locală sau un f
 
 ## Ce lași pe altă dată
 
-- Nesting, etichete, ofertă — pe planul Atelier, când etapa e gata pe Plan.
-- Export CNC — etapă ulterioară.
+- Nesting (așezarea pieselor pe placă), etichete, ofertă — pe planul Atelier, când etapa e gata pe Plan.
+- Export CNC (fișier pentru mașina din atelier) — etapă ulterioară.
 - Echipă / partajare și AI — etape mai târzii.
 
-Prima sesiune e reușită dacă ai un proiect salvat și o listă de debitare pe care o poți citi în atelier — nu dacă ai parcurs tot roadmap-ul.
+Prima sesiune e reușită dacă ai un proiect salvat și o listă de debitare pe care o poți citi în atelier — nu dacă ai parcurs tot Planul.

@@ -26,27 +26,27 @@ Polyboard (PolyBoard 8) is furniture design software installed on a computer (de
 
 **Public price.** In the Wood Designer store, PolyBoard 8 appears in the **USD $2,795–$5,295** range ([product page](https://wooddesigner.org/product/polyboard/)).
 
-**CNC (per vendor).** **Pro PP:** output including CNC files and post-processors (Homag, Biesse, SCM/Morbidelli, Felder, Vitap, Busellato, NC-HOPS, etc.), plus a DXF post-processor. **Pro:** the same design/output options, **without** CNC files ([polyboard-software-tools](https://wooddesigner.org/polyboard-software-tools/)).
+**CNC (per vendor).** **Pro PP:** output including CNC files and post-processors — tools that adapt the file to a machine (Homag, Biesse, SCM/Morbidelli, Felder, Vitap, Busellato, NC-HOPS, etc.), plus a DXF post-processor (2D drawing for the machine). **Pro:** the same design/output options, **without** CNC files ([polyboard-software-tools](https://wooddesigner.org/polyboard-software-tools/)).
 
 ## PRO100
 
 PRO100 is furniture design software (kitchens, cabinets, etc.) installed on Windows. Prices below are from **Pro100 USA** ([pro100usa.com](https://www.pro100usa.com/)) — a US distribution channel; other markets may have different offers.
 
-**Licence.** **One-time purchase**, no monthly subscription; licence on a **USB dongle** ([pricing table](https://www.pro100usa.com/pricing-table)).
+**Licence.** **One-time purchase**, no monthly subscription; licence on a **USB dongle** (licence stick) ([pricing table](https://www.pro100usa.com/pricing-table)).
 
 **Public price (Pro100 USA).** Pro100 v7: **USD $3,144.99** one-time; with Kray: **USD $3,444.95**. Separate CNC package: **USD $2,695**; design + CNC: **USD $5,839.99** (without Kray), on the CNC page ([CNC cabinet design](https://www.pro100usa.com/industries-included/cnc-cabinet-design-software)). Demo with no expiry; it doesn’t save the project and doesn’t export a cut list ([pricing table](https://www.pro100usa.com/pricing-table)).
 
-**CNC (per Pro100 USA).** Optional package: drilling/routing operations on parts; export **DXF** or native files for HOMAG, SCM, Biesse, Felder, HOLZ-HER, etc. The vendor states explicitly: it does **not** generate G-code and does **not** do nesting — those stay in CAM ([CNC page](https://www.pro100usa.com/industries-included/cnc-cabinet-design-software)).
+**CNC (per Pro100 USA).** Optional package: drilling/routing operations on parts; export **DXF** (2D drawing) or native files for HOMAG, SCM, Biesse, Felder, HOLZ-HER, etc. The vendor states explicitly: it does **not** generate G-code (the commands the machine runs) and does **not** do nesting (laying parts on the sheet) — those stay in CAM (the software that prepares the machine file) ([CNC page](https://www.pro100usa.com/industries-included/cnc-cabinet-design-software)).
 
 ## SketchList 3D
 
 SketchList 3D is design software for woodworking / custom furniture, installed on a computer. Vendor: SketchList3D Inc. ([sketchlist.com](https://sketchlist.com/)).
 
-**Licence.** **Subscription** (1 month / 1 year / 2 years) or **one-time licence**; on subscription, maintenance is included for the plan term; on one-time, maintenance is included for one year, then separate plans ([pricing](https://sketchlist.com/pricing/)).
+**Licence.** **Subscription** (1 month / 1 year / 2 years) or **one-time licence**; on subscription, updates/support are included for the plan term; on one-time, updates are included for one year, then separate plans ([pricing](https://sketchlist.com/pricing/)).
 
 **Public price.** On [sketchlist.com/pricing](https://sketchlist.com/pricing/): **USD $79.99/month**; **USD $599.99/year**; **USD $899.99 / 2 years**; one-time **USD $999.99**. Trial: **14 days**, no card.
 
-**CNC (per vendor).** On the pricing page, under features: **“DXF for CNC importing”**. On product pages, SketchList is described as a design tool that exports **DXF** for CNC/CAM software; it isn’t presented as a G-code generator.
+**CNC (per vendor).** On the pricing page, under features: **“DXF for CNC importing”**. On product pages, SketchList is described as a design tool that exports **DXF** (2D drawing) for CNC/CAM software; it isn’t presented as a G-code generator.
 
 ## Cabinet Vision
 
@@ -60,11 +60,11 @@ Cabinet Vision is design and production software for cabinetry / furniture, modu
 
 ## Mobilcab
 
-Mobilcab is furniture CAD that runs in the browser, on a laptop, with no install ([mobilcab.com](https://mobilcab.com/)).
+Mobilcab is furniture design software (CAD) that runs in the browser, on a laptop, with no install ([mobilcab.com](https://mobilcab.com/)).
 
 **Licence / price.** The site describes the app as **free** on Cut list (3D design and list) until subscriptions open. **Standard RON amounts are not published** on the site (November 2026). Founding Partner program: free signup only during launch; first 2 months free on your chosen plan — details on the program page.
 
-**Stages.** Public roadmap (M1–M5): cut list; nesting, labels, and quotes; CNC export; team and sharing; AI and renders. CNC export is announced as a later stage, not as a feature available now.
+**Stages.** Public Roadmap (M1–M5): cut list; nesting (parts on the sheet), labels, and quotes; CNC export; team and sharing; AI (suggestions) and renders (images for the client). CNC export is announced as a later stage, not as a feature available now.
 
 **CNC.** On the site, CNC export is listed as a future stage (M3), not as a capability delivered in the current stage.
 

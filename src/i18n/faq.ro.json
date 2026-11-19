@@ -28,7 +28,7 @@
       "q": "Pot exporta direct pentru CNC-ul meu?",
       "a": [
         "Lista de debitare (dimensiuni, cantități, materiale) e baza pentru atelier.",
-        "Exportul dedicat pentru mașină vine pe o etapă ulterioară pe Plan. Nu e inclus în planul Debitare de la lansarea abonamentelor."
+        "Exportul CNC (fișier pentru mașina din atelier) vine pe o etapă ulterioară pe Plan. Nu e inclus în planul Debitare (3D + listă) de la lansarea abonamentelor."
       ],
       "link": "roadmap"
     },
@@ -37,7 +37,7 @@
       "q": "Ce înseamnă M1–M5?",
       "a": [
         "Sunt etapele de pe pagina Plan, în ordine. M1 = Debitare (proiectare 3D + listă — baza de acum pe Gratuit).",
-        "Abonamentele pot începe cu planul Debitare (plătit) înainte ca nesting-ul să fie gata. Pe restul site-ului vorbim despre abonamente, nu despre coduri M. Detaliile etapelor următoare sunt pe Plan."
+        "Abonamentele pot începe cu planul Debitare (plătit) înainte ca nesting-ul (așezarea pieselor pe placă) să fie gata. Pe restul site-ului vorbim despre abonamente, nu despre coduri M. Detaliile etapelor următoare sunt pe Plan."
       ],
       "link": "roadmap"
     },
@@ -45,7 +45,7 @@
       "id": "pret",
       "q": "Cât costă?",
       "a": [
-        "Acum aplicația este gratuită, fără limită de export pentru lista de debitare. După lansarea abonamentelor, planul Gratuit va include 3 exporturi per cont, iar planul Debitare va păstra exporturile nelimitate (sub costul unei plăci de PAL pe lună). Partenerii Fondatori primesc **primele 2 luni gratuite**. Vezi [Planul produsului](/ro/roadmap/) pentru funcțiile viitoare."
+        "Acum aplicația este gratuită, fără limită de export (descărcare) pentru lista de debitare. După lansarea abonamentelor, planul Gratuit va include 3 exporturi per cont, iar planul Debitare (3D + listă) va păstra exporturile nelimitate (sub costul unei plăci de PAL pe lună). Partenerii Fondatori primesc **primele 2 luni gratuite**. Vezi [Planul produsului](/ro/roadmap/) pentru funcțiile viitoare."
       ],
       "link": "foundingPartner"
     },
@@ -53,7 +53,7 @@
       "id": "planuri",
       "q": "Prin ce diferă planul Gratuit de planul Debitare?",
       "a": [
-        "Acum există doar Gratuit: Debitare completă (3D, listă, cloud), fără limite de export.",
+        "Acum există doar Gratuit: Debitare completă (3D, listă, cloud = în cont), fără limite de export.",
         "La lansarea abonamentelor: Gratuit rămâne Debitare cu 3 exporturi pe cont; Debitare (plătit) e același produs cu exporturi nelimitate. Parteneri Fondatori: **primele 2 luni gratuite**; înscrierile se închid odată cu lansarea abonamentelor."
       ],
       "tiers": true,

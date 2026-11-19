@@ -23,7 +23,7 @@ const links = (['roadmap', 'pricing', 'faq', 'blog', 'foundingPartner', 'terms',
     <nav aria-label={lang === 'ro' ? 'Subsol' : 'Footer'} class="flex flex-wrap gap-x-5">
       {
         links.map((link) => (
-          <a href={link.href} class="inline-flex min-h-11 items-center underline-offset-4 hover:text-ink hover:underline">
+          <a href={link.href} class="inline-flex min-h-11 items-center text-ink underline-offset-4 hover:underline">
             {link.label}
           </a>
         ))

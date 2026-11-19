@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "How it works — Mobilcab",
-    "description": "Three short clips of what’s ready now: 3D design in the browser, the cut list, and save / export (cloud, CSV, .mcab)."
+    "description": "Three short clips of what’s ready now: 3D design in the browser, the cut list, and save / export (cloud = in your account; CSV = Excel-style table; .mcab = project file)."
   },
   "hero": {
     "label": "How it works",
@@ -29,16 +29,16 @@
       "points": [
         "Open the cut list on the same project — no manual math for every panel.",
         "See parts with dimensions, quantities and materials, ready for the workshop.",
-        "That’s the foundation today: design + cut list, before nesting or CNC."
+        "That’s the foundation today: design + cut list, before nesting (parts on the sheet) or CNC (machine file)."
       ],
       "note": ""
     },
     {
       "title": "Save and export",
-      "aha": "The project stays in the cloud; you can download CSV or a .mcab file.",
+      "aha": "The project stays in the cloud (in your account); you can download CSV (Excel-style table) or a .mcab file (Mobilcab project).",
       "points": [
-        "Save to the cloud and come back on your laptop — nothing to install.",
-        "Export the list (CSV) or the local project file (.mcab) when you need it.",
+        "Save to the cloud (in your account) and come back on your laptop — nothing to install.",
+        "Export (download) the list as CSV or the local project as .mcab when you need it.",
         "Now: exports without limits. Free-plan limits start only when subscriptions open."
       ],
       "note": ""

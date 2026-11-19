@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Cum funcționează — Mobilcab",
-    "description": "Trei clipuri scurte pe ce e gata acum: proiectare 3D în browser, lista de debitare și salvare / export (cloud, CSV, .mcab)."
+    "description": "Trei clipuri scurte pe ce e gata acum: proiectare 3D în browser, lista de debitare și salvare / export (cloud = în cont; CSV = tabel tip Excel; .mcab = fișierul proiectului)."
   },
   "hero": {
     "label": "Cum funcționează",
@@ -29,16 +29,16 @@
       "points": [
         "Deschizi lista de debitare pe același proiect — fără să calculezi manual fiecare panou.",
         "Vezi piesele cu dimensiuni, cantități și materiale, gata de folosit în atelier.",
-        "Asta e baza de acum: proiectare + debitare, înainte de nesting sau CNC."
+        "Asta e baza de acum: proiectare + debitare, înainte de nesting (așezare pe placă) sau CNC (fișier pentru mașină)."
       ],
       "note": ""
     },
     {
       "title": "Salvare și export",
-      "aha": "Proiectul rămâne în cloud; poți descărca CSV sau fișier .mcab.",
+      "aha": "Proiectul rămâne în cloud (în contul tău); poți descărca CSV (tabel tip Excel) sau fișier .mcab (proiectul Mobilcab).",
       "points": [
-        "Salvezi în cloud și revii la proiect de pe laptop, fără instalare.",
-        "Exporti lista (CSV) sau proiectul local (.mcab) când ai nevoie.",
+        "Salvezi în cloud (în cont) și revii la proiect de pe laptop, fără instalare.",
+        "Exporți (descarci) lista ca CSV sau proiectul local ca .mcab când ai nevoie.",
         "Acum: exporturi fără limite pe Gratuit, în perioada de lansare."
       ],
       "note": ""
