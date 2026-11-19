@@ -59,7 +59,7 @@ test.describe('website → app Partener Fondator', () => {
     const stamp = Date.now().toString(36);
     await page.locator('[data-testid="fp-name"]').fill('Smoke Website FP');
     await page.locator('[data-testid="fp-email"]').fill(`smoke.web.fp.${stamp}@mobilcab.test`);
-    // Prod form: workshop + CUI required; phone/city optional and not shown.
+    // Prod form: workshop + CUI are optional (filled here to cover the full path); phone/city not shown.
     await page.locator('[data-testid="fp-workshop"]').fill('Atelier Smoke Web');
     await page.locator('[data-testid="fp-cui"]').fill('RO12345678');
     await expect(page.locator('[data-testid="fp-phone"]')).toHaveCount(0);

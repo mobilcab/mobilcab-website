@@ -6,7 +6,7 @@
   "hero": {
     "label": "The Founding Partner program",
     "title": "Help shape the tool furniture workshops actually need.",
-    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app (workshop / company name only — no document upload); at subscription launch (first paid plan: Cut list, less than the cost of a single sheet of melamine board per month), people on the list get **the first 2 months free** on their chosen plan. Enrollment closes when paid plans launch. Anyone who joins later pays full price. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
+    "body": "We're not looking for testers for unfinished software. We're looking for furniture makers to build it with us. Join free from the app (only your name and email are required; workshop name and company ID are optional — no document upload); at subscription launch (first paid plan: Cut list, less than the cost of a single sheet of melamine board per month), people on the list get **the first 2 months free** on their chosen plan. Enrollment closes when paid plans launch. Anyone who joins later pays full price. Cut list on Free is available to everyone — Founding Partner is not the access gate.",
     "cta": "Apply in the app"
   },
   "counter": {
@@ -51,14 +51,14 @@
   "next": {
     "title": "What happens after you apply",
     "steps": [
-      "You submit the request in the app in about 15 seconds (workshop / company name only). We confirm your place on the list quickly — no documents to upload.",
+      "You submit the request in the app in about 15 seconds (workshop name and company ID are optional). We confirm your place on the list quickly — no documents to upload.",
       "You use the app like everyone else — full Cut list on Free, with unlimited cut-list export during the launch period.",
       "At subscription launch, we contact you with the standard price and the first 2 months free on your chosen plan. Founding Partner enrollment closes. Anyone who subscribes later, without a place on the list, pays full price."
     ]
   },
   "apply": {
     "title": "Apply in the app",
-    "body": "Founding Partner requests are submitted from your free account in the app — you only need the workshop / company name, with no documents to upload.",
+    "body": "Founding Partner requests are submitted from your free account in the app — the workshop name and company ID are optional, and there are no documents to upload.",
     "cta": "Open the app and request a spot"
   },
   "form": {
